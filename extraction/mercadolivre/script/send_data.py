@@ -1,4 +1,4 @@
-def postgres_ingestion_ml():
+def postgres_ingestion_ml(test_run):
     import dlt
     from dlt.destinations import postgres
     import json
@@ -11,10 +11,14 @@ def postgres_ingestion_ml():
         destination=postgres(credentials="postgresql://airflow:airflow@pgdatabase/sales_db"),
     )
     
-    dir = "./extraction/mercadolivre/data/raw/"
-    filelist = os.listdir(dir)
+    if test_run:
+        dir = "./extraction/mercadolivre/data/raw/sample.json"
+        files = [dir]
+    else:
+        dir = "./extraction/mercadolivre/data/raw/"
+        filelist = os.listdir(dir)
+        files = [f"{dir}{file}" for file in filelist]
 
-    files = [f"{dir}{file}" for file in filelist]
 
     for file in files:
 
@@ -27,5 +31,9 @@ def postgres_ingestion_ml():
 
             print(info)
             print(pipeline.last_trace)
+            result = 1
         else:
             print(f"[WARNING] - file {file} does not have .json extension and could not be loaded.")
+            result = -1
+            
+    return result
