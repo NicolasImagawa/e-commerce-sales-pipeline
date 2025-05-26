@@ -26,10 +26,27 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
         pip install pytest pytest-cov
+
+    - name: Set test_run environment variable
+      run: echo "TEST_RUN=True" >> $GITHUB_ENV
+
+    - name: Set other environment variables
+      env:
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        CLIENT_ID: ${{ secrets.CLIENT_ID }}
+        CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
+        CODE: ${{ secrets.CODE }}
+        EXPIRES_IN: ${{ secrets.EXPIRES_IN }}
+        REDIRECT_URI: ${{ secrets.REDIRECT_URI }}
+        REFRESH_TOKEN: ${{ secrets.REFRESH_TOKEN }}
+        SCOPE: ${{ secrets.SCOPE }}
+        SELLER_ID: ${{ secrets.SELLER_ID }}
+        TOKEN_TYPE: ${{ secrets.TOKEN_TYPE }}
+        USER_ID: ${{ secrets.USER_ID }}
     
     - name: Run tests
       run: |
-        pytest --cov=./ --cov-report=xml
+        pytest --cov=./ --cov-report=xml --test-run=True
     
     - name: Upload coverage
       uses: codecov/codecov-action@v3
