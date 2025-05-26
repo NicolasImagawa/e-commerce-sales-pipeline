@@ -27,8 +27,8 @@ def clean_cost_data (test_run):
         test_results = {
             "begin_date_type": df["begin_date"].dtype,
             "end_date_type": df["end_date"].dtype,
-            "begin_date_nulls": df["begin_date"].isna.sum(),
-            "cost_nulls_nans": df["cost"].isna.sum()
+            "begin_date_nulls": df["begin_date"].isna.sum().sum(),
+            "cost_nulls_nans": df["cost"].isna.sum().sum()
         }
 
         return test_results
