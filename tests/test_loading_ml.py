@@ -10,7 +10,8 @@ from extraction.mercadolivre.script.send_data import postgres_ingestion_ml
 def test_load_ml():
     conn = psycopg2.connect(database = "postgres", user = "airflow", host= 'localhost', password = "airflow", port = 5432) #uses maintenance db to create the infrastructure
     cursor = conn.cursor()
-
+    conn.autocommit = True
+    
     cursor.execute(sql.SQL("CREATE DATABASE {}").format(sql.Identifier("sales_db")))
 
     test_results = postgres_ingestion_ml(test_run=True)
