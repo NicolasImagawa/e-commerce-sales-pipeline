@@ -1,0 +1,5 @@
+CREATE TABLE IF NOT EXISTS shopee.new_id (
+	id_do_pedido VARCHAR(14) NOT NULL,
+	sku VARCHAR(20),
+	main_id VARCHAR(35) UNIQUE NOT NULL
+)

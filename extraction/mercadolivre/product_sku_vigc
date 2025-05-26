@@ -1,0 +1,83 @@
+WITH product_sku AS (
+	SELECT payments.reason AS product,
+		   orders.item__seller_sku AS sku
+	FROM mercadolivre.mercadolivre__payments AS payments
+	INNER JOIN mercadolivre.mercadolivre__order_items AS orders
+	ON payments.reason = orders.item__title
+	GROUP BY product, sku
+), first_sku_record AS (
+	SELECT product_sku.product,
+		   product_sku.sku,
+		   MIN(payments.date_approved) AS first_sale_date
+	FROM product_sku
+	INNER JOIN mercadolivre.mercadolivre__payments AS payments
+	ON product_sku.product = payments.reason
+	GROUP BY product_sku.product,
+		     product_sku.sku
+), last_sku_record AS (
+	SELECT product_sku.product,
+		   product_sku.sku,
+		   MAX(payments.date_approved) AS last_sale_date
+	FROM product_sku
+	INNER JOIN mercadolivre.mercadolivre__payments AS payments
+	ON product_sku.product = payments.reason
+	GROUP BY product_sku.product,
+		     product_sku.sku
+), product_sku_recordrange AS (
+	SELECT product_sku.product,
+		   product_sku.sku,
+		   first_sku_record.first_sale_date,
+		   last_sku_record.last_sale_date
+	FROM product_sku
+	INNER JOIN first_sku_record
+	ON product_sku.sku = first_sku_record.sku
+	AND product_sku.product = first_sku_record.product
+	INNER JOIN last_sku_record
+	ON product_sku.sku = last_sku_record.sku
+	AND product_sku.product = last_sku_record.product
+)
+SELECT *
+FROM product_sku_recordrange
+ORDER BY first_sale_date, product
+
+
+/*Checking Nulls with Left Join*/
+WITH product_sku AS (
+	SELECT payments.reason AS product,
+		   orders.item__seller_sku AS sku
+	FROM mercadolivre.mercadolivre__payments AS payments
+	LEFT JOIN mercadolivre.mercadolivre.mercadolivre__order_items AS orders
+	ON payments.reason = orders.item__title
+	GROUP BY product, sku
+), first_sku_record AS (
+	SELECT product_sku.product,
+		   product_sku.sku,
+		   MIN(payments.date_approved) AS first_sale_date
+	FROM product_sku
+	LEFT JOIN mercadolivre.mercadolivre__payments AS payments
+	ON product_sku.product = payments.reason
+	GROUP BY product_sku.product,
+		     product_sku.sku
+), last_sku_record AS (
+	SELECT product_sku.product,
+		   product_sku.sku,
+		   MAX(payments.date_approved) AS last_sale_date
+	FROM product_sku
+	LEFT JOIN mercadolivre.mercadolivre__payments AS payments
+	ON product_sku.product = payments.reason
+	GROUP BY product_sku.product,
+		     product_sku.sku
+), product_sku_recordrange AS (
+	SELECT product_sku.product,
+		   product_sku.sku,
+		   first_sku_record.first_sale_date,
+		   last_sku_record.last_sale_date
+	FROM product_sku
+	LEFT JOIN first_sku_record
+	ON product_sku.sku = first_sku_record.sku
+	AND product_sku.product = first_sku_record.product
+	LEFT JOIN last_sku_record
+	ON product_sku.sku = last_sku_record.sku
+	AND product_sku.product = last_sku_record.product
+)
+SELECT * FROM product_sku_recordrange

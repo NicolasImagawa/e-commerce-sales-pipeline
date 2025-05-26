@@ -1,0 +1,404 @@
+main_sku,product,sku,component_name,begin_date,end_date,cost
+BOR001,Borrifador fino e cilíndrico,BOR001VAR001,"Borrifador fino, cilíndrico pole preto",01/07/2024,,"7,00"
+BOR001,Borrifador fino e cilíndrico,BOR001VAR002,"Borrifador fino, cilíndrico pole branco",01/07/2024,,"7,00"
+BOR001,Borrifador fino e cilíndrico,BOR001VAR003,"Borrifador fino, cilíndrico branco pole com caveira",01/07/2024,,"7,00"
+BOR002,Borrifador largo e quadrado,BOR002VAR001,"Borrifador largo, quadrado, pole, branco, azul e vermelho",01/07/2024,,"12,50"
+BOR002,Borrifador largo e quadrado,BOR002VAR002,"Borrifador largo, quadrado, Reino Unido",01/07/2024,,"12,50"
+BOR002,Borrifador largo e quadrado,BOR002VAR003,"Borrifador largo, quadrado, Estados Unidos",01/07/2024,,"12,50"
+BOR002,Borrifador largo e quadrado,BOR002VAR004,"Borrifador largo, quadrado, Cervejas",01/07/2024,,"12,50"
+BOR003,"Borrifador fino,  cilíndrico, com adorno",BOR003VAR001,"Borrifador cilíndrico prata, listras azuis e vermelhas",01/07/2024,,
+BOR003,"Borrifador fino,  cilíndrico, com adorno",BOR003VAR002,"Borrifador cilíndrico dourado, listras azuis e vermelhas",01/07/2024,,
+BOR004,Borrifador Caveira,BOR004VAR001,Borrifador Caveira,01/07/2024,,"12,50"
+BOR005,Borrifador pequeno e cilíndrico,BOR005VAR001,Borrifador profissional estampa pole,01/07/2024,,
+BOR005,Borrifador pequeno e cilíndrico,BOR005VAR002,Borrifador profissional estampa bigode,01/07/2024,,"8,50"
+BOR006,Borrifador automático,BOR006VAR001,Borrifador automático preto,01/07/2024,,"10,00"
+BOR007,Borrifador torre,BOR007VAR001,Borrifador torre branco,01/07/2024,,"6,00"
+DUR001,Durag de cetim,DUR001VAR001,Durag de cetim preta,01/07/2024,31/10/2024,"6,00"
+DUR001,Durag de cetim,DUR001VAR001,Durag de cetim preta,1/11/2024,07/12/2025,"5,00"
+DUR001,Durag de cetim,DUR001VAR001,Durag de cetim preta,08/12/2025,,"4,00"
+DUR001,Durag de cetim,DUR001VAR002,Durag de cetim branca,01/07/2024,,"6,00"
+DUR001,Durag de cetim,DUR001VAR003,Durag de cetim azul,01/07/2024,,"6,00"
+DUR001,Durag de cetim,DUR001VAR004,Durag de cetim vermelha,01/07/2024,,"6,00"
+DUR001,Durag de cetim,DUR001VAR005,Durag de cetim estampa dourada gucci,01/07/2024,,"12,00"
+DUR001,Durag de cetim,DUR001VAR006,Durag de cetim rosa pink,01/07/2024,,"6,00"
+DUR002,Durag de veludo,DUR002VAR001,Durag de veludo preta,01/07/2024,,"8,00"
+DUR002,Durag de veludo,DUR002VAR002,Durag de veludo azul marinho,01/07/2024,,"8,00"
+DUR002,Durag de veludo,DUR002VAR003,Durag de veludo vermelha,01/07/2024,,"8,00"
+DUR002,Durag de veludo,DUR002VAR004,Durag de veludo roxa,01/07/2024,,"8,00"
+DUR002,Durag de veludo,DUR002VAR005,Durag de veludo azul royal,01/07/2024,,"8,00"
+DUR002,Durag de veludo,DUR002VAR006,Durag de veludo branca,01/07/2024,,"8,00"
+DUR003,Durag silky,DUR003VAR001,Durag silky preta,01/07/2024,,
+DUR004,Durag de poliéster,DUR004VAR001,Durag de poliéster preta,01/07/2024,31/10/2024,"4,00"
+DUR004,Durag de poliéster,DUR004VAR001,Durag de poliéster preta,01/11/2024,07/11/2024,"5,00"
+DUR004,Durag de poliéster,DUR004VAR001,Durag de poliéster preta,08/11/2024,12/12/2024,"6,00"
+DUR004,Durag de poliéster,DUR004VAR001,Durag de poliéster preta,13/12/2024,,"4,00"
+DUR004,Durag de poliéster,DUR004VAR002,Durag de poliéster branca,01/07/2024,,"4,00"
+DUR004,Durag de poliéster,DUR004VAR003,Durag de poliéster azul marinho,01/07/2024,,"4,00"
+DUR004,Durag de poliéster,DUR004VAR004,Durag de poliéster vermelha,01/07/2024,,"4,00"
+WAV001,Wavecap de poliéster,WAV001VAR001,Wavecap de poliéster preta,01/07/2024,20/12/2024,"3,00"
+WAV001,Wavecap de poliéster,WAV001VAR001,Wavecap de poliéster preta,21/12/2024,29/12/2024,"2,00"
+WAV001,Wavecap de poliéster,WAV001VAR001,Wavecap de poliéster preta,30/12/2024,,"4,00"
+WAV001,Wavecap de poliéster,WAV001VAR002,Wavecap de poliéster branca,01/07/2024,,"3,00"
+WAV001,Wavecap de poliéster,WAV001VAR003,Wavecap de poliéster gucci tamanho P,01/07/2024,,"5,00"
+WAV001,Wavecap de poliéster,WAV001VAR004,Wavecap de poliéster gucci tamanho M,01/07/2024,,"5,00"
+WAV001,Wavecap de poliéster,WAV001VAR005,Wavecap de poliéster azul,01/07/2024,,"3,00"
+PRE001,Presilha crocodilo,PRE001VAR001,Presilha crocodilo preto 6 unidades,01/07/2024,,"7,00"
+PRE001,Presilha crocodilo,PRE001VAR002,Presilha crocodilo azul 6 unidades,01/07/2024,,
+PRE001,Presilha crocodilo,PRE001VAR003,Presilha crocodilo vermelho 6 unidades,01/07/2024,,
+PRE001,Presilha crocodilo,PRE001VAR004,Presilha crocodilo rosa claro 6 unidades,01/07/2024,,
+PRE001,Presilha crocodilo,PRE001VAR005,Presilha crocodilo roxo 6 unidades,01/07/2024,,
+PRE001,Presilha crocodilo,PRE001VAR006,Presilha crocodilo amarelo 6 unidades,01/07/2024,,
+PRE002,Presilha carbono,PRE002VAR001,Presilha Carbono preto,01/07/2024,,
+PRE003,Presilha de ferro,PRE003VAR001,Presilha de ferro,01/07/2024,,
+PRE004,Presilha reta 12 unidades,PRE004VAR001,Presilha reta 12 unidades preta,01/07/2024,,"7,00"
+PRE005,Presilha crocodilo carbon clip 6 unidades,PRE005VAR001,Presilha crocodilo carbon clip 6 unidades,01/07/2024,,"8,00"
+MIN001,Minoxidil,MIN001VAR001,Minoxidil Dom Pelo,01/07/2024,,"4,00"
+ESP002,Espanador de madeira retro/luxo,ESP002VAR001,Espanador de madeira retro/luxo com cerdas pretas,01/07/2024,,"12,50"
+ESP002,Espanador de madeira retro/luxo,ESP002VAR002,Espanador de madeira retro/luxo com cerdas brancas,01/07/2024,,"13,00"
+ESP005,Espanador de madeira redonda para capa,ESP005VAR001,Espanador de madeira redonda com cerdas brancas para capa,01/07/2024,,"9,00"
+ESP003,Espanador de plástico redondo para capa,ESP003VAR001,Espanador dourada de plástico redonda com cerdas brancas para capa,01/07/2024,,
+ESP003,Espanador de plástico redondo para capa,ESP003VAR002,Espanador preta de plástico redonda com cerdas pretas para capa,01/07/2024,,"6,00"
+ESP004,Espanador bolinha para capa,ESP004VAR001,Espanador bolinha para capa com cabo prata,01/07/2024,27/08/2024,"8,00"
+ESP004,Espanador bolinha para capa,ESP004VAR001,Espanador bolinha para capa com cabo prata,28/08/2024,12/12/2024,"5,00"
+ESP004,Espanador bolinha para capa,ESP004VAR001,Espanador bolinha para capa com cabo prata,13/12/2024,,"7,00"
+ESP004,Espanador bolinha para capa,ESP004VAR002,Espanador bolinha para capa com cabo preto,01/07/2024,,"8,00"
+ESP004,Espanador bolinha para capa,ESP004VAR003,Espanador bolinha para capa com cabo preto escrito hairdo,01/07/2024,,"8,00"
+ESC001,Escova disfarce para barba quadrada,ESC001VAR001,Escova disfarce para barba quadrada preta de plástico,01/07/2024,,"3,80"
+ESC001,Escova disfarce para barba quadrada,ESC001VAR002,Escova disfarce para barba quadrada prata de plástico,01/07/2024,,"3,80"
+ESC001,Escova disfarce para barba quadrada,ESC001VAR003,Escova disfarce para barba quadrada dourada de plástico,01/07/2024,,"3,80"
+ESC002,Escova disfarce de dedo,ESC002VAR001,"Escova disfarce de dedo para barba, preta",01/07/2024,,"7,80"
+ESC003,Escova disfarce pole oval,ESC003VAR001,Escova disfarce pole oval cerdas claras,01/07/2024,,"13,00"
+ESC004,Escova disfarce tipo Annie,ESC004VAR001,Escova disfarce tipo Annie marrom,01/07/2024,,"10,00"
+ESC005,Escova Javali com cerdas duplas de madeira,ESC005VAR001,Escova Javali com cerdas duplas de madeira P,01/07/2024,,"13,00"
+ESC006,Escova Medium Javali premium,ESC006VAR001,Escova Medium Javali premium,01/07/2024,,"20,00"
+ESC007,Escova Cilíndrica Daily Marco Boni 30 mm,ESC007VAR001,Escova Cilíndrica Daily Marco Boni 30 mm azul,01/07/2024,,"13,00"
+ESC007,Escova Cilíndrica Daily Marco Boni 30 mm,ESC007VAR002,Escova Cilíndrica Daily Marco Boni 30 mm preta,01/07/2024,,"13,00"
+ESC008,Escova Marco Boni Antiestática Roxa,ESC008VAR001,Escova Marco Boni Antiestática Roxa,01/07/2024,,"25,00"
+ESC009,Escova Disfarce Oval com furo na ponta,ESC009VAR001,Escova Disfarce Oval com furo na ponta,01/07/2024,,"10,00"
+ESC010,Escova Cilíndrica Vermelha genérica,ESC010VAR001,Escova Cilíndrica Vermelha genérica TIPO Marco Boni,01/07/2024,,"10,00"
+ESC011,Escova Raquete comum,ESC011VAR001,Escova Raquete comum preta,01/07/2024,,"15,00"
+ESC012,Escova Raquete vazada,ESC012VAR001,Escova Raquete vazada azul escuro,01/07/2024,,"15,00"
+ESC012,Escova Raquete vazada,ESC012VAR002,Escova Raquete vazada azul claro,01/07/2024,,"15,00"
+ESC012,Escova Raquete vazada,ESC012VAR003,Escova Raquete vazada rosa,01/07/2024,,"15,00"
+ESC012,Escova Raquete vazada,ESC012VAR004,Escova Raquete vazada vermelho,01/07/2024,,"15,00"
+ESC013,Escova Oval,ESC013VAR001,Escova Oval de madeira G,01/07/2024,,"13,00"
+ESC013,Escova Oval,ESC013VAR002,Escova Oval de madeira P,01/07/2024,,
+ESC014,Escova disfarce para barba com pente,ESC014VAR001,Escova disfarce para barba com pente preta,01/07/2024,,"6,00"
+ESC015,Escova disfarce para barba quadrada,ESC015VAR004,Escova disfarce para barba quadrada pole,01/07/2024,,"6,00"
+ESC016,Escova Wahl,ESC016VAR001,Escova de madeira tipo Wahl,01/07/2024,,"10,00"
+ESC017,Escovinha Babyhair,ESC017VAR001,Escovinha Babyhair várias cores,01/07/2024,,"3,00"
+ESC018,Escova disfarce grande,ESC018VAR001,Escova disfarce grande (média) marrom,01/07/2024,,"7,00"
+ESC018,Escova disfarce grande,ESC018VAR002,Escova disfarce grande (média) preta,01/07/2024,,"8,00"
+ESC019,Kit cinco escovas javali cilíndricas tamanhos diferentes,ESC019VAR001,Kit cinco escovas javali cilíndricas tamanhos diferentes amarelo,01/07/2024,,"100,00"
+ESC020,Escova raquete pequena marca Privado,ESC020VAR001,Escova raquete pequena marca Privado Azul,01/07/2024,,"15,00"
+ESC021,Escova disfarce para barba quadrada com pente integrado,ESC021VAR001,Escova disfarce para barba quadrada com pente preta,01/07/2024,,"0,00"
+CAL001,"Cartela Derby platinum lâmina dupla, 50 un./ cartela",CAL001VAR001,"Cartela Derby platinum lâmina dupla, 50 un./ cartela",01/07/2024,,
+CAL002,Cartela Wilkinson Sword lâmina dupla 60 un./ cartela,CAL002VAR001,Cartela Wilkinson Sword lâmina dupla 60 un./ cartela,01/07/2024,,"19,80"
+CAL002,Cartela Wilkinson Sword lâmina dupla 60 un./ cartela,CAL002VAR002,1/2 Cartela Wilkinson Sword lâmina dupla 60 un./ cartela,01/07/2024,,"9,90"
+CAL003,Cartela Lamix Platinum Plus lâmina dupla 50 un./cartela caixa laranja,CAL003VAR001,Cartela Lamix Platinum Plus lâmina dupla 50 un./cartela caixa laranja,01/07/2024,,
+CAL004,Cartela Lamix Premier Plus lâmina dupla 50 un./cartela caixa preta,CAL004VAR001,Cartela Lamix Premier Plus lâmina dupla 50 un./cartela caixa preta,01/07/2024,,
+CAL005,Cartela Lamix New Platinum Pro lâmina dupla 50 un./cartela caixa amarela e laranja,CAL005VAR001,Cartela Lamix New Platinum Pro lâmina dupla 50 un./cartela caixa amarela e laranja,01/07/2024,,
+CAL006,Cartela Master Barba lâmina dupla 50 un./cartela caixa verde,CAL006VAR001,Cartela Master Barba lâmina dupla 50 un./cartela caixa verde,01/07/2024,,
+CAL007,Cartela Super Barba lâmina dupla 60 un./cartela caixa preta,CAL007VAR001,Cartela Super Barba lâmina dupla 60 un./cartela caixa preta,01/07/2024,,
+CAL008,Cartela Lord Super lâmina dupla 50 un./cartela,CAL008VAR001,Cartela Lord Super lâmina dupla 50 un./cartela,01/07/2024,,
+CAL009,"Caixa Derby Premium meia lâmina com 100 un. / caixa, caixa preta",CAL009VAR001,"Caixa Derby Premium meia lâmina com 100 un. / caixa, caixa preta",01/07/2024,,
+CAL010,"Caixa Derby Professional meia lâmina com 100 un. / caixa, caixa verde",CAL010VAR001,"Caixa Derby Professional meia lâmina com 100 un. / caixa, caixa verde",01/07/2024,,
+CAL011,Caixa Lord Platinum Saloon meia lâmina com 100 un. / caixa,CAL011VAR001,Caixa Lord Platinum Saloon meia lâmina com 100 un. / caixa,01/07/2024,,"11,90"
+CAL012,"Caixa Super Barba meia lâmina com 100 un. / caixa, caixa amarela",CAL012VAR001,"Caixa Super Barba meia lâmina com 100 un. / caixa, caixa amarela",01/07/2024,,
+CAL013,Caixa Lord Saloon meia lâmina com 100 un. / caixa,CAL013VAR001,Caixa Lord Saloon meia lâmina com 100 un. / caixa,01/07/2024,,"11,90"
+CAL014,Caixa Lord preta platinum com 5 caixinhas,CAL014VAR001,Caixa Lord preta platinum com 5 caixinhas,01/07/2024,,"20,90"
+CXL001,Caixa de atacado Wilkinson Sword 1440 lâminas ou 24 cartelas,CXL001VAR001,Caixa de atacado Wilkinson Sword 1440 lâminas ou 24 cartelas,01/07/2024,,
+CXL002,Caixa Lord Platinum Saloon Sword 1000 lâminas ou 10 caixas menores,CXL002VAR001,Caixa Lord Platinum Saloon Sword 1000 lâminas ou 10 caixas menores,01/07/2024,,
+CXL003,Caixa Super Barba meia lâmina 1000 lâminas ou 10 caixas menores,CXL003VAR001,Caixa Super Barba meia lâmina 1000 lâminas ou 10 caixas menores,01/07/2024,,
+LAM001,"Caixinha Derby Platinum lâmina dupla, 5 un./caixinha",LAM001VAR001,"Caixinha Derby Platinum lâmina dupla, 5 un./caixinha",01/07/2024,,
+LAM002,"Caixinha Wilkinson Sword lâmina dupla, 3 un./caixinha",LAM002VAR001,"Caixinha Wilkinson Sword lâmina dupla, 3 un./caixinha",01/07/2024,,
+LAM003,"Caixinha Lamix Platinum Plus, 5 un./caixinha",LAM003VAR001,"Caixinha Lamix Platinum Plus, 5 un./caixinha",01/07/2024,,
+LAM004,"Caixinha Lamix Premier Plus, 5 un./caixinha",LAM004VAR001,"Caixinha Lamix Premier Plus, 5 un./caixinha",01/07/2024,,
+LAM005,"Caixinha Lamix New Platinum Pro, 5 un./caixinha",LAM005VAR001,"Caixinha Lamix New Platinum Pro, 5 un./caixinha",01/07/2024,,
+LAM006,"Caixinha Master Barba, 5 un./caixinha",LAM006VAR001,"Caixinha Master Barba, 5 un./caixinha",01/07/2024,,
+LAM007,"Caixinha Super Barba, 10 un./caixinha",LAM007VAR001,"Caixinha Super Barba, 10 un./caixinha",01/07/2024,,
+LAM008,"Caixinha Lord Super, 5 un./caixinha",LAM008VAR001,"Caixinha Lord Super, 5 un./caixinha",01/07/2024,,
+CAP001,"Capa de cetim lisa 1,45 m",CAP001VAR001,"Capa de cetim 1,45 m preta",01/07/2024,17/08/2024,"10,00"
+CAP001,"Capa de cetim lisa 1,45 m",CAP001VAR001,"Capa de cetim 1,45 m preta",18/08/2024,03/01/2025,"11,00"
+CAP001,"Capa de cetim lisa 1,45 m",CAP001VAR001,"Capa de cetim 1,45 m preta",04/01/2025,12/01/2025,"8,00"
+CAP001,"Capa de cetim lisa 1,45 m",CAP001VAR001,"Capa de cetim 1,45 m preta",13/01/2025,,"13,00"
+CAP001,"Capa de cetim lisa 1,45 m",CAP001VAR002,"Capa de cetim 1,45 m branca",01/07/2024,,"10,00"
+CAP001,"Capa de cetim lisa 1,45 m",CAP001VAR003,"Capa de cetim 1,45 m azul royal",01/07/2024,,"10,00"
+CAP001,"Capa de cetim lisa 1,45 m",CAP001VAR004,"Capa de cetim 1,45 m azul marinho",01/07/2024,,"10,00"
+CAP001,"Capa de cetim lisa 1,45 m",CAP001VAR005,"Capa de cetim 1,45 m vermelha",01/07/2024,,"10,00"
+CAP001,"Capa de cetim lisa 1,45 m",CAP001VAR006,"Capa de cetim 1,45 m verde claro",01/07/2024,,"10,00"
+CAP001,"Capa de cetim lisa 1,45 m",CAP001VAR007,"Capa de cetim 1,45 m verde escuro",01/07/2024,,"10,00"
+CAP001,"Capa de cetim lisa 1,45 m",CAP001VAR008,"Capa de cetim 1,45 m verde-quase-preto",01/07/2024,,"10,00"
+CAP001,"Capa de cetim lisa 1,45 m",CAP001VAR009,"Capa de cetim 1,45 m rosa claro/rosê",01/07/2024,,"10,00"
+CAP001,"Capa de cetim lisa 1,45 m",CAP001VAR010,"Capa de cetim 1,45 m rosa pink",01/07/2024,,"10,00"
+CAP001,"Capa de cetim lisa 1,45 m",CAP001VAR011,"Capa de cetim 1,45 m grafite",01/07/2024,,"10,00"
+CAP001,"Capa de cetim lisa 1,45 m",CAP001VAR012,"Capa de cetim 1,45 m dourado",01/07/2024,,"10,00"
+CAP001,"Capa de cetim lisa 1,45 m",CAP001VAR013,"Capa de cetim 1,45 m lilás",01/07/2024,,"10,00"
+CAP002,Capa de cetim infantil,CAP002VAR001,Capa de cetim infantil Batman,01/07/2024,,"10,00"
+CAP002,Capa de cetim infantil,CAP002VAR002,Capa de cetim infantil Flash,01/07/2024,,"10,00"
+CAP002,Capa de cetim infantil,CAP002VAR003,Capa de cetim infantil Hulk,01/07/2024,,"10,00"
+CAP002,Capa de cetim infantil,CAP002VAR004,Capa de cetim infantil Mulher Maravilha,01/07/2024,,"10,00"
+CAP002,Capa de cetim infantil,CAP002VAR005,Capa de cetim infantil Homem Aranha,01/07/2024,,"10,00"
+CAP002,Capa de cetim infantil,CAP002VAR006,Capa de cetim infantil Thor,01/07/2024,,"10,00"
+CAP002,Capa de cetim infantil,CAP002VAR007,Capa de cetim infantil Homem de Ferro,01/07/2024,,"10,00"
+CAP002,Capa de cetim infantil,CAP002VAR008,Capa de cetim infantil Super Homem,01/07/2024,,"10,00"
+CAP002,Capa de cetim infantil,CAP002VAR009,Capa de cetim infantil Capitão América,01/07/2024,,"10,00"
+CAP002,Capa de cetim infantil,CAP002VAR010,Capa de cetim infantil gravatinha,01/07/2024,,"10,00"
+CAP002,Capa de cetim infantil,CAP002VAR011,Capa de cetim infantil Barbie Rosa claro/rosê,01/07/2024,,"10,00"
+CAP002,Capa de cetim infantil,CAP002VAR012,Capa de cetim infantil Barbie Rosa pink,01/07/2024,,"10,00"
+CAP002,Capa de cetim infantil,CAP002VAR013,Capa de cetim infantil Azul Royal,01/07/2024,,"7,00"
+CAP002,Capa de cetim infantil,CAP002VAR014,Capa de cetim infantil Vermelha,01/07/2024,,"7,00"
+CAP002,Capa de cetim infantil,CAP002VAR015,Capa de cetim infantil Preta,01/07/2024,,"13,00"
+CAP003,Capa Silky adulta estampada,CAP003VAR001,Capa Silky NBA 94,01/07/2024,,"13,00"
+CAP003,Capa Silky adulta estampada,CAP003VAR002,Capa Silky Heineken,01/07/2024,,"13,00"
+CAP003,Capa Silky adulta estampada,CAP003VAR003,Capa Silky Jack Daniels,01/07/2024,,"13,00"
+CAP003,Capa Silky adulta estampada,CAP003VAR004,Capa Silky Caveira Vermelha,01/07/2024,,"13,00"
+CAP003,Capa Silky adulta estampada,CAP003VAR005,Capa Silky Escudo da fé,01/07/2024,,"13,00"
+CAP003,Capa Silky adulta estampada,CAP003VAR006,Capa Silky Tesoura,01/07/2024,,"13,00"
+CAP003,Capa Silky adulta estampada,CAP003VAR007,Capa Silky Caveira com Touca,01/07/2024,,"13,00"
+CAP003,Capa Silky adulta estampada,CAP003VAR008,Capa Silky Caveira Barber Shop,01/07/2024,,"13,00"
+CAP003,Capa Silky adulta estampada,CAP003VAR009,Capa Silky Guccii,01/07/2024,,"13,00"
+CAP003,Capa Silky adulta estampada,CAP003VAR010,Capa silky Barber pole,01/07/2024,,"13,00"
+CAP003,Capa Silky adulta estampada,CAP003VAR011,Capa Silky Lacoste,01/07/2024,,"13,00"
+CAP003,Capa Silky adulta estampada,CAP003VAR012,Capa Silky Paris,01/07/2024,,"13,00"
+CAP003,Capa Silky adulta estampada,CAP003VAR013,Capa Silky Caveira Navalhete,01/07/2024,,"13,00"
+CAP004,Capa Personalizada adulta estampada,CAP004VAR001,Capa personalizada Adidas Sorvete,01/07/2024,,"16,00"
+CAP004,Capa Personalizada adulta estampada,CAP004VAR002,Capa personalizada Canário Barber Shop,01/07/2024,,"16,00"
+CAP004,Capa Personalizada adulta estampada,CAP004VAR003,Capa personalizada Nike Just Do It,01/07/2024,,"16,00"
+CAP004,Capa Personalizada adulta estampada,CAP004VAR004,Capa personalizada Homer Jordan Rosquinha,01/07/2024,,"16,00"
+CAP004,Capa Personalizada adulta estampada,CAP004VAR005,Capa personalizada Tio Patinhas Gold,01/07/2024,,"16,00"
+CAP004,Capa Personalizada adulta estampada,CAP004VAR006,Capa personalizada Tio Patinhas Metralha,01/07/2024,,"16,00"
+CAP004,Capa Personalizada adulta estampada,CAP004VAR007,Capa personalizada Tio Patinhas Metralha Escuro,01/07/2024,,"16,00"
+CAP004,Capa Personalizada adulta estampada,CAP004VAR008,Capa personalizada Irmãos Metralhas,01/07/2024,,"16,00"
+CAP010,Capa de cetim adulta estampada,CAP010VAR001,Capa de Cetim Xadrez,01/07/2024,,"16,00"
+CAP004,Capa Personalizada adulta estampada,CAP004VAR009,Capa personalizada Chiquinha,01/07/2024,,"16,00"
+CAP004,Capa Personalizada adulta estampada,CAP004VAR010,Capa personalizada Seu Madruga,01/07/2024,,"16,00"
+CAP004,Capa Personalizada adulta estampada,CAP004VAR011,Capa personalizada Simpsons Chuveiro,01/07/2024,,"16,00"
+CAP004,Capa Personalizada adulta estampada,CAP004VAR012,Capa personalizada Coringa hahaha,01/07/2024,,"16,00"
+CAP003,Capa Silky adulta estampada,CAP003VAR014,Capa Silky Jack Daniels,01/07/2024,,"16,00"
+CAP004,Capa Personalizada adulta estampada,CAP004VAR013,Capa personalizada Tio Patinhas Dólar,01/07/2024,,"16,00"
+CAP004,Capa Personalizada adulta estampada,CAP004VAR014,Capa personalizada Tio Patinhas Supreme Preto,01/07/2024,,"16,00"
+CAP004,Capa Personalizada adulta estampada,CAP004VAR015,Capa personalizada Tio Patinhas USA,01/07/2024,,"16,00"
+CAP003,Capa Silky adulta estampada,CAP003VAR015,Capa Silky Caveira Dourada,01/07/2024,,"16,00"
+CAP004,Capa Personalizada adulta estampada,CAP004VAR016,Capa personalizada Tio Patinhas Supreme Vermelho,01/07/2024,,"16,00"
+CAP004,Capa Personalizada adulta estampada,CAP004VAR017,Capa personalizada Tio patinhas bandeira,01/07/2024,,"16,00"
+CAP004,Capa Personalizada adulta estampada,CAP004VAR018,Capa personalizada Tio patinhas bravo,01/07/2024,,"16,00"
+CAP004,Capa Personalizada adulta estampada,CAP004VAR019,Capa personalizada Tio patinhas placa,01/07/2024,,"16,00"
+CAP004,Capa Personalizada adulta estampada,CAP004VAR020,Capa personalizada Tio patinhas dolar,01/07/2024,,"16,00"
+CAP004,Capa Personalizada adulta estampada,CAP004VAR021,Capa personalizada Caveira com fone,01/07/2024,,"6,00"
+CAP004,Capa Personalizada adulta estampada,CAP004VAR022,Capa personalizada Tio patinhas mina,01/07/2024,,"16,00"
+CAP004,Capa Personalizada adulta estampada,CAP004VAR023,Capa personalizada Coringa mão na boca,01/07/2024,,"16,00"
+CAP004,Capa Personalizada adulta estampada,CAP004VAR024,Capa personalizada Flamengo,01/07/2024,,"16,00"
+CAP004,Capa Personalizada adulta estampada,CAP004VAR025,Capa personalizada Bart azul,01/07/2024,,"16,00"
+CAP004,Capa Personalizada adulta estampada,CAP004VAR026,Capa personalizada bart laranja,01/07/2024,,"16,00"
+CAP004,Capa Personalizada adulta estampada,CAP004VAR027,Capa personalizada Bart verde,01/07/2024,,"16,00"
+CAP004,Capa Personalizada adulta estampada,CAP004VAR028,Capa personalizada Bart e milhouse,01/07/2024,,"16,00"
+CAP004,Capa Personalizada adulta estampada,CAP004VAR029,Capa personalizada Bart bone,01/07/2024,,"16,00"
+CAP004,Capa Personalizada adulta estampada,CAP004VAR030,Capa personalizada Bob marley,01/07/2024,,"16,00"
+CAP004,Capa Personalizada adulta estampada,CAP004VAR031,Capa personilizada NBA,01/07/2024,,"16,00"
+CAP004,Capa Personalizada adulta estampada,CAP004VAR032,Capa personalizada Lakers Lebron James,01/07/2024,,"16,00"
+CAP004,Capa Personalizada adulta estampada,CAP004VAR033,Capa personalizada Marcas,01/07/2024,,"16,00"
+CAP004,Capa Personalizada adulta estampada,CAP004VAR034,Capa personalizada Jordan preto,01/07/2024,,"16,00"
+CAP004,Capa Personalizada adulta estampada,CAP004VAR035,Capa personalizada Jordan vermelho,01/07/2024,,"16,00"
+CAP004,Capa Personalizada adulta estampada,CAP004VAR036,Capa personalizada Shave cut,01/07/2024,,"16,00"
+CAP004,Capa Personalizada adulta estampada,CAP004VAR037,Capa personalizada Zé pequeno,01/07/2024,,"16,00"
+CAP004,Capa Personalizada adulta estampada,CAP004VAR038,Capa personalizada Pernalonga,01/07/2024,,"16,00"
+CAP004,Capa Personalizada adulta estampada,CAP003VAR016,Capa Silky Nike Color,01/07/2024,,"16,00"
+CAP004,Capa Personalizada adulta estampada,CAP004VAR039,Capa personalizada Skunk doo(scoob doo),01/07/2024,,"16,00"
+CAP004,Capa Personalizada adulta estampada,CAP004VAR040,Capa personalizada brasil canario,01/07/2024,,"16,00"
+CAP004,Capa Personalizada adulta estampada,CAP004VAR041,Capa personalizada favela venceu,01/07/2024,,"16,00"
+CAP004,Capa Personalizada adulta estampada,CAP004VAR042,Capa personalizada bart duff,01/07/2024,,"16,00"
+CAP004,Capa Personalizada adulta estampada,CAP004VAR043,Capa personalizada Bart cinza nova,01/07/2024,,"16,00"
+CAP004,Capa Personalizada adulta estampada,CAP004VAR044,Capa personalizada Bart cinza antiga,01/07/2024,,"16,00"
+CAP004,Capa Personalizada adulta estampada,CAP004VAR045,Capa personalizada São Paulo,01/07/2024,,"16,00"
+CAP004,Capa Personalizada adulta estampada,CAP004VAR046,Capa personalizada Vasco,01/07/2024,,"16,00"
+CAP004,Capa Personalizada adulta estampada,CAP004VAR047,Capa personalizada Fluminense,01/07/2024,,"16,00"
+CAP005,"Capa de microfibra lisa 1,55 m",CAP005VAR001,"Capa de Microfibra Preta 1,55 m",01/07/2024,,"14,00"
+CAP005,"Capa de microfibra lisa 1,55 m",CAP005VAR002,"Capa de Microfibra Branca 1,55 m",01/07/2024,,"14,00"
+CAP005,"Capa de microfibra lisa 1,55 m",CAP005VAR003,"Capa de Microfibra Azul 1,55 m",01/07/2024,,"14,00"
+CAP005,"Capa de microfibra lisa 1,55 m",CAP005VAR004,"Capa de Microfibra Grafite 1,55 m",01/07/2024,,"14,00"
+CAP005,"Capa de microfibra lisa 1,55 m",CAP005VAR005,"Capa de Microfibra Rosa 1,55 m",01/07/2024,,"14,00"
+CAP006,"Capa de microfibra lisa 1,80 m",CAP006VAR001,"Capa de Microfibra Preta 1,80m",01/07/2024,,"17,00"
+CAP006,"Capa de microfibra lisa 1,80 m",CAP006VAR002,"Capa de Microfibra Branca 1,80m",01/07/2024,,"17,00"
+CAP006,"Capa de microfibra lisa 1,80 m",CAP006VAR003,"Capa de Microfibra Azul 1,80m",01/07/2024,,"17,00"
+CAP006,"Capa de microfibra lisa 1,80 m",CAP006VAR004,"Capa de Microfibra Grafite 1,80m",01/07/2024,,"17,00"
+CAP006,"Capa de microfibra lisa 1,80 m",CAP006VAR005,"Capa de Microfibra Rosa 1,80m",01/07/2024,,"17,00"
+CAP007,Capa de microfibra infantil,CAP007VAR001,Capa de Microfibra infantil Princesas 1,01/07/2024,,"15,00"
+CAP007,Capa de microfibra infantil,CAP007VAR002,Capa de Microfibra infantil Princesas 2,01/07/2024,,"15,00"
+CAP007,Capa de microfibra infantil,CAP007VAR003,Capa de Microfibra infantil Minnie,01/07/2024,,"15,00"
+CAP007,Capa de microfibra infantil,CAP007VAR004,Capa de Microfibra infantil Black Women,01/07/2024,,"15,00"
+CAP007,Capa de microfibra infantil,CAP007VAR005,Capa de Microfibra infantil Mulher Maravilha,01/07/2024,,"15,00"
+CAP007,Capa de microfibra infantil,CAP007VAR006,Capa de Microfibra infantil Chiquinha,01/07/2024,,"15,00"
+CAP007,Capa de microfibra infantil,CAP007VAR007,Capa de Microfibra infantil Escova Feminina,01/07/2024,,"15,00"
+CAP007,Capa de microfibra infantil,CAP007VAR008,Capa de Microfibra infantil Free Fire,01/07/2024,,"15,00"
+CAP007,Capa de microfibra infantil,CAP007VAR009,Capa de Microfibra infantil Skye,01/07/2024,,"15,00"
+CAP007,Capa de microfibra infantil,CAP007VAR010,Capa de Microfibra infantil Super homem,01/07/2024,,"15,00"
+CAP007,Capa de microfibra infantil,CAP007VAR011,Capa de Microfibra infantil Hulk,01/07/2024,,"15,00"
+CAP007,Capa de microfibra infantil,CAP007VAR012,Capa de Microfibra infantil Homem Aranha,01/07/2024,,"15,00"
+CAP007,Capa de microfibra infantil,CAP007VAR013,Capa de Microfibra infantil Capitão América,01/07/2024,,"15,00"
+CAP007,Capa de microfibra infantil,CAP007VAR014,Capa de Microfibra infantil Wolverine,01/07/2024,,"15,00"
+CAP007,Capa de microfibra infantil,CAP007VAR015,Capa de Microfibra infantil Batman,01/07/2024,,"15,00"
+CAP007,Capa de microfibra infantil,CAP007VAR016,Capa de Microfibra infantil Thor,01/07/2024,,"15,00"
+CAP007,Capa de microfibra infantil,CAP007VAR017,Capa de Microfibra infantil Homem de Ferro,01/07/2024,,"15,00"
+CAP007,Capa de microfibra infantil,CAP007VAR018,Capa de Microfibra infantil Chaves,01/07/2024,,"15,00"
+CAP007,Capa de microfibra infantil,CAP007VAR019,Capa de Microfibra infantil Nemo,01/07/2024,,"15,00"
+CAP007,Capa de microfibra infantil,CAP007VAR020,Capa de Microfibra infantil Toy Story,01/07/2024,,"15,00"
+CAP007,Capa de microfibra infantil,CAP007VAR021,Capa de Microfibra infantil Lucas Neto,01/07/2024,,"15,00"
+CAP007,Capa de microfibra infantil,CAP007VAR022,Capa de Microfibra infantil patrulha canina,01/07/2024,,"15,00"
+CAP007,Capa de microfibra infantil,CAP007VAR023,Capa de Microfibra infantil Os Incríveis,01/07/2024,,"15,00"
+CAP008,Capa de microfibra lisa 2 m,CAP008VAR001,Capa de Microfibra Preta 2 m,01/07/2024,,"18,00"
+CAP008,Capa de microfibra lisa 2 m,CAP008VAR002,Capa de Microfibra Branca 2 m,01/07/2024,,"18,00"
+LAC001,Lâmina de Acabamento Babyliss Pro FX707Z,LAC001VAR001,Lâmina de Acabamento Babyliss Pro FX707Z,01/07/2024,,
+LAC002,Lâmina de Acabamento Babyliss Pro FX8010B,LAC002VAR001,Lâmina de Acabamento Babyliss Pro FX8010B,01/07/2024,,
+LAC003,Lâmina de Cerâmica Babyliss Pro Fx707/787,LAC003VAR001,Lâmina de Cerâmica Babyliss Pro Fx707/787,01/07/2024,,
+PMQ001,"Pente para máquina 0,5",PMQ001VAR001,"Pente para máquina branco 0,5",01/07/2024,,
+PMQ001,"Pente para máquina 0,5",PMQ001VAR002,"Pente para máquina cinza 0,5",01/07/2024,,"2,00"
+PMQ001,"Pente para máquina 0,5",PMQ001VAR003,"Pente para máquina preto trava metal 0,5",01/07/2024,,"10,00"
+PMQ002,"Pente para máquina 1,5",PMQ002VAR001,"Pente para máquina verde 1,5",01/07/2024,,"2,00"
+PMQ002,"Pente para máquina 1,5",PMQ002VAR002,"Pente para máquina branco 1,5",01/07/2024,,"1,00"
+PMQ002,"Pente para máquina 1,5",PMQ002VAR003,"Pente para máquina preto trava metal 1,5",01/07/2024,,
+PMQ002,"Pente para máquina 1,5",PMQ002VAR004,"Pente para máquina vermelho 1,5",01/07/2024,,
+PMQ003,Pente para máquina 1,PMQ003VAR001,Pente para máquina vermelho 1,01/07/2024,,
+PEN001,Pente de Química Derlin,PEN001VAR001,Pente de Química Derlin,01/07/2024,,"2,50"
+PEN002,Pente Carbono Umi CB107 preto,PEN002VAR001,Pente Carbono Umi CB107 preto,01/07/2024,,"3,80"
+PEN003,Pente Carbono Umi CB1235,PEN003VAR001,Pente Carbono Umi CB1235 vermelho,01/07/2024,,"3,80"
+PEN003,Pente Carbono Umi CB1235,PEN003VAR002,Pente Carbono Umi CB1235 salmão,01/07/2024,,"3,80"
+PEN004,Pente Afro,PEN004VAR001,Pente Afro de plástico,01/07/2024,,"2,00"
+PEN004,Pente Afro,PEN004VAR002,Pente Afro de metal grande reto,01/07/2024,,"5,00"
+PEN005,Pente carbono Mofashi antiestático 06900,PEN005VAR001,Pente Carbono Mofashi antiestático 06900 bege,01/07/2024,,"3,00"
+PEN006,Pente carbono Mofashi antiestático 06200,PEN006VAR001,Pente Carbono Mofashi antiestático 06200 branco,01/07/2024,,"3,00"
+PEN007,Pente carbono Umi tipo Andis preto,PEN007VAR001,Pente carbono Umi tipo Andis preto,01/07/2024,,"3,00"
+PEN008,Pente Mofashi tipo clipper 188,PEN008VAR001,Pente Mofashi tipo clipper 188,01/07/2024,,"3,00"
+PEN009,Pente Mofashi carbonantistatic 8612,PEN009VAR001,Pente Mofashi carbonantistatic 8612 bege,01/07/2024,,"3,00"
+PEN010,Pente Mofashi carbonantistatic cabo de metal 06700,PEN010VAR002,Pente Mofashi carbonantistatic cabo de metal 06700 bege,01/07/2024,,"3,00"
+PEN011,Pente Mofashi carbonantistatic 8915,PEN011VAR001,Pente Mofashi carbonantistatic 8915 branco,01/07/2024,,"3,00"
+PEN012,Pente Mofashi carbonantistatic 8613,PEN012VAR001,Pente Mofashi carbonantistatic 8613 bege,01/07/2024,,"3,00"
+PEN013,Pente Mofashi carbonantistatic 06969,PEN013VAR001,Pente Mofashi carbonantistatic 06969 preto,01/07/2024,,"3,00"
+PEN014,Pente Mofashi carbonantistatic 0812,PEN014VAR001,Pente Mofashi carbonantistatic 0812 bege,01/07/2024,,
+PEN015,Pente Mofashi carbonantistatic branco sem código,PEN015VAR001,Pente Mofashi carbonantistatic branco sem código,01/07/2024,,
+PEN016,Pente Mofashi carbonantistatic 8917,PEN016VAR001,Pente Mofashi carbonantistatic 8917 branco,01/07/2024,,
+PEN017,Pente carbono dourado sem marca,PEN017VAR001,Pente carbono dourado sem marca,01/07/2024,,
+PEN018,Pente tipo Andis dourado sem marca,PEN018VAR001,Pente tipo Andis dourado sem marca,01/07/2024,,"5,00"
+PEN019,Pente de madeira chinês,PEN019VAR001,Pente de madeira chinês,01/07/2024,,
+PEN020,Pente Afro,PEN020VAR003,Pente Afro de metal angulado,01/07/2024,,"7,00"
+PEN021,Pente Disfarce Tru Barber,PEN021VAR001,Pente Curvo Tru Barber branco,01/07/2024,,
+PEN022,Pente Carbono Umi CB605,PEN022VAR001,Pente Carbono Umi CB605 salmão,01/07/2024,,
+PEN022,Pente Carbono Umi CB605,PEN022VAR002,Pente Carbono Umi CB605 bege,01/07/2024,,
+PEN023,Pente Disfarce Tru Barber,PEN023VAR001,Pente Curvo Tru Barber diferente cinza,01/07/2024,,"20,00"
+PEN024,Pente tipo Clipper,PEN024VAR001,Pente tipo Clipper branco,01/07/2024,,"4,00"
+PEN024,Pente tipo Clipper,PEN024VAR002,Pente tipo Clipper preto,01/07/2024,,"4,00"
+PEN024,Pente tipo Clipper,PEN024VAR003,Pente tipo Clipper verde,01/07/2024,,"4,00"
+PEN024,Pente tipo Clipper,PEN024VAR004,Pente tipo Clipper amarelo,01/07/2024,,"4,00"
+PEN025,Pente de bolso/retrô,PEN025VAR001,Pente de bolso/retrô várias cores,01/07/2024,,
+PEN026,Pente de química Beauty Flash,PEN026VAR001,Pente de química Beauty Flash,01/07/2024,,"3,00"
+NDR001,Esponja Nudred simples,NDR001VAR001,Esponja Nudred simples M,01/07/2024,,"3,50"
+NDR002,Esponja Nudred simples estampada,NDR002VAR001,Esponja Nudred simples P estampada,01/07/2024,,"4,50"
+NDR002,Esponja Nudred simples estampada,NDR002VAR002,Esponja Nudred simples M estampada,01/07/2024,,"4,50"
+NDR002,Esponja Nudred simples estampada,NDR002VAR003,Esponja Nudred simples G estampada,01/07/2024,,"4,50"
+NDR003,Esponja Nudred dupla,NDR003VAR001,Esponja Nudred dupla P,01/07/2024,,"6,50"
+NDR003,Esponja Nudred dupla,NDR003VAR002,Esponja Nudred dupla M,01/07/2024,,"6,50"
+NDR003,Esponja Nudred dupla,NDR003VAR003,Esponja Nudred dupla G,01/07/2024,,"6,50"
+ESL001,Espelho de Nuca,ESL001VAR001,Espelho de Nuca de EVA,01/07/2024,,"21,00"
+EPL001,Espelho de Nuca,EPL001VAR002,Espelho de Nuca de madeira,01/07/2024,,
+TES001,Tesoura Tondeo 6 polegadas,TES001VAR001,Tesoura Tondeo 6 polegadas fio laser,01/07/2024,,"35,00"
+TES001,Tesoura Tondeo 6 polegadas,TES001VAR002,Tesoura Tondeo 6 polegadas fio navalha,01/07/2024,,"35,00"
+TES002,"Tesoura Tondeo Primo 6,5 polegadas",TES002VAR001,"Tesoura Tondeo Primo 6,5 polegadas com dedal preto",01/07/2024,,
+TES003,Tesoura de desbaste Tondeo Primo,TES003VAR001,"Tesoura de desbaste Tondeo Primo 6,5 polegadas com dedal preto",01/07/2024,,
+TES003,Tesoura de desbaste Tondeo Primo,TES003VAR002,Tesoura de desbaste Tondeo Primo 6 polegadas com dedal preto,01/07/2024,,"0,00"
+TES004,Pinça Mosquito Reta/Curva Halstead,TES004VAR001,Pinça Mosquito Reta/Curva Halstead 12 cm,01/07/2024,,
+FIX001,Fixador Extreme Pró Verde 400 ml,FIX001VAR001,Extreme Pró Verde 400 ml,01/07/2024,,"17,90"
+FIX002,Fixador Extreme Pró Vermelho 400 ml,FIX002VAR001,Extreme Pró Vermelho 400 ml,01/07/2024,,"18,90"
+FIX003,Fixador Isacare 400 ml,FIX003VAR001,Isacare 400 ml,01/07/2024,,"17,50"
+TOU001,Touca Leon Barber,TOU001VAR001,Touca Leon Barber M,01/07/2024,,"40,00"
+TOU001,Touca Leon Barber,TOU001VAR002,Touca Leon Barber P,01/07/2024,,"40,00"
+AVN001,Avental para barbeiro - marca própria,AVN001VAR001,Avental para barbeiro de couro - marca própria,01/07/2024,,
+AVN002,Avental para barbeiro - outra marca,AVN002VAR001,Avental para barbeiro de sarja - marca própria,01/07/2024,,"25,00"
+SHP001,Shampoo Dom Pelo Anticaspa 250 ml,SHP001VAR001,Shampoo Dom Pelo Anticaspa 250 ml,01/07/2024,,"3,25"
+SHP002,Shampoo Fox,SHP002VAR001,Shampoo Fox 4 em 1,01/07/2024,,
+SHP002,Shampoo Fox,SHP002VAR002,Shampoo Fox Grooming,01/07/2024,,
+SHP002,Shampoo Fox,SHP002VAR003,Shampoo Ice Fresh Fox,01/07/2024,,
+SHA001,Shaving 1L Fox,SHA001VAR001,Shaving 1L Fox,01/07/2024,,
+SHA002,Shaving 1L Dom Pelo,SHA002VAR001,Shaving 1L Dom Pelo,01/07/2024,,
+TAL001,Talco Fox,TAL001VAR001,Talco Fox 140 ml,01/07/2024,,
+TAL002,Talco Dom Pelo,TAL002VAR001,Talco Dom Pelo,01/07/2024,,
+LPR001,Limpador facial Fox,LPR001VAR001,Limpador facial Fox 250g,01/07/2024,,
+FIX004,Fixador Fix Hair Fox,FIX004VAR001,Fix Hair Fox 400 ml,01/07/2024,,
+PBR001,Balm Fox,PBR001VAR001,Balm Fox 120 ml,01/07/2024,,
+POM001,Pomada/Cera Fox,POM001VAR001,Cera Fox Caramelo 130g,01/07/2024,,
+POM001,Pomada/Cera Fox,POM001VAR002,Cera Fox Efeito Seco 120g,01/07/2024,,
+POM001,Pomada/Cera Fox,POM001VAR003,Cera Fox Caramelo 80g,01/07/2024,,
+POM001,Pomada/Cera Fox,POM001VAR004,Cera Fox Pasta Coffe 80g,01/07/2024,,
+POM001,Pomada/Cera Fox,POM001VAR005,Cera Fox Pasta Premium 80g,01/07/2024,,
+POM001,Pomada/Cera Fox,POM001VAR006,Cera Fox Pasta Toque Seco 80g,01/07/2024,,
+POM001,Pomada/Cera Fox,POM001VAR007,Cera Fox Pasta Efeito Teia 80g,01/07/2024,,
+MAS001,Máscara preta anti-acne Dom Pelo 150g,MAS001VAR001,Máscara preta anti-acne Dom Pelo 150g,01/07/2024,,
+MAS002,Máscara black Fox,MAS002VAR001,Máscara black Fox 8g,01/07/2024,,
+CMB001,Cumbuca para tinta/luzes,CMB001VAR001,Cumbuca para tinta/luzes,01/07/2024,,"5,00"
+PNL001,Pincel para tinta/luzes,PNL001VAR001,Pincel para tinta/luzes,01/07/2024,,
+EPL001,Espelho de Nuca,EPL001VAR001,Espátula para tinta/luzes,01/07/2024,,
+OLE001,Óleo para lubrificar máquina,OLE001VAR001,Óleo para lubrificar máquina,01/07/2024,,
+RSL002,Resfriador de lâmina Bravus 400 ml,RSL002VAR001,Resfriador de lâmina Bravus 400 ml,01/07/2024,,"21,00"
+GOL001,Gola Higiência Descartável,GOL001VAR001,Gola Higiência Descartável,01/07/2024,,
+TPT001,Tapete antiderrapante de bancada,TPT001VAR001,Tapete antiderrapante de bancada,01/07/2024,,"12,00"
+NAV001,Navalhete de pressão,NAV001VAR001,Navalhete de pressão preto,01/07/2024,,"35,00"
+NAV001,Navalhete de pressão,NAV001VAR002,Navalhete de pressão dourado,01/07/2024,,"35,00"
+TQR001,Talqueira Barber Pro,TQR001VAR001,Talqueira Barber Pro,01/07/2024,,"13,00"
+ESP001,Espanador Fígaro,ESP001VAR001,Espanador Fígaro Cabo Preto Cerda Branca,01/07/2024,,"4,00"
+ESP001,Espanador Fígaro,ESP001VAR002,Espanador Fígaro Cabo Preto Cerda Preta,01/07/2024,,"4,00"
+GEL001,Gel Cola Amigos Barber,GEL001VAR001,Gel Cola Amigos Barber,01/07/2024,,"4,00"
+EJT001,Estojo de Tesoura,EJT001VAR001,Estojo de tesoura preto,01/07/2024,,"10,00"
+POM002,Pomada modeladora Waves,POM002VAR001,Pomada modeladora Waves Vermelha,01/07/2024,,"5,00"
+POM002,Pomada modeladora Waves,POM002VAR002,Pomada modeladora Waves Roxa,01/07/2024,,"5,00"
+ESP006,Espanador Vassoura/cabo longo,ESP006VAR001,Espanador Vassoura de madeira,01/07/2024,,"13,00"
+ESP007,Espanador Talqueira com botão,ESP007VAR001,Espanador Talqueira com botão cerdas brancas,01/07/2024,,"10,00"
+ESP008,Espanador cilíndrico tipo bolinha,ESP008VAR001,Espanador cilíndrico parecido com o bolinha,01/07/2024,,"10,00"
+AGU001,Agulha Leon Barber,AGU001VAR001,Agulha Leon Barber,01/07/2024,,"5,00"
+DCH001,Ducha de lavatório com filtro,DCH001VAR001,Ducha de lavatório com filtro,01/07/2024,,"12,50"
+DCH001,Ducha de lavatório com filtro,DCH001VAR002,Ducha Black,01/07/2024,,"12,00"
+TES005,Tesoura cirúgica Spencer,TES005VAR001,Tesoura cirúgica Spencer,01/07/2024,,"10,00"
+RSL001,Resfriador de lâmina Maranatta,RSL001VAR001,Resfriador de lâmina Maranatta 400 ml,01/07/2024,,"19,00"
+FIX005,Fixador DRI Works,FIX005VAR001,Fixador DRI Works 400 ml,01/07/2024,,
+CNT001,Caneta preenchedor de barba Suake,CNT001VAR001,Caneta preenchedor de barba Suake 15g,01/07/2024,,"5,00"
+CAP004,Capa Personalizada adulta estampada,CAP004VAR048,Capa personalizada NBA 94,01/07/2024,,"16,00"
+AVN002,Avental para barbeiro - outra marca,AVN002VAR002,Avental para barbeiro de couro - outra marca marrom,01/07/2024,,"25,00"
+CAP003,Capa Silky adulta estampada,CAP003VAR017,Capa Silky Puma Cetim,01/07/2024,,"5,00"
+CAP003,Capa Silky adulta estampada,CAP003VAR018,Capa Silky Burberry,01/07/2024,,"13,00"
+NAV002,Navalhete de dedo,NAV002VAR001,Navalhete de dedo preto,01/07/2024,,"13,00"
+NAV001,Navalhete de pressão,NAV001VAR003,Navalhete de pressão laranja,01/07/2024,,"15,00"
+NAV001,Navalhete de pressão,NAV001VAR004,Navalhete de pressão verde,01/07/2024,,"35,00"
+NAV001,Navalhete de pressão,NAV001VAR005,Navalhete de pressão verde,01/07/2024,,"35,00"
+NAV003,Navalhete básico,NAV003VAR001,Navalhete básico preto com dourado,01/07/2024,,"35,00"
+NAV001,Navalhete de pressão,NAV001VAR006,Navalhete de pressão azul,01/07/2024,,"15,00"
+NAV004,Navalhete de madeira,NAV004VAR001,Navalhete de madeira,01/07/2024,,"35,00"
+NAV001,Navalhete de pressão,NAV001VAR007,Navalhete de pressão prata,01/07/2024,,"20,00"
+NAV005,Navalhete de desbastar,NAV005VAR001,Navalhete de desbastar,01/07/2024,,"15,00"
+TES006,"Tesoura Jaguar 6,5 polegadas",TES006VAR001,"Tesoura Jaguar 6,5 polegadas fio laser",01/07/2024,,
+TES007,Tesoura Mofashi,TES007VAR001,Tesoura Mofashi prata,01/07/2024,,"45,00"
+TES007,Tesoura Mofashi,TES007VAR002,Tesoura Mofashi preta,01/07/2024,,"45,00"
+TES008,Tesoura Umi,TES008VAR001,Tesoura Umi prata,01/07/2024,,"45,00"
+TES007,Tesoura Mofashi,TES007VAR003,Tesoura Mofashi dourada,01/07/2024,,"45,00"
+TES007,Tesoura Mofashi,TES007VAR004,Tesoura Mofashi azul,01/07/2024,,"45,00"
+TES009,Tesoura Umi desfiadeira,TES009VAR001,Tesoura Umi desfiadeira,01/07/2024,,"45,00"
+TES010,Tesoura Mofashi desfiadeira,TES010VAR001,Tesoura Mofashi desfiadeira,01/07/2024,,"45,00"
+TES011,Tesoura cirúgica Romba,TES011VAR001,Tesoura cirúgica Romba reta 15cm,01/07/2024,,"10,00"
+TES012,Tesoura Íris curva,TES012VAR001,Tesoura Íris curva,01/07/2024,,"10,00"
+TES013,Tesoura Íris reta,TES013VAR001,Tesoura Íris reta,01/07/2024,,"10,00"
+TES014,Tesoura cirúgica Romba,TES014VAR001,Tesoura cirúgica Romba curva 15cm,01/07/2024,,"10,00"
+TES015,Tesoura pinça curvada,TES015VAR001,Tesoura pinça curvada,01/07/2024,,"10,00"
+TES016,Pinça reta,TES016VAR001,Pinça reta,01/07/2024,,"10,00"
+CAP004,Capa Personalizada adulta estampada,CAP004VAR049,Capa personalizada Bart supreme,01/07/2024,,"16,00"
+POM003,Pomada modeladora Amigos Barber,POM003VAR001,Pomada modeladora Amigos Barber Caramelo,01/07/2024,,
+POM003,Pomada modeladora Amigos Barber,POM003VAR002,Pomada modeladora Amigos Barber Caramelo,01/07/2024,,
+CAP004,Capa Personalizada adulta estampada,CAP004VAR050,Capa personalizada Bart Popeye,01/07/2024,,"13,00"
+CAP004,Capa Personalizada adulta estampada,CAP004VAR051,Capa personalizada Barber shop,01/07/2024,,"13,00"
+CAP009,"Capa de cetim lisa 1,80 m",CAP009VAR001,"Capa de Cetim 1,80 preta",01/07/2024,,
+CAP009,"Capa de cetim lisa 1,80 m",CAP009VAR002,"Capa de Cetim 1,80 branca",01/07/2024,,
+AOX001,Água Oxigenada Ox Mirage,AOX001VAR001,Água Oxigenada Ox Mirage 450 ml,01/07/2024,,
+BOR001,Borrifador fino e cilíndrico,BOR001VAR004,"Borrifador fino, cilíndrico preto pole com caveira",01/07/2024,,"7,00"
+PMQ001,"Pente para máquina 0,5",PMQ001VAR004,"Pente para máquina verde 0,5",01/07/2024,,"5,00"
+ESP005,Espanador de madeira redonda para capa,ESP005VAR002,Espanador de madeira redonda com cerdas pretas para capa,01/07/2024,,"0,00"
+PUF001,Puff de corte de cabelo infantil,PUF001VAR001,Puff de corte de cabelo infantil marvel,01/07/2024,,"0,00"
+TOP001,Top suplex nadador preto,TOP001VAR001,Top suplex nadador preto M,01/07/2024,,"0,00"
+TOP001,Top suplex nadador preto,TOP001VAR002,Top suplex nadador preto P,01/07/2024,,"0,00"
+TOP001,Top suplex nadador preto,TOP001VAR003,Top suplex nadador preto G,01/07/2024,,"0,00"
+TOP001,Top suplex nadador preto,TOP001VAR004,Top suplex nadador preto GG,01/07/2024,,"0,00"

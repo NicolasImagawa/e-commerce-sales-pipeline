@@ -1,0 +1,63 @@
+WITH results AS (
+    SELECT new_id.main_id,
+        stg_shopee.nome_de_usuario__comprador_ AS buyer__id,
+        stg_shopee.data_de_criacao_do_pedido AS date_created,
+        stg_shopee.hora_completa_do_pedido AS date_approved,
+        stg_shopee.nome_do_produto AS product,
+        stg_shopee.numero_de_referencia_sku AS sku,
+        stg_shopee.quantidade AS qt,
+        stg_shopee.preco_acordado AS price,
+        stg_shopee.taxa_de_comissao AS comission_fee,
+        stg_shopee.taxa_de_servico AS service_fee,
+        stg_shopee.taxa_de_envio_pagas_pelo_comprador AS sh_cost,
+        stg_shopee.desconto_de_frete_aproximado AS sh_discount,
+        stg_shopee.taxa_de_envio_reversa AS reverse_sh_fee,
+        stg_shopee.status_da_devolucao___reembolso AS refund_status
+        FROM shopee.new_id AS new_id, shopee.stg_shopee AS stg_shopee
+        WHERE new_id.id_do_pedido = stg_shopee.id_do_pedido
+) INSERT INTO shopee.orders_results (
+    main_id,
+	buyer__id,
+	date_created,
+	date_approved,
+	product,
+	sku,
+	qt,
+	price,
+	unit_comission_fee,
+	unit_service_fee,
+	sh_cost,
+	sh_discount,
+	reverse_sh_fee,
+	refund_status
+) SELECT results.main_id,
+         results.buyer__id,
+         results.date_created,
+         results.date_approved,
+         results.product,
+         results.sku,
+         results.qt,
+         results.price,
+         results.comission_fee,
+         results.service_fee,
+         results.sh_cost,
+         results.sh_discount,
+         results.reverse_sh_fee,
+         results.refund_status
+    FROM results
+    ON CONFLICT (main_id)
+    DO UPDATE SET main_id = EXCLUDED.main_id,
+                  buyer__id = EXCLUDED.buyer__id,
+                  date_created = EXCLUDED.date_created,
+                  date_approved = EXCLUDED.date_approved,
+                  product = EXCLUDED.product,
+                  sku = EXCLUDED.sku,
+                  qt = EXCLUDED.qt,
+                  price = EXCLUDED.price,
+                  unit_comission_fee = EXCLUDED.unit_comission_fee,
+                  unit_service_fee = EXCLUDED.unit_service_fee,
+                  sh_cost = EXCLUDED.sh_cost,
+                  sh_discount = EXCLUDED.sh_discount,
+                  reverse_sh_fee = EXCLUDED.reverse_sh_fee,
+                  refund_status = EXCLUDED.refund_status
+

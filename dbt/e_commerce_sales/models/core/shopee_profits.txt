@@ -1,0 +1,127 @@
+{{
+    config(
+        materialized='incremental',
+        unique_key='main_id',
+        incremental_strategy='merge'
+    )
+}}
+
+WITH order_date AS (
+	SELECT orders_results.main_id,
+		   orders_results.date_created AS date_paid,
+	   	   orders_results.sku,
+           orders_results.ld_timestamp
+	FROM {{ ref("shopee_orders_results") }} AS orders_results
+
+    {% if is_incremental() %}
+
+        WHERE orders_results.ld_timestamp > (SELECT MAX(ld_timestamp) FROM {{ this }}) /*the "this" keyword compares to shopee_profits table*/
+
+    {% endif %}
+
+), orders_cost AS (
+	SELECT  order_date.main_id,
+            kit.sku,
+            order_date.date_paid,
+            SUM(costs.cost) AS total_prod_cost
+	FROM {{ source("supplies", "kit_components") }} AS kit, 
+		 {{ source("supplies", "product_sku_cost") }} AS costs,
+		 order_date
+	WHERE kit.component_sku = costs.sku
+		AND kit.sku = order_date.sku
+		AND (costs.end_date >= order_date.date_paid OR costs.end_date IS NULL)
+		AND costs.begin_date <= order_date.date_paid
+	GROUP BY order_date.main_id,
+			 order_date.date_paid,
+			 kit.sku
+), update_profits AS (
+    SELECT  orders_results.main_id,
+            orders_results.buyer__id,
+            orders_results.date_created,
+            orders_results.date_approved,
+            orders_results.product,
+            orders_results.sku,
+            orders_results.qt,
+            orders_results.price,
+            orders_results.unit_comission_fee,
+            orders_results.unit_service_fee,
+            orders_results.sh_cost,
+            orders_results.sh_discount,
+            orders_results.reverse_sh_fee,
+            orders_results.refund_status,
+            orders_cost.total_prod_cost,
+            (orders_results.price - orders_results.unit_comission_fee - orders_results.unit_service_fee - orders_cost.total_prod_cost) - orders_results.reverse_sh_fee AS profit,
+            orders_results.ld_timestamp
+    FROM {{ ref('shopee_orders_results') }} AS orders_results
+    LEFT JOIN orders_cost
+        ON orders_results.sku = orders_cost.sku
+        AND orders_results.main_id = orders_cost.main_id
+    {% if is_incremental() %}
+
+        WHERE orders_results.main_id IN (SELECT main_id FROM {{ this }})
+
+    {% endif %}
+), insert_profits AS (
+	SELECT  orders_results.main_id,
+			orders_results.buyer__id,
+			orders_results.date_created,
+			orders_results.date_approved,
+			orders_results.product,
+			orders_results.sku,
+			orders_results.qt,
+			orders_results.price,
+			orders_results.unit_comission_fee,
+			orders_results.unit_service_fee,
+			orders_results.sh_cost,
+			orders_results.sh_discount,
+			orders_results.reverse_sh_fee,
+			orders_results.refund_status,
+			orders_cost.total_prod_cost,
+			(orders_results.price - orders_results.unit_comission_fee - orders_results.unit_service_fee - orders_cost.total_prod_cost) - orders_results.reverse_sh_fee AS profit,
+            orders_results.ld_timestamp
+		FROM {{ ref('shopee_orders_results') }} AS orders_results
+		LEFT JOIN orders_cost
+			ON orders_results.sku = orders_cost.sku
+			AND orders_results.main_id = orders_cost.main_id
+    {% if is_incremental() %}
+
+        WHERE orders_results.main_id NOT IN (SELECT main_id FROM update_profits)
+        
+    {% endif %}
+) SELECT   update_profits.main_id,
+           update_profits.buyer__id,
+           update_profits.date_created,
+           update_profits.date_approved,
+           update_profits.product,
+           update_profits.sku,
+           update_profits.qt,
+           update_profits.price,
+           update_profits.unit_comission_fee,
+           update_profits.unit_service_fee,
+           update_profits.sh_cost,
+           update_profits.sh_discount,
+           update_profits.reverse_sh_fee,
+           update_profits.refund_status,
+           update_profits.total_prod_cost,
+           update_profits.profit,
+           update_profits.ld_timestamp
+    FROM update_profits
+    UNION
+    SELECT  insert_profits.main_id,
+            insert_profits.buyer__id,
+            insert_profits.date_created,
+            insert_profits.date_approved,
+            insert_profits.product,
+            insert_profits.sku,
+            insert_profits.qt,
+            insert_profits.price,
+            insert_profits.unit_comission_fee,
+            insert_profits.unit_service_fee,
+            insert_profits.sh_cost,
+            insert_profits.sh_discount,
+            insert_profits.reverse_sh_fee,
+            insert_profits.refund_status,
+            insert_profits.total_prod_cost,
+            insert_profits.profit,
+            insert_profits.ld_timestamp
+    FROM insert_profits

@@ -1,0 +1,1 @@
+print("Edit this file in case you need to clean product relations.")

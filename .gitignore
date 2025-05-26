@@ -1,0 +1,27 @@
+__pycache__
+tempCodeRunnerFile.py
+normalization-not-working.py
+/logs/*
+/old
+/sql/mercadolivre/old
+/sql/shopee/working files
+.terraform
+.terraform.lock.hcl
+terraform.tfstate
+pending_fixes.txt
+pending_queries
+records
+guide.txt
+nohup.out
+/extraction/mercadolivre/data/clean/*.csv
+/extraction/mercadolivre/data/shipping_cost_ml/*
+/extraction/shopee/data/raw/*
+/entry_data/clean/*.csv
+.ipynb_checkpoints
+
+token.json
+/old
+/dbt/logs/*
+auth.py
+/exceptions
+/venv

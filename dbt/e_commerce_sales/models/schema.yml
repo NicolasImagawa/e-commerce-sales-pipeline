@@ -1,0 +1,35 @@
+version: 2
+
+sources:
+  - name: entry_shopee
+    database: sales_db
+    schema: stg
+    tables:
+      - name: stg_shopee
+
+  - name: entry_ml
+    database: sales_db
+    schema: stg
+    tables:
+      - name: stg_mercadolivre
+      - name: stg_mercadolivre__context__flows
+      - name: stg_mercadolivre__mediations
+      - name: stg_mercadolivre__order_items
+      - name: stg_mercadolivre__order_items__item__variation_attributes
+      - name: stg_mercadolivre__payments
+      - name: stg_mercadolivre__payments__available_actions
+      - name: stg_mercadolivre__tags
+      - name: stg_mercadolivre_sh
+
+  - name: supplies
+    database: sales_db
+    schema: supplies
+    tables:
+      - name: product_sku_cost
+        external:
+          location: /input_data/clean/clean_cost_data.csv
+          file_format: csv
+      - name: kit_components
+        external:
+          location: /input_data/clean/kit_components.csv
+          file_format: csv
