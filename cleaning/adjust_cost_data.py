@@ -2,8 +2,8 @@ def clean_cost_data (test_run):
     import pandas as pd
 
     if test_run:
-        cost_data_path = "./cleaning/entry_data/raw/cleaning_sample.csv"
-        output_path = "./cleaning/entry_data/clean/clean_sample.csv"
+        cost_data_path = "./entry_data/raw/cleaning_sample.csv"
+        output_path = "./entry_data/clean/clean_sample.csv"
     else:
         cost_data_path = "/opt/airflow/cleaning/entry_data/raw/cost_data.csv"
         output_path = "/opt/airflow/cleaning/entry_data/clean/clean_cost_data.csv"
