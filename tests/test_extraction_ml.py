@@ -3,7 +3,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from extraction.mercadolivre.script import extract_mercado
+from extraction.mercadolivre.script.extract_data import extract_mercado
 
 def test_extraction():
     test_results = extract_mercado()
