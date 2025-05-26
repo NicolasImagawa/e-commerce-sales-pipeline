@@ -9,6 +9,18 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    env:
+      ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+      CLIENT_ID: ${{ secrets.CLIENT_ID }}
+      CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
+      CODE: ${{ secrets.CODE }}
+      EXPIRES_IN: ${{ secrets.EXPIRES_IN }}
+      REDIRECT_URI: ${{ secrets.REDIRECT_URI }}
+      REFRESH_TOKEN: ${{ secrets.REFRESH_TOKEN }}
+      SCOPE: ${{ secrets.SCOPE }}
+      SELLER_ID: ${{ secrets.SELLER_ID }}
+      TOKEN_TYPE: ${{ secrets.TOKEN_TYPE }}
+      USER_ID: ${{ secrets.USER_ID }}
     strategy:
       matrix:
         python-version: ["3.8", "3.9", "3.10"]
@@ -26,22 +38,6 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
         pip install pytest pytest-cov
-
-    - name: Set other environment variables
-      env:
-        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        CLIENT_ID: ${{ secrets.CLIENT_ID }}
-        CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
-        CODE: ${{ secrets.CODE }}
-        EXPIRES_IN: ${{ secrets.EXPIRES_IN }}
-        REDIRECT_URI: ${{ secrets.REDIRECT_URI }}
-        REFRESH_TOKEN: ${{ secrets.REFRESH_TOKEN }}
-        SCOPE: ${{ secrets.SCOPE }}
-        SELLER_ID: ${{ secrets.SELLER_ID }}
-        TOKEN_TYPE: ${{ secrets.TOKEN_TYPE }}
-        USER_ID: ${{ secrets.USER_ID }}
-      run: |
-        echo "Environment variables set"
     
     - name: Run tests
       run: |
