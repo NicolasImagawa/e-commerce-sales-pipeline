@@ -15,6 +15,7 @@ guide.txt
 nohup.out
 /extraction/mercadolivre/data/clean/*.csv
 /extraction/mercadolivre/data/shipping_cost_ml/*
+/extraction/mercadolivre/prototypes/*
 /extraction/shopee/data/raw/*
 /entry_data/clean/*.csv
 .ipynb_checkpoints
