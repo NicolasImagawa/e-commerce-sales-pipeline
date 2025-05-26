@@ -27,9 +27,6 @@ jobs:
         pip install -r requirements.txt
         pip install pytest pytest-cov
 
-    - name: Set test_run environment variable
-      run: echo "TEST_RUN=True" >> $GITHUB_ENV
-
     - name: Set other environment variables
       env:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
@@ -43,6 +40,8 @@ jobs:
         SELLER_ID: ${{ secrets.SELLER_ID }}
         TOKEN_TYPE: ${{ secrets.TOKEN_TYPE }}
         USER_ID: ${{ secrets.USER_ID }}
+      run: |
+        echo "Environment variables set"
     
     - name: Run tests
       run: |
