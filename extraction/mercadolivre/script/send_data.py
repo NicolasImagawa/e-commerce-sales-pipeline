@@ -8,7 +8,7 @@ def postgres_ingestion_ml(test_run):
     pipeline = dlt.pipeline(
         pipeline_name="mercadolivre_data",
         dataset_name="stg",
-        destination=postgres(credentials="postgresql://airflow:airflow@pgdatabase/sales_db"),
+        destination=postgres(credentials="postgresql://airflow:airflow@pgdatabase:5432/sales_db"),
     )
     
     if test_run:
