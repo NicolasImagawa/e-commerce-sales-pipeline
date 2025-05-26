@@ -1,6 +1,7 @@
 def get_access_token():
     import requests
     import json
+    import pathlib
 
     config_path = "./extraction/mercadolivre/script/configs/user.json"
 
@@ -31,3 +32,7 @@ def get_access_token():
 
     with open("./extraction/mercadolivre/token.json", "w+", encoding="utf-8") as token_json:
          json.dump(response.json(), token_json)
+
+    is_json = (pathlib.Path('/foo/bar.txt').suffix == ".json")
+
+    return is_json
