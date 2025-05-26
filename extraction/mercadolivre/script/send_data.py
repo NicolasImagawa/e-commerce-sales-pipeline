@@ -5,10 +5,21 @@ def postgres_ingestion_ml(test_run):
     import os
     import pathlib
 
+    if test_run:
+        dir = "./extraction/mercadolivre/data/raw/sample.json"
+        files = [dir]
+        creds = "postgresql://airflow:airflow@localhost:5432/sales_db"
+    else:
+        dir = "./extraction/mercadolivre/data/raw/"
+        filelist = os.listdir(dir)
+        files = [f"{dir}{file}" for file in filelist]
+        creds = "postgresql://airflow:airflow@pgdatabase/sales_db"
+
+
     pipeline = dlt.pipeline(
         pipeline_name="mercadolivre_data",
         dataset_name="stg",
-        destination=postgres(credentials="postgresql://airflow:airflow@pgdatabase:5432/sales_db"),
+        destination=postgres(credentials=creds),
     )
     
     if test_run:
