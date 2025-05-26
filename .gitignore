@@ -20,7 +20,7 @@ nohup.out
 /entry_data/clean/*.csv
 .ipynb_checkpoints
 
-token.json
+
 /old
 /dbt/logs/*
 auth.py
