@@ -55,7 +55,7 @@ jobs:
     - name: create network
       run:
         docker-compose up -d
-    
+
     - name: Run tests
       run: |
         pytest --cov=./ --cov-report=xml
