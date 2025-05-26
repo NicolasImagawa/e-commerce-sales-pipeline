@@ -1,27 +1,38 @@
-def extract_mercado():
+def extract_mercado(test_run):
     import requests
     import json
     import pathlib
+    import os
 
-    config_path = "./extraction/mercadolivre/script/configs/user.json"
+    if test_run == False:
+        config_path = "./extraction/mercadolivre/script/configs/user.json"
+        token_filepath = "./extraction/mercadolivre/token.json"
 
-    with open (config_path, "r") as config_file:
-        user_configs = json.load(config_file)
+        with open (config_path, "r") as config_file:
+            user_configs = json.load(config_file)
+
+        seller_id = user_configs["seller_id"]
+
+        with open(token_filepath, "r") as token_json:
+            token_file = json.load(token_json)
+
+        access_token = token_file["access_token"]
+
+        order_data_created_from = "2024-07-01T00:00:00.000-03:00"
+        order_data_created_to = "2025-04-01T00:00:00.000-03:00"
+
+    else:
+        seller_id = os.environ["SELLER_ID"]
+        access_token = os.environ["ACCESS_TOKEN"]
+        order_data_created_from = "2024-07-01T00:00:00.000-03:00"
+        order_data_created_to = "2024-10-01T00:00:00.000-03:00"
 
     limit = 50
     offset = 0
     file_num = 0
-    is_csv = True
+    is_json = True
 
     while True:
-        token_filepath = "./extraction/mercadolivre/token.json"
-        with open(token_filepath, "r") as token_json:
-            token_file = json.load(token_json)
-        
-        seller_id = user_configs["seller_id"]
-
-        order_data_created_from = "2024-07-01T00:00:00.000-03:00"
-        order_data_created_to = "2025-04-01T00:00:00.000-03:00"
         url = (
                 f"https://api.mercadolibre.com/orders/search?seller={seller_id}"
                 f"&order.date_created.from={order_data_created_from}"
@@ -30,7 +41,6 @@ def extract_mercado():
                 f"&limit={limit}"
             )
 
-        access_token = token_file["access_token"]
         headers = {
             "Authorization": f"Bearer {access_token}"
         }
@@ -41,20 +51,23 @@ def extract_mercado():
         if not data["results"]:
             break
 
-        with open(f"./extraction/mercadolivre/data/raw/ml_sell_data_{order_data_created_from}_{order_data_created_to}_{file_num}.json", "w", encoding="utf-8") as data_json:
+        download_path = f"./extraction/mercadolivre/data/raw/ml_sell_data_{order_data_created_from}_{order_data_created_to}_{file_num}.json"
+
+        with open(download_path, "w", encoding="utf-8") as data_json:
             json.dump(data["results"], data_json)
 
         offset += limit
         file_num += 1
         print(offset, data["results"])
 
-        is_csv = (pathlib.Path('/foo/bar.txt').suffix == ".csv")
+        is_json = (pathlib.Path(download_path).suffix == ".json")
 
     results_dict = {
         "orders_range": (order_data_created_from < order_data_created_to),
-        "all_csv": is_csv
+        "all_json": is_json
     }
 
-    return results_dict
-
-# get_access_token()
+    if test_run == True:
+        return results_dict
+    else:
+        print("Data successfully extracted.")

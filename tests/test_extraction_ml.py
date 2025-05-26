@@ -9,4 +9,4 @@ def test_extraction():
     test_results = extract_mercado()
 
     assert test_results["orders_range"] == True
-    assert test_results["all_csv"] == True
+    assert test_results["all_json"] == True
