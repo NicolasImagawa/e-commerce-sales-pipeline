@@ -21,6 +21,9 @@ jobs:
       SELLER_ID: ${{ secrets.SELLER_ID }}
       TOKEN_TYPE: ${{ secrets.TOKEN_TYPE }}
       USER_ID: ${{ secrets.USER_ID }}
+      SHIPPING_ID_TEST_1: ${{ secrets.SHIPPING_ID_TEST_1 }}
+      LIST_COST: ${{ secrets.LIST_COST }}
+      SHIPPING_SAMPLE: ${{ secrets.SHIPPING_SAMPLE }}
     strategy:
       matrix:
         python-version: ["3.9", "3.10", "3.11"]

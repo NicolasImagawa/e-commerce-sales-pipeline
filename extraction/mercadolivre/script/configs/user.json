@@ -1,7 +1,7 @@
 {
-    "client_id": 5691318154785215,
-    "client_secret": "eQUxjYLIWE2I7uMalRPHkyDS7DM9OnvV",
-    "code": "TG-6834c72c537c720001556c62-187745286",
-    "seller_id": 187745286,
+    "client_id": 0000000000000000,
+    "client_secret": "your secret",
+    "code": "your code",
+    "seller_id": 123456789,
     "redirect_uri": "https://github.com/NicolasImagawa"
 }

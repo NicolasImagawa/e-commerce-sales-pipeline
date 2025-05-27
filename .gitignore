@@ -19,7 +19,8 @@ nohup.out
 /extraction/shopee/data/raw/*
 /entry_data/clean/*.csv
 .ipynb_checkpoints
-
+user-local.json
+token.json
 
 /old
 /dbt/logs/*

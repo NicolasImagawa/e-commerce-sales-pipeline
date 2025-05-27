@@ -1,17 +1,23 @@
-def get_shipping_id():
+def get_shipping_id(test_run):
     import pandas as pd
+    import os
 
-    id_path = "./extraction/mercadolivre/data/clean/shipping_ids_mercadolivre.csv"
-    
-    df = pd.read_csv(id_path, encoding="utf-8")
+    if test_run:
+        id = os.environ["SHIPPING_ID"]
+        shipping_ids = [id]
 
-    df["shipping__id"] = df["shipping__id"].astype(int)
-    shipping_ids = df["shipping__id"].tolist()
+    else:
+        id_path = "./extraction/mercadolivre/data/clean/shipping_ids_mercadolivre.csv"
+
+        df = pd.read_csv(id_path, encoding="utf-8")
+
+        df["shipping__id"] = df["shipping__id"].astype(int)
+        shipping_ids = df["shipping__id"].tolist()
 
     # get_access_token(shipping_ids)
-    extract_shipping_cost(shipping_ids)
+    extract_shipping_cost(shipping_ids, test_run)
 
-def extract_shipping_cost(sh_list):
+def extract_shipping_cost(sh_list, test_run):
     import requests
     import json
 
@@ -45,6 +51,15 @@ def extract_shipping_cost(sh_list):
         offset += limit
         file_num += 1
         print(offset, data)
+    
+    if test_run:
+        
+        test_results = {
+            "id": data["id"],
+            "list_cost": data ["lead_time"]["list_cost"]
+        }
 
+        return test_results
+    
 # get_shipping_id()
 # get_access_token()
