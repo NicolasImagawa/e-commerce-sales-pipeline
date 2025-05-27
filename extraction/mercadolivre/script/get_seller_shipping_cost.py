@@ -59,8 +59,8 @@ def extract_shipping_cost(sh_list, test_run):
             "id": data["id"],
             "list_cost": data["lead_time"]["list_cost"]
         }
-        print("json file id is: " + data["id"])
-        print("test results id is:" + test_results["id"])
+        print("json file id is: " + str(data["id"]))
+        print("test results id is:" + str(test_results["id"]))
 
         return test_results
     
