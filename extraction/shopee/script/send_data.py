@@ -1,13 +1,16 @@
-def postgres_ingestion_shopee():
+def postgres_ingestion_shopee(test_run):
     import pandas as pd
     from sqlalchemy import create_engine
     import os
     import pathlib
 
-    dir = "./extraction/shopee/data/raw/"
-    filelist = os.listdir(dir)
-
-    files = [f"{dir}{file}" for file in filelist]
+    if test_run:
+        dir = "./extraction/shopee/data/raw/sample.xlsx"
+        files = [dir]
+    else:
+        dir = "./extraction/shopee/data/raw/"
+        filelist = os.listdir(dir)
+        files = [f"{dir}{file}" for file in filelist]
 
     for file in files:
         if pathlib.Path(file).suffix == ".xlsx":
@@ -38,6 +41,9 @@ def postgres_ingestion_shopee():
                 print("--------------------------------------------------")
         else:
             print(f"[WARNING] - file {file} does not have .xlsx extension and could not be loaded.")
+
+    print("All data successfully loaded!")
+    return 1
 
 def clean_name(name):
     from unidecode import unidecode
