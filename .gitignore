@@ -21,7 +21,8 @@ nohup.out
 .ipynb_checkpoints
 user-local.json
 token.json
-
+sample.json
+test_id.py
 /old
 /dbt/logs/*
 auth.py
