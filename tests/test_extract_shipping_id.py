@@ -12,5 +12,5 @@ def test_shipping_extraction():
     print("On test function:")
     print(test_results)
     print(test_results["id"], type(test_results["id"]))
-    assert test_results["id"] == os.environ["SHIPPING_ID_TEST_1"]
-    assert test_results["list_cost"] == os.environ["LIST_COST"]
+    assert test_results["id"] == int(os.environ["SHIPPING_ID_TEST_1"]])
+    assert test_results["list_cost"] == int(os.environ["LIST_COST"])
