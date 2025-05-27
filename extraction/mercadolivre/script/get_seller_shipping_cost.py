@@ -15,7 +15,11 @@ def get_shipping_id(test_run):
         shipping_ids = df["shipping__id"].tolist()
 
     # get_access_token(shipping_ids)
-    extract_shipping_cost(shipping_ids, test_run)
+    if test_run:
+        test_data = extract_shipping_cost(shipping_ids, test_run)
+        return test_data
+    else:
+        extract_shipping_cost(shipping_ids, test_run)
 
 def extract_shipping_cost(sh_list, test_run):
     import requests
