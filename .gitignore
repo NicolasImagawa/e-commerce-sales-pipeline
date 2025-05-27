@@ -14,7 +14,7 @@ records
 guide.txt
 nohup.out
 /extraction/mercadolivre/data/clean/*.csv
-/extraction/mercadolivre/data/shipping_cost_ml/*
+/extraction/mercadolivre/data/shipping_cost_ml/*.json
 /extraction/mercadolivre/prototypes/*
 /extraction/shopee/data/raw/*
 /entry_data/clean/*.csv
