@@ -45,6 +45,9 @@ def extract_shipping_cost(sh_list, test_run):
         response = requests.get(url, headers=headers)
         data = response.json()
         print(type(data))
+        print(data["id"], type(data["id"]))
+        print(data["lead_time"]["list_cost"], type(data["lead_time"]["list_cost"]))
+
         with open(f"./extraction/mercadolivre/data/shipping_cost_ml/sh_cost_{file_num}.json", "w", encoding="utf-8") as data_json:
             json.dump(data, data_json)
 
