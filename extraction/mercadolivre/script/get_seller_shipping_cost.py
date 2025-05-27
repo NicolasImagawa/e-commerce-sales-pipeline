@@ -3,7 +3,7 @@ def get_shipping_id(test_run):
     import os
 
     if test_run:
-        id = os.environ["SHIPPING_ID"]
+        id = os.environ["SHIPPING_ID_TEST_1"]
         shipping_ids = [id]
 
     else:
