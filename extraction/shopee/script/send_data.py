@@ -5,7 +5,7 @@ def postgres_ingestion_shopee(test_run):
     import pathlib
 
     if test_run:
-        dir = "./extraction/shopee/data/raw/sample.xlsx"
+        dir = "./extraction/shopee/data/sample/sample.xlsx"
         files = [dir]
     else:
         dir = "./extraction/shopee/data/raw/"
