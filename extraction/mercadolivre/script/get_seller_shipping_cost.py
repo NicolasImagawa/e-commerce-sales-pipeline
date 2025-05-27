@@ -50,15 +50,13 @@ def extract_shipping_cost(sh_list, test_run):
 
         offset += limit
         file_num += 1
-        print(offset, data)
     
     if test_run:
-        data_dict = json.loads(str(data))
         test_results = {
-            "id": data_dict["id"],
-            "list_cost": data_dict["lead_time"]["list_cost"]
+            "id": data["id"],
+            "list_cost": data["lead_time"]["list_cost"]
         }
-        print("json file id is: " + data_dict["id"])
+        print("json file id is: " + data["id"])
         print("test results id is:" + test_results["id"])
 
         return test_results
