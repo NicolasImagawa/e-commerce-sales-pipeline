@@ -53,10 +53,10 @@ def extract_shipping_cost(sh_list, test_run):
         print(offset, data)
     
     if test_run:
-        
+        data_dict = json.loads(data)
         test_results = {
-            "id": data["id"],
-            "list_cost": data ["lead_time"]["list_cost"]
+            "id": data_dict["id"],
+            "list_cost": data_dict["lead_time"]["list_cost"]
         }
 
         return test_results
