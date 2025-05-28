@@ -24,6 +24,7 @@ def get_shipping_id(test_run):
 def extract_shipping_cost(sh_list, test_run):
     import requests
     import json
+    import os
 
     limit = 50
     offset = 0
@@ -31,16 +32,19 @@ def extract_shipping_cost(sh_list, test_run):
 
     sh_ids = sh_list
 
-    for id in sh_ids:
+    if test_run:
+        access_token = os.environ["ACCESS_TOKEN"]
+    else:
         token_filepath = "./extraction/mercadolivre/token.json"
         with open(token_filepath, "r") as token_json:
             token_file = json.load(token_json)
+        access_token = token_file["access_token"]
 
+    for id in sh_ids:
         url = (
                 f"https://api.mercadolibre.com/shipments/{id}"
             )
-
-        access_token = token_file["access_token"]
+        
         headers = {
             "Authorization": f"Bearer {access_token}",
             "X-Format-New": "true"
