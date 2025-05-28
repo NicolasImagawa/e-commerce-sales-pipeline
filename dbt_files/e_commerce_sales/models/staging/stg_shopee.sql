@@ -5,4 +5,4 @@
 }}
 
 SELECT *
-FROM {{ ("entry_shopee", "stg_shopee") }}
+FROM {{ source("entry_shopee", "stg_shopee") }}

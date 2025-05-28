@@ -5,4 +5,4 @@
 }}
 
 SELECT *
-FROM {{ ("supplies", "product_sku_cost") }}
+FROM {{ source("supplies", "product_sku_cost") }}

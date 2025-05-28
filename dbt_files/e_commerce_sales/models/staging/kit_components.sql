@@ -5,4 +5,4 @@
 }}
 
 SELECT *
-FROM {{ ("supplies", "kit_components") }}
+FROM {{ source("supplies", "kit_components") }}
