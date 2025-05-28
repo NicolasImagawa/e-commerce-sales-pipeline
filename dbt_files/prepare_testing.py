@@ -11,7 +11,7 @@ def run_empty_shopee_tables(test_run):
     dbt = dbtRunner()
     cli_args = [
                     "run",
-                    "--select"
+                    "--select",
                     "entry_shopee",
                     "shopee_new_id",
                     "supplies",
