@@ -93,6 +93,10 @@ def test_transform():
         SELECT * FROM stg.stg_shopee
     """)
 
+    # Print column headers first
+    column_names = [desc[0] for desc in cursor.description]
+    print("|".join(column_names))
+
     print("\n******* installing dependencies *******")
     install_dependencies(test_run = True)
     print("\n******* running empty parent tables *******")
