@@ -7,7 +7,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from extraction.shopee.script.send_data import postgres_ingestion_shopee
 
-def test_load_ml():
+def test_load_shopee():
     print("\n=================== test_load_shopee.py started ===================")
     conn = psycopg2.connect(database = "postgres", user = "airflow", host= 'localhost', password = "airflow", port = 5432) #uses maintenance db to create the infrastructure
     cursor = conn.cursor()
