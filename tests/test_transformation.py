@@ -80,6 +80,14 @@ def test_transform():
                                 load_timestamp timestamp without time zone
                             )
                            """).format(sql.Identifier("stg_shopee")))
+    cursor.execute("""
+        INSERT INTO stg.stg_shopee (
+            id_do_pedido, numero_de_referencia_sku, subtotal_do_produto,
+            taxa_de_comissao, taxa_de_servico, preco_acordado, load_timestamp
+        ) VALUES (
+            '1', 'ABC001VAR001', 10.99, 1, 1, 10.99, '2025-05-20 17:16:13.338174'
+        )
+    """)
 
     print("\n******* installing dependencies *******")
     install_dependencies(test_run = True)
