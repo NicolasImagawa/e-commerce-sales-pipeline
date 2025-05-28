@@ -6,7 +6,7 @@ unit_tests:
       macros:
         is_incremental: false 
     given:
-      - input: source("entry_shopee", "stg_shopee")
+      - input: ref("stg_shopee")
         rows:
           - {id_do_pedido: 1, numero_de_referencia_sku: "ABC001VAR001", subtotal_do_produto: 10.99, taxa_de_comissao: 1, taxa_de_servico: 1, preco_acordado: 10.99, load_timestamp: "2025-05-20 17:16:13.338174"}
 
@@ -14,11 +14,11 @@ unit_tests:
         rows:
           - {id_do_pedido: 1, numero_de_referencia_sku: "ABC001VAR001", main_id: "1ABC001VAR001", load_timestamp: "2025-05-20 17:16:13.338174"}
 
-      - input: source("supplies", "kit_components")
+      - input: ref("kit_components")
         rows:
           - {sku: "ABC001VAR001",component_sku: "ABC001VAR001"}
 
-      - input: source("supplies", "product_sku_cost")
+      - input: ref("product_sku_cost")
         rows:
           - {component_sku: "ABC001VAR001", cost: 3.00}
     expect:
