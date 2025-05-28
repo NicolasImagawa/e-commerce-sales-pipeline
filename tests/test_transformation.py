@@ -6,7 +6,7 @@ from psycopg2 import sql
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from dbt_files.install_deps import install_dependencies
-from dbt_files.prepare_testing import run_empty_shopee_fact_table
+from dbt_files.prepare_testing import run_empty_shopee_tables
 from dbt_files.prepare_testing import run_shopee_fact_table
 
 def test_transform():
@@ -19,7 +19,7 @@ def test_transform():
     print("\n******* installing dependencies *******")
     install_dependencies(test_run = True)
     print("\n******* running empty parent tables *******")
-    run_empty_shopee_fact_table(test_run = True)
+    run_empty_shopee_tables(test_run = True)
     print("\n******* testing shopee fact table *******")
     test_results = run_shopee_fact_table(test_run = True)
 

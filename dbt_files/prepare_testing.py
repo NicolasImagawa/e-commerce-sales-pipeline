@@ -1,4 +1,4 @@
-def run_empty_shopee_fact_table(test_run):
+def run_empty_shopee_tables(test_run):
     from dbt.cli.main import dbtRunner, dbtRunnerResult
 
     if test_run:
@@ -9,24 +9,25 @@ def run_empty_shopee_fact_table(test_run):
         PROJECT_PATH = "/opt/airflow/dbt_files/e_commerce_sales"
 
     dbt = dbtRunner()
-    # cli_args = [
-    #                 "run",
-    #                 "entry_shopee",
-    #                 "shopee_new_id",
-    #                 "supplies",
-    #                 "--empty",
-    #                 "--profiles-dir",
-    #                 PROFILE_PATH,
-    #                 "--project-dir",
-    #                 PROJECT_PATH
-    #            ]
     cli_args = [
-                    "build",
+                    "run",
+                    "--select"
+                    "entry_shopee",
+                    "shopee_new_id",
+                    "supplies",
+                    "--empty",
                     "--profiles-dir",
                     PROFILE_PATH,
                     "--project-dir",
                     PROJECT_PATH
                ]
+    # cli_args = [
+    #                 "build",
+    #                 "--profiles-dir",
+    #                 PROFILE_PATH,
+    #                 "--project-dir",
+    #                 PROJECT_PATH
+    #            ]
 
     result = dbt.invoke(cli_args)
     if result.success:
