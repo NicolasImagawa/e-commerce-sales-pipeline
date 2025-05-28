@@ -61,7 +61,7 @@ jobs:
 
     - name: install dbt deps
       run:
-        dbt deps --select stg_shopee shopee_new_id kit_components product_sku_cost --empty --profiles-dir ./dbt_files/e_commerce_sales/tests --project-dir ./dbt_files/e_commerce_sales
+        dbt deps --profiles-dir ./dbt_files/e_commerce_sales/tests --project-dir ./dbt_files/e_commerce_sales
 
     - name: create shopee dbt tables
       run:
