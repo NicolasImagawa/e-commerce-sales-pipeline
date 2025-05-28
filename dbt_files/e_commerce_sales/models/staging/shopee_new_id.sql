@@ -11,7 +11,7 @@ WITH new_data AS (
             numero_de_referencia_sku AS sku,
             CONCAT(id_do_pedido, numero_de_referencia_sku) AS main_id,
             MAX(load_timestamp) AS load_timestamp /*Protects against duplicates on the staging table*/
-    FROM {{ source('entry_shopee', 'stg_shopee') }}
+    FROM {{ ref('stg_shopee') }}
 
     {% if is_incremental() %}
 
