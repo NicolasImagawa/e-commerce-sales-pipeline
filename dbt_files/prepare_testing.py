@@ -50,7 +50,8 @@ def run_shopee_fact_table(test_run):
 
     result = dbt.invoke(cli_args)
     if result.success:
-        print("Test successfully finished.")
+        print("************Test successfully finished.************")
+        print(result)
     else:
         print("dbt deps failed!")
         print(result.exception)

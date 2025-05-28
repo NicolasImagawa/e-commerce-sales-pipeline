@@ -19,7 +19,6 @@ def dbt_unit_test():
     install_dependencies(test_run = True)
     run_empty_shopee_fact_table(test_run = True)
     test_results = run_shopee_fact_table(test_run = True)
-    print(test_results)
 
     cursor.execute(sql.SQL("DROP DATABASE {}").format(sql.Identifier("sales_db")))
 
