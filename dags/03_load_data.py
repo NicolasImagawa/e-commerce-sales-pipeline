@@ -27,12 +27,14 @@ with DAG (
 
     load_mercadolivre = PythonOperator(
                     task_id='load_mercadolivre',
-                    python_callable=postgres_ingestion_ml
+                    python_callable=postgres_ingestion_ml,
+                    op_kwargs = {'test_run': False}
                 )
 
     load_shopee = PythonOperator(
                     task_id='load_shopee',
-                    python_callable=postgres_ingestion_shopee
+                    python_callable=postgres_ingestion_shopee,
+                    op_kwargs = {'test_run': False}
                 )
     
     load_prod_cost = PythonOperator(
@@ -47,7 +49,8 @@ with DAG (
     
     load_sh_costs = PythonOperator(
                     task_id='load_sh_costs',
-                    python_callable=postgres_ingestion_sh_costs
+                    python_callable=postgres_ingestion_sh_costs,
+                    op_kwargs = {'test_run': False}
                 )
     
     start_dag >> [load_mercadolivre, load_shopee, load_prod_cost, load_kits, load_sh_costs]

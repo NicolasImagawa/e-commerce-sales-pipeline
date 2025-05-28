@@ -23,7 +23,8 @@ with DAG (
 
     clean_supplies_prices = PythonOperator(
                     task_id='clean_cost_data',
-                    python_callable = clean_cost_data
+                    python_callable = clean_cost_data,
+                    op_kwargs = {'test_run': False}
                 )
 
     start_dag >> clean_supplies_prices

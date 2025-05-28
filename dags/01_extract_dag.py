@@ -25,17 +25,20 @@ with DAG (
 
     ml_access_token = PythonOperator(
                     task_id = 'ml_access_token',
-                    python_callable = get_access_token
+                    python_callable = get_access_token,
+                    op_kwargs = {'test_run': False}
                 )
 
     extract_ml = PythonOperator(
                     task_id = 'extract_ml',
-                    python_callable = extract_mercado
+                    python_callable = extract_mercado,
+                    op_kwargs = {'test_run': False}
                 )
     
     extract_ml_ship_cost = PythonOperator( #This has to occur after the data is loaded to the warehouse. Got to fix it
                     task_id = 'extract_ml_ship_cost',
-                    python_callable = get_shipping_id
+                    python_callable = get_shipping_id,
+                    op_kwargs = {'test_run': False}
                 )
 
     # extract_shopee is not available due to platform issues
