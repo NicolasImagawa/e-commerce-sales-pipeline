@@ -12,7 +12,7 @@ def run_empty_shopee_tables(test_run):
     cli_args = [
                     "run",
                     "--select",
-                    "stg_shopee"
+                    "stg_shopee",
                     "entry_shopee",
                     "shopee_new_id",
                     "supplies",
