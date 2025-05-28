@@ -58,7 +58,6 @@ def extract_mercado(test_run):
 
         offset += limit
         file_num += 1
-        print(offset, data["results"])
 
         is_json = (pathlib.Path(download_path).suffix == ".json")
 
@@ -68,6 +67,7 @@ def extract_mercado(test_run):
     }
 
     if test_run == True:
+        print("Data successfully extracted.")
         return results_dict
     else:
         print("Data successfully extracted.")
