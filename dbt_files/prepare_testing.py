@@ -21,7 +21,7 @@ def run_empty_shopee_tables(test_run):
     #            ]
     cli_args = [
                     "build",
-                    "--empty"
+                    "--empty",
                     "--profiles-dir",
                     PROFILE_PATH,
                     "--project-dir",
