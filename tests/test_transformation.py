@@ -104,7 +104,7 @@ def test_transform():
     print("\n******* testing shopee fact table *******")
     test_results = run_shopee_fact_table(test_run = True)
 
-    cursor.execute(sql.SQL("DROP DATABASE {}").format(sql.Identifier("sales_db")))
+    # cursor.execute(sql.SQL("DROP DATABASE {}").format(sql.Identifier("sales_db")))
     print("=================== test_transformation.py finished ===================")
 
     assert test_results == True
