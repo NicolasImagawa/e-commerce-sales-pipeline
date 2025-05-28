@@ -1,8 +1,12 @@
-def install_dependencies():
+def install_dependencies(test_run):
     from dbt.cli.main import dbtRunner, dbtRunnerResult
 
-    PROFILE_PATH = "/opt/airflow/dbt/e_commerce_sales"
-    PROJECT_PATH = "/opt/airflow/dbt/e_commerce_sales"
+    if test_run:
+        PROFILE_PATH = "./dbt/e_commerce_sales"
+        PROJECT_PATH = "./dbt/e_commerce_sales"
+    else:
+        PROFILE_PATH = "/opt/airflow/dbt/e_commerce_sales"
+        PROJECT_PATH = "/opt/airflow/dbt/e_commerce_sales"
 
     dbt = dbtRunner()
     cli_args = [
@@ -20,3 +24,4 @@ def install_dependencies():
         print("dbt deps failed!")
         print(result.exception)
         raise RuntimeError("dbt deps failed")
+    
