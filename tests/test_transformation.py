@@ -16,6 +16,11 @@ def test_transform():
     conn.autocommit = True
     
     cursor.execute(sql.SQL("CREATE DATABASE {}").format(sql.Identifier("sales_db")))
+
+    conn = psycopg2.connect(database = "sales_db", user = "airflow", host= 'localhost', password = "airflow", port = 5432)
+    cursor.execute(sql.SQL("CREATE SCHEMA {}").format(sql.Identifier("stg")))
+    cursor.execute(sql.SQL("CREATE TABLE IF NOT EXISTS {}").format(sql.Identifier("stg_shopee")))
+
     print("\n******* installing dependencies *******")
     install_dependencies(test_run = True)
     print("\n******* running empty parent tables *******")
