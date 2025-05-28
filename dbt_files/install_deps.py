@@ -2,7 +2,7 @@ def install_dependencies(test_run):
     from dbt.cli.main import dbtRunner, dbtRunnerResult
 
     if test_run:
-        PROFILE_PATH = "./dbt_files/e_commerce_sales"
+        PROFILE_PATH = "./dbt_files/e_commerce_sales/tests"
         PROJECT_PATH = "./dbt_files/e_commerce_sales"
     else:
         PROFILE_PATH = "/opt/airflow/dbt_files/e_commerce_sales"
