@@ -89,6 +89,10 @@ def test_transform():
         )
     """)
 
+    cursor.execute("""
+        SELECT * FROM stg.stg_shopee
+    """)
+
     print("\n******* installing dependencies *******")
     install_dependencies(test_run = True)
     print("\n******* running empty parent tables *******")
