@@ -1,0 +1,74 @@
+[0m14:00:38.034933 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F7355B58E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F737641C40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F737641F40>]}
+
+
+============================== 14:00:38.047580 | ecdd4eeb-f0b1-4e2f-9b4d-b08a27ca07bc ==============================
+[0m14:00:38.047580 [info ] [MainThread]: Running with dbt=1.9.3
+[0m14:00:38.049585 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\nicol\\.dbt', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': 'logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt init', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m14:00:41.606219 [debug] [MainThread]: Starter project path: C:\Users\nicol\AppData\Local\Programs\Python\Python39\lib\site-packages\dbt\include\starter_project
+[0m14:00:41.632503 [info ] [MainThread]: 
+Your new dbt project "e_commerce_sales" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m14:00:41.632503 [info ] [MainThread]: Setting up your profile.
+[0m14:00:41.632503 [error] [MainThread]: Encountered an error:
+'charmap' codec can't decode byte 0x81 in position 196: character maps to <undefined>
+[0m14:00:41.636330 [error] [MainThread]: Traceback (most recent call last):
+  File "C:\Users\nicol\AppData\Local\Programs\Python\Python39\lib\site-packages\dbt\cli\requires.py", line 153, in wrapper
+    result, success = func(*args, **kwargs)
+  File "C:\Users\nicol\AppData\Local\Programs\Python\Python39\lib\site-packages\dbt\cli\requires.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\nicol\AppData\Local\Programs\Python\Python39\lib\site-packages\dbt\cli\main.py", line 477, in init
+    results = task.run()
+  File "C:\Users\nicol\AppData\Local\Programs\Python\Python39\lib\site-packages\dbt\task\init.py", line 346, in run
+    self.setup_profile(profile_name)
+  File "C:\Users\nicol\AppData\Local\Programs\Python\Python39\lib\site-packages\dbt\task\init.py", line 248, in setup_profile
+    if not self.check_if_can_write_profile(profile_name=profile_name):
+  File "C:\Users\nicol\AppData\Local\Programs\Python\Python39\lib\site-packages\dbt\task\init.py", line 209, in check_if_can_write_profile
+    profiles = yaml.safe_load(f) or {}
+  File "C:\Users\nicol\AppData\Local\Programs\Python\Python39\lib\site-packages\yaml\__init__.py", line 125, in safe_load
+    return load(stream, SafeLoader)
+  File "C:\Users\nicol\AppData\Local\Programs\Python\Python39\lib\site-packages\yaml\__init__.py", line 79, in load
+    loader = Loader(stream)
+  File "C:\Users\nicol\AppData\Local\Programs\Python\Python39\lib\site-packages\yaml\loader.py", line 34, in __init__
+    Reader.__init__(self, stream)
+  File "C:\Users\nicol\AppData\Local\Programs\Python\Python39\lib\site-packages\yaml\reader.py", line 85, in __init__
+    self.determine_encoding()
+  File "C:\Users\nicol\AppData\Local\Programs\Python\Python39\lib\site-packages\yaml\reader.py", line 124, in determine_encoding
+    self.update_raw()
+  File "C:\Users\nicol\AppData\Local\Programs\Python\Python39\lib\site-packages\yaml\reader.py", line 178, in update_raw
+    data = self.stream.read(size)
+  File "C:\Users\nicol\AppData\Local\Programs\Python\Python39\lib\encodings\cp1252.py", line 23, in decode
+    return codecs.charmap_decode(input,self.errors,decoding_table)[0]
+UnicodeDecodeError: 'charmap' codec can't decode byte 0x81 in position 196: character maps to <undefined>
+
+[0m14:00:41.638070 [debug] [MainThread]: Command `dbt init` failed at 14:00:41.638070 after 3.66 seconds
+[0m14:00:41.638070 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F7355B58E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F73762BD90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F7376414C0>]}
+[0m14:00:41.638070 [debug] [MainThread]: Flushing usage events
+[0m14:00:42.332046 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:00:08.410289 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F346874880>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F348900520>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F348900310>]}
+
+
+============================== 11:00:08.424398 | 8182c5df-a7e3-46b0-ba35-cb0f898f0a59 ==============================
+[0m11:00:08.424398 [info ] [MainThread]: Running with dbt=1.9.3
+[0m11:00:08.424398 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\nicol\\.dbt', 'debug': 'False', 'version_check': 'True', 'log_path': 'logs', 'warn_error': 'None', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt docs generate', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m11:00:08.424398 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\nicol\OneDrive\Área de Trabalho\e-commerce-sales-pipeline\dbt\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m11:00:08.429941 [debug] [MainThread]: Command `dbt docs generate` failed at 11:00:08.429941 after 0.14 seconds
+[0m11:00:08.429941 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F346874880>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F348900220>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F3489002B0>]}
+[0m11:00:08.429941 [debug] [MainThread]: Flushing usage events
+[0m11:00:09.297858 [debug] [MainThread]: An error was encountered while trying to flush usage events

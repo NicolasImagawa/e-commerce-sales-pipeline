@@ -2,11 +2,11 @@ def run_empty_shopee_fact_table(test_run):
     from dbt.cli.main import dbtRunner, dbtRunnerResult
 
     if test_run:
-        PROFILE_PATH = "./dbt/e_commerce_sales"
-        PROJECT_PATH = "./dbt/e_commerce_sales"
+        PROFILE_PATH = "./dbt_files/e_commerce_sales"
+        PROJECT_PATH = "./dbt_files/e_commerce_sales"
     else:
-        PROFILE_PATH = "/opt/airflow/dbt/e_commerce_sales"
-        PROJECT_PATH = "/opt/airflow/dbt/e_commerce_sales"
+        PROFILE_PATH = "/opt/airflow/dbt_files/e_commerce_sales"
+        PROJECT_PATH = "/opt/airflow/dbt_files/e_commerce_sales"
 
     dbt = dbtRunner()
     cli_args = [

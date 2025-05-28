@@ -1,8 +1,8 @@
 def transform_data():
     from dbt.cli.main import dbtRunner, dbtRunnerResult
 
-    PROFILE_PATH = "/opt/airflow/dbt/e_commerce_sales"
-    PROJECT_PATH = "/opt/airflow/dbt/e_commerce_sales"
+    PROFILE_PATH = "/opt/airflow/dbt_files/e_commerce_sales"
+    PROJECT_PATH = "/opt/airflow/dbt_files/e_commerce_sales"
 
     dbt = dbtRunner()
     cli_args = [

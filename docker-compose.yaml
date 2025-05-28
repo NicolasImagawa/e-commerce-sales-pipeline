@@ -82,7 +82,7 @@ x-airflow-common:
     - ${AIRFLOW_PROJ_DIR:-.}/plugins:/opt/airflow/plugins
     - ${AIRFLOW_PROJ_DIR:-.}/cleaning:/opt/airflow/cleaning
     - ${AIRFLOW_PROJ_DIR:-.}/entry_data/:/opt/airflow/cleaning/entry_data/
-    - ${AIRFLOW_PROJ_DIR:-.}/dbt:/opt/airflow/dbt
+    - ${AIRFLOW_PROJ_DIR:-.}/dbt_files:/opt/airflow/dbt_files
     - ${AIRFLOW_PROJ_DIR:-.}/extraction:/opt/airflow/extraction
     - ${AIRFLOW_PROJ_DIR:-.}/terraform:/opt/airflow/terraform
     - ${AIRFLOW_PROJ_DIR:-.}/tests:/opt/airflow/tests

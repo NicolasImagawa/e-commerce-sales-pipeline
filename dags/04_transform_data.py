@@ -6,8 +6,8 @@ import sys
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from dbt.run_dbt import transform_data
-from dbt.install_deps import install_dependencies
+from dbt_files.run_dbt import transform_data
+from dbt_files.install_deps import install_dependencies
 
 with DAG(
     '04_transform_data',
