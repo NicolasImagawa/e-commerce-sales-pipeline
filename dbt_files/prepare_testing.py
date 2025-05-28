@@ -9,24 +9,24 @@ def run_empty_shopee_tables(test_run):
         PROJECT_PATH = "/opt/airflow/dbt_files/e_commerce_sales"
 
     dbt = dbtRunner()
-    # cli_args = [
-    #                 "run",
-    #                 "--select",
-    #                 "stg_shopee shopee_new_id kit_components product_sku_cost",
-    #                 "--empty",
-    #                 "--profiles-dir",
-    #                 PROFILE_PATH,
-    #                 "--project-dir",
-    #                 PROJECT_PATH
-    #            ]
     cli_args = [
-                    "build",
+                    "run",
+                    "--select",
+                    "stg_shopee shopee_new_id kit_components product_sku_cost",
                     "--empty",
                     "--profiles-dir",
                     PROFILE_PATH,
                     "--project-dir",
                     PROJECT_PATH
                ]
+    # cli_args = [
+    #                 "build",
+    #                 "--empty",
+    #                 "--profiles-dir",
+    #                 PROFILE_PATH,
+    #                 "--project-dir",
+    #                 PROJECT_PATH
+    #            ]
 
     result = dbt.invoke(cli_args)
     if result.success:
