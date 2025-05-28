@@ -11,7 +11,9 @@ def run_empty_shopee_fact_table(test_run):
     dbt = dbtRunner()
     cli_args = [
                     "run",
-                    "entry_shopee shopee_new_id supplies",
+                    "entry_shopee",
+                    "shopee_new_id",
+                    "supplies",
                     "--empty",
                     "--profiles-dir",
                     PROFILE_PATH,
