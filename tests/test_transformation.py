@@ -19,7 +19,7 @@ def test_transform():
 
     conn = psycopg2.connect(database = "sales_db", user = "airflow", host= 'localhost', password = "airflow", port = 5432)
     cursor.execute(sql.SQL("CREATE SCHEMA {}").format(sql.Identifier("stg")))
-    cursor.execute(sql.SQL("CREATE TABLE IF NOT EXISTS {}").format(sql.Identifier("stg_shopee")))
+    cursor.execute(sql.SQL("CREATE TABLE IF NOT EXISTS {}").format(sql.Identifier("stg.stg_shopee")))
 
     print("\n******* installing dependencies *******")
     install_dependencies(test_run = True)
