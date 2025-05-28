@@ -59,6 +59,10 @@ jobs:
       run:
         docker-compose up -d
 
+    - name: install dbt deps
+      run:
+        dbt deps --select stg_shopee shopee_new_id kit_components product_sku_cost --empty --profiles-dir ./dbt_files/e_commerce_sales/tests --project-dir ./dbt_files/e_commerce_sales
+
     - name: create shopee dbt tables
       run:
         dbt run --select stg_shopee shopee_new_id kit_components product_sku_cost --empty --profiles-dir ./dbt_files/e_commerce_sales/tests --project-dir ./dbt_files/e_commerce_sales
