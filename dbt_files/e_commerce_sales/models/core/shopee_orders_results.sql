@@ -12,7 +12,7 @@ WITH id_buyer_sku AS (
            stg_shopee.hora_do_pagamento_do_pedido AS date_approved,
            stg_shopee.numero_de_referencia_sku AS sku,
            shopee_new_id.load_timestamp
-        FROM {{ ref("stg_shopee") }} AS stg_shopee
+        FROM {{ source("entry_shopee", "stg_shopee") }} AS stg_shopee
         LEFT JOIN {{ ref("shopee_new_id") }} AS shopee_new_id
             ON shopee_new_id.id_do_pedido =  stg_shopee.id_do_pedido
             AND shopee_new_id.sku = stg_shopee.numero_de_referencia_sku
@@ -32,7 +32,7 @@ WITH id_buyer_sku AS (
            id_buyer_sku.load_timestamp,
            COALESCE(ROUND(CAST(SUM(stg_shopee.subtotal_do_produto) AS NUMERIC), 2), 0) AS total_price
         FROM id_buyer_sku
-        LEFT JOIN {{ ref("stg_shopee") }} AS stg_shopee
+        LEFT JOIN {{ source("entry_shopee", "stg_shopee") }} AS stg_shopee
             ON id_buyer_sku.id = stg_shopee.id_do_pedido
         
         {% if is_incremental() %}
@@ -55,7 +55,7 @@ WITH id_buyer_sku AS (
            kit_components.component_sku,
            id_buyer_sku_price.load_timestamp
         FROM id_buyer_sku_price
-        LEFT JOIN {{ ref("kit_components") }} AS kit_components
+        LEFT JOIN {{ source("supplies", "kit_components") }} AS kit_components
             ON id_buyer_sku_price.sku = kit_components.sku
         
         {% if is_incremental() %}
@@ -73,7 +73,7 @@ WITH id_buyer_sku AS (
            COALESCE(SUM(costs.cost), 0) AS total_prod_cost,
            id_buyer_sku_price_component.load_timestamp
 		FROM id_buyer_sku_price_component
-        LEFT JOIN {{ ref("product_sku_cost") }} AS costs
+        LEFT JOIN {{ source("supplies", "product_sku_cost") }} AS costs
             ON id_buyer_sku_price_component.component_sku = costs.sku
             AND (id_buyer_sku_price_component.date_approved <= costs.end_date OR costs.end_date IS NULL)
             AND id_buyer_sku_price_component.date_approved >= costs.begin_date
@@ -111,7 +111,7 @@ WITH id_buyer_sku AS (
             total_price.total_prod_cost,
             total_price.load_timestamp AS ld_timestamp
             
-		FROM {{ ref("shopee_new_id") }} AS new_id, {{ ref("stg_shopee") }} AS stg_shopee, total_price
+		FROM {{ ref("shopee_new_id") }}AS new_id, {{ source("entry_shopee", "stg_shopee") }} AS stg_shopee, total_price
 		WHERE new_id.id_do_pedido = stg_shopee.id_do_pedido
 		AND total_price.id = stg_shopee.id_do_pedido
 		AND total_price.id = new_id.id_do_pedido
