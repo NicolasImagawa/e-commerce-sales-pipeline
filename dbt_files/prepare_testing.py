@@ -9,12 +9,19 @@ def run_empty_shopee_fact_table(test_run):
         PROJECT_PATH = "/opt/airflow/dbt_files/e_commerce_sales"
 
     dbt = dbtRunner()
+    # cli_args = [
+    #                 "run",
+    #                 "entry_shopee",
+    #                 "shopee_new_id",
+    #                 "supplies",
+    #                 "--empty",
+    #                 "--profiles-dir",
+    #                 PROFILE_PATH,
+    #                 "--project-dir",
+    #                 PROJECT_PATH
+    #            ]
     cli_args = [
-                    "run",
-                    "entry_shopee",
-                    "shopee_new_id",
-                    "supplies",
-                    "--empty",
+                    "build",
                     "--profiles-dir",
                     PROFILE_PATH,
                     "--project-dir",
@@ -25,10 +32,10 @@ def run_empty_shopee_fact_table(test_run):
     if result.success:
         print("Run successfully finished.")
     else:
-        print("dbt deps failed!")
+        print("dbt preparation failed!")
         print(result.exception)
         raise RuntimeError("dbt run failed")
-
+        
 def run_shopee_fact_table(test_run):
     from dbt.cli.main import dbtRunner, dbtRunnerResult
 
