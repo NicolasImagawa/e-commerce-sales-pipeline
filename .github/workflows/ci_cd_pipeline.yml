@@ -59,6 +59,10 @@ jobs:
       run:
         docker-compose up -d
 
+    - name: create db
+      run:
+        createdb -h localhost -p 5432 -U airflow sales_db
+
     - name: install dbt deps
       run:
         dbt deps --profiles-dir ./dbt_files/e_commerce_sales/tests --project-dir ./dbt_files/e_commerce_sales
