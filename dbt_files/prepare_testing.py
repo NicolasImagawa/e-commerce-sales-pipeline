@@ -12,10 +12,7 @@ def run_empty_shopee_tables(test_run):
     cli_args = [
                     "run",
                     "--select",
-                    "stg_shopee",
-                    "shopee_new_id",
-                    "kit_components",
-                    "product_sku_cost",
+                    "stg_shopee shopee_new_id kit_components product_sku_cost",
                     "--empty",
                     "--profiles-dir",
                     PROFILE_PATH,

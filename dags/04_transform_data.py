@@ -21,7 +21,8 @@ with DAG(
     
     install_dbt_deps = PythonOperator(
                 task_id='install_dbt_deps',
-                python_callable=install_dependencies
+                python_callable=install_dependencies,
+                op_kwargs = {'test_run': False}
             )
 
     transform_dbt = PythonOperator(
