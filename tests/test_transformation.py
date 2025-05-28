@@ -10,17 +10,17 @@ from dbt_files.prepare_testing import run_empty_shopee_fact_table
 from dbt_files.prepare_testing import run_shopee_fact_table
 
 def dbt_unit_test():
-    print("=================== test_transformation.py started ===================")
+    print("\n=================== test_transformation.py started ===================")
     conn = psycopg2.connect(database = "postgres", user = "airflow", host= 'localhost', password = "airflow", port = 5432) #uses maintenance db to create the infrastructure
     cursor = conn.cursor()
     conn.autocommit = True
     
     cursor.execute(sql.SQL("CREATE DATABASE {}").format(sql.Identifier("sales_db")))
-    print("******* installing dependencies *******")
+    print("\n******* installing dependencies *******")
     install_dependencies(test_run = True)
-    print("******* running empty parent tables *******")
+    print("\n******* running empty parent tables *******")
     run_empty_shopee_fact_table(test_run = True)
-    print("******* testing shopee fact table *******")
+    print("\n******* testing shopee fact table *******")
     test_results = run_shopee_fact_table(test_run = True)
 
     cursor.execute(sql.SQL("DROP DATABASE {}").format(sql.Identifier("sales_db")))

@@ -7,7 +7,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 from extraction.mercadolivre.script.get_seller_shipping_cost import get_shipping_id
 
 def test_shipping_extraction():
-    print("=================== test_extract_shipping_id.py started ===================")
+    print("\n=================== test_extract_shipping_id.py started ===================")
 
     test_results = get_shipping_id(test_run=True)
 

@@ -6,7 +6,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 from cleaning.adjust_cost_data import clean_cost_data
 
 def test_cleaning():
-    print("=================== test_cleaning.py started ===================")
+    print("\n=================== test_cleaning.py started ===================")
     test_result = clean_cost_data(test_run = True)
 
     assert test_result["begin_date_type"] == "datetime64[ns, UTC]"

@@ -8,7 +8,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 from extraction.mercadolivre.script.send_shipping_cost import postgres_ingestion_sh_costs
 
 def test_load_ml():
-    print("=================== test_load_shipping.py started ===================")
+    print("\n=================== test_load_shipping.py started ===================")
     conn = psycopg2.connect(database = "postgres", user = "airflow", host= 'localhost', password = "airflow", port = 5432) #uses maintenance db to create the infrastructure
     cursor = conn.cursor()
     conn.autocommit = True
