@@ -27,7 +27,7 @@ def run_empty_shopee_fact_table(test_run):
         print(result.exception)
         raise RuntimeError("dbt run failed")
 
-def test_shopee_fact_table(test_run):
+def run_shopee_fact_table(test_run):
     from dbt.cli.main import dbtRunner, dbtRunnerResult
 
     if test_run:
