@@ -4,6 +4,9 @@ def postgres_ingestion_ml(test_run):
     import json
     import os
     import pathlib
+    from dotenv import load_dotenv
+
+    load_dotenv()
 
     if test_run:
         dir = "./extraction/mercadolivre/data/raw/sample.json"

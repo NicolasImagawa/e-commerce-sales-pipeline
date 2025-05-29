@@ -96,25 +96,25 @@ jobs:
 
       - name: run '00_create_IAC'
         run:
-          docker exec airflow-webserver \
+          docker exec e-commerce-sales-pipeline-airflow-webserver-1 \
           airflow dags trigger "00_create_IAC"
       
       - name: run '01_extract_data'
         run:
-          docker exec airflow-webserver \
+          docker exec e-commerce-sales-pipeline-airflow-webserver-1 \
           airflow dags trigger "01_extract_data"
       
       - name: run '02_clean_data'
         run:
-          docker exec airflow-webserver \
+          docker exec e-commerce-sales-pipeline-airflow-webserver-1 \
           airflow dags trigger "02_clean_data"
       
       - name: run '03_load_data'
         run:
-          docker exec airflow-webserver \
+          docker exec e-commerce-sales-pipeline-airflow-webserver-1 \
           airflow dags trigger "03_load_data"
 
       - name: run '04_transform_data'
         run:
-          docker exec airflow-webserver \
+          docker exec e-commerce-sales-pipeline-airflow-webserver-1 \
           airflow dags trigger "04_transform_data"

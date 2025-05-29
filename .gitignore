@@ -29,3 +29,4 @@ auth.py
 /exceptions
 /venv
 get_access_token-locla.py
+.env

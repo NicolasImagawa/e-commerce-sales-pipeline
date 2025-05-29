@@ -1,6 +1,9 @@
 def get_shipping_id(test_run):
     import pandas as pd
     import os
+    from dotenv import load_dotenv
+
+    load_dotenv()
 
     if test_run:
         id = os.environ["SHIPPING_ID_TEST_1"]
@@ -14,7 +17,6 @@ def get_shipping_id(test_run):
         df["shipping__id"] = df["shipping__id"].astype(int)
         shipping_ids = df["shipping__id"].tolist()
 
-    # get_access_token(shipping_ids)
     if test_run:
         test_data = extract_shipping_cost(shipping_ids, test_run)
         return test_data
@@ -25,6 +27,10 @@ def extract_shipping_cost(sh_list, test_run):
     import requests
     import json
     import os
+    from dotenv import load_dotenv
+
+    load_dotenv()
+
 
     limit = 50
     offset = 0
@@ -32,13 +38,7 @@ def extract_shipping_cost(sh_list, test_run):
 
     sh_ids = sh_list
 
-    if test_run:
-        access_token = os.environ["ACCESS_TOKEN"]
-    else:
-        token_filepath = "./extraction/mercadolivre/token.json"
-        with open(token_filepath, "r") as token_json:
-            token_file = json.load(token_json)
-        access_token = token_file["access_token"]
+    access_token = os.environ["ACCESS_TOKEN"]
 
     for id in sh_ids:
         url = (

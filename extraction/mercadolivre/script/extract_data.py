@@ -3,29 +3,17 @@ def extract_mercado(test_run):
     import json
     import pathlib
     import os
+    from dotenv import load_dotenv
 
-    if test_run == False:
-        config_path = "./extraction/mercadolivre/script/configs/user.json"
-        token_filepath = "./extraction/mercadolivre/token.json"
+    # config_path = "./extraction/mercadolivre/script/configs/user.json"
+    # token_filepath = "./extraction/mercadolivre/token.json"
 
-        with open (config_path, "r") as config_file:
-            user_configs = json.load(config_file)
+    load_dotenv()
 
-        seller_id = user_configs["seller_id"]
-
-        with open(token_filepath, "r") as token_json:
-            token_file = json.load(token_json)
-
-        access_token = token_file["access_token"]
-
-        order_data_created_from = "2024-07-01T00:00:00.000-03:00"
-        order_data_created_to = "2025-04-01T00:00:00.000-03:00"
-
-    else:
-        seller_id = os.environ["SELLER_ID"]
-        access_token = os.environ["ACCESS_TOKEN"]
-        order_data_created_from = "2024-07-01T00:00:00.000-03:00"
-        order_data_created_to = "2024-10-01T00:00:00.000-03:00"
+    seller_id = os.environ["SELLER_ID"]
+    access_token = os.environ["ACCESS_TOKEN"]
+    order_data_created_from = "2024-07-01T00:00:00.000-03:00"
+    order_data_created_to = "2024-10-01T00:00:00.000-03:00"
 
     limit = 50
     offset = 0

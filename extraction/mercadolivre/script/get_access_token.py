@@ -3,23 +3,14 @@ def get_access_token(test_run):
     import json
     import pathlib
     import os
+    from dotenv import load_dotenv
 
-    if test_run == False:
-        config_path = "./extraction/mercadolivre/script/configs/user.json"
+    load_dotenv()
 
-        with open(config_path, "r") as config_json:
-            config_file = json.load(config_json)
-        
-        client_id = config_file["client_id"]
-        client_secret = config_file["client_secret"]
-        code = config_file["code"]
-        redirect_uri = config_file["redirect_uri"]
-
-    else:
-        client_id = os.environ["CLIENT_ID"]
-        client_secret = os.environ["CLIENT_SECRET"]
-        code = os.environ["CODE"]
-        redirect_uri = os.environ["REDIRECT_URI"]
+    client_id = os.environ["CLIENT_ID"]
+    client_secret = os.environ["CLIENT_SECRET"]
+    code = os.environ["CODE"]
+    redirect_uri = os.environ["REDIRECT_URI"]
 
     token_url = "https://api.mercadolibre.com/oauth/token"
 

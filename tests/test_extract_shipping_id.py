@@ -1,10 +1,13 @@
 import sys
 from pathlib import Path
 import os
+from dotenv import load_dotenv
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from extraction.mercadolivre.script.get_seller_shipping_cost import get_shipping_id
+
+load_dotenv()
 
 def test_shipping_extraction():
     print("\n=================== test_extract_shipping_id.py started ===================")

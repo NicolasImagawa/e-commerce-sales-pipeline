@@ -3,7 +3,7 @@ def postgres_ingestion_sh_costs(test_run):
     from dlt.destinations import postgres
     import os
     import json
-    
+
     if test_run:
         creds = "postgresql://airflow:airflow@localhost:5432/sales_db"
         file = os.environ["SHIPPING_SAMPLE"]
