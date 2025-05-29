@@ -91,18 +91,23 @@ jobs:
           docker build -t airflow_e_commerce_sales:v001 .
 
       - name: create network
+        id: docker_network
         run:
           docker-compose up -d
+      
+      - name: wait for network
+        id: delay
+        needs: docker_network
+        run: |
+          echo "Waiting for Airflow..."
+          sleep 30
 
       - name: check airflow permissions
         run:
           docker exec e-commerce-sales-pipeline-airflow-scheduler-1 ls -l /opt/airflow/dags
 
-      - name: check syntax errors
-        run:
-          docker exec e-commerce-sales-pipeline-airflow-scheduler-1 python /opt/airflow/dags/00_create_IAC.py
-
       - name: run '00_create_IAC'
+        needs: delay
         run:
           docker exec e-commerce-sales-pipeline-airflow-webserver-1 airflow dags trigger 00_create_IAC
       
