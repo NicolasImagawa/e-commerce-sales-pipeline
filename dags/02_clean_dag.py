@@ -10,7 +10,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 from cleaning.adjust_cost_data import clean_cost_data
 
 with DAG (
-    '02_clean_data',
+    dag_id = '02_clean_data',
     description="Data cleaning DAG",
     start_date=None,
     schedule_interval=None

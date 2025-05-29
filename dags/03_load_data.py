@@ -15,7 +15,7 @@ from extraction.supplies.script.load_kits import postgres_ingestion_kits
 
 
 with DAG (
-    '03_load_data',
+    dag_id = '03_load_data',
     description="Data loading DAG",
     start_date=None,
     schedule_interval=None

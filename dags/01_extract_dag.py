@@ -12,7 +12,7 @@ from extraction.mercadolivre.script.extract_data import extract_mercado
 from extraction.mercadolivre.script.get_seller_shipping_cost import get_shipping_id
 
 with DAG (
-    '01_extract_data',
+    dag_id = '01_extract_data',
     description="Data extraction DAG",
     start_date=None,
     schedule_interval=None,

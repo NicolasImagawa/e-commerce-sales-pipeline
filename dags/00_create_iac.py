@@ -13,7 +13,7 @@ tf_create_db_dir = "/opt/airflow/terraform/create_db"
 tf_create_schemas_dir = "/opt/airflow/terraform/create_schemas"
 
 with DAG(
-    '00_create_IAC',
+    dag_id = '00_create_IAC',
     start_date=None,
     schedule=None,
     description='Creates database and schema'
