@@ -98,6 +98,10 @@ jobs:
         run:
           docker exec e-commerce-sales-pipeline-airflow-scheduler-1 ls -l /opt/airflow/dags
 
+      - name: check syntax errors
+        run:
+          docker exec e-commerce-sales-pipeline-airflow-scheduler-1 python /opt/airflow/dags/00_create_IAC.py
+
       - name: run '00_create_IAC'
         run:
           docker exec e-commerce-sales-pipeline-airflow-webserver-1 airflow dags trigger 00_create_IAC
