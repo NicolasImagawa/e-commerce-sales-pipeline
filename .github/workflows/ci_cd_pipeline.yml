@@ -94,7 +94,7 @@ jobs:
         run:
           docker-compose up -d
       
-      - name: wait for network to finished
+      - name: wait for network to finish
         run: |
           echo "Waiting for Airflow..."
           sleep 30
@@ -107,18 +107,43 @@ jobs:
         run:
           docker exec e-commerce-sales-pipeline-airflow-webserver-1 airflow dags trigger 00_create_IAC
       
+      - name: wait '00_create_IAC'
+        run: |
+          echo "Waiting for 00_create_IAC..."
+          sleep 10
+
       - name: run '01_extract_data'
         run:
           docker exec e-commerce-sales-pipeline-airflow-webserver-1 airflow dags trigger "01_extract_data"
-      
+
+      - name: wait '01_extract_data'
+        run: |
+          echo "Waiting for 01_extract_data..."
+          sleep 10
+
       - name: run '02_clean_data'
         run:
           docker exec e-commerce-sales-pipeline-airflow-webserver-1 airflow dags trigger "02_clean_data"
-      
+
+      - name: wait '02_extract_data'
+        run: |
+          echo "Waiting for 02_extract_data..."
+          sleep 10
+
       - name: run '03_load_data'
         run:
           docker exec e-commerce-sales-pipeline-airflow-webserver-1 airflow dags trigger "03_load_data"
 
+      - name: wait '03_load_data'
+        run: |
+          echo "Waiting for 03_load_data..."
+          sleep 10
+
       - name: run '04_transform_data'
         run:
           docker exec e-commerce-sales-pipeline-airflow-webserver-1 airflow dags trigger "04_transform_data"
+
+      - name: wait '04_transform_data'
+        run: |
+          echo "Waiting for 04_transform_data..."
+          sleep 10
