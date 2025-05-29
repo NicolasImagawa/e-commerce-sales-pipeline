@@ -86,7 +86,8 @@ x-airflow-common:
     - ${AIRFLOW_PROJ_DIR:-.}/extraction:/opt/airflow/extraction
     - ${AIRFLOW_PROJ_DIR:-.}/terraform:/opt/airflow/terraform
     - ${AIRFLOW_PROJ_DIR:-.}/tests:/opt/airflow/tests
-  user: "${AIRFLOW_UID:-50000}:0"
+    - ${AIRFLOW_PROJ_DIR:-.}/.env:/opt/airflow/.env:rw
+  user: "root"
   depends_on:
     &airflow-common-depends-on
     redis:

@@ -8,7 +8,7 @@ def extract_mercado(test_run):
     # config_path = "./extraction/mercadolivre/script/configs/user.json"
     # token_filepath = "./extraction/mercadolivre/token.json"
 
-    load_dotenv()
+    load_dotenv("/opt/airflow/.env")
 
     seller_id = os.environ["SELLER_ID"]
     access_token = os.environ["ACCESS_TOKEN"]

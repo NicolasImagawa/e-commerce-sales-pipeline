@@ -3,9 +3,10 @@ def get_access_token(test_run):
     import json
     import pathlib
     import os
-    from dotenv import load_dotenv
+    from dotenv import load_dotenv, set_key
+    from airflow.models import Variable
 
-    load_dotenv()
+    load_dotenv("/opt/airflow/.env", override=True)
 
     client_id = os.environ["CLIENT_ID"]
     client_secret = os.environ["CLIENT_SECRET"]
@@ -34,10 +35,20 @@ def get_access_token(test_run):
         data=payload
     )
 
-    token_path = "./extraction/mercadolivre/token.json"
-    with open(token_path, "w+", encoding="utf-8") as token_json:
-         json.dump(response.json(), token_json)
+    token_data = response.json()
 
-    is_json = (pathlib.Path(token_path).suffix == ".json")
+    print(token_data)
 
-    return is_json
+    # with open(os.path.expanduser("~/.bashrc"), "a") as f:
+    #     f.write(f'\nexport ACCESS_TOKEN={token_data["access_token"]}\n')
+
+    # os.system("source ~/.bashrc")
+    set_key("/opt/airflow/.env", "ACCESS_TOKEN", token_data["access_token"], encoding='utf-8')
+
+    # token_path = "./extraction/mercadolivre/token.json"
+    # with open(token_path, "w+", encoding="utf-8") as token_json:
+    #      json.dump(response.json(), token_json)
+
+    # is_json = (pathlib.Path(token_path).suffix == ".json")
+
+    # return is_json
