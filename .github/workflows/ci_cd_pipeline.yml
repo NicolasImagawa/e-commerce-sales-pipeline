@@ -150,20 +150,20 @@ jobs:
 
       - name: list '00_create_IAC' status
         run:
-          docker exec e-commerce-sales-pipeline-airflow-webserver-1 airflow dags list-runs 00_create_IAC
+          docker exec e-commerce-sales-pipeline-airflow-webserver-1 airflow dags list-runs -d 00_create_IAC
       
       - name: list '01_extract_data' status
         run:
-          docker exec e-commerce-sales-pipeline-airflow-webserver-1 airflow dags list-runs 01_extract_data
+          docker exec e-commerce-sales-pipeline-airflow-webserver-1 airflow dags list-runs -d 01_extract_data
 
       - name: list '02_clean_data' status
         run:
-          docker exec e-commerce-sales-pipeline-airflow-webserver-1 airflow dags list-runs 02_clean_data
+          docker exec e-commerce-sales-pipeline-airflow-webserver-1 airflow dags list-runs -d 02_clean_data
 
       - name: list '03_load_data' status
         run:
-          docker exec e-commerce-sales-pipeline-airflow-webserver-1 airflow dags list-runs 03_load_data
+          docker exec e-commerce-sales-pipeline-airflow-webserver-1 airflow dags list-runs -d 03_load_data
 
       - name: list '04_transform_data' status
         run:
-          docker exec e-commerce-sales-pipeline-airflow-webserver-1 airflow dags list-runs 04_transform_data
+          docker exec e-commerce-sales-pipeline-airflow-webserver-1 airflow dags list-runs -d 04_transform_data
