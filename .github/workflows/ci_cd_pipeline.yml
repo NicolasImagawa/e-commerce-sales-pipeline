@@ -148,6 +148,11 @@ jobs:
           echo "Waiting for 04_transform_data..."
           sleep 10
 
+      - name: wait for dag runs
+        run: |
+          echo "Waiting for dag runs..."
+          sleep 600
+
       - name: list '00_create_IAC' status
         run:
           docker exec e-commerce-sales-pipeline-airflow-webserver-1 airflow dags list-runs -d 00_create_IAC
