@@ -125,9 +125,9 @@ jobs:
         run:
           docker exec e-commerce-sales-pipeline-airflow-webserver-1 airflow dags trigger "02_clean_data"
 
-      - name: wait '02_extract_data'
+      - name: wait '02_clean_data'
         run: |
-          echo "Waiting for 02_extract_data..."
+          echo "Waiting for 02_clean_data..."
           sleep 10
 
       - name: run '03_load_data'
@@ -147,3 +147,23 @@ jobs:
         run: |
           echo "Waiting for 04_transform_data..."
           sleep 10
+
+      - name: list '00_create_IAC' status
+        run:
+          docker exec e-commerce-sales-pipeline-airflow-webserver-1 airflow dags list-runs 00_create_IAC
+      
+      - name: list '01_extract_data' status
+        run:
+          docker exec e-commerce-sales-pipeline-airflow-webserver-1 airflow dags list-runs 01_extract_data
+
+      - name: list '02_clean_data' status
+        run:
+          docker exec e-commerce-sales-pipeline-airflow-webserver-1 airflow dags list-runs 02_clean_data
+
+      - name: list '03_load_data' status
+        run:
+          docker exec e-commerce-sales-pipeline-airflow-webserver-1 airflow dags list-runs 03_load_data
+
+      - name: list '04_transform_data' status
+        run:
+          docker exec e-commerce-sales-pipeline-airflow-webserver-1 airflow dags list-runs 04_transform_data
