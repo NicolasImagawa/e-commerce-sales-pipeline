@@ -94,9 +94,13 @@ jobs:
         run:
           docker-compose up -d
 
+      - name: check airflow permissions
+        run:
+          docker exec e-commerce-sales-pipeline-airflow-scheduler-1 ls -l /opt/airflow/dags
+
       - name: run '00_create_IAC'
         run:
-          docker exec e-commerce-sales-pipeline-airflow-webserver-1 airflow dags trigger "00_create_IAC"
+          docker exec e-commerce-sales-pipeline-airflow-webserver-1 airflow dags trigger 00_create_IAC
       
       - name: run '01_extract_data'
         run:
