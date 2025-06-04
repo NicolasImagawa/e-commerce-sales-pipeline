@@ -40,6 +40,8 @@ To run this pipeline, the user needs:
 6. To have preferably Python 3.9 or a virtual environment equivalent on its machine.
 
 ## Running the pipeline
+
+### Running Docker
 To run the pipeline, first run the following command on the project's root through the CLI.
 ```
 docker build -t airflow_e_commerce_sales:v001 .
@@ -52,6 +54,9 @@ After creating the containers, use your browser to check if the following port h
 ```
 https://localhost:8081
 ```
+The default credentials are `airflow` for both the username and password.
+
+### Accessing the API
 Now, create a `.env` file on the project's root to access Mercado Livre's API and get its access token with the following parameters:
 - `SELLER_ID` = Obtained on your 
 - `CLIENT_ID` = Access [https://developers.mercadolivre.com.br/devcenter]
@@ -68,4 +73,16 @@ Now, create a `.env` file on the project's root to access Mercado Livre's API an
 > [!TIP]
 > If this is your first time accessing Mercado Livre's API, you can learn more about it on the following webpage: https://developers.mercadolivre.com.br/pt_br/crie-uma-aplicacao-no-mercado-livre
 
-After that, 
+### Running the DAGs
+After that, please go again to again to Airflow on the following port:
+```
+https://localhost:8081
+```
+Then, run each DAG (or "play buttons" if you are not familiar with some concepts) on its numerical order after each one of them is finished. This is the UI to be used:
+![image](https://github.com/user-attachments/assets/5dd4d02f-b2e1-4d8d-abe1-e42cc045d306)
+
+After running the DAGs, the user can check the Warehouse on the given port:
+```
+https://localhost:8082
+```
+
