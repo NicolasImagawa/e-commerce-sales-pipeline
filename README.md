@@ -115,7 +115,7 @@ After, under "Connection", use the following parameters to connect to the databa
 
 <br>
 
-That's it! The pipeline should be working smoothly now and queries can be made against the pipeline.
+That's it! The pipeline should be working smoothly now and queries can be made against the warehouse.
 
 ### Contact
 If you have any questions or want to reach me out, you can contact me on the following channels:
