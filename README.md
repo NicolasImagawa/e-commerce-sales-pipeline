@@ -4,14 +4,14 @@ The pipeline runs can be configured as the users see fit by changing the Apache 
 
 ## Contents
 - [Tools and technologies used for the pipeline development](#tools-and-technologies-used-for-the-pipeline-development)
-- [Charts and reports](## Charts and reports)
-- [Requirements](## Requirements)
-- [Running the pipeline](## Running the pipeline)
-  - [Running Docker]### Running Docker
-  - [Accessing the API]### Accessing the API
-  - [Running the DAGs]### Running the DAGs
-  - [Accessing the Data Warehouse]### Accessing the Data Warehouse
-- [Contact]## Contact
+- [Charts and reports](#charts-and-reports)
+- [Requirements](#requirements)
+- [Running the pipeline](#running-the-pipeline)
+  - [Running Docker](#running-docker)
+  - [Accessing the API](#accessing-the-api)
+  - [Running the DAGs](#running-the-dags)
+  - [Accessing the Data Warehouse](#accessing-the-data-warehouse)
+- [Contact](#contact)
   
 ## Tools and technologies used for the pipeline development
 The following picture shows how the pipeline works end-to-end.
