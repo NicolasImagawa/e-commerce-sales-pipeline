@@ -39,3 +39,8 @@ To run this pipeline, the user needs:
 5. To clone this repo;
 6. To have preferably Python 3.9 or a virtual environment equivalent on its machine.
 
+## Running the pipeline
+To run the pipeline, first run the following command on the project's root.
+'''
+docker build -t airflow_ecommerce:v001 .
+'''
