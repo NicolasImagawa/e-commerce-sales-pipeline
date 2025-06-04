@@ -52,7 +52,7 @@ After creating the containers, use your browser to check if the following port h
 ```
 https://localhost:8081
 ```
-Now, create a `.env` on the project's root to access Mercado Livre's API with the following parameters:
+Now, create a `.env` file on the project's root to access Mercado Livre's API and get its access token with the following parameters:
 - `SELLER_ID` = Obtained on your 
 - `CLIENT_ID` = Access [https://developers.mercadolivre.com.br/devcenter]
 - `CLIENT_SECRET` = Click on the chosen mercadolivre devcenter application, then the value will be found under "Chave Secreta" on the Portuguese UI;
@@ -62,7 +62,10 @@ Now, create a `.env` on the project's root to access Mercado Livre's API with th
 -  `CODE` = Change $CLIENT_ID on the following link and paste it on your browser \
             https://auth.mercadolivre.com.br/authorization?response_type=code&$CLIENT_ID&redirect_uri=https://github.com/NicolasImagawa \
             Then, get the code from the reponse URL. It starts with "TG-" followed be an alphanumeric sequence.
+> [!IMPORTANT]
+> `CODE` lasts for about 10 minutes, so if an error occurs while trying to get the Access Token that might be the case.
 
 > [!TIP]
 > If this is your first time accessing Mercado Livre's API, you can learn more about it on the following webpage: https://developers.mercadolivre.com.br/pt_br/crie-uma-aplicacao-no-mercado-livre
 
+After that, 
