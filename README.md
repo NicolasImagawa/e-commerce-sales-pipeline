@@ -48,7 +48,19 @@ Then, please run this command:
 ```
 docker-compose up -d
 ```
-After creating the containers, check if the following port has Apache Airflow running on it.
+After creating the containers, use your browser to check if the following port has Apache Airflow running on it.
 ```
 https://localhost:8081
 ```
+Now, create a `.env` on the project's root to access Mercado Livre's API with the following parameters:
+- `SELLER_ID` = Obtained on your 
+- `CLIENT_ID` = Access [https://developers.mercadolivre.com.br/devcenter]
+- `CLIENT_SECRET` = Click on the chosen mercadolivre devcenter application, then the value will be found under "Chave Secreta" on the Portuguese UI;
+- `REDIRECT_URI` = Default value is "https://github.com/NicolasImagawa"
+- `SHIPPING_ID_TEST_1` = for testing only, not necessary
+- `LIST_COST` = for testing only, not necessary
+-  `CODE` = Change $CLIENT_ID on the following link and paste it on your browser https://auth.mercadolivre.com.br/authorization?response_type=code&$CLIENT_ID&redirect_uri=https://github.com/NicolasImagawa
+
+> !TIP
+> If this is your first time accessing Mercado Livre's API, you can learn more about it on the following webpage: [https://developers.mercadolivre.com.br/pt_br/crie-uma-aplicacao-no-mercado-livre]
+
