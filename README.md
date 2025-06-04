@@ -59,7 +59,8 @@ Now, create a `.env` on the project's root to access Mercado Livre's API with th
 - `REDIRECT_URI` = Default value is "https://github.com/NicolasImagawa"
 - `SHIPPING_ID_TEST_1` = for testing only, not necessary
 - `LIST_COST` = for testing only, not necessary
--  `CODE` = Change $CLIENT_ID on the following link and paste it on your browser https://auth.mercadolivre.com.br/authorization?response_type=code&$CLIENT_ID&redirect_uri=https://github.com/NicolasImagawa \
+-  `CODE` = Change $CLIENT_ID on the following link and paste it on your browser \
+            https://auth.mercadolivre.com.br/authorization?response_type=code&$CLIENT_ID&redirect_uri=https://github.com/NicolasImagawa \
             Then, get the code from the reponse URL. It starts with "TG-" followed be an alphanumeric sequence.
 
 > [!TIP]
