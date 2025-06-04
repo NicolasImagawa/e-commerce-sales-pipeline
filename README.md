@@ -90,7 +90,9 @@ https://localhost:8082
 The default username and password are admin@admin.com and root, respectively.
 
 Then, go to "Server > Register > Server..."
+
 <br>
+
 ![image](https://github.com/user-attachments/assets/d9a624bc-b0ad-4e62-ae0a-272ea8105010)
 <br>
 Now, name the server
