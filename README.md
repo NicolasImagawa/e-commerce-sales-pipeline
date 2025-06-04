@@ -4,6 +4,7 @@ The pipeline runs can be configured as the users see fi by changing the Apache A
 
 ## Tools and technologies used for the pipeline development
 The following picture shows how the pipeline works end-to-end.
+
 Picture here
 
 - Data Warehouse: PostgreSQL;
