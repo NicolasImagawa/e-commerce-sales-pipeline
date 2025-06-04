@@ -115,5 +115,10 @@ After, under "Connection", use the following parameters to connect to the databa
 
 <br>
 
-![image](https://github.com/user-attachments/assets/8a4a0259-7c87-49d9-b2ae-448c7bbab5f7)
+That's it! The pipeline should be working smoothly now and queries can be made against the pipeline.
+
+### Contact
+If you have any questions or want to reach me out, you can contact me on the following channels:
+LinkedIn: www.linkedin.com/in/nicolas-imagawa
+GitHub: https://github.com/NicolasImagawa
 
