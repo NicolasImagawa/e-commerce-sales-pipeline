@@ -1,6 +1,6 @@
 # Overview
 This open-source data pipeline shows sales results from two major e-commerce platforms in Brazil (Mercado Livre and Shopee) through an ELT pipeline that stores data in an on-premises star-schema data warehouse. 
-The pipeline runs can be configured as the users see fi by changing the Apache Airflow DAGs.
+The pipeline runs can be configured as the users see fit by changing the Apache Airflow DAGs.
 
 ## Tools and technologies used for the pipeline development
 The following picture shows how the pipeline works end-to-end.
