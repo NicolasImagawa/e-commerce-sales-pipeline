@@ -3,7 +3,7 @@ This open-source data pipeline shows sales results from two major e-commerce pla
 The pipeline runs can be configured as the users see fit by changing the Apache Airflow DAGs.
 
 ## Contents
-- [Tools and technologies used for the pipeline development](## Tools and technologies used for the pipeline development)
+- [Tools and technologies used for the pipeline development](#tools-and-technologies-used-for-the-pipeline-development)
 - [Charts and reports](## Charts and reports)
 - [Requirements](## Requirements)
 - [Running the pipeline](## Running the pipeline)
