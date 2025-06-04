@@ -94,14 +94,21 @@ Then, go to "Server > Register > Server..."
 <br>
 
 ![image](https://github.com/user-attachments/assets/d9a624bc-b0ad-4e62-ae0a-272ea8105010)
+
 <br>
+
 Now, name the server
+
 <br>
+
 ![image](https://github.com/user-attachments/assets/c1b5fda1-74d8-4af9-8afe-a9c6a6a15ede)
+
 <br>
 After, under "Connection", use the following parameters to connect to the database, the default password is airflow:
+
 <br>
 ![image](https://github.com/user-attachments/assets/99198a3d-fe29-4c1c-8c42-e43437b6ae89)
+
 <br>
 
 ![image](https://github.com/user-attachments/assets/8a4a0259-7c87-49d9-b2ae-448c7bbab5f7)
