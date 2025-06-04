@@ -78,11 +78,25 @@ After that, please go again to again to Airflow on the following port:
 ```
 https://localhost:8081
 ```
-Then, run each DAG (or "play buttons" if you are not familiar with some concepts) on its numerical order after each one of them is finished. This is the UI to be used:
+Then, run each DAG (or "play buttons" if you are not familiar with some concepts) on its numerical order after each one of them is finished. This is the UI to be used: \
 ![image](https://github.com/user-attachments/assets/5dd4d02f-b2e1-4d8d-abe1-e42cc045d306)
 
-After running the DAGs, the user can check the Warehouse on the given port:
+### Accessing the Data Warehouse
+With the DAG runs finished, the user can check the warehouse on the port below:
 ```
 https://localhost:8082
 ```
+The default username and password are admin@admin.com and root, respectively.
+
+Then, go to "Server > Register > Server..."
+![image](https://github.com/user-attachments/assets/d9a624bc-b0ad-4e62-ae0a-272ea8105010) \
+Now, name the server
+![image](https://github.com/user-attachments/assets/c1b5fda1-74d8-4af9-8afe-a9c6a6a15ede)
+
+After, under "Connection", use the following parameters to connect to the database, the default password is airflow: \
+
+![image](https://github.com/user-attachments/assets/99198a3d-fe29-4c1c-8c42-e43437b6ae89)
+
+
+![image](https://github.com/user-attachments/assets/8a4a0259-7c87-49d9-b2ae-448c7bbab5f7)
 
