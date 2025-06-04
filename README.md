@@ -5,5 +5,5 @@ The pipeline runs can be configured as the users see fi by changing the Apache A
 ## Requirements
 To run this pipeline, the user needs:
 1. A Mercado Livre seller account
-2. A Mercado Livre application [(more on that here - PT/BR) (https://developers.mercadolivre.com.br/en/crie-uma-aplicacao-no-mercado-livre)]
+2. A Mercado Livre application [(more on that here - PT/BR)](https://developers.mercadolivre.com.br/en/crie-uma-aplicacao-no-mercado-livre)
 3. A Shopee seller account
