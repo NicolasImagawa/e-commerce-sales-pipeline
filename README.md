@@ -2,6 +2,17 @@
 This open-source data pipeline shows sales results from two major e-commerce platforms in Brazil (Mercado Livre and Shopee) through an ELT pipeline that stores data in an on-premises star-schema data warehouse. 
 The pipeline runs can be configured as the users see fit by changing the Apache Airflow DAGs.
 
+## Contents
+- [Tools and technologies used for the pipeline development](## Tools and technologies used for the pipeline development)
+- [Charts and reports](## Charts and reports)
+- [Requirements](## Requirements)
+- [Running the pipeline](## Running the pipeline)
+  - [Running Docker]### Running Docker
+  - [Accessing the API]### Accessing the API
+  - [Running the DAGs]### Running the DAGs
+  - [Accessing the Data Warehouse]### Accessing the Data Warehouse
+- [Contact]## Contact
+  
 ## Tools and technologies used for the pipeline development
 The following picture shows how the pipeline works end-to-end.
 
@@ -117,7 +128,7 @@ After, under "Connection", use the following parameters to connect to the databa
 
 That's it! The pipeline should be working smoothly now and queries can be made against the warehouse.
 
-### Contact
+## Contact
 If you have any questions or want to reach me out, you can contact me on the following channels:
 LinkedIn: www.linkedin.com/in/nicolas-imagawa
 GitHub: https://github.com/NicolasImagawa
