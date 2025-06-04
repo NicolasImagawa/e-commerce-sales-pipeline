@@ -61,6 +61,6 @@ Now, create a `.env` on the project's root to access Mercado Livre's API with th
 - `LIST_COST` = for testing only, not necessary
 -  `CODE` = Change $CLIENT_ID on the following link and paste it on your browser [https://auth.mercadolivre.com.br/authorization?response_type=code&$CLIENT_ID&redirect_uri=https://github.com/NicolasImagawa] Then, get the code from the reponse URL. It starts with "TG-" followed be an alphanumeric sequence.
 
-> !TIP
+> [!TIP]
 > If this is your first time accessing Mercado Livre's API, you can learn more about it on the following webpage: [https://developers.mercadolivre.com.br/pt_br/crie-uma-aplicacao-no-mercado-livre]
 
