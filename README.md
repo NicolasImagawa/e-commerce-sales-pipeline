@@ -40,7 +40,15 @@ To run this pipeline, the user needs:
 6. To have preferably Python 3.9 or a virtual environment equivalent on its machine.
 
 ## Running the pipeline
-To run the pipeline, first run the following command on the project's root.
-'''
-docker build -t airflow_ecommerce:v001 .
-'''
+To run the pipeline, first run the following command on the project's root through the CLI.
+```
+docker build -t airflow_e_commerce_sales:v001 .
+```
+Then, please run this command:
+```
+docker-compose up -d
+```
+After creating the containers, check if the following port has Apache Airflow running on it.
+```
+https://localhost:8081
+```
