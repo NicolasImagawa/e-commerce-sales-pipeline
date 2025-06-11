@@ -23,7 +23,7 @@ The following picture shows how the pipeline works end-to-end.
   <br>
   
 - Data Warehouse: PostgreSQL;
-- Infrastructure: Terraform creates all databases and schemas in the warehouse;
+- Infrastructure: Terraform creates all additional databases and schemas in the warehouse;
 - Extraction: Python to handle REST API requests;
 - Cleaning: Pandas;
 - Loading:
