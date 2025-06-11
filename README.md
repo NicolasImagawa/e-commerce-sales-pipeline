@@ -18,8 +18,8 @@ The following picture shows how the pipeline works end-to-end.
   
   <br>
   
-![image](https://github.com/user-attachments/assets/c540cc01-767b-4a62-8bef-8f9023eac0a5)
-  
+![image](https://github.com/user-attachments/assets/7e739c09-68b1-464a-b555-45b0835eeb7e)
+
   <br>
   
 - Data Warehouse: PostgreSQL;
