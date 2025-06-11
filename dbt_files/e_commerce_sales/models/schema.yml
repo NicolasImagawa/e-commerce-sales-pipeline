@@ -3,24 +3,24 @@ version: 2
 sources:
   - name: entry_shopee
     database: sales_db
-    schema: stg
+    schema: entry
     tables:
-      - name: stg_shopee
+      - name: entry_shopee
 
   - name: entry_ml
     database: sales_db
-    schema: stg
+    schema: entry
     tables:
-      - name: stg_mercadolivre
-      - name: stg_mercadolivre__context__flows
-      - name: stg_mercadolivre__mediations
-      - name: stg_mercadolivre__order_items
-      - name: stg_mercadolivre__order_items__item__variation_attributes
-      - name: stg_mercadolivre__payments
-      - name: stg_mercadolivre__payments__available_actions
-      - name: stg_mercadolivre__tags
-      - name: stg_mercadolivre_sh
-
+      - name: entry_mercadolivre
+      - name: entry_mercadolivre__context__flows
+      - name: entry_mercadolivre__mediations
+      - name: entry_mercadolivre__order_items
+      - name: entry_mercadolivre__order_items__item__variation_attributes
+      - name: entry_mercadolivre__payments
+      - name: entry_mercadolivre__payments__available_actions
+      - name: entry_mercadolivre__tags
+      - name: entry_mercadolivre_sh
+      
   - name: supplies
     database: sales_db
     schema: supplies

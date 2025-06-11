@@ -1,7 +1,7 @@
 {{
     config(
         materialized='incremental',
-        unique_key='product_id',
+        unique_key='product_ad_id',
         incremental_strategy='merge'
     )
 }}
@@ -12,13 +12,13 @@ WITH ad_name AS (
            stg_mercadolivre__payments.reason AS product_ad_name,
            orders_results.ld_timestamp AS ld_timestamp
         FROM {{ ref('mercadolivre_orders_results') }} AS orders_results
-        LEFT JOIN {{ source('entry_ml', 'stg_mercadolivre__payments') }} AS stg_mercadolivre__payments
+        LEFT JOIN {{ ref('stg_mercadolivre__payments') }} AS stg_mercadolivre__payments
             ON orders_results.order_id = stg_mercadolivre__payments.order_id
-        LEFT JOIN {{ source('entry_ml', 'stg_mercadolivre') }} AS stg_mercadolivre
+        LEFT JOIN {{ ref('stg_mercadolivre') }} AS stg_mercadolivre
             ON orders_results.order_id = stg_mercadolivre.id
         {% if is_incremental() %}
 
-            WHERE orders_results.ld_timestamp > (SELECT MAX(ld_timestamp) FROM {{ this }} )
+            WHERE orders_results.ld_timestamp > (SELECT MAX(ld_timestamp) FROM {{ this }})
 
         {% endif %}
 ), ad_name_dlt_id AS (
@@ -27,7 +27,7 @@ WITH ad_name AS (
            stg_mercadolivre._dlt_id AS dlt_id,
            ad_name.ld_timestamp
         FROM ad_name
-        LEFT JOIN {{ source('entry_ml', 'stg_mercadolivre') }} AS stg_mercadolivre
+        LEFT JOIN {{ ref('stg_mercadolivre') }} AS stg_mercadolivre
             ON ad_name.order_id = stg_mercadolivre.id
 ), ad_name_dlt_id_sku AS (
     SELECT ad_name_dlt_id.product_id,
@@ -36,10 +36,11 @@ WITH ad_name AS (
            ad_name_dlt_id.dlt_id,
            ad_name_dlt_id.ld_timestamp
         FROM ad_name_dlt_id
-        LEFT JOIN {{ source('entry_ml', 'stg_mercadolivre__order_items') }} AS stg_mercadolivre__order_items
+        LEFT JOIN {{ ref('stg_mercadolivre__order_items') }} AS stg_mercadolivre__order_items
             ON ad_name_dlt_id.dlt_id = stg_mercadolivre__order_items._dlt_parent_id
 ), ad_name_dlt_id_sku_product AS (
     SELECT ad_name_dlt_id_sku.product_id,
+           CONCAT('ML_', {{ dbt_utils.generate_surrogate_key(['ad_name_dlt_id_sku.product_id', 'ad_name_dlt_id_sku.product_ad_name']) }} ) AS product_ad_id,
            ad_name_dlt_id_sku.product_ad_name,
            ad_name_dlt_id_sku.sku,
            kit_components.product,
@@ -47,41 +48,43 @@ WITH ad_name AS (
         FROM ad_name_dlt_id_sku
         LEFT JOIN {{ source('supplies', 'kit_components') }} AS kit_components
             ON ad_name_dlt_id_sku.sku = kit_components.sku
-), new_data AS (
+        GROUP BY ad_name_dlt_id_sku.product_id,
+                 product_ad_id,
+	             ad_name_dlt_id_sku.product_ad_name,
+	             ad_name_dlt_id_sku.sku,
+	             kit_components.product,
+	             ad_name_dlt_id_sku.ld_timestamp
+), update_data AS (
     SELECT ad_name_dlt_id_sku_product.product_id,
+           ad_name_dlt_id_sku_product.product_ad_id,
            ad_name_dlt_id_sku_product.product_ad_name,
            ad_name_dlt_id_sku_product.sku,
            ad_name_dlt_id_sku_product.product,
            ad_name_dlt_id_sku_product.ld_timestamp
         FROM ad_name_dlt_id_sku_product
-), update_data AS (
-    SELECT new_data.product_id,
-           new_data.product_ad_name,
-           new_data.sku,
-           new_data.product,
-           new_data.ld_timestamp
-        FROM new_data
         
         {% if is_incremental() %}
 
-            WHERE new_data.product_id IN (SELECT product_id FROM {{ this }})
+            WHERE ad_name_dlt_id_sku_product.product_id IN (SELECT product_ad_id FROM {{ this }})
 
         {% endif %}
 ), insert_data AS (
-    SELECT new_data.product_id,
-           new_data.product_ad_name,
-           new_data.sku,
-           new_data.product,
-           new_data.ld_timestamp
-        FROM new_data
+    SELECT ad_name_dlt_id_sku_product.product_id,
+           ad_name_dlt_id_sku_product.product_ad_id,
+           ad_name_dlt_id_sku_product.product_ad_name,
+           ad_name_dlt_id_sku_product.sku,
+           ad_name_dlt_id_sku_product.product,
+           ad_name_dlt_id_sku_product.ld_timestamp
+        FROM ad_name_dlt_id_sku_product
         
         {% if is_incremental() %}
 
-            WHERE new_data.product_id NOT IN (SELECT product_id FROM update_data)
+            WHERE ad_name_dlt_id_sku_product.product_id NOT IN (SELECT product_ad_id FROM update_data)
 
         {% endif %}
 )
 SELECT  update_data.product_id,
+        update_data.product_ad_id,
         update_data.product_ad_name,
         update_data.sku,
         update_data.product,
@@ -89,6 +92,7 @@ SELECT  update_data.product_id,
     FROM update_data
     UNION
 SELECT  insert_data.product_id,
+        insert_data.product_ad_id,
         insert_data.product_ad_name,
         insert_data.sku,
         insert_data.product,

@@ -32,7 +32,7 @@ def postgres_ingestion_shopee(test_run):
 
             try:
                 print(f"Loading file {file} to sales_db")
-                df.to_sql(name="stg_shopee", schema="stg", con=engine, if_exists='append', index=False)
+                df.to_sql(name="entry_shopee", schema="entry", con=engine, if_exists='append', index=False)
                 print(f"Data in {file} successfully loaded.")
             except Exception as e:
                 print(f"An exception has occured on file {file}.")

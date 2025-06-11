@@ -6,25 +6,33 @@
     )
 }}
 
-WITH new_data AS (
-    SELECT orders_results.product_id AS product_id,
-           stg_shopee.nome_do_produto AS product_ad_name,
+WITH product_id_sku AS(
+ SELECT product_id,
+        SPLIT_PART(product_id, 'SH_', 2) AS sku,
+		MAX(ld_timestamp) AS ld_timestamp
+	FROM {{ ref("shopee_orders_results") }}
+	GROUP BY product_id,
+	         sku
+), new_data AS (
+    SELECT product_id_sku.product_id AS product_id,
            stg_shopee.numero_de_referencia_sku AS sku,
            kit_components.product AS product,
-           orders_results.ld_timestamp AS ld_timestamp
-        FROM {{ ref("shopee_orders_results") }} AS orders_results,
-             {{ source("entry_shopee", "stg_shopee") }} AS stg_shopee,
-             {{ source("supplies", "kit_components") }} AS kit_components,
-             {{ ref("shopee_new_id") }} AS shopee_new_id
-        WHERE orders_results.main_id = shopee_new_id.main_id
-            AND shopee_new_id.id_do_pedido = stg_shopee.id_do_pedido
-            AND stg_shopee.numero_de_referencia_sku = kit_components.sku
+           product_id_sku.ld_timestamp
+        FROM product_id_sku,
+             {{ ref("stg_shopee") }} AS stg_shopee,
+             {{ source("supplies", "kit_components") }} AS kit_components
+        WHERE product_id_sku.sku = stg_shopee.numero_de_referencia_sku
+		    AND product_id_sku.sku = kit_components.sku
+			AND stg_shopee.numero_de_referencia_sku = kit_components.sku
             {% if is_incremental() %}
-                AND orders_results.ld_timestamp  > (SELECT MAX(ld_timestamp) FROM {{ this }})
+                AND  product_id_sku.ld_timestamp  > (SELECT MAX(ld_timestamp) FROM {{ this }})
             {% endif %}
+        GROUP BY product_id_sku.product_id,
+           		 stg_shopee.numero_de_referencia_sku,
+           		 kit_components.product,
+				 product_id_sku.ld_timestamp
 ), update_data AS (
         SELECT  product_id,
-                product_ad_name,
                 sku,
                 product,
                 ld_timestamp
@@ -34,21 +42,18 @@ WITH new_data AS (
             {% endif %}
 ), insert_data AS (
         SELECT  product_id,
-                product_ad_name,
                 sku,
                 product,
                 ld_timestamp
         FROM new_data
         WHERE product_id NOT IN (SELECT product_id FROM update_data)
 ) SELECT product_id,
-         product_ad_name,
          sku,
          product,
          ld_timestamp
     FROM update_data
     UNION
     SELECT product_id,
-           product_ad_name,
            sku,
            product,
            ld_timestamp

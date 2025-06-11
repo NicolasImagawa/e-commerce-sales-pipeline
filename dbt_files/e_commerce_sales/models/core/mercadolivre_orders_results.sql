@@ -7,14 +7,14 @@
 }}
 
 WITH add_timestamp AS (
-	SELECT ml.buyer__id,
+	SELECT ml.buyer__nickname,
            ml.id,
 		   ml._dlt_id,
            CURRENT_TIMESTAMP AS ld_timestamp
-	FROM {{ source("entry_ml", "stg_mercadolivre") }} AS ml
+	FROM {{ ref("stg_mercadolivre") }} AS ml
 
 ), buyers AS (
-	SELECT DISTINCT add_timestamp.buyer__id,
+	SELECT DISTINCT add_timestamp.buyer__nickname,
 		   add_timestamp._dlt_id,
            add_timestamp.ld_timestamp
 	FROM add_timestamp
@@ -30,15 +30,15 @@ WITH add_timestamp AS (
                 orders.unit_price AS price,
                 orders.sale_fee AS fee,
                 orders._dlt_parent_id AS _dlt_parent_id
-			FROM {{ source("entry_ml", "stg_mercadolivre__order_items") }} AS orders
+			FROM {{ ref( "stg_mercadolivre__order_items") }} AS orders
 ), agg_results AS (
 	SELECT payments.order_id,
 		   orders.item__seller_sku AS sku,
 		   SUM(payments.transaction_amount) AS agg_transaction_amount,
 		   SUM(payments.shipping_cost) AS agg_sh_cost,
            add_timestamp.ld_timestamp
-	FROM {{ source("entry_ml", "stg_mercadolivre__payments") }} AS payments
-    LEFT JOIN {{ source("entry_ml", "stg_mercadolivre__order_items") }} AS orders
+	FROM {{ ref("stg_mercadolivre__payments") }} AS payments
+    LEFT JOIN {{ ref("stg_mercadolivre__order_items") }} AS orders
         ON payments._dlt_parent_id = orders._dlt_parent_id
     LEFT JOIN add_timestamp
         ON payments.order_id = add_timestamp.id
@@ -58,8 +58,8 @@ WITH add_timestamp AS (
 		   orders.unit_price AS price,
 	   	   orders.item__seller_sku AS sku,
            add_timestamp.ld_timestamp
-	FROM {{ source("entry_ml", "stg_mercadolivre__payments") }} AS payments
-    LEFT JOIN {{ source("entry_ml", "stg_mercadolivre__order_items") }} AS orders
+	FROM {{ ref("stg_mercadolivre__payments") }} AS payments
+    LEFT JOIN {{ ref("stg_mercadolivre__order_items") }} AS orders
         ON orders._dlt_parent_id = payments._dlt_parent_id
     LEFT JOIN add_timestamp
         ON payments.order_id = add_timestamp.id
@@ -92,10 +92,10 @@ WITH add_timestamp AS (
 			 kit.sku
 ), prep_seller_sh_cost AS (
 	SELECT ml.id AS order_id,
-		   COALESCE(ml_sh.lead_time__list_cost__v_double, 0) AS seller_ship_cost,
+		   COALESCE(ml_sh.lead_time__list_cost, 0) AS seller_ship_cost,
 		   orders_costs.price
-	FROM {{ source("entry_ml", "stg_mercadolivre_sh") }} AS ml_sh
-	LEFT JOIN {{ source("entry_ml", "stg_mercadolivre") }} AS ml
+	FROM {{ ref("stg_mercadolivre_sh") }} AS ml_sh
+	LEFT JOIN {{ ref("stg_mercadolivre") }} AS ml
 		ON ml_sh.id = ml.shipping__id
 	LEFT JOIN orders_costs
 		ON orders_costs.order_id = ml.id
@@ -119,10 +119,10 @@ WITH add_timestamp AS (
 			ON prep_seller_sh_cost.order_id = aux_seller_sh_cost.order_id
 ), new_results AS (
 		SELECT  payments.id AS main_id,
-                CONCAT('ML_', {{ dbt_utils.generate_surrogate_key(['buyers.buyer__id', 'payments.date_approved']) }} ) AS main_buyer__id,
+                CONCAT('ML_', {{ dbt_utils.generate_surrogate_key(['buyers.buyer__nickname', 'payments.date_approved']) }} ) AS main_buyer__id,
                 payments.order_id,
                 CONCAT('ML_', product_sku_qt_price_fee.sku) AS product_id,
-                CONCAT('ML_', {{ dbt_utils.generate_surrogate_key(['payments.id', 'payments.date_approved']) }} ) AS date_id,
+                CONCAT(payments.id, payments.date_approved) AS date_id,
                 payments.date_approved,
                 payments.payment_method_id,
                 product_sku_qt_price_fee.qt,
@@ -135,7 +135,7 @@ WITH add_timestamp AS (
 		        seller_sh_cost.seller_ship_cost,
                 ROUND(CAST(agg_results.agg_transaction_amount - (product_sku_qt_price_fee.qt * (product_sku_qt_price_fee.fee + orders_costs.total_prod_cost)) - seller_sh_cost.seller_ship_cost AS NUMERIC), 2) AS profit,
                 buyers.ld_timestamp
-            FROM {{ source("entry_ml", "stg_mercadolivre__payments") }} AS payments,
+            FROM {{ ref("stg_mercadolivre__payments") }} AS payments,
                  product_sku_qt_price_fee,
                  buyers,
                  agg_results,

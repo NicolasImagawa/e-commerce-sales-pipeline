@@ -12,8 +12,8 @@ def extract_mercado(test_run):
 
     seller_id = os.environ["SELLER_ID"]
     access_token = os.environ["ACCESS_TOKEN"]
-    order_data_created_from = "2024-07-01T00:00:00.000-03:00"
-    order_data_created_to = "2024-10-01T00:00:00.000-03:00"
+    order_data_created_from = "2025-05-01T00:00:00.000-03:00"
+    order_data_created_to = "2025-06-01T00:00:00.000-03:00"
 
     limit = 50
     offset = 0

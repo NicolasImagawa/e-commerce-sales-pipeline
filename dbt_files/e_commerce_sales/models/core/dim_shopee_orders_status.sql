@@ -7,16 +7,15 @@
 }}
 
 WITH delivery_data AS (
-    SELECT shopee_new_id.main_id,
+    SELECT stg_shopee.load_id AS main_id,
            stg_shopee.status_do_pedido AS order_status,
            stg_shopee.status_da_devolucao___reembolso AS refund_status,
            stg_shopee.numero_de_rastreamento AS deliver_id,
            stg_shopee.opcao_de_envio AS delivery_company,
            stg_shopee.opcao_de_envio AS shipping_option,
-            stg_shopee.load_timestamp AS ld_timestamp
-        FROM {{ ref('shopee_new_id') }} AS shopee_new_id
-        LEFT JOIN {{ source('entry_shopee', 'stg_shopee') }} AS stg_shopee
-            ON shopee_new_id.id_do_pedido = stg_shopee.id_do_pedido
+           stg_shopee.load_timestamp AS ld_timestamp
+        FROM {{ ref("stg_shopee") }} AS stg_shopee
+        WHERE stg_shopee.status_da_devolucao___reembolso IS NULL
 ), new_data AS (
     SELECT  orders_results.main_id,
             delivery_data.order_status,

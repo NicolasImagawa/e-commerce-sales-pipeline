@@ -8,7 +8,6 @@ import datetime as dt
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from extraction.mercadolivre.script.send_data import postgres_ingestion_ml
-from extraction.mercadolivre.script.send_shipping_cost import postgres_ingestion_sh_costs
 from extraction.shopee.script.send_data import postgres_ingestion_shopee
 from extraction.supplies.script.load_prices import postgres_ingestion_costs
 from extraction.supplies.script.load_kits import postgres_ingestion_kits
@@ -47,10 +46,5 @@ with DAG (
                     python_callable=postgres_ingestion_kits
                 )
     
-    load_sh_costs = PythonOperator(
-                    task_id='load_sh_costs',
-                    python_callable=postgres_ingestion_sh_costs,
-                    op_kwargs = {'test_run': False}
-                )
     
-    start_dag >> [load_mercadolivre, load_shopee, load_prod_cost, load_kits, load_sh_costs]
+    start_dag >> [load_mercadolivre, load_shopee, load_prod_cost, load_kits]

@@ -16,6 +16,16 @@ provider "postgresql" {
   connect_timeout = 15
 }
 
+resource "postgresql_schema" "entry" {
+  name  = var.entry_schema_name
+  database = var.db_name
+  owner = var.owner
+
+  policy {
+    usage = true
+  }
+}
+
 resource "postgresql_schema" "stg" {
   name  = var.stg_schema_name
   database = var.db_name

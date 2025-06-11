@@ -12,7 +12,7 @@ WITH date_approved AS (
            orders_results.order_id,
            orders_results.ld_timestamp
         FROM {{ ref('mercadolivre_orders_results') }} AS orders_results
-            LEFT JOIN {{ source('entry_ml', 'stg_mercadolivre__payments') }} AS stg_mercadolivre__payments
+            LEFT JOIN {{ ref('stg_mercadolivre__payments') }} AS stg_mercadolivre__payments
             ON orders_results.main_id = stg_mercadolivre__payments.id
         {% if is_incremental() %}
 
@@ -26,7 +26,7 @@ WITH date_approved AS (
            stg_mercadolivre.shipping__id AS shipping_id,
            date_approved.ld_timestamp
         FROM date_approved
-            LEFT JOIN {{ source('entry_ml', 'stg_mercadolivre') }} AS stg_mercadolivre
+            LEFT JOIN {{ ref('stg_mercadolivre') }} AS stg_mercadolivre
             ON date_approved.order_id = stg_mercadolivre.id
 ), date_approved_estimated_delivery AS (
     SELECT date_approved_ship_id.date_id,
@@ -40,7 +40,7 @@ WITH date_approved AS (
            EXTRACT( DAY FROM stg_mercadolivre_sh.lead_time__estimated_delivery_limit__date) AS day_delivered,
            date_approved_ship_id.ld_timestamp
     FROM date_approved_ship_id
-        LEFT JOIN {{ source('entry_ml', 'stg_mercadolivre_sh') }} AS stg_mercadolivre_sh
+        LEFT JOIN {{ ref('stg_mercadolivre_sh') }} AS stg_mercadolivre_sh
         ON date_approved_ship_id.shipping_id = stg_mercadolivre_sh.id
 ), update_data AS (
     SELECT  date_approved_estimated_delivery.date_id,

@@ -14,11 +14,12 @@ records
 guide.txt
 nohup.out
 /extraction/mercadolivre/data/clean/*.csv
-/extraction/mercadolivre/data/raw/*.json
+./extraction/mercadolivre/data/raw/*.json
 /extraction/mercadolivre/data/shipping_cost_ml/*.json
 /extraction/mercadolivre/prototypes/*
 /extraction/shopee/data/raw/*.xlsx
 /entry_data/clean/*.csv
+./entry_data/raw/cost_data.csv
 .ipynb_checkpoints
 user-local.json
 token.json

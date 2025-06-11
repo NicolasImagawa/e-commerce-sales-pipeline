@@ -10,7 +10,7 @@ from dbt_files.run_dbt import transform_data
 from dbt_files.install_deps import install_dependencies
 
 with DAG(
-    dag_id = '04_transform_data',
+    dag_id = '05_transform_data',
     description="Data transformation DAG",
     start_date=None,
     schedule=None

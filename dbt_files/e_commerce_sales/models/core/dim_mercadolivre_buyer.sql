@@ -13,7 +13,7 @@ WITH buyer_id_shipping_id AS (
            stg_mercadolivre.buyer__nickname,
            orders_results.ld_timestamp
         FROM {{ ref('mercadolivre_orders_results') }} AS orders_results
-        LEFT JOIN {{ source('entry_ml', 'stg_mercadolivre') }} AS stg_mercadolivre
+        LEFT JOIN {{ ref('stg_mercadolivre') }} AS stg_mercadolivre
             ON orders_results.order_id = stg_mercadolivre.id
         {% if is_incremental() %}
 
@@ -36,7 +36,7 @@ WITH buyer_id_shipping_id AS (
            stg_mercadolivre_sh.destination__shipping_address__country__id AS country,
            buyer_id_shipping_id.ld_timestamp
         FROM buyer_id_shipping_id
-        LEFT JOIN {{ source('entry_ml', 'stg_mercadolivre_sh') }} AS stg_mercadolivre_sh
+        LEFT JOIN {{ ref('stg_mercadolivre_sh') }} AS stg_mercadolivre_sh
             ON buyer_id_shipping_id.shipping__id = stg_mercadolivre_sh.id
 ), update_data AS (
     SELECT buyer_id_shipping_id_buyer_data.main_buyer__id,

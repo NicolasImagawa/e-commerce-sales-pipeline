@@ -12,7 +12,7 @@ WITH shipping_id AS (
            stg_mercadolivre.fulfilled,
            order_status.ld_timestamp
         FROM {{ ref('mercadolivre_orders_results') }} AS order_status
-        LEFT JOIN {{ source('entry_ml', 'stg_mercadolivre') }} AS stg_mercadolivre
+        LEFT JOIN {{ ref('stg_mercadolivre') }} AS stg_mercadolivre
             ON order_status.order_id = stg_mercadolivre.id
         {% if is_incremental() %}
 
@@ -28,7 +28,7 @@ WITH shipping_id AS (
            stg_mercadolivre_sh.lead_time__shipping_method__type AS delivery_method,
            shipping_id.ld_timestamp
         FROM shipping_id
-        LEFT JOIN {{ source('entry_ml', 'stg_mercadolivre_sh') }} AS stg_mercadolivre_sh
+        LEFT JOIN {{ ref('stg_mercadolivre_sh') }} AS stg_mercadolivre_sh
             ON shipping_id.shipping_id = stg_mercadolivre_sh.id
 ), update_data AS (
     SELECT  status_data.main_id,

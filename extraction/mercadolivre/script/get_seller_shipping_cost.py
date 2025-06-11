@@ -14,8 +14,8 @@ def get_shipping_id(test_run):
 
         df = pd.read_csv(id_path, encoding="utf-8")
 
-        df["shipping__id"] = df["shipping__id"].astype(int)
-        shipping_ids = df["shipping__id"].tolist()
+        df["shipping_id"] = df["shipping_id"].astype(int)
+        shipping_ids = df["shipping_id"].tolist()
 
     if test_run:
         test_data = extract_shipping_cost(shipping_ids, test_run)
