@@ -16,7 +16,7 @@ The pipeline runs can be configured as the users see fit by changing the Apache 
 ## Tools and technologies used for the pipeline development
 The following picture shows how the pipeline works end-to-end.
 
-![Untitled Diagram drawio](https://github.com/user-attachments/assets/6c666c77-b3df-450f-94d4-705d1d9955b9)
+![Untitled Diagram drawio](https://github.com/user-attachments/assets/27ef25fd-c3a3-45a9-9d4f-2e36a4dc1261)
 
 - Data Warehouse: PostgreSQL;
 - Infrastructure: Terraform creates all databases and schemas in the warehouse;
