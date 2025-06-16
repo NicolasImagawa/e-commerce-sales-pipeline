@@ -139,7 +139,7 @@ After, under "Connection", use the following parameters to connect to the databa
 
 <br>
 
-![image](https://github.com/user-attachments/assets/99198a3d-fe29-4c1c-8c42-e43437b6ae89)
+![image](https://github.com/user-attachments/assets/721c41ed-fdcf-4215-833e-7ef4dabbee5c)
 
 <br>
 
