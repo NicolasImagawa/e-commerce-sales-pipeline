@@ -1,4 +1,4 @@
-#About The Terraform files
+# About The Terraform files
 
 Terraform is used along Apache Airflow to create the dev and prod databases for the data pipeline, along with some of its schemas.
 
