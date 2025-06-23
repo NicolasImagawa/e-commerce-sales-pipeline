@@ -106,9 +106,13 @@ After that, please go again to again to Airflow on the following port:
 ```
 https://localhost:8081
 ```
-Then, run each DAG (or "play buttons" if you are not familiar with some concepts) on its numerical order after each one of them is finished. This is the UI to be used:
+Then, choose a tag (dev or prod) and run each DAG for the chosen tag on its numerical order after each one of them is finished. This is the UI to be used:
+
 <br>
-![image](https://github.com/user-attachments/assets/5dd4d02f-b2e1-4d8d-abe1-e42cc045d306)
+
+![image](https://github.com/user-attachments/assets/01c3d8bc-1fa3-4c81-b361-bb3a44bca197)
+
+<br>
 
 ### Accessing the Data Warehouse
 With the DAG runs finished, the user can check the warehouse on the port below:
