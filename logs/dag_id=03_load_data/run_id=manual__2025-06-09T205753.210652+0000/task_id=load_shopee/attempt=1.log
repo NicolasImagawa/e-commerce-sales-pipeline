@@ -1,0 +1,39 @@
+[2025-06-09T20:57:55.582+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-06-09T20:57:55.603+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: 03_load_data.load_shopee manual__2025-06-09T20:57:53.210652+00:00 [queued]>
+[2025-06-09T20:57:55.613+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: 03_load_data.load_shopee manual__2025-06-09T20:57:53.210652+00:00 [queued]>
+[2025-06-09T20:57:55.613+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-06-09T20:57:55.630+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): load_shopee> on 2025-06-09 20:57:53.210652+00:00
+[2025-06-09T20:57:55.637+0000] {standard_task_runner.py:72} INFO - Started process 3073 to run task
+[2025-06-09T20:57:55.643+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', '03_load_data', 'load_shopee', 'manual__2025-06-09T20:57:53.210652+00:00', '--job-id', '562', '--raw', '--subdir', 'DAGS_FOLDER/03_load_data.py', '--cfg-path', '/tmp/tmp8ks2yj_8']
+[2025-06-09T20:57:55.647+0000] {standard_task_runner.py:105} INFO - Job 562: Subtask load_shopee
+[2025-06-09T20:57:55.717+0000] {task_command.py:467} INFO - Running <TaskInstance: 03_load_data.load_shopee manual__2025-06-09T20:57:53.210652+00:00 [running]> on host 28e6a58e4107
+[2025-06-09T20:57:55.822+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='03_load_data' AIRFLOW_CTX_TASK_ID='load_shopee' AIRFLOW_CTX_EXECUTION_DATE='2025-06-09T20:57:53.210652+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-06-09T20:57:53.210652+00:00'
+[2025-06-09T20:57:55.824+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-06-09T20:57:56.960+0000] {logging_mixin.py:190} INFO - Loading file ./extraction/shopee/data/raw/Order.completed.20240701_20240731.xlsx to sales_db
+[2025-06-09T20:57:57.002+0000] {logging_mixin.py:190} INFO - Data in ./extraction/shopee/data/raw/Order.completed.20240701_20240731.xlsx successfully loaded.
+[2025-06-09T20:57:57.113+0000] {logging_mixin.py:190} INFO - Loading file ./extraction/shopee/data/raw/Order.completed.20240801_20240831.xlsx to sales_db
+[2025-06-09T20:57:57.160+0000] {logging_mixin.py:190} INFO - Data in ./extraction/shopee/data/raw/Order.completed.20240801_20240831.xlsx successfully loaded.
+[2025-06-09T20:57:57.274+0000] {logging_mixin.py:190} INFO - Loading file ./extraction/shopee/data/raw/Order.completed.20240901_20240930.xlsx to sales_db
+[2025-06-09T20:57:57.321+0000] {logging_mixin.py:190} INFO - Data in ./extraction/shopee/data/raw/Order.completed.20240901_20240930.xlsx successfully loaded.
+[2025-06-09T20:57:57.527+0000] {logging_mixin.py:190} INFO - Loading file ./extraction/shopee/data/raw/Order.completed.20241001_20241031.xlsx to sales_db
+[2025-06-09T20:57:57.613+0000] {logging_mixin.py:190} INFO - Data in ./extraction/shopee/data/raw/Order.completed.20241001_20241031.xlsx successfully loaded.
+[2025-06-09T20:57:57.922+0000] {logging_mixin.py:190} INFO - Loading file ./extraction/shopee/data/raw/Order.completed.20241101_20241130.xlsx to sales_db
+[2025-06-09T20:57:58.075+0000] {logging_mixin.py:190} INFO - Data in ./extraction/shopee/data/raw/Order.completed.20241101_20241130.xlsx successfully loaded.
+[2025-06-09T20:57:58.447+0000] {logging_mixin.py:190} INFO - Loading file ./extraction/shopee/data/raw/Order.completed.20241201_20241231.xlsx to sales_db
+[2025-06-09T20:57:58.546+0000] {logging_mixin.py:190} INFO - Data in ./extraction/shopee/data/raw/Order.completed.20241201_20241231.xlsx successfully loaded.
+[2025-06-09T20:57:58.738+0000] {logging_mixin.py:190} INFO - Loading file ./extraction/shopee/data/raw/Order.completed.20250101_20250131.xlsx to sales_db
+[2025-06-09T20:57:58.815+0000] {logging_mixin.py:190} INFO - Data in ./extraction/shopee/data/raw/Order.completed.20250101_20250131.xlsx successfully loaded.
+[2025-06-09T20:57:59.053+0000] {logging_mixin.py:190} INFO - Loading file ./extraction/shopee/data/raw/Order.completed.20250201_20250228.xlsx to sales_db
+[2025-06-09T20:57:59.159+0000] {logging_mixin.py:190} INFO - Data in ./extraction/shopee/data/raw/Order.completed.20250201_20250228.xlsx successfully loaded.
+[2025-06-09T20:57:59.477+0000] {logging_mixin.py:190} INFO - Loading file ./extraction/shopee/data/raw/Order.completed.20250301_20250331.xlsx to sales_db
+[2025-06-09T20:57:59.621+0000] {logging_mixin.py:190} INFO - Data in ./extraction/shopee/data/raw/Order.completed.20250301_20250331.xlsx successfully loaded.
+[2025-06-09T20:57:59.813+0000] {logging_mixin.py:190} INFO - Loading file ./extraction/shopee/data/raw/Order.completed.20250401_20250430.xlsx to sales_db
+[2025-06-09T20:57:59.892+0000] {logging_mixin.py:190} INFO - Data in ./extraction/shopee/data/raw/Order.completed.20250401_20250430.xlsx successfully loaded.
+[2025-06-09T20:57:59.893+0000] {logging_mixin.py:190} INFO - [WARNING] - file ./extraction/shopee/data/raw/tests.txt does not have .xlsx extension and could not be loaded.
+[2025-06-09T20:57:59.894+0000] {logging_mixin.py:190} INFO - All data successfully loaded!
+[2025-06-09T20:57:59.895+0000] {python.py:240} INFO - Done. Returned value was: 1
+[2025-06-09T20:57:59.926+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-06-09T20:57:59.927+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=03_load_data, task_id=load_shopee, run_id=manual__2025-06-09T20:57:53.210652+00:00, execution_date=20250609T205753, start_date=20250609T205755, end_date=20250609T205759
+[2025-06-09T20:57:59.952+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-06-09T20:57:59.970+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-06-09T20:57:59.973+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

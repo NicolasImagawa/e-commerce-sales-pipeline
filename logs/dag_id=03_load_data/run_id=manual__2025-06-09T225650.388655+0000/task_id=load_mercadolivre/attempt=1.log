@@ -1,0 +1,451 @@
+[2025-06-09T22:56:51.586+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-06-09T22:56:51.610+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: 03_load_data.load_mercadolivre manual__2025-06-09T22:56:50.388655+00:00 [queued]>
+[2025-06-09T22:56:51.621+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: 03_load_data.load_mercadolivre manual__2025-06-09T22:56:50.388655+00:00 [queued]>
+[2025-06-09T22:56:51.622+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-06-09T22:56:51.637+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): load_mercadolivre> on 2025-06-09 22:56:50.388655+00:00
+[2025-06-09T22:56:51.642+0000] {standard_task_runner.py:72} INFO - Started process 9066 to run task
+[2025-06-09T22:56:51.648+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', '03_load_data', 'load_mercadolivre', 'manual__2025-06-09T22:56:50.388655+00:00', '--job-id', '662', '--raw', '--subdir', 'DAGS_FOLDER/03_load_data.py', '--cfg-path', '/tmp/tmpqo5ewfi2']
+[2025-06-09T22:56:51.650+0000] {standard_task_runner.py:105} INFO - Job 662: Subtask load_mercadolivre
+[2025-06-09T22:56:51.719+0000] {task_command.py:467} INFO - Running <TaskInstance: 03_load_data.load_mercadolivre manual__2025-06-09T22:56:50.388655+00:00 [running]> on host 28e6a58e4107
+[2025-06-09T22:56:51.818+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='03_load_data' AIRFLOW_CTX_TASK_ID='load_mercadolivre' AIRFLOW_CTX_EXECUTION_DATE='2025-06-09T22:56:50.388655+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-06-09T22:56:50.388655+00:00'
+[2025-06-09T22:56:51.820+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-06-09T22:56:52.613+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.9/site-packages/dlt/helpers/dbt/__init__.py:3: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+
+[2025-06-09T22:56:52.946+0000] {config_providers_context.py:156} WARNING - Airflow variable 'dlt_secrets_toml' was not found. This Airflow variable is a recommended place to hold the content of secrets.toml.If you do not use Airflow variables to hold dlt configuration or use variables with other names you can ignore this warning.
+[2025-06-09T22:56:55.261+0000] {logging_mixin.py:190} INFO - trying to load ./extraction/mercadolivre/data/raw/ml_sell_data_2024-07-01T00:00:00.000-03:00_2024-10-01T00:00:00.000-03:00_0.json to sales_db
+[2025-06-09T22:56:57.910+0000] {logging_mixin.py:190} WARNING - 2025-06-09 22:56:57,901|[ERROR]|9066|140509360125632|dlt|client.py|run_managed:409|Terminal exception in job entry_mercadolivre__tags.8ace355ea8.insert_values in file /var/dlt/pipelines/mercadolivre_data/load/normalized/1749509816.4517522/started_jobs/entry_mercadolivre__tags.8ace355ea8.0.insert_values
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.9/site-packages/dlt/destinations/sql_client.py", line 416, in _wrap_gen
+    return (yield from f(self, *args, **kwargs))
+  File "/home/***/.local/lib/python3.9/site-packages/dlt/destinations/impl/postgres/sql_client.py", line 112, in execute_query
+    raise outer
+  File "/home/***/.local/lib/python3.9/site-packages/dlt/destinations/impl/postgres/sql_client.py", line 104, in execute_query
+    curr.execute(query, db_args)
+psycopg2.errors.UndefinedTable: relation "entry.entry_mercadolivre__tags" does not exist
+LINE 1: insert into "entry"."entry_mercadolivre__tags"("value","_dlt...
+                    ^
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.9/site-packages/dlt/common/destination/client.py", line 404, in run_managed
+    self.run()
+  File "/home/***/.local/lib/python3.9/site-packages/dlt/destinations/insert_job_client.py", line 28, in run
+    self._sql_client.execute_fragments(fragments)
+  File "/home/***/.local/lib/python3.9/site-packages/dlt/destinations/impl/postgres/sql_client.py", line 119, in execute_fragments
+    return self.execute_sql(composed, *args, **kwargs)
+  File "/home/***/.local/lib/python3.9/site-packages/dlt/destinations/impl/postgres/sql_client.py", line 90, in execute_sql
+    with self.execute_query(sql, *args, **kwargs) as curr:
+  File "/usr/local/lib/python3.9/contextlib.py", line 119, in __enter__
+    return next(self.gen)
+  File "/home/***/.local/lib/python3.9/site-packages/dlt/destinations/sql_client.py", line 418, in _wrap_gen
+    raise self._make_database_exception(ex)
+  File "/home/***/.local/lib/python3.9/site-packages/dlt/destinations/impl/postgres/sql_client.py", line 129, in _make_database_exception
+    raise DatabaseUndefinedRelation(ex)
+dlt.destinations.exceptions.DatabaseUndefinedRelation: relation "entry.entry_mercadolivre__tags" does not exist
+LINE 1: insert into "entry"."entry_mercadolivre__tags"("value","_dlt...
+                    ^
+[2025-06-09T22:56:57.915+0000] {logging_mixin.py:190} WARNING - 2025-06-09 22:56:57,907|[ERROR]|9066|140509402072768|dlt|client.py|run_managed:409|Terminal exception in job entry_mercadolivre__payments__available_actions.488d0c2fcb.insert_values in file /var/dlt/pipelines/mercadolivre_data/load/normalized/1749509816.4517522/started_jobs/entry_mercadolivre__payments__available_actions.488d0c2fcb.0.insert_values
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.9/site-packages/dlt/destinations/sql_client.py", line 416, in _wrap_gen
+    return (yield from f(self, *args, **kwargs))
+  File "/home/***/.local/lib/python3.9/site-packages/dlt/destinations/impl/postgres/sql_client.py", line 112, in execute_query
+    raise outer
+  File "/home/***/.local/lib/python3.9/site-packages/dlt/destinations/impl/postgres/sql_client.py", line 104, in execute_query
+    curr.execute(query, db_args)
+psycopg2.errors.UndefinedTable: relation "entry.entry_mercadolivre__payments__available_actions" does not exist
+LINE 1: insert into "entry"."entry_mercadolivre__payments__available...
+                    ^
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.9/site-packages/dlt/common/destination/client.py", line 404, in run_managed
+    self.run()
+  File "/home/***/.local/lib/python3.9/site-packages/dlt/destinations/insert_job_client.py", line 28, in run
+    self._sql_client.execute_fragments(fragments)
+  File "/home/***/.local/lib/python3.9/site-packages/dlt/destinations/impl/postgres/sql_client.py", line 119, in execute_fragments
+    return self.execute_sql(composed, *args, **kwargs)
+  File "/home/***/.local/lib/python3.9/site-packages/dlt/destinations/impl/postgres/sql_client.py", line 90, in execute_sql
+    with self.execute_query(sql, *args, **kwargs) as curr:
+  File "/usr/local/lib/python3.9/contextlib.py", line 119, in __enter__
+    return next(self.gen)
+  File "/home/***/.local/lib/python3.9/site-packages/dlt/destinations/sql_client.py", line 418, in _wrap_gen
+    raise self._make_database_exception(ex)
+  File "/home/***/.local/lib/python3.9/site-packages/dlt/destinations/impl/postgres/sql_client.py", line 129, in _make_database_exception
+    raise DatabaseUndefinedRelation(ex)
+dlt.destinations.exceptions.DatabaseUndefinedRelation: relation "entry.entry_mercadolivre__payments__available_actions" does not exist
+LINE 1: insert into "entry"."entry_mercadolivre__payments__available...
+                    ^
+[2025-06-09T22:56:57.920+0000] {logging_mixin.py:190} WARNING - 2025-06-09 22:56:57,915|[ERROR]|9066|140509027227328|dlt|client.py|run_managed:409|Terminal exception in job entry_mercadolivre__payments.43ef306676.insert_values in file /var/dlt/pipelines/mercadolivre_data/load/normalized/1749509816.4517522/started_jobs/entry_mercadolivre__payments.43ef306676.0.insert_values
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.9/site-packages/dlt/destinations/sql_client.py", line 416, in _wrap_gen
+    return (yield from f(self, *args, **kwargs))
+  File "/home/***/.local/lib/python3.9/site-packages/dlt/destinations/impl/postgres/sql_client.py", line 112, in execute_query
+    raise outer
+  File "/home/***/.local/lib/python3.9/site-packages/dlt/destinations/impl/postgres/sql_client.py", line 104, in execute_query
+    curr.execute(query, db_args)
+psycopg2.errors.UndefinedTable: relation "entry.entry_mercadolivre__payments" does not exist
+LINE 1: insert into "entry"."entry_mercadolivre__payments"("reason",...
+                    ^
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.9/site-packages/dlt/common/destination/client.py", line 404, in run_managed
+    self.run()
+  File "/home/***/.local/lib/python3.9/site-packages/dlt/destinations/insert_job_client.py", line 28, in run
+    self._sql_client.execute_fragments(fragments)
+  File "/home/***/.local/lib/python3.9/site-packages/dlt/destinations/impl/postgres/sql_client.py", line 119, in execute_fragments
+    return self.execute_sql(composed, *args, **kwargs)
+  File "/home/***/.local/lib/python3.9/site-packages/dlt/destinations/impl/postgres/sql_client.py", line 90, in execute_sql
+    with self.execute_query(sql, *args, **kwargs) as curr:
+  File "/usr/local/lib/python3.9/contextlib.py", line 119, in __enter__
+    return next(self.gen)
+  File "/home/***/.local/lib/python3.9/site-packages/dlt/destinations/sql_client.py", line 418, in _wrap_gen
+    raise self._make_database_exception(ex)
+  File "/home/***/.local/lib/python3.9/site-packages/dlt/destinations/impl/postgres/sql_client.py", line 129, in _make_database_exception
+    raise DatabaseUndefinedRelation(ex)
+dlt.destinations.exceptions.DatabaseUndefinedRelation: relation "entry.entry_mercadolivre__payments" does not exist
+LINE 1: insert into "entry"."entry_mercadolivre__payments"("reason",...
+                    ^
+[2025-06-09T22:56:57.922+0000] {logging_mixin.py:190} WARNING - 2025-06-09 22:56:57,917|[ERROR]|9066|140509035620032|dlt|client.py|run_managed:409|Terminal exception in job entry_mercadolivre__mediations.e10b101d8c.insert_values in file /var/dlt/pipelines/mercadolivre_data/load/normalized/1749509816.4517522/started_jobs/entry_mercadolivre__mediations.e10b101d8c.0.insert_values
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.9/site-packages/dlt/destinations/sql_client.py", line 416, in _wrap_gen
+    return (yield from f(self, *args, **kwargs))
+  File "/home/***/.local/lib/python3.9/site-packages/dlt/destinations/impl/postgres/sql_client.py", line 112, in execute_query
+    raise outer
+  File "/home/***/.local/lib/python3.9/site-packages/dlt/destinations/impl/postgres/sql_client.py", line 104, in execute_query
+    curr.execute(query, db_args)
+psycopg2.errors.UndefinedTable: relation "entry.entry_mercadolivre__mediations" does not exist
+LINE 1: insert into "entry"."entry_mercadolivre__mediations"("id","_...
+                    ^
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.9/site-packages/dlt/common/destination/client.py", line 404, in run_managed
+    self.run()
+  File "/home/***/.local/lib/python3.9/site-packages/dlt/destinations/insert_job_client.py", line 28, in run
+    self._sql_client.execute_fragments(fragments)
+  File "/home/***/.local/lib/python3.9/site-packages/dlt/destinations/impl/postgres/sql_client.py", line 119, in execute_fragments
+    return self.execute_sql(composed, *args, **kwargs)
+  File "/home/***/.local/lib/python3.9/site-packages/dlt/destinations/impl/postgres/sql_client.py", line 90, in execute_sql
+    with self.execute_query(sql, *args, **kwargs) as curr:
+  File "/usr/local/lib/python3.9/contextlib.py", line 119, in __enter__
+    return next(self.gen)
+  File "/home/***/.local/lib/python3.9/site-packages/dlt/destinations/sql_client.py", line 418, in _wrap_gen
+    raise self._make_database_exception(ex)
+  File "/home/***/.local/lib/python3.9/site-packages/dlt/destinations/impl/postgres/sql_client.py", line 129, in _make_database_exception
+    raise DatabaseUndefinedRelation(ex)
+dlt.destinations.exceptions.DatabaseUndefinedRelation: relation "entry.entry_mercadolivre__mediations" does not exist
+LINE 1: insert into "entry"."entry_mercadolivre__mediations"("id","_...
+                    ^
+[2025-06-09T22:56:57.924+0000] {logging_mixin.py:190} WARNING - 2025-06-09 22:56:57,918|[ERROR]|9066|140509018834624|dlt|client.py|run_managed:409|Terminal exception in job entry_mercadolivre.25b70b3a89.insert_values in file /var/dlt/pipelines/mercadolivre_data/load/normalized/1749509816.4517522/started_jobs/entry_mercadolivre.25b70b3a89.0.insert_values
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.9/site-packages/dlt/destinations/sql_client.py", line 416, in _wrap_gen
+    return (yield from f(self, *args, **kwargs))
+  File "/home/***/.local/lib/python3.9/site-packages/dlt/destinations/impl/postgres/sql_client.py", line 112, in execute_query
+    raise outer
+  File "/home/***/.local/lib/python3.9/site-packages/dlt/destinations/impl/postgres/sql_client.py", line 104, in execute_query
+    curr.execute(query, db_args)
+psycopg2.errors.UndefinedTable: relation "entry.entry_mercadolivre" does not exist
+LINE 1: insert into "entry"."entry_mercadolivre"("fulfilled","expira...
+                    ^
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.9/site-packages/dlt/common/destination/client.py", line 404, in run_managed
+    self.run()
+  File "/home/***/.local/lib/python3.9/site-packages/dlt/destinations/insert_job_client.py", line 28, in run
+    self._sql_client.execute_fragments(fragments)
+  File "/home/***/.local/lib/python3.9/site-packages/dlt/destinations/impl/postgres/sql_client.py", line 119, in execute_fragments
+    return self.execute_sql(composed, *args, **kwargs)
+  File "/home/***/.local/lib/python3.9/site-packages/dlt/destinations/impl/postgres/sql_client.py", line 90, in execute_sql
+    with self.execute_query(sql, *args, **kwargs) as curr:
+  File "/usr/local/lib/python3.9/contextlib.py", line 119, in __enter__
+    return next(self.gen)
+  File "/home/***/.local/lib/python3.9/site-packages/dlt/destinations/sql_client.py", line 418, in _wrap_gen
+    raise self._make_database_exception(ex)
+  File "/home/***/.local/lib/python3.9/site-packages/dlt/destinations/impl/postgres/sql_client.py", line 129, in _make_database_exception
+    raise DatabaseUndefinedRelation(ex)
+dlt.destinations.exceptions.DatabaseUndefinedRelation: relation "entry.entry_mercadolivre" does not exist
+LINE 1: insert into "entry"."entry_mercadolivre"("fulfilled","expira...
+                    ^
+[2025-06-09T22:56:57.926+0000] {logging_mixin.py:190} WARNING - 2025-06-09 22:56:57,920|[ERROR]|9066|140509002049216|dlt|client.py|run_managed:409|Terminal exception in job entry_mercadolivre__context__flows.f718b7081f.insert_values in file /var/dlt/pipelines/mercadolivre_data/load/normalized/1749509816.4517522/started_jobs/entry_mercadolivre__context__flows.f718b7081f.0.insert_values
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.9/site-packages/dlt/destinations/sql_client.py", line 416, in _wrap_gen
+    return (yield from f(self, *args, **kwargs))
+  File "/home/***/.local/lib/python3.9/site-packages/dlt/destinations/impl/postgres/sql_client.py", line 112, in execute_query
+    raise outer
+  File "/home/***/.local/lib/python3.9/site-packages/dlt/destinations/impl/postgres/sql_client.py", line 104, in execute_query
+    curr.execute(query, db_args)
+psycopg2.errors.UndefinedTable: relation "entry.entry_mercadolivre__context__flows" does not exist
+LINE 1: insert into "entry"."entry_mercadolivre__context__flows"("va...
+                    ^
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.9/site-packages/dlt/common/destination/client.py", line 404, in run_managed
+    self.run()
+  File "/home/***/.local/lib/python3.9/site-packages/dlt/destinations/insert_job_client.py", line 28, in run
+    self._sql_client.execute_fragments(fragments)
+  File "/home/***/.local/lib/python3.9/site-packages/dlt/destinations/impl/postgres/sql_client.py", line 119, in execute_fragments
+    return self.execute_sql(composed, *args, **kwargs)
+  File "/home/***/.local/lib/python3.9/site-packages/dlt/destinations/impl/postgres/sql_client.py", line 90, in execute_sql
+    with self.execute_query(sql, *args, **kwargs) as curr:
+  File "/usr/local/lib/python3.9/contextlib.py", line 119, in __enter__
+    return next(self.gen)
+  File "/home/***/.local/lib/python3.9/site-packages/dlt/destinations/sql_client.py", line 418, in _wrap_gen
+    raise self._make_database_exception(ex)
+  File "/home/***/.local/lib/python3.9/site-packages/dlt/destinations/impl/postgres/sql_client.py", line 129, in _make_database_exception
+    raise DatabaseUndefinedRelation(ex)
+dlt.destinations.exceptions.DatabaseUndefinedRelation: relation "entry.entry_mercadolivre__context__flows" does not exist
+LINE 1: insert into "entry"."entry_mercadolivre__context__flows"("va...
+                    ^
+[2025-06-09T22:56:57.926+0000] {logging_mixin.py:190} WARNING - 2025-06-09 22:56:57,920|[ERROR]|9066|140509881050944|dlt|load.py|complete_jobs:413|Job for entry_mercadolivre__tags.8ace355ea8.insert_values failed terminally in load 1749509816.4517522 with message relation "entry.entry_mercadolivre__tags" does not exist
+LINE 1: insert into "entry"."entry_mercadolivre__tags"("value","_dlt...
+                    ^
+[2025-06-09T22:56:57.927+0000] {logging_mixin.py:190} WARNING - 2025-06-09 22:56:57,921|[ERROR]|9066|140509010441920|dlt|client.py|run_managed:409|Terminal exception in job entry_mercadolivre__order_items.0c4ea8b9bd.insert_values in file /var/dlt/pipelines/mercadolivre_data/load/normalized/1749509816.4517522/started_jobs/entry_mercadolivre__order_items.0c4ea8b9bd.0.insert_values
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.9/site-packages/dlt/destinations/sql_client.py", line 416, in _wrap_gen
+    return (yield from f(self, *args, **kwargs))
+  File "/home/***/.local/lib/python3.9/site-packages/dlt/destinations/impl/postgres/sql_client.py", line 112, in execute_query
+    raise outer
+  File "/home/***/.local/lib/python3.9/site-packages/dlt/destinations/impl/postgres/sql_client.py", line 104, in execute_query
+    curr.execute(query, db_args)
+psycopg2.errors.UndefinedTable: relation "entry.entry_mercadolivre__order_items" does not exist
+LINE 1: insert into "entry"."entry_mercadolivre__order_items"("item_...
+                    ^
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.9/site-packages/dlt/common/destination/client.py", line 404, in run_managed
+    self.run()
+  File "/home/***/.local/lib/python3.9/site-packages/dlt/destinations/insert_job_client.py", line 28, in run
+    self._sql_client.execute_fragments(fragments)
+  File "/home/***/.local/lib/python3.9/site-packages/dlt/destinations/impl/postgres/sql_client.py", line 119, in execute_fragments
+    return self.execute_sql(composed, *args, **kwargs)
+  File "/home/***/.local/lib/python3.9/site-packages/dlt/destinations/impl/postgres/sql_client.py", line 90, in execute_sql
+    with self.execute_query(sql, *args, **kwargs) as curr:
+  File "/usr/local/lib/python3.9/contextlib.py", line 119, in __enter__
+    return next(self.gen)
+  File "/home/***/.local/lib/python3.9/site-packages/dlt/destinations/sql_client.py", line 418, in _wrap_gen
+    raise self._make_database_exception(ex)
+  File "/home/***/.local/lib/python3.9/site-packages/dlt/destinations/impl/postgres/sql_client.py", line 129, in _make_database_exception
+    raise DatabaseUndefinedRelation(ex)
+dlt.destinations.exceptions.DatabaseUndefinedRelation: relation "entry.entry_mercadolivre__order_items" does not exist
+LINE 1: insert into "entry"."entry_mercadolivre__order_items"("item_...
+                    ^
+[2025-06-09T22:56:57.929+0000] {logging_mixin.py:190} WARNING - 2025-06-09 22:56:57,923|[ERROR]|9066|140508993656512|dlt|client.py|run_managed:409|Terminal exception in job entry_mercadolivre__order_items__item__variation_attributes.77f184e7c3.insert_values in file /var/dlt/pipelines/mercadolivre_data/load/normalized/1749509816.4517522/started_jobs/entry_mercadolivre__order_items__item__variation_attributes.77f184e7c3.0.insert_values
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.9/site-packages/dlt/destinations/sql_client.py", line 416, in _wrap_gen
+    return (yield from f(self, *args, **kwargs))
+  File "/home/***/.local/lib/python3.9/site-packages/dlt/destinations/impl/postgres/sql_client.py", line 112, in execute_query
+    raise outer
+  File "/home/***/.local/lib/python3.9/site-packages/dlt/destinations/impl/postgres/sql_client.py", line 104, in execute_query
+    curr.execute(query, db_args)
+psycopg2.errors.UndefinedTable: relation "entry.entry_mercadolivre__order_items__item__variation_attributes" does not exist
+LINE 1: insert into "entry"."entry_mercadolivre__order_items__item__...
+                    ^
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.9/site-packages/dlt/common/destination/client.py", line 404, in run_managed
+    self.run()
+  File "/home/***/.local/lib/python3.9/site-packages/dlt/destinations/insert_job_client.py", line 28, in run
+    self._sql_client.execute_fragments(fragments)
+  File "/home/***/.local/lib/python3.9/site-packages/dlt/destinations/impl/postgres/sql_client.py", line 119, in execute_fragments
+    return self.execute_sql(composed, *args, **kwargs)
+  File "/home/***/.local/lib/python3.9/site-packages/dlt/destinations/impl/postgres/sql_client.py", line 90, in execute_sql
+    with self.execute_query(sql, *args, **kwargs) as curr:
+  File "/usr/local/lib/python3.9/contextlib.py", line 119, in __enter__
+    return next(self.gen)
+  File "/home/***/.local/lib/python3.9/site-packages/dlt/destinations/sql_client.py", line 418, in _wrap_gen
+    raise self._make_database_exception(ex)
+  File "/home/***/.local/lib/python3.9/site-packages/dlt/destinations/impl/postgres/sql_client.py", line 129, in _make_database_exception
+    raise DatabaseUndefinedRelation(ex)
+dlt.destinations.exceptions.DatabaseUndefinedRelation: relation "entry.entry_mercadolivre__order_items__item__variation_attributes" does not exist
+LINE 1: insert into "entry"."entry_mercadolivre__order_items__item__...
+                    ^
+[2025-06-09T22:56:57.930+0000] {logging_mixin.py:190} WARNING - 2025-06-09 22:56:57,928|[ERROR]|9066|140509881050944|dlt|load.py|complete_jobs:413|Job for entry_mercadolivre__payments__available_actions.488d0c2fcb.insert_values failed terminally in load 1749509816.4517522 with message relation "entry.entry_mercadolivre__payments__available_actions" does not exist
+LINE 1: insert into "entry"."entry_mercadolivre__payments__available...
+                    ^
+[2025-06-09T22:56:57.931+0000] {logging_mixin.py:190} WARNING - 2025-06-09 22:56:57,931|[ERROR]|9066|140509881050944|dlt|load.py|complete_jobs:413|Job for entry_mercadolivre__mediations.e10b101d8c.insert_values failed terminally in load 1749509816.4517522 with message relation "entry.entry_mercadolivre__mediations" does not exist
+LINE 1: insert into "entry"."entry_mercadolivre__mediations"("id","_...
+                    ^
+[2025-06-09T22:56:57.932+0000] {logging_mixin.py:190} WARNING - 2025-06-09 22:56:57,932|[ERROR]|9066|140509881050944|dlt|load.py|complete_jobs:413|Job for entry_mercadolivre__payments.43ef306676.insert_values failed terminally in load 1749509816.4517522 with message relation "entry.entry_mercadolivre__payments" does not exist
+LINE 1: insert into "entry"."entry_mercadolivre__payments"("reason",...
+                    ^
+[2025-06-09T22:56:57.933+0000] {logging_mixin.py:190} WARNING - 2025-06-09 22:56:57,933|[ERROR]|9066|140509881050944|dlt|load.py|complete_jobs:413|Job for entry_mercadolivre.25b70b3a89.insert_values failed terminally in load 1749509816.4517522 with message relation "entry.entry_mercadolivre" does not exist
+LINE 1: insert into "entry"."entry_mercadolivre"("fulfilled","expira...
+                    ^
+[2025-06-09T22:56:57.933+0000] {logging_mixin.py:190} WARNING - 2025-06-09 22:56:57,933|[ERROR]|9066|140509881050944|dlt|load.py|complete_jobs:413|Job for entry_mercadolivre__order_items.0c4ea8b9bd.insert_values failed terminally in load 1749509816.4517522 with message relation "entry.entry_mercadolivre__order_items" does not exist
+LINE 1: insert into "entry"."entry_mercadolivre__order_items"("item_...
+                    ^
+[2025-06-09T22:56:57.934+0000] {logging_mixin.py:190} WARNING - 2025-06-09 22:56:57,934|[ERROR]|9066|140509881050944|dlt|load.py|complete_jobs:413|Job for entry_mercadolivre__context__flows.f718b7081f.insert_values failed terminally in load 1749509816.4517522 with message relation "entry.entry_mercadolivre__context__flows" does not exist
+LINE 1: insert into "entry"."entry_mercadolivre__context__flows"("va...
+                    ^
+[2025-06-09T22:56:57.935+0000] {logging_mixin.py:190} WARNING - 2025-06-09 22:56:57,935|[ERROR]|9066|140509881050944|dlt|load.py|complete_jobs:413|Job for entry_mercadolivre__order_items__item__variation_attributes.77f184e7c3.insert_values failed terminally in load 1749509816.4517522 with message relation "entry.entry_mercadolivre__order_items__item__variation_attributes" does not exist
+LINE 1: insert into "entry"."entry_mercadolivre__order_items__item__...
+                    ^
+[2025-06-09T22:56:57.944+0000] {taskinstance.py:3311} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/dlt/pipeline/pipeline.py", line 585, in load
+    runner.run_pool(load_step.config, load_step)
+  File "/home/airflow/.local/lib/python3.9/site-packages/dlt/common/runners/pool_runner.py", line 91, in run_pool
+    while _run_func():
+  File "/home/airflow/.local/lib/python3.9/site-packages/dlt/common/runners/pool_runner.py", line 84, in _run_func
+    run_metrics = run_f.run(cast(TExecutor, pool))
+  File "/home/airflow/.local/lib/python3.9/site-packages/dlt/load/load.py", line 638, in run
+    self.load_single_package(load_id, schema)
+  File "/home/airflow/.local/lib/python3.9/site-packages/dlt/load/load.py", line 597, in load_single_package
+    raise pending_exception
+dlt.load.exceptions.LoadClientJobFailed: Job for entry_mercadolivre__order_items__item__variation_attributes.77f184e7c3.insert_values failed terminally in load 1749509816.4517522 with message relation "entry.entry_mercadolivre__order_items__item__variation_attributes" does not exist
+LINE 1: insert into "entry"."entry_mercadolivre__order_items__item__...
+                    ^
+. The package is aborted and cannot be retried.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/opt/airflow/extraction/mercadolivre/script/send_data.py", line 44, in postgres_ingestion_ml
+    info = pipeline.run(data, table_name="entry_mercadolivre", write_disposition="append")
+  File "/home/airflow/.local/lib/python3.9/site-packages/dlt/pipeline/pipeline.py", line 222, in _wrap
+    step_info = f(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/dlt/pipeline/pipeline.py", line 271, in _wrap
+    return f(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/dlt/pipeline/pipeline.py", line 729, in run
+    return self.load(destination, dataset_name, credentials=credentials)
+  File "/home/airflow/.local/lib/python3.9/site-packages/dlt/pipeline/pipeline.py", line 222, in _wrap
+    step_info = f(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/dlt/pipeline/pipeline.py", line 162, in _wrap
+    return f(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/dlt/pipeline/pipeline.py", line 271, in _wrap
+    return f(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/dlt/pipeline/pipeline.py", line 592, in load
+    raise PipelineStepFailed(
+dlt.pipeline.exceptions.PipelineStepFailed: Pipeline execution failed at stage load with exception:
+
+<class 'dlt.load.exceptions.LoadClientJobFailed'>
+Job for entry_mercadolivre__order_items__item__variation_attributes.77f184e7c3.insert_values failed terminally in load 1749509816.4517522 with message relation "entry.entry_mercadolivre__order_items__item__variation_attributes" does not exist
+LINE 1: insert into "entry"."entry_mercadolivre__order_items__item__...
+                    ^
+. The package is aborted and cannot be retried.
+[2025-06-09T22:56:57.958+0000] {taskinstance.py:1225} INFO - Marking task as FAILED. dag_id=03_load_data, task_id=load_mercadolivre, run_id=manual__2025-06-09T22:56:50.388655+00:00, execution_date=20250609T225650, start_date=20250609T225651, end_date=20250609T225657
+[2025-06-09T22:56:57.969+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-06-09T22:56:57.970+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 662 for task load_mercadolivre (Pipeline execution failed at stage load with exception:
+
+<class 'dlt.load.exceptions.LoadClientJobFailed'>
+Job for entry_mercadolivre__order_items__item__variation_attributes.77f184e7c3.insert_values failed terminally in load 1749509816.4517522 with message relation "entry.entry_mercadolivre__order_items__item__variation_attributes" does not exist
+LINE 1: insert into "entry"."entry_mercadolivre__order_items__item__...
+                    ^
+. The package is aborted and cannot be retried.; 9066)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/dlt/pipeline/pipeline.py", line 585, in load
+    runner.run_pool(load_step.config, load_step)
+  File "/home/airflow/.local/lib/python3.9/site-packages/dlt/common/runners/pool_runner.py", line 91, in run_pool
+    while _run_func():
+  File "/home/airflow/.local/lib/python3.9/site-packages/dlt/common/runners/pool_runner.py", line 84, in _run_func
+    run_metrics = run_f.run(cast(TExecutor, pool))
+  File "/home/airflow/.local/lib/python3.9/site-packages/dlt/load/load.py", line 638, in run
+    self.load_single_package(load_id, schema)
+  File "/home/airflow/.local/lib/python3.9/site-packages/dlt/load/load.py", line 597, in load_single_package
+    raise pending_exception
+dlt.load.exceptions.LoadClientJobFailed: Job for entry_mercadolivre__order_items__item__variation_attributes.77f184e7c3.insert_values failed terminally in load 1749509816.4517522 with message relation "entry.entry_mercadolivre__order_items__item__variation_attributes" does not exist
+LINE 1: insert into "entry"."entry_mercadolivre__order_items__item__...
+                    ^
+. The package is aborted and cannot be retried.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 3005, in _run_raw_task
+    return _run_raw_task(
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 3159, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 3183, in _execute_task
+    return _execute_task(self, context, task_orig)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/opt/airflow/extraction/mercadolivre/script/send_data.py", line 44, in postgres_ingestion_ml
+    info = pipeline.run(data, table_name="entry_mercadolivre", write_disposition="append")
+  File "/home/airflow/.local/lib/python3.9/site-packages/dlt/pipeline/pipeline.py", line 222, in _wrap
+    step_info = f(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/dlt/pipeline/pipeline.py", line 271, in _wrap
+    return f(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/dlt/pipeline/pipeline.py", line 729, in run
+    return self.load(destination, dataset_name, credentials=credentials)
+  File "/home/airflow/.local/lib/python3.9/site-packages/dlt/pipeline/pipeline.py", line 222, in _wrap
+    step_info = f(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/dlt/pipeline/pipeline.py", line 162, in _wrap
+    return f(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/dlt/pipeline/pipeline.py", line 271, in _wrap
+    return f(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/dlt/pipeline/pipeline.py", line 592, in load
+    raise PipelineStepFailed(
+dlt.pipeline.exceptions.PipelineStepFailed: Pipeline execution failed at stage load with exception:
+
+<class 'dlt.load.exceptions.LoadClientJobFailed'>
+Job for entry_mercadolivre__order_items__item__variation_attributes.77f184e7c3.insert_values failed terminally in load 1749509816.4517522 with message relation "entry.entry_mercadolivre__order_items__item__variation_attributes" does not exist
+LINE 1: insert into "entry"."entry_mercadolivre__order_items__item__...
+                    ^
+. The package is aborted and cannot be retried.
+[2025-06-09T22:56:57.998+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2025-06-09T22:56:58.015+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-06-09T22:56:58.018+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

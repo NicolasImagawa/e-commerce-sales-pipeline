@@ -1,0 +1,47 @@
+[2025-05-19T19:50:31.361+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-05-19T19:50:31.382+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: 04_transform_data.run_dbt manual__2025-05-19T19:50:29.271788+00:00 [queued]>
+[2025-05-19T19:50:31.390+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: 04_transform_data.run_dbt manual__2025-05-19T19:50:29.271788+00:00 [queued]>
+[2025-05-19T19:50:31.392+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-05-19T19:50:31.405+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): run_dbt> on 2025-05-19 19:50:29.271788+00:00
+[2025-05-19T19:50:31.410+0000] {standard_task_runner.py:72} INFO - Started process 2952 to run task
+[2025-05-19T19:50:31.413+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', '04_transform_data', 'run_dbt', 'manual__2025-05-19T19:50:29.271788+00:00', '--job-id', '42', '--raw', '--subdir', 'DAGS_FOLDER/04_transform_data.py', '--cfg-path', '/tmp/tmps420q4vo']
+[2025-05-19T19:50:31.415+0000] {standard_task_runner.py:105} INFO - Job 42: Subtask run_dbt
+[2025-05-19T19:50:31.468+0000] {task_command.py:467} INFO - Running <TaskInstance: 04_transform_data.run_dbt manual__2025-05-19T19:50:29.271788+00:00 [running]> on host 68e8d748c575
+[2025-05-19T19:50:31.551+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='04_transform_data' AIRFLOW_CTX_TASK_ID='run_dbt' AIRFLOW_CTX_EXECUTION_DATE='2025-05-19T19:50:29.271788+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-05-19T19:50:29.271788+00:00'
+[2025-05-19T19:50:31.553+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-05-19T19:50:33.238+0000] {logging_mixin.py:190} INFO - 19:50:33  Running with dbt=1.9.4
+[2025-05-19T19:50:33.590+0000] {logging_mixin.py:190} INFO - 19:50:33  Registered adapter: postgres=1.9.0
+[2025-05-19T19:50:34.689+0000] {logging_mixin.py:190} INFO - 19:50:34  [WARNING]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.e_commerce_sales.example
+[2025-05-19T19:50:34.857+0000] {logging_mixin.py:190} INFO - 19:50:34  Found 7 models, 12 sources, 433 macros
+[2025-05-19T19:50:34.861+0000] {logging_mixin.py:190} INFO - 19:50:34
+[2025-05-19T19:50:34.863+0000] {logging_mixin.py:190} INFO - 19:50:34  Concurrency: 4 threads (target='dev')
+[2025-05-19T19:50:34.864+0000] {logging_mixin.py:190} INFO - 19:50:34
+[2025-05-19T19:50:34.996+0000] {logging_mixin.py:190} INFO - 19:50:34  1 of 7 START sql incremental model sales.mercadolivre_orders_results ........... [RUN]
+[2025-05-19T19:50:34.998+0000] {logging_mixin.py:190} INFO - 19:50:34  2 of 7 START sql incremental model sales.shopee_new_id ......................... [RUN]
+[2025-05-19T19:50:35.354+0000] {logging_mixin.py:190} INFO - 19:50:35  2 of 7 OK created sql incremental model sales.shopee_new_id .................... [MERGE 0 in 0.35s]
+[2025-05-19T19:50:35.356+0000] {logging_mixin.py:190} INFO - 19:50:35  1 of 7 OK created sql incremental model sales.mercadolivre_orders_results ...... [MERGE 255 in 0.35s]
+[2025-05-19T19:50:35.362+0000] {logging_mixin.py:190} INFO - 19:50:35  3 of 7 START sql incremental model sales.shopee_orders_results ................. [RUN]
+[2025-05-19T19:50:35.366+0000] {logging_mixin.py:190} INFO - 19:50:35  4 of 7 START sql incremental model sales.mercadolivre_profits .................. [RUN]
+[2025-05-19T19:50:35.528+0000] {logging_mixin.py:190} INFO - 19:50:35  3 of 7 OK created sql incremental model sales.shopee_orders_results ............ [MERGE 0 in 0.16s]
+[2025-05-19T19:50:35.530+0000] {logging_mixin.py:190} INFO - 19:50:35  4 of 7 OK created sql incremental model sales.mercadolivre_profits ............. [MERGE 250 in 0.15s]
+[2025-05-19T19:50:35.536+0000] {logging_mixin.py:190} INFO - 19:50:35  5 of 7 START sql incremental model sales.dim_shopee_orders ..................... [RUN]
+[2025-05-19T19:50:35.538+0000] {logging_mixin.py:190} INFO - 19:50:35  6 of 7 START sql incremental model sales.dim_shopee_product .................... [RUN]
+[2025-05-19T19:50:35.539+0000] {logging_mixin.py:190} INFO - 19:50:35  7 of 7 START sql incremental model sales.shopee_profits ........................ [RUN]
+[2025-05-19T19:50:35.703+0000] {logging_mixin.py:190} INFO - 19:50:35  6 of 7 OK created sql incremental model sales.dim_shopee_product ............... [SELECT 2702 in 0.16s]
+[2025-05-19T19:50:35.726+0000] {logging_mixin.py:190} INFO - 19:50:35  5 of 7 OK created sql incremental model sales.dim_shopee_orders ................ [MERGE 0 in 0.18s]
+[2025-05-19T19:50:35.750+0000] {logging_mixin.py:190} INFO - 19:50:35  7 of 7 OK created sql incremental model sales.shopee_profits ................... [MERGE 2727 in 0.21s]
+[2025-05-19T19:50:35.774+0000] {logging_mixin.py:190} INFO - 19:50:35
+[2025-05-19T19:50:35.776+0000] {logging_mixin.py:190} INFO - 19:50:35  Finished running 7 incremental models in 0 hours 0 minutes and 0.91 seconds (0.91s).
+[2025-05-19T19:50:35.840+0000] {logging_mixin.py:190} INFO - 19:50:35
+[2025-05-19T19:50:35.842+0000] {logging_mixin.py:190} INFO - 19:50:35  Completed successfully
+[2025-05-19T19:50:35.844+0000] {logging_mixin.py:190} INFO - 19:50:35
+[2025-05-19T19:50:35.846+0000] {logging_mixin.py:190} INFO - 19:50:35  Done. PASS=7 WARN=0 ERROR=0 SKIP=0 TOTAL=7
+[2025-05-19T19:50:36.733+0000] {logging_mixin.py:190} INFO - Transformation sucessfully done.
+[2025-05-19T19:50:36.734+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-05-19T19:50:36.747+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-05-19T19:50:36.749+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=04_transform_data, task_id=run_dbt, run_id=manual__2025-05-19T19:50:29.271788+00:00, execution_date=20250519T195029, start_date=20250519T195031, end_date=20250519T195036
+[2025-05-19T19:50:36.809+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-05-19T19:50:36.827+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-05-19T19:50:36.830+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

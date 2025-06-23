@@ -1,0 +1,2408 @@
+[2025-06-11T22:05:44.363+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-06-11T22:05:44.383+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: 04_ELT_shipping_file_dev.load_sh_costs manual__2025-06-11T22:05:19.126488+00:00 [queued]>
+[2025-06-11T22:05:44.392+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: 04_ELT_shipping_file_dev.load_sh_costs manual__2025-06-11T22:05:19.126488+00:00 [queued]>
+[2025-06-11T22:05:44.393+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-06-11T22:05:44.406+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): load_sh_costs> on 2025-06-11 22:05:19.126488+00:00
+[2025-06-11T22:05:44.410+0000] {standard_task_runner.py:72} INFO - Started process 3727 to run task
+[2025-06-11T22:05:44.413+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', '04_ELT_shipping_file_dev', 'load_sh_costs', 'manual__2025-06-11T22:05:19.126488+00:00', '--job-id', '926', '--raw', '--subdir', 'DAGS_FOLDER/04_make_sh_id_file_dev.py', '--cfg-path', '/tmp/tmpkxt3q_k8']
+[2025-06-11T22:05:44.415+0000] {standard_task_runner.py:105} INFO - Job 926: Subtask load_sh_costs
+[2025-06-11T22:05:44.468+0000] {task_command.py:467} INFO - Running <TaskInstance: 04_ELT_shipping_file_dev.load_sh_costs manual__2025-06-11T22:05:19.126488+00:00 [running]> on host 28e6a58e4107
+[2025-06-11T22:05:44.546+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='04_ELT_shipping_file_dev' AIRFLOW_CTX_TASK_ID='load_sh_costs' AIRFLOW_CTX_EXECUTION_DATE='2025-06-11T22:05:19.126488+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-06-11T22:05:19.126488+00:00'
+[2025-06-11T22:05:44.548+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-06-11T22:05:45.198+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.9/site-packages/dlt/helpers/dbt/__init__.py:3: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+
+[2025-06-11T22:05:45.514+0000] {config_providers_context.py:156} WARNING - Airflow variable 'dlt_secrets_toml' was not found. This Airflow variable is a recommended place to hold the content of secrets.toml.If you do not use Airflow variables to hold dlt configuration or use variables with other names you can ignore this warning.
+[2025-06-11T22:05:48.237+0000] {logging_mixin.py:190} INFO - trying to load ./extraction/mercadolivre/data/shipping_cost_ml/dev/sh_cost_0.json to entry schema
+[2025-06-11T22:05:51.026+0000] {logging_mixin.py:190} INFO - Pipeline mercadolivre_shipping load step completed in 0.12 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679549.4440506 is LOADED and contains no failed jobs
+[2025-06-11T22:05:51.027+0000] {logging_mixin.py:190} INFO - Run started at 2025-06-11 22:05:48.238753+00:00 and COMPLETED in 2.78 seconds with 4 steps.
+Step extract COMPLETED in 0.83 seconds.
+
+Load package 1749679549.4440506 is EXTRACTED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step normalize COMPLETED in 0.42 seconds.
+Normalized data for the following tables:
+- entry_mercadolivre_sh: 1 row(s)
+- entry_mercadolivre_sh__items_types: 1 row(s)
+- entry_mercadolivre_sh__origin__shipping_address__types: 4 row(s)
+- entry_mercadolivre_sh__destination__shipping_address__types: 1 row(s)
+- entry_mercadolivre_sh__tags: 1 row(s)
+
+Load package 1749679549.4440506 is NORMALIZED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step load COMPLETED in 0.37 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.12 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679549.4440506 is LOADED and contains no failed jobs
+
+Step run COMPLETED in 2.78 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.12 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679549.4440506 is LOADED and contains no failed jobs
+[2025-06-11T22:05:51.031+0000] {logging_mixin.py:190} INFO - trying to load ./extraction/mercadolivre/data/shipping_cost_ml/dev/sh_cost_1.json to entry schema
+[2025-06-11T22:05:51.315+0000] {logging_mixin.py:190} INFO - Pipeline mercadolivre_shipping load step completed in 0.08 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679551.1004527 is LOADED and contains no failed jobs
+[2025-06-11T22:05:51.317+0000] {logging_mixin.py:190} INFO - Run started at 2025-06-11 22:05:51.033187+00:00 and COMPLETED in 0.28 seconds with 4 steps.
+Step extract COMPLETED in 0.07 seconds.
+
+Load package 1749679551.1004527 is EXTRACTED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step normalize COMPLETED in 0.06 seconds.
+Normalized data for the following tables:
+- entry_mercadolivre_sh: 1 row(s)
+- entry_mercadolivre_sh__items_types: 1 row(s)
+- entry_mercadolivre_sh__origin__shipping_address__types: 4 row(s)
+- entry_mercadolivre_sh__destination__shipping_address__types: 1 row(s)
+- entry_mercadolivre_sh__tags: 1 row(s)
+
+Load package 1749679551.1004527 is NORMALIZED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step load COMPLETED in 0.12 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.08 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679551.1004527 is LOADED and contains no failed jobs
+
+Step run COMPLETED in 0.28 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.08 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679551.1004527 is LOADED and contains no failed jobs
+[2025-06-11T22:05:51.321+0000] {logging_mixin.py:190} INFO - trying to load ./extraction/mercadolivre/data/shipping_cost_ml/dev/sh_cost_10.json to entry schema
+[2025-06-11T22:05:51.629+0000] {logging_mixin.py:190} INFO - Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679551.4026818 is LOADED and contains no failed jobs
+[2025-06-11T22:05:51.631+0000] {logging_mixin.py:190} INFO - Run started at 2025-06-11 22:05:51.323144+00:00 and COMPLETED in 0.31 seconds with 4 steps.
+Step extract COMPLETED in 0.09 seconds.
+
+Load package 1749679551.4026818 is EXTRACTED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step normalize COMPLETED in 0.08 seconds.
+Normalized data for the following tables:
+- entry_mercadolivre_sh: 1 row(s)
+- entry_mercadolivre_sh__items_types: 1 row(s)
+- entry_mercadolivre_sh__origin__shipping_address__types: 4 row(s)
+- entry_mercadolivre_sh__destination__shipping_address__types: 1 row(s)
+- entry_mercadolivre_sh__tags: 1 row(s)
+
+Load package 1749679551.4026818 is NORMALIZED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step load COMPLETED in 0.11 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679551.4026818 is LOADED and contains no failed jobs
+
+Step run COMPLETED in 0.31 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679551.4026818 is LOADED and contains no failed jobs
+[2025-06-11T22:05:51.636+0000] {logging_mixin.py:190} INFO - trying to load ./extraction/mercadolivre/data/shipping_cost_ml/dev/sh_cost_11.json to entry schema
+[2025-06-11T22:05:51.932+0000] {logging_mixin.py:190} INFO - Pipeline mercadolivre_shipping load step completed in 0.08 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679551.707661 is LOADED and contains no failed jobs
+[2025-06-11T22:05:51.934+0000] {logging_mixin.py:190} INFO - Run started at 2025-06-11 22:05:51.637720+00:00 and COMPLETED in 0.29 seconds with 4 steps.
+Step extract COMPLETED in 0.08 seconds.
+
+Load package 1749679551.707661 is EXTRACTED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step normalize COMPLETED in 0.07 seconds.
+Normalized data for the following tables:
+- entry_mercadolivre_sh: 1 row(s)
+- entry_mercadolivre_sh__items_types: 1 row(s)
+- entry_mercadolivre_sh__origin__shipping_address__types: 4 row(s)
+- entry_mercadolivre_sh__destination__shipping_address__types: 1 row(s)
+- entry_mercadolivre_sh__tags: 1 row(s)
+
+Load package 1749679551.707661 is NORMALIZED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step load COMPLETED in 0.12 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.08 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679551.707661 is LOADED and contains no failed jobs
+
+Step run COMPLETED in 0.29 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.08 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679551.707661 is LOADED and contains no failed jobs
+[2025-06-11T22:05:51.938+0000] {logging_mixin.py:190} INFO - trying to load ./extraction/mercadolivre/data/shipping_cost_ml/dev/sh_cost_12.json to entry schema
+[2025-06-11T22:05:52.207+0000] {logging_mixin.py:190} INFO - Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679552.0064828 is LOADED and contains no failed jobs
+[2025-06-11T22:05:52.209+0000] {logging_mixin.py:190} INFO - Run started at 2025-06-11 22:05:51.940540+00:00 and COMPLETED in 0.27 seconds with 4 steps.
+Step extract COMPLETED in 0.08 seconds.
+
+Load package 1749679552.0064828 is EXTRACTED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step normalize COMPLETED in 0.06 seconds.
+Normalized data for the following tables:
+- entry_mercadolivre_sh: 1 row(s)
+- entry_mercadolivre_sh__items_types: 1 row(s)
+- entry_mercadolivre_sh__origin__shipping_address__types: 4 row(s)
+- entry_mercadolivre_sh__destination__shipping_address__types: 1 row(s)
+- entry_mercadolivre_sh__tags: 1 row(s)
+
+Load package 1749679552.0064828 is NORMALIZED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step load COMPLETED in 0.11 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679552.0064828 is LOADED and contains no failed jobs
+
+Step run COMPLETED in 0.27 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679552.0064828 is LOADED and contains no failed jobs
+[2025-06-11T22:05:52.214+0000] {logging_mixin.py:190} INFO - trying to load ./extraction/mercadolivre/data/shipping_cost_ml/dev/sh_cost_13.json to entry schema
+[2025-06-11T22:05:52.490+0000] {logging_mixin.py:190} INFO - Pipeline mercadolivre_shipping load step completed in 0.08 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679552.2806778 is LOADED and contains no failed jobs
+[2025-06-11T22:05:52.491+0000] {logging_mixin.py:190} INFO - Run started at 2025-06-11 22:05:52.215444+00:00 and COMPLETED in 0.27 seconds with 4 steps.
+Step extract COMPLETED in 0.08 seconds.
+
+Load package 1749679552.2806778 is EXTRACTED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step normalize COMPLETED in 0.06 seconds.
+Normalized data for the following tables:
+- entry_mercadolivre_sh: 1 row(s)
+- entry_mercadolivre_sh__items_types: 2 row(s)
+- entry_mercadolivre_sh__origin__shipping_address__types: 5 row(s)
+- entry_mercadolivre_sh__destination__shipping_address__types: 1 row(s)
+- entry_mercadolivre_sh__tags: 1 row(s)
+
+Load package 1749679552.2806778 is NORMALIZED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step load COMPLETED in 0.11 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.08 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679552.2806778 is LOADED and contains no failed jobs
+
+Step run COMPLETED in 0.27 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.08 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679552.2806778 is LOADED and contains no failed jobs
+[2025-06-11T22:05:52.495+0000] {logging_mixin.py:190} INFO - trying to load ./extraction/mercadolivre/data/shipping_cost_ml/dev/sh_cost_14.json to entry schema
+[2025-06-11T22:05:52.769+0000] {logging_mixin.py:190} INFO - Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679552.564798 is LOADED and contains no failed jobs
+[2025-06-11T22:05:52.771+0000] {logging_mixin.py:190} INFO - Run started at 2025-06-11 22:05:52.497378+00:00 and COMPLETED in 0.27 seconds with 4 steps.
+Step extract COMPLETED in 0.07 seconds.
+
+Load package 1749679552.564798 is EXTRACTED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step normalize COMPLETED in 0.06 seconds.
+Normalized data for the following tables:
+- entry_mercadolivre_sh: 1 row(s)
+- entry_mercadolivre_sh__items_types: 1 row(s)
+- entry_mercadolivre_sh__origin__shipping_address__types: 4 row(s)
+- entry_mercadolivre_sh__destination__shipping_address__types: 1 row(s)
+- entry_mercadolivre_sh__tags: 1 row(s)
+
+Load package 1749679552.564798 is NORMALIZED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step load COMPLETED in 0.11 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679552.564798 is LOADED and contains no failed jobs
+
+Step run COMPLETED in 0.27 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679552.564798 is LOADED and contains no failed jobs
+[2025-06-11T22:05:52.776+0000] {logging_mixin.py:190} INFO - trying to load ./extraction/mercadolivre/data/shipping_cost_ml/dev/sh_cost_15.json to entry schema
+[2025-06-11T22:05:53.054+0000] {logging_mixin.py:190} INFO - Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679552.8482678 is LOADED and contains no failed jobs
+[2025-06-11T22:05:53.055+0000] {logging_mixin.py:190} INFO - Run started at 2025-06-11 22:05:52.778127+00:00 and COMPLETED in 0.28 seconds with 4 steps.
+Step extract COMPLETED in 0.08 seconds.
+
+Load package 1749679552.8482678 is EXTRACTED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step normalize COMPLETED in 0.06 seconds.
+Normalized data for the following tables:
+- entry_mercadolivre_sh: 1 row(s)
+- entry_mercadolivre_sh__items_types: 1 row(s)
+- entry_mercadolivre_sh__origin__shipping_address__types: 4 row(s)
+- entry_mercadolivre_sh__destination__shipping_address__types: 1 row(s)
+- entry_mercadolivre_sh__tags: 1 row(s)
+
+Load package 1749679552.8482678 is NORMALIZED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step load COMPLETED in 0.11 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679552.8482678 is LOADED and contains no failed jobs
+
+Step run COMPLETED in 0.27 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679552.8482678 is LOADED and contains no failed jobs
+[2025-06-11T22:05:53.060+0000] {logging_mixin.py:190} INFO - trying to load ./extraction/mercadolivre/data/shipping_cost_ml/dev/sh_cost_16.json to entry schema
+[2025-06-11T22:05:53.323+0000] {logging_mixin.py:190} INFO - Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679553.1286008 is LOADED and contains no failed jobs
+[2025-06-11T22:05:53.325+0000] {logging_mixin.py:190} INFO - Run started at 2025-06-11 22:05:53.062179+00:00 and COMPLETED in 0.26 seconds with 4 steps.
+Step extract COMPLETED in 0.07 seconds.
+
+Load package 1749679553.1286008 is EXTRACTED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step normalize COMPLETED in 0.06 seconds.
+Normalized data for the following tables:
+- entry_mercadolivre_sh: 1 row(s)
+- entry_mercadolivre_sh__items_types: 1 row(s)
+- entry_mercadolivre_sh__origin__shipping_address__types: 4 row(s)
+- entry_mercadolivre_sh__destination__shipping_address__types: 1 row(s)
+- entry_mercadolivre_sh__tags: 1 row(s)
+
+Load package 1749679553.1286008 is NORMALIZED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step load COMPLETED in 0.11 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679553.1286008 is LOADED and contains no failed jobs
+
+Step run COMPLETED in 0.26 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679553.1286008 is LOADED and contains no failed jobs
+[2025-06-11T22:05:53.329+0000] {logging_mixin.py:190} INFO - trying to load ./extraction/mercadolivre/data/shipping_cost_ml/dev/sh_cost_17.json to entry schema
+[2025-06-11T22:05:53.627+0000] {logging_mixin.py:190} INFO - Pipeline mercadolivre_shipping load step completed in 0.08 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679553.3965418 is LOADED and contains no failed jobs
+[2025-06-11T22:05:53.629+0000] {logging_mixin.py:190} INFO - Run started at 2025-06-11 22:05:53.330984+00:00 and COMPLETED in 0.30 seconds with 4 steps.
+Step extract COMPLETED in 0.10 seconds.
+
+Load package 1749679553.3965418 is EXTRACTED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step normalize COMPLETED in 0.06 seconds.
+Normalized data for the following tables:
+- entry_mercadolivre_sh: 1 row(s)
+- entry_mercadolivre_sh__items_types: 1 row(s)
+- entry_mercadolivre_sh__origin__shipping_address__types: 4 row(s)
+- entry_mercadolivre_sh__destination__shipping_address__types: 1 row(s)
+- entry_mercadolivre_sh__tags: 1 row(s)
+
+Load package 1749679553.3965418 is NORMALIZED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step load COMPLETED in 0.11 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.08 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679553.3965418 is LOADED and contains no failed jobs
+
+Step run COMPLETED in 0.30 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.08 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679553.3965418 is LOADED and contains no failed jobs
+[2025-06-11T22:05:53.632+0000] {logging_mixin.py:190} INFO - trying to load ./extraction/mercadolivre/data/shipping_cost_ml/dev/sh_cost_18.json to entry schema
+[2025-06-11T22:05:53.905+0000] {logging_mixin.py:190} INFO - Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679553.7041662 is LOADED and contains no failed jobs
+[2025-06-11T22:05:53.907+0000] {logging_mixin.py:190} INFO - Run started at 2025-06-11 22:05:53.633953+00:00 and COMPLETED in 0.27 seconds with 4 steps.
+Step extract COMPLETED in 0.08 seconds.
+
+Load package 1749679553.7041662 is EXTRACTED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step normalize COMPLETED in 0.06 seconds.
+Normalized data for the following tables:
+- entry_mercadolivre_sh: 1 row(s)
+- entry_mercadolivre_sh__items_types: 1 row(s)
+- entry_mercadolivre_sh__origin__shipping_address__types: 4 row(s)
+- entry_mercadolivre_sh__destination__shipping_address__types: 1 row(s)
+- entry_mercadolivre_sh__tags: 1 row(s)
+
+Load package 1749679553.7041662 is NORMALIZED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step load COMPLETED in 0.11 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679553.7041662 is LOADED and contains no failed jobs
+
+Step run COMPLETED in 0.27 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679553.7041662 is LOADED and contains no failed jobs
+[2025-06-11T22:05:53.911+0000] {logging_mixin.py:190} INFO - trying to load ./extraction/mercadolivre/data/shipping_cost_ml/dev/sh_cost_19.json to entry schema
+[2025-06-11T22:05:55.208+0000] {logging_mixin.py:190} INFO - Pipeline mercadolivre_shipping load step completed in 1.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679553.9893117 is LOADED and contains no failed jobs
+[2025-06-11T22:05:55.210+0000] {logging_mixin.py:190} INFO - Run started at 2025-06-11 22:05:53.913660+00:00 and COMPLETED in 1.29 seconds with 4 steps.
+Step extract COMPLETED in 0.08 seconds.
+
+Load package 1749679553.9893117 is EXTRACTED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step normalize COMPLETED in 0.07 seconds.
+Normalized data for the following tables:
+- entry_mercadolivre_sh: 1 row(s)
+- entry_mercadolivre_sh__items_types: 1 row(s)
+- entry_mercadolivre_sh__origin__shipping_address__types: 4 row(s)
+- entry_mercadolivre_sh__destination__shipping_address__types: 1 row(s)
+- entry_mercadolivre_sh__tags: 1 row(s)
+
+Load package 1749679553.9893117 is NORMALIZED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step load COMPLETED in 1.11 seconds.
+Pipeline mercadolivre_shipping load step completed in 1.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679553.9893117 is LOADED and contains no failed jobs
+
+Step run COMPLETED in 1.29 seconds.
+Pipeline mercadolivre_shipping load step completed in 1.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679553.9893117 is LOADED and contains no failed jobs
+[2025-06-11T22:05:55.215+0000] {logging_mixin.py:190} INFO - trying to load ./extraction/mercadolivre/data/shipping_cost_ml/dev/sh_cost_2.json to entry schema
+[2025-06-11T22:05:56.497+0000] {logging_mixin.py:190} INFO - Pipeline mercadolivre_shipping load step completed in 1.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679555.2819216 is LOADED and contains no failed jobs
+[2025-06-11T22:05:56.499+0000] {logging_mixin.py:190} INFO - Run started at 2025-06-11 22:05:55.216722+00:00 and COMPLETED in 1.28 seconds with 4 steps.
+Step extract COMPLETED in 0.07 seconds.
+
+Load package 1749679555.2819216 is EXTRACTED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step normalize COMPLETED in 0.07 seconds.
+Normalized data for the following tables:
+- entry_mercadolivre_sh: 1 row(s)
+- entry_mercadolivre_sh__items_types: 1 row(s)
+- entry_mercadolivre_sh__origin__shipping_address__types: 4 row(s)
+- entry_mercadolivre_sh__destination__shipping_address__types: 1 row(s)
+- entry_mercadolivre_sh__tags: 1 row(s)
+
+Load package 1749679555.2819216 is NORMALIZED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step load COMPLETED in 1.11 seconds.
+Pipeline mercadolivre_shipping load step completed in 1.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679555.2819216 is LOADED and contains no failed jobs
+
+Step run COMPLETED in 1.28 seconds.
+Pipeline mercadolivre_shipping load step completed in 1.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679555.2819216 is LOADED and contains no failed jobs
+[2025-06-11T22:05:56.504+0000] {logging_mixin.py:190} INFO - trying to load ./extraction/mercadolivre/data/shipping_cost_ml/dev/sh_cost_20.json to entry schema
+[2025-06-11T22:05:56.773+0000] {logging_mixin.py:190} INFO - Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679556.571689 is LOADED and contains no failed jobs
+[2025-06-11T22:05:56.775+0000] {logging_mixin.py:190} INFO - Run started at 2025-06-11 22:05:56.505864+00:00 and COMPLETED in 0.27 seconds with 4 steps.
+Step extract COMPLETED in 0.07 seconds.
+
+Load package 1749679556.571689 is EXTRACTED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step normalize COMPLETED in 0.06 seconds.
+Normalized data for the following tables:
+- entry_mercadolivre_sh: 1 row(s)
+- entry_mercadolivre_sh__items_types: 1 row(s)
+- entry_mercadolivre_sh__origin__shipping_address__types: 5 row(s)
+- entry_mercadolivre_sh__destination__shipping_address__types: 1 row(s)
+- entry_mercadolivre_sh__tags: 1 row(s)
+
+Load package 1749679556.571689 is NORMALIZED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step load COMPLETED in 0.11 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679556.571689 is LOADED and contains no failed jobs
+
+Step run COMPLETED in 0.27 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679556.571689 is LOADED and contains no failed jobs
+[2025-06-11T22:05:56.780+0000] {logging_mixin.py:190} INFO - trying to load ./extraction/mercadolivre/data/shipping_cost_ml/dev/sh_cost_21.json to entry schema
+[2025-06-11T22:05:57.052+0000] {logging_mixin.py:190} INFO - Pipeline mercadolivre_shipping load step completed in 0.08 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679556.8473344 is LOADED and contains no failed jobs
+[2025-06-11T22:05:57.054+0000] {logging_mixin.py:190} INFO - Run started at 2025-06-11 22:05:56.782343+00:00 and COMPLETED in 0.27 seconds with 4 steps.
+Step extract COMPLETED in 0.07 seconds.
+
+Load package 1749679556.8473344 is EXTRACTED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step normalize COMPLETED in 0.06 seconds.
+Normalized data for the following tables:
+- entry_mercadolivre_sh: 1 row(s)
+- entry_mercadolivre_sh__items_types: 1 row(s)
+- entry_mercadolivre_sh__origin__shipping_address__types: 4 row(s)
+- entry_mercadolivre_sh__destination__shipping_address__types: 1 row(s)
+- entry_mercadolivre_sh__tags: 1 row(s)
+
+Load package 1749679556.8473344 is NORMALIZED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step load COMPLETED in 0.11 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.08 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679556.8473344 is LOADED and contains no failed jobs
+
+Step run COMPLETED in 0.27 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.08 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679556.8473344 is LOADED and contains no failed jobs
+[2025-06-11T22:05:57.059+0000] {logging_mixin.py:190} INFO - trying to load ./extraction/mercadolivre/data/shipping_cost_ml/dev/sh_cost_22.json to entry schema
+[2025-06-11T22:05:57.330+0000] {logging_mixin.py:190} INFO - Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679557.1284838 is LOADED and contains no failed jobs
+[2025-06-11T22:05:57.332+0000] {logging_mixin.py:190} INFO - Run started at 2025-06-11 22:05:57.060731+00:00 and COMPLETED in 0.27 seconds with 4 steps.
+Step extract COMPLETED in 0.07 seconds.
+
+Load package 1749679557.1284838 is EXTRACTED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step normalize COMPLETED in 0.06 seconds.
+Normalized data for the following tables:
+- entry_mercadolivre_sh: 1 row(s)
+- entry_mercadolivre_sh__items_types: 1 row(s)
+- entry_mercadolivre_sh__origin__shipping_address__types: 4 row(s)
+- entry_mercadolivre_sh__destination__shipping_address__types: 4 row(s)
+- entry_mercadolivre_sh__tags: 1 row(s)
+
+Load package 1749679557.1284838 is NORMALIZED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step load COMPLETED in 0.11 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679557.1284838 is LOADED and contains no failed jobs
+
+Step run COMPLETED in 0.27 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679557.1284838 is LOADED and contains no failed jobs
+[2025-06-11T22:05:57.337+0000] {logging_mixin.py:190} INFO - trying to load ./extraction/mercadolivre/data/shipping_cost_ml/dev/sh_cost_23.json to entry schema
+[2025-06-11T22:05:57.607+0000] {logging_mixin.py:190} INFO - Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679557.4089718 is LOADED and contains no failed jobs
+[2025-06-11T22:05:57.609+0000] {logging_mixin.py:190} INFO - Run started at 2025-06-11 22:05:57.339538+00:00 and COMPLETED in 0.27 seconds with 4 steps.
+Step extract COMPLETED in 0.08 seconds.
+
+Load package 1749679557.4089718 is EXTRACTED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step normalize COMPLETED in 0.06 seconds.
+Normalized data for the following tables:
+- entry_mercadolivre_sh: 1 row(s)
+- entry_mercadolivre_sh__items_types: 1 row(s)
+- entry_mercadolivre_sh__origin__shipping_address__types: 4 row(s)
+- entry_mercadolivre_sh__destination__shipping_address__types: 1 row(s)
+- entry_mercadolivre_sh__tags: 1 row(s)
+
+Load package 1749679557.4089718 is NORMALIZED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step load COMPLETED in 0.11 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679557.4089718 is LOADED and contains no failed jobs
+
+Step run COMPLETED in 0.27 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679557.4089718 is LOADED and contains no failed jobs
+[2025-06-11T22:05:57.614+0000] {logging_mixin.py:190} INFO - trying to load ./extraction/mercadolivre/data/shipping_cost_ml/dev/sh_cost_24.json to entry schema
+[2025-06-11T22:05:58.884+0000] {logging_mixin.py:190} INFO - Pipeline mercadolivre_shipping load step completed in 1.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679557.6806998 is LOADED and contains no failed jobs
+[2025-06-11T22:05:58.886+0000] {logging_mixin.py:190} INFO - Run started at 2025-06-11 22:05:57.615906+00:00 and COMPLETED in 1.27 seconds with 4 steps.
+Step extract COMPLETED in 0.07 seconds.
+
+Load package 1749679557.6806998 is EXTRACTED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step normalize COMPLETED in 0.06 seconds.
+Normalized data for the following tables:
+- entry_mercadolivre_sh: 1 row(s)
+- entry_mercadolivre_sh__items_types: 1 row(s)
+- entry_mercadolivre_sh__origin__shipping_address__types: 4 row(s)
+- entry_mercadolivre_sh__destination__shipping_address__types: 1 row(s)
+- entry_mercadolivre_sh__tags: 1 row(s)
+
+Load package 1749679557.6806998 is NORMALIZED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step load COMPLETED in 1.11 seconds.
+Pipeline mercadolivre_shipping load step completed in 1.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679557.6806998 is LOADED and contains no failed jobs
+
+Step run COMPLETED in 1.27 seconds.
+Pipeline mercadolivre_shipping load step completed in 1.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679557.6806998 is LOADED and contains no failed jobs
+[2025-06-11T22:05:58.890+0000] {logging_mixin.py:190} INFO - trying to load ./extraction/mercadolivre/data/shipping_cost_ml/dev/sh_cost_25.json to entry schema
+[2025-06-11T22:06:00.166+0000] {logging_mixin.py:190} INFO - Pipeline mercadolivre_shipping load step completed in 1.08 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679558.9641566 is LOADED and contains no failed jobs
+[2025-06-11T22:06:00.167+0000] {logging_mixin.py:190} INFO - Run started at 2025-06-11 22:05:58.892534+00:00 and COMPLETED in 1.27 seconds with 4 steps.
+Step extract COMPLETED in 0.08 seconds.
+
+Load package 1749679558.9641566 is EXTRACTED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step normalize COMPLETED in 0.06 seconds.
+Normalized data for the following tables:
+- entry_mercadolivre_sh: 1 row(s)
+- entry_mercadolivre_sh__items_types: 1 row(s)
+- entry_mercadolivre_sh__origin__shipping_address__types: 5 row(s)
+- entry_mercadolivre_sh__destination__shipping_address__types: 1 row(s)
+- entry_mercadolivre_sh__tags: 1 row(s)
+
+Load package 1749679558.9641566 is NORMALIZED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step load COMPLETED in 1.11 seconds.
+Pipeline mercadolivre_shipping load step completed in 1.08 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679558.9641566 is LOADED and contains no failed jobs
+
+Step run COMPLETED in 1.27 seconds.
+Pipeline mercadolivre_shipping load step completed in 1.08 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679558.9641566 is LOADED and contains no failed jobs
+[2025-06-11T22:06:00.173+0000] {logging_mixin.py:190} INFO - trying to load ./extraction/mercadolivre/data/shipping_cost_ml/dev/sh_cost_26.json to entry schema
+[2025-06-11T22:06:00.444+0000] {logging_mixin.py:190} INFO - Pipeline mercadolivre_shipping load step completed in 0.08 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679560.2419367 is LOADED and contains no failed jobs
+[2025-06-11T22:06:00.446+0000] {logging_mixin.py:190} INFO - Run started at 2025-06-11 22:06:00.175604+00:00 and COMPLETED in 0.27 seconds with 4 steps.
+Step extract COMPLETED in 0.07 seconds.
+
+Load package 1749679560.2419367 is EXTRACTED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step normalize COMPLETED in 0.06 seconds.
+Normalized data for the following tables:
+- entry_mercadolivre_sh: 1 row(s)
+- entry_mercadolivre_sh__items_types: 1 row(s)
+- entry_mercadolivre_sh__origin__shipping_address__types: 4 row(s)
+- entry_mercadolivre_sh__destination__shipping_address__types: 1 row(s)
+- entry_mercadolivre_sh__tags: 1 row(s)
+
+Load package 1749679560.2419367 is NORMALIZED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step load COMPLETED in 0.11 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.08 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679560.2419367 is LOADED and contains no failed jobs
+
+Step run COMPLETED in 0.27 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.08 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679560.2419367 is LOADED and contains no failed jobs
+[2025-06-11T22:06:00.451+0000] {logging_mixin.py:190} INFO - trying to load ./extraction/mercadolivre/data/shipping_cost_ml/dev/sh_cost_27.json to entry schema
+[2025-06-11T22:06:00.835+0000] {logging_mixin.py:190} INFO - Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679560.5199857 is LOADED and contains no failed jobs
+[2025-06-11T22:06:00.836+0000] {logging_mixin.py:190} INFO - Run started at 2025-06-11 22:06:00.452893+00:00 and COMPLETED in 0.38 seconds with 4 steps.
+Step extract COMPLETED in 0.18 seconds.
+
+Load package 1749679560.5199857 is EXTRACTED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step normalize COMPLETED in 0.06 seconds.
+Normalized data for the following tables:
+- entry_mercadolivre_sh: 1 row(s)
+- entry_mercadolivre_sh__items_types: 1 row(s)
+- entry_mercadolivre_sh__origin__shipping_address__types: 4 row(s)
+- entry_mercadolivre_sh__destination__shipping_address__types: 1 row(s)
+- entry_mercadolivre_sh__tags: 1 row(s)
+
+Load package 1749679560.5199857 is NORMALIZED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step load COMPLETED in 0.11 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679560.5199857 is LOADED and contains no failed jobs
+
+Step run COMPLETED in 0.38 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679560.5199857 is LOADED and contains no failed jobs
+[2025-06-11T22:06:00.841+0000] {logging_mixin.py:190} INFO - trying to load ./extraction/mercadolivre/data/shipping_cost_ml/dev/sh_cost_28.json to entry schema
+[2025-06-11T22:06:01.108+0000] {logging_mixin.py:190} INFO - Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679560.9080262 is LOADED and contains no failed jobs
+[2025-06-11T22:06:01.110+0000] {logging_mixin.py:190} INFO - Run started at 2025-06-11 22:06:00.842992+00:00 and COMPLETED in 0.26 seconds with 4 steps.
+Step extract COMPLETED in 0.07 seconds.
+
+Load package 1749679560.9080262 is EXTRACTED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step normalize COMPLETED in 0.06 seconds.
+Normalized data for the following tables:
+- entry_mercadolivre_sh: 1 row(s)
+- entry_mercadolivre_sh__items_types: 1 row(s)
+- entry_mercadolivre_sh__origin__shipping_address__types: 4 row(s)
+- entry_mercadolivre_sh__destination__shipping_address__types: 1 row(s)
+- entry_mercadolivre_sh__tags: 1 row(s)
+
+Load package 1749679560.9080262 is NORMALIZED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step load COMPLETED in 0.11 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679560.9080262 is LOADED and contains no failed jobs
+
+Step run COMPLETED in 0.26 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679560.9080262 is LOADED and contains no failed jobs
+[2025-06-11T22:06:01.114+0000] {logging_mixin.py:190} INFO - trying to load ./extraction/mercadolivre/data/shipping_cost_ml/dev/sh_cost_29.json to entry schema
+[2025-06-11T22:06:01.395+0000] {logging_mixin.py:190} INFO - Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679561.1855772 is LOADED and contains no failed jobs
+[2025-06-11T22:06:01.397+0000] {logging_mixin.py:190} INFO - Run started at 2025-06-11 22:06:01.116421+00:00 and COMPLETED in 0.28 seconds with 4 steps.
+Step extract COMPLETED in 0.07 seconds.
+
+Load package 1749679561.1855772 is EXTRACTED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step normalize COMPLETED in 0.06 seconds.
+Normalized data for the following tables:
+- entry_mercadolivre_sh: 1 row(s)
+- entry_mercadolivre_sh__items_types: 1 row(s)
+- entry_mercadolivre_sh__origin__shipping_address__types: 4 row(s)
+- entry_mercadolivre_sh__destination__shipping_address__types: 1 row(s)
+- entry_mercadolivre_sh__tags: 1 row(s)
+
+Load package 1749679561.1855772 is NORMALIZED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step load COMPLETED in 0.11 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679561.1855772 is LOADED and contains no failed jobs
+
+Step run COMPLETED in 0.28 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679561.1855772 is LOADED and contains no failed jobs
+[2025-06-11T22:06:01.401+0000] {logging_mixin.py:190} INFO - trying to load ./extraction/mercadolivre/data/shipping_cost_ml/dev/sh_cost_3.json to entry schema
+[2025-06-11T22:06:01.676+0000] {logging_mixin.py:190} INFO - Pipeline mercadolivre_shipping load step completed in 0.08 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679561.4719036 is LOADED and contains no failed jobs
+[2025-06-11T22:06:01.678+0000] {logging_mixin.py:190} INFO - Run started at 2025-06-11 22:06:01.402826+00:00 and COMPLETED in 0.27 seconds with 4 steps.
+Step extract COMPLETED in 0.08 seconds.
+
+Load package 1749679561.4719036 is EXTRACTED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step normalize COMPLETED in 0.06 seconds.
+Normalized data for the following tables:
+- entry_mercadolivre_sh: 1 row(s)
+- entry_mercadolivre_sh__items_types: 1 row(s)
+- entry_mercadolivre_sh__origin__shipping_address__types: 4 row(s)
+- entry_mercadolivre_sh__destination__shipping_address__types: 1 row(s)
+- entry_mercadolivre_sh__tags: 1 row(s)
+
+Load package 1749679561.4719036 is NORMALIZED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step load COMPLETED in 0.11 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.08 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679561.4719036 is LOADED and contains no failed jobs
+
+Step run COMPLETED in 0.27 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.08 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679561.4719036 is LOADED and contains no failed jobs
+[2025-06-11T22:06:01.683+0000] {logging_mixin.py:190} INFO - trying to load ./extraction/mercadolivre/data/shipping_cost_ml/dev/sh_cost_30.json to entry schema
+[2025-06-11T22:06:01.953+0000] {logging_mixin.py:190} INFO - Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679561.7505016 is LOADED and contains no failed jobs
+[2025-06-11T22:06:01.955+0000] {logging_mixin.py:190} INFO - Run started at 2025-06-11 22:06:01.684993+00:00 and COMPLETED in 0.27 seconds with 4 steps.
+Step extract COMPLETED in 0.07 seconds.
+
+Load package 1749679561.7505016 is EXTRACTED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step normalize COMPLETED in 0.06 seconds.
+Normalized data for the following tables:
+- entry_mercadolivre_sh: 1 row(s)
+- entry_mercadolivre_sh__items_types: 2 row(s)
+- entry_mercadolivre_sh__origin__shipping_address__types: 5 row(s)
+- entry_mercadolivre_sh__destination__shipping_address__types: 1 row(s)
+- entry_mercadolivre_sh__tags: 1 row(s)
+
+Load package 1749679561.7505016 is NORMALIZED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step load COMPLETED in 0.11 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679561.7505016 is LOADED and contains no failed jobs
+
+Step run COMPLETED in 0.27 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679561.7505016 is LOADED and contains no failed jobs
+[2025-06-11T22:06:01.961+0000] {logging_mixin.py:190} INFO - trying to load ./extraction/mercadolivre/data/shipping_cost_ml/dev/sh_cost_31.json to entry schema
+[2025-06-11T22:06:02.250+0000] {logging_mixin.py:190} INFO - Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679562.0365787 is LOADED and contains no failed jobs
+[2025-06-11T22:06:02.252+0000] {logging_mixin.py:190} INFO - Run started at 2025-06-11 22:06:01.963313+00:00 and COMPLETED in 0.29 seconds with 4 steps.
+Step extract COMPLETED in 0.07 seconds.
+
+Load package 1749679562.0365787 is EXTRACTED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step normalize COMPLETED in 0.08 seconds.
+Normalized data for the following tables:
+- entry_mercadolivre_sh: 1 row(s)
+- entry_mercadolivre_sh__items_types: 1 row(s)
+- entry_mercadolivre_sh__origin__shipping_address__types: 4 row(s)
+- entry_mercadolivre_sh__destination__shipping_address__types: 1 row(s)
+- entry_mercadolivre_sh__tags: 1 row(s)
+
+Load package 1749679562.0365787 is NORMALIZED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step load COMPLETED in 0.11 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679562.0365787 is LOADED and contains no failed jobs
+
+Step run COMPLETED in 0.29 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679562.0365787 is LOADED and contains no failed jobs
+[2025-06-11T22:06:02.257+0000] {logging_mixin.py:190} INFO - trying to load ./extraction/mercadolivre/data/shipping_cost_ml/dev/sh_cost_32.json to entry schema
+[2025-06-11T22:06:03.536+0000] {logging_mixin.py:190} INFO - Pipeline mercadolivre_shipping load step completed in 1.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679562.3289883 is LOADED and contains no failed jobs
+[2025-06-11T22:06:03.539+0000] {logging_mixin.py:190} INFO - Run started at 2025-06-11 22:06:02.259209+00:00 and COMPLETED in 1.28 seconds with 4 steps.
+Step extract COMPLETED in 0.08 seconds.
+
+Load package 1749679562.3289883 is EXTRACTED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step normalize COMPLETED in 0.06 seconds.
+Normalized data for the following tables:
+- entry_mercadolivre_sh: 1 row(s)
+- entry_mercadolivre_sh__items_types: 1 row(s)
+- entry_mercadolivre_sh__origin__shipping_address__types: 4 row(s)
+- entry_mercadolivre_sh__destination__shipping_address__types: 1 row(s)
+- entry_mercadolivre_sh__tags: 1 row(s)
+
+Load package 1749679562.3289883 is NORMALIZED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step load COMPLETED in 1.11 seconds.
+Pipeline mercadolivre_shipping load step completed in 1.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679562.3289883 is LOADED and contains no failed jobs
+
+Step run COMPLETED in 1.28 seconds.
+Pipeline mercadolivre_shipping load step completed in 1.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679562.3289883 is LOADED and contains no failed jobs
+[2025-06-11T22:06:03.544+0000] {logging_mixin.py:190} INFO - trying to load ./extraction/mercadolivre/data/shipping_cost_ml/dev/sh_cost_33.json to entry schema
+[2025-06-11T22:06:04.813+0000] {logging_mixin.py:190} INFO - Pipeline mercadolivre_shipping load step completed in 1.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679563.6142428 is LOADED and contains no failed jobs
+[2025-06-11T22:06:04.814+0000] {logging_mixin.py:190} INFO - Run started at 2025-06-11 22:06:03.545837+00:00 and COMPLETED in 1.27 seconds with 4 steps.
+Step extract COMPLETED in 0.08 seconds.
+
+Load package 1749679563.6142428 is EXTRACTED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step normalize COMPLETED in 0.06 seconds.
+Normalized data for the following tables:
+- entry_mercadolivre_sh: 1 row(s)
+- entry_mercadolivre_sh__items_types: 1 row(s)
+- entry_mercadolivre_sh__origin__shipping_address__types: 4 row(s)
+- entry_mercadolivre_sh__destination__shipping_address__types: 5 row(s)
+- entry_mercadolivre_sh__tags: 1 row(s)
+
+Load package 1749679563.6142428 is NORMALIZED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step load COMPLETED in 1.11 seconds.
+Pipeline mercadolivre_shipping load step completed in 1.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679563.6142428 is LOADED and contains no failed jobs
+
+Step run COMPLETED in 1.27 seconds.
+Pipeline mercadolivre_shipping load step completed in 1.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679563.6142428 is LOADED and contains no failed jobs
+[2025-06-11T22:06:04.819+0000] {logging_mixin.py:190} INFO - trying to load ./extraction/mercadolivre/data/shipping_cost_ml/dev/sh_cost_34.json to entry schema
+[2025-06-11T22:06:05.104+0000] {logging_mixin.py:190} INFO - Pipeline mercadolivre_shipping load step completed in 0.08 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679564.889343 is LOADED and contains no failed jobs
+[2025-06-11T22:06:05.105+0000] {logging_mixin.py:190} INFO - Run started at 2025-06-11 22:06:04.820609+00:00 and COMPLETED in 0.28 seconds with 4 steps.
+Step extract COMPLETED in 0.08 seconds.
+
+Load package 1749679564.889343 is EXTRACTED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step normalize COMPLETED in 0.06 seconds.
+Normalized data for the following tables:
+- entry_mercadolivre_sh: 1 row(s)
+- entry_mercadolivre_sh__items_types: 1 row(s)
+- entry_mercadolivre_sh__origin__shipping_address__types: 4 row(s)
+- entry_mercadolivre_sh__destination__shipping_address__types: 1 row(s)
+- entry_mercadolivre_sh__tags: 1 row(s)
+
+Load package 1749679564.889343 is NORMALIZED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step load COMPLETED in 0.12 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.08 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679564.889343 is LOADED and contains no failed jobs
+
+Step run COMPLETED in 0.28 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.08 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679564.889343 is LOADED and contains no failed jobs
+[2025-06-11T22:06:05.111+0000] {logging_mixin.py:190} INFO - trying to load ./extraction/mercadolivre/data/shipping_cost_ml/dev/sh_cost_35.json to entry schema
+[2025-06-11T22:06:05.382+0000] {logging_mixin.py:190} INFO - Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679565.178861 is LOADED and contains no failed jobs
+[2025-06-11T22:06:05.383+0000] {logging_mixin.py:190} INFO - Run started at 2025-06-11 22:06:05.112702+00:00 and COMPLETED in 0.27 seconds with 4 steps.
+Step extract COMPLETED in 0.07 seconds.
+
+Load package 1749679565.178861 is EXTRACTED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step normalize COMPLETED in 0.06 seconds.
+Normalized data for the following tables:
+- entry_mercadolivre_sh: 1 row(s)
+- entry_mercadolivre_sh__items_types: 1 row(s)
+- entry_mercadolivre_sh__origin__shipping_address__types: 4 row(s)
+- entry_mercadolivre_sh__destination__shipping_address__types: 1 row(s)
+- entry_mercadolivre_sh__tags: 1 row(s)
+
+Load package 1749679565.178861 is NORMALIZED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step load COMPLETED in 0.11 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679565.178861 is LOADED and contains no failed jobs
+
+Step run COMPLETED in 0.27 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679565.178861 is LOADED and contains no failed jobs
+[2025-06-11T22:06:05.387+0000] {logging_mixin.py:190} INFO - trying to load ./extraction/mercadolivre/data/shipping_cost_ml/dev/sh_cost_36.json to entry schema
+[2025-06-11T22:06:06.671+0000] {logging_mixin.py:190} INFO - Pipeline mercadolivre_shipping load step completed in 1.08 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679565.4593177 is LOADED and contains no failed jobs
+[2025-06-11T22:06:06.673+0000] {logging_mixin.py:190} INFO - Run started at 2025-06-11 22:06:05.388688+00:00 and COMPLETED in 1.28 seconds with 4 steps.
+Step extract COMPLETED in 0.08 seconds.
+
+Load package 1749679565.4593177 is EXTRACTED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step normalize COMPLETED in 0.06 seconds.
+Normalized data for the following tables:
+- entry_mercadolivre_sh: 1 row(s)
+- entry_mercadolivre_sh__items_types: 1 row(s)
+- entry_mercadolivre_sh__origin__shipping_address__types: 4 row(s)
+- entry_mercadolivre_sh__destination__shipping_address__types: 1 row(s)
+- entry_mercadolivre_sh__tags: 1 row(s)
+
+Load package 1749679565.4593177 is NORMALIZED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step load COMPLETED in 1.11 seconds.
+Pipeline mercadolivre_shipping load step completed in 1.08 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679565.4593177 is LOADED and contains no failed jobs
+
+Step run COMPLETED in 1.28 seconds.
+Pipeline mercadolivre_shipping load step completed in 1.08 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679565.4593177 is LOADED and contains no failed jobs
+[2025-06-11T22:06:06.678+0000] {logging_mixin.py:190} INFO - trying to load ./extraction/mercadolivre/data/shipping_cost_ml/dev/sh_cost_37.json to entry schema
+[2025-06-11T22:06:07.948+0000] {logging_mixin.py:190} INFO - Pipeline mercadolivre_shipping load step completed in 1.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679566.7450767 is LOADED and contains no failed jobs
+[2025-06-11T22:06:07.949+0000] {logging_mixin.py:190} INFO - Run started at 2025-06-11 22:06:06.679586+00:00 and COMPLETED in 1.27 seconds with 4 steps.
+Step extract COMPLETED in 0.07 seconds.
+
+Load package 1749679566.7450767 is EXTRACTED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step normalize COMPLETED in 0.06 seconds.
+Normalized data for the following tables:
+- entry_mercadolivre_sh: 1 row(s)
+- entry_mercadolivre_sh__items_types: 1 row(s)
+- entry_mercadolivre_sh__origin__shipping_address__types: 4 row(s)
+- entry_mercadolivre_sh__destination__shipping_address__types: 1 row(s)
+- entry_mercadolivre_sh__tags: 1 row(s)
+
+Load package 1749679566.7450767 is NORMALIZED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step load COMPLETED in 1.11 seconds.
+Pipeline mercadolivre_shipping load step completed in 1.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679566.7450767 is LOADED and contains no failed jobs
+
+Step run COMPLETED in 1.27 seconds.
+Pipeline mercadolivre_shipping load step completed in 1.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679566.7450767 is LOADED and contains no failed jobs
+[2025-06-11T22:06:07.954+0000] {logging_mixin.py:190} INFO - trying to load ./extraction/mercadolivre/data/shipping_cost_ml/dev/sh_cost_38.json to entry schema
+[2025-06-11T22:06:08.228+0000] {logging_mixin.py:190} INFO - Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679568.0205383 is LOADED and contains no failed jobs
+[2025-06-11T22:06:08.229+0000] {logging_mixin.py:190} INFO - Run started at 2025-06-11 22:06:07.955711+00:00 and COMPLETED in 0.27 seconds with 4 steps.
+Step extract COMPLETED in 0.07 seconds.
+
+Load package 1749679568.0205383 is EXTRACTED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step normalize COMPLETED in 0.07 seconds.
+Normalized data for the following tables:
+- entry_mercadolivre_sh: 1 row(s)
+- entry_mercadolivre_sh__items_types: 1 row(s)
+- entry_mercadolivre_sh__origin__shipping_address__types: 5 row(s)
+- entry_mercadolivre_sh__destination__shipping_address__types: 3 row(s)
+- entry_mercadolivre_sh__tags: 1 row(s)
+
+Load package 1749679568.0205383 is NORMALIZED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step load COMPLETED in 0.11 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679568.0205383 is LOADED and contains no failed jobs
+
+Step run COMPLETED in 0.27 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679568.0205383 is LOADED and contains no failed jobs
+[2025-06-11T22:06:08.235+0000] {logging_mixin.py:190} INFO - trying to load ./extraction/mercadolivre/data/shipping_cost_ml/dev/sh_cost_39.json to entry schema
+[2025-06-11T22:06:08.506+0000] {logging_mixin.py:190} INFO - Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679568.3045967 is LOADED and contains no failed jobs
+[2025-06-11T22:06:08.507+0000] {logging_mixin.py:190} INFO - Run started at 2025-06-11 22:06:08.236531+00:00 and COMPLETED in 0.27 seconds with 4 steps.
+Step extract COMPLETED in 0.07 seconds.
+
+Load package 1749679568.3045967 is EXTRACTED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step normalize COMPLETED in 0.06 seconds.
+Normalized data for the following tables:
+- entry_mercadolivre_sh: 1 row(s)
+- entry_mercadolivre_sh__items_types: 1 row(s)
+- entry_mercadolivre_sh__origin__shipping_address__types: 5 row(s)
+- entry_mercadolivre_sh__destination__shipping_address__types: 5 row(s)
+- entry_mercadolivre_sh__tags: 1 row(s)
+
+Load package 1749679568.3045967 is NORMALIZED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step load COMPLETED in 0.11 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679568.3045967 is LOADED and contains no failed jobs
+
+Step run COMPLETED in 0.27 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679568.3045967 is LOADED and contains no failed jobs
+[2025-06-11T22:06:08.513+0000] {logging_mixin.py:190} INFO - trying to load ./extraction/mercadolivre/data/shipping_cost_ml/dev/sh_cost_4.json to entry schema
+[2025-06-11T22:06:08.782+0000] {logging_mixin.py:190} INFO - Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679568.581974 is LOADED and contains no failed jobs
+[2025-06-11T22:06:08.784+0000] {logging_mixin.py:190} INFO - Run started at 2025-06-11 22:06:08.514567+00:00 and COMPLETED in 0.27 seconds with 4 steps.
+Step extract COMPLETED in 0.08 seconds.
+
+Load package 1749679568.581974 is EXTRACTED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step normalize COMPLETED in 0.06 seconds.
+Normalized data for the following tables:
+- entry_mercadolivre_sh: 1 row(s)
+- entry_mercadolivre_sh__items_types: 1 row(s)
+- entry_mercadolivre_sh__origin__shipping_address__types: 4 row(s)
+- entry_mercadolivre_sh__destination__shipping_address__types: 1 row(s)
+- entry_mercadolivre_sh__tags: 1 row(s)
+
+Load package 1749679568.581974 is NORMALIZED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step load COMPLETED in 0.11 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679568.581974 is LOADED and contains no failed jobs
+
+Step run COMPLETED in 0.27 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679568.581974 is LOADED and contains no failed jobs
+[2025-06-11T22:06:08.789+0000] {logging_mixin.py:190} INFO - trying to load ./extraction/mercadolivre/data/shipping_cost_ml/dev/sh_cost_40.json to entry schema
+[2025-06-11T22:06:10.076+0000] {logging_mixin.py:190} INFO - Pipeline mercadolivre_shipping load step completed in 1.09 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679568.859149 is LOADED and contains no failed jobs
+[2025-06-11T22:06:10.078+0000] {logging_mixin.py:190} INFO - Run started at 2025-06-11 22:06:08.791451+00:00 and COMPLETED in 1.28 seconds with 4 steps.
+Step extract COMPLETED in 0.07 seconds.
+
+Load package 1749679568.859149 is EXTRACTED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step normalize COMPLETED in 0.06 seconds.
+Normalized data for the following tables:
+- entry_mercadolivre_sh: 1 row(s)
+- entry_mercadolivre_sh__items_types: 1 row(s)
+- entry_mercadolivre_sh__origin__shipping_address__types: 4 row(s)
+- entry_mercadolivre_sh__destination__shipping_address__types: 5 row(s)
+- entry_mercadolivre_sh__tags: 1 row(s)
+
+Load package 1749679568.859149 is NORMALIZED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step load COMPLETED in 1.12 seconds.
+Pipeline mercadolivre_shipping load step completed in 1.09 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679568.859149 is LOADED and contains no failed jobs
+
+Step run COMPLETED in 1.28 seconds.
+Pipeline mercadolivre_shipping load step completed in 1.09 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679568.859149 is LOADED and contains no failed jobs
+[2025-06-11T22:06:10.084+0000] {logging_mixin.py:190} INFO - trying to load ./extraction/mercadolivre/data/shipping_cost_ml/dev/sh_cost_41.json to entry schema
+[2025-06-11T22:06:10.362+0000] {logging_mixin.py:190} INFO - Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679570.150733 is LOADED and contains no failed jobs
+[2025-06-11T22:06:10.363+0000] {logging_mixin.py:190} INFO - Run started at 2025-06-11 22:06:10.085458+00:00 and COMPLETED in 0.28 seconds with 4 steps.
+Step extract COMPLETED in 0.07 seconds.
+
+Load package 1749679570.150733 is EXTRACTED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step normalize COMPLETED in 0.06 seconds.
+Normalized data for the following tables:
+- entry_mercadolivre_sh: 1 row(s)
+- entry_mercadolivre_sh__items_types: 1 row(s)
+- entry_mercadolivre_sh__origin__shipping_address__types: 5 row(s)
+- entry_mercadolivre_sh__destination__shipping_address__types: 1 row(s)
+- entry_mercadolivre_sh__tags: 1 row(s)
+
+Load package 1749679570.150733 is NORMALIZED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step load COMPLETED in 0.12 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679570.150733 is LOADED and contains no failed jobs
+
+Step run COMPLETED in 0.28 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679570.150733 is LOADED and contains no failed jobs
+[2025-06-11T22:06:10.368+0000] {logging_mixin.py:190} INFO - trying to load ./extraction/mercadolivre/data/shipping_cost_ml/dev/sh_cost_42.json to entry schema
+[2025-06-11T22:06:10.640+0000] {logging_mixin.py:190} INFO - Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679570.438129 is LOADED and contains no failed jobs
+[2025-06-11T22:06:10.642+0000] {logging_mixin.py:190} INFO - Run started at 2025-06-11 22:06:10.369916+00:00 and COMPLETED in 0.27 seconds with 4 steps.
+Step extract COMPLETED in 0.07 seconds.
+
+Load package 1749679570.438129 is EXTRACTED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step normalize COMPLETED in 0.06 seconds.
+Normalized data for the following tables:
+- entry_mercadolivre_sh: 1 row(s)
+- entry_mercadolivre_sh__items_types: 1 row(s)
+- entry_mercadolivre_sh__origin__shipping_address__types: 4 row(s)
+- entry_mercadolivre_sh__destination__shipping_address__types: 1 row(s)
+- entry_mercadolivre_sh__tags: 1 row(s)
+
+Load package 1749679570.438129 is NORMALIZED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step load COMPLETED in 0.11 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679570.438129 is LOADED and contains no failed jobs
+
+Step run COMPLETED in 0.27 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679570.438129 is LOADED and contains no failed jobs
+[2025-06-11T22:06:10.649+0000] {logging_mixin.py:190} INFO - trying to load ./extraction/mercadolivre/data/shipping_cost_ml/dev/sh_cost_43.json to entry schema
+[2025-06-11T22:06:10.920+0000] {logging_mixin.py:190} INFO - Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679570.7177825 is LOADED and contains no failed jobs
+[2025-06-11T22:06:10.922+0000] {logging_mixin.py:190} INFO - Run started at 2025-06-11 22:06:10.650506+00:00 and COMPLETED in 0.27 seconds with 4 steps.
+Step extract COMPLETED in 0.07 seconds.
+
+Load package 1749679570.7177825 is EXTRACTED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step normalize COMPLETED in 0.06 seconds.
+Normalized data for the following tables:
+- entry_mercadolivre_sh: 1 row(s)
+- entry_mercadolivre_sh__items_types: 1 row(s)
+- entry_mercadolivre_sh__origin__shipping_address__types: 4 row(s)
+- entry_mercadolivre_sh__destination__shipping_address__types: 1 row(s)
+- entry_mercadolivre_sh__tags: 1 row(s)
+
+Load package 1749679570.7177825 is NORMALIZED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step load COMPLETED in 0.11 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679570.7177825 is LOADED and contains no failed jobs
+
+Step run COMPLETED in 0.27 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679570.7177825 is LOADED and contains no failed jobs
+[2025-06-11T22:06:10.925+0000] {logging_mixin.py:190} INFO - trying to load ./extraction/mercadolivre/data/shipping_cost_ml/dev/sh_cost_44.json to entry schema
+[2025-06-11T22:06:11.206+0000] {logging_mixin.py:190} INFO - Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679570.9950933 is LOADED and contains no failed jobs
+[2025-06-11T22:06:11.207+0000] {logging_mixin.py:190} INFO - Run started at 2025-06-11 22:06:10.927217+00:00 and COMPLETED in 0.28 seconds with 4 steps.
+Step extract COMPLETED in 0.08 seconds.
+
+Load package 1749679570.9950933 is EXTRACTED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step normalize COMPLETED in 0.06 seconds.
+Normalized data for the following tables:
+- entry_mercadolivre_sh: 1 row(s)
+- entry_mercadolivre_sh__items_types: 1 row(s)
+- entry_mercadolivre_sh__origin__shipping_address__types: 4 row(s)
+- entry_mercadolivre_sh__destination__shipping_address__types: 1 row(s)
+- entry_mercadolivre_sh__tags: 1 row(s)
+
+Load package 1749679570.9950933 is NORMALIZED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step load COMPLETED in 0.12 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679570.9950933 is LOADED and contains no failed jobs
+
+Step run COMPLETED in 0.28 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679570.9950933 is LOADED and contains no failed jobs
+[2025-06-11T22:06:11.212+0000] {logging_mixin.py:190} INFO - trying to load ./extraction/mercadolivre/data/shipping_cost_ml/dev/sh_cost_45.json to entry schema
+[2025-06-11T22:06:11.503+0000] {logging_mixin.py:190} INFO - Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679571.2842271 is LOADED and contains no failed jobs
+[2025-06-11T22:06:11.505+0000] {logging_mixin.py:190} INFO - Run started at 2025-06-11 22:06:11.213921+00:00 and COMPLETED in 0.29 seconds with 4 steps.
+Step extract COMPLETED in 0.08 seconds.
+
+Load package 1749679571.2842271 is EXTRACTED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step normalize COMPLETED in 0.07 seconds.
+Normalized data for the following tables:
+- entry_mercadolivre_sh: 1 row(s)
+- entry_mercadolivre_sh__items_types: 1 row(s)
+- entry_mercadolivre_sh__origin__shipping_address__types: 4 row(s)
+- entry_mercadolivre_sh__destination__shipping_address__types: 1 row(s)
+- entry_mercadolivre_sh__tags: 1 row(s)
+
+Load package 1749679571.2842271 is NORMALIZED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step load COMPLETED in 0.11 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679571.2842271 is LOADED and contains no failed jobs
+
+Step run COMPLETED in 0.29 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679571.2842271 is LOADED and contains no failed jobs
+[2025-06-11T22:06:11.508+0000] {logging_mixin.py:190} INFO - trying to load ./extraction/mercadolivre/data/shipping_cost_ml/dev/sh_cost_46.json to entry schema
+[2025-06-11T22:06:11.774+0000] {logging_mixin.py:190} INFO - Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679571.5746183 is LOADED and contains no failed jobs
+[2025-06-11T22:06:11.776+0000] {logging_mixin.py:190} INFO - Run started at 2025-06-11 22:06:11.509872+00:00 and COMPLETED in 0.26 seconds with 4 steps.
+Step extract COMPLETED in 0.07 seconds.
+
+Load package 1749679571.5746183 is EXTRACTED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step normalize COMPLETED in 0.06 seconds.
+Normalized data for the following tables:
+- entry_mercadolivre_sh: 1 row(s)
+- entry_mercadolivre_sh__items_types: 1 row(s)
+- entry_mercadolivre_sh__origin__shipping_address__types: 5 row(s)
+- entry_mercadolivre_sh__destination__shipping_address__types: 4 row(s)
+- entry_mercadolivre_sh__tags: 1 row(s)
+
+Load package 1749679571.5746183 is NORMALIZED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step load COMPLETED in 0.11 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679571.5746183 is LOADED and contains no failed jobs
+
+Step run COMPLETED in 0.26 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679571.5746183 is LOADED and contains no failed jobs
+[2025-06-11T22:06:11.781+0000] {logging_mixin.py:190} INFO - trying to load ./extraction/mercadolivre/data/shipping_cost_ml/dev/sh_cost_47.json to entry schema
+[2025-06-11T22:06:12.050+0000] {logging_mixin.py:190} INFO - Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679571.850258 is LOADED and contains no failed jobs
+[2025-06-11T22:06:12.052+0000] {logging_mixin.py:190} INFO - Run started at 2025-06-11 22:06:11.782935+00:00 and COMPLETED in 0.27 seconds with 4 steps.
+Step extract COMPLETED in 0.07 seconds.
+
+Load package 1749679571.850258 is EXTRACTED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step normalize COMPLETED in 0.06 seconds.
+Normalized data for the following tables:
+- entry_mercadolivre_sh: 1 row(s)
+- entry_mercadolivre_sh__items_types: 1 row(s)
+- entry_mercadolivre_sh__origin__shipping_address__types: 5 row(s)
+- entry_mercadolivre_sh__destination__shipping_address__types: 1 row(s)
+- entry_mercadolivre_sh__tags: 1 row(s)
+
+Load package 1749679571.850258 is NORMALIZED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step load COMPLETED in 0.11 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679571.850258 is LOADED and contains no failed jobs
+
+Step run COMPLETED in 0.27 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679571.850258 is LOADED and contains no failed jobs
+[2025-06-11T22:06:12.057+0000] {logging_mixin.py:190} INFO - trying to load ./extraction/mercadolivre/data/shipping_cost_ml/dev/sh_cost_48.json to entry schema
+[2025-06-11T22:06:12.334+0000] {logging_mixin.py:190} INFO - Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679572.126099 is LOADED and contains no failed jobs
+[2025-06-11T22:06:12.335+0000] {logging_mixin.py:190} INFO - Run started at 2025-06-11 22:06:12.058938+00:00 and COMPLETED in 0.27 seconds with 4 steps.
+Step extract COMPLETED in 0.07 seconds.
+
+Load package 1749679572.126099 is EXTRACTED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step normalize COMPLETED in 0.06 seconds.
+Normalized data for the following tables:
+- entry_mercadolivre_sh: 1 row(s)
+- entry_mercadolivre_sh__items_types: 1 row(s)
+- entry_mercadolivre_sh__origin__shipping_address__types: 4 row(s)
+- entry_mercadolivre_sh__destination__shipping_address__types: 5 row(s)
+- entry_mercadolivre_sh__tags: 1 row(s)
+
+Load package 1749679572.126099 is NORMALIZED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step load COMPLETED in 0.11 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679572.126099 is LOADED and contains no failed jobs
+
+Step run COMPLETED in 0.27 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679572.126099 is LOADED and contains no failed jobs
+[2025-06-11T22:06:12.340+0000] {logging_mixin.py:190} INFO - trying to load ./extraction/mercadolivre/data/shipping_cost_ml/dev/sh_cost_49.json to entry schema
+[2025-06-11T22:06:12.614+0000] {logging_mixin.py:190} INFO - Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679572.4104478 is LOADED and contains no failed jobs
+[2025-06-11T22:06:12.616+0000] {logging_mixin.py:190} INFO - Run started at 2025-06-11 22:06:12.341822+00:00 and COMPLETED in 0.27 seconds with 4 steps.
+Step extract COMPLETED in 0.08 seconds.
+
+Load package 1749679572.4104478 is EXTRACTED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step normalize COMPLETED in 0.06 seconds.
+Normalized data for the following tables:
+- entry_mercadolivre_sh: 1 row(s)
+- entry_mercadolivre_sh__items_types: 1 row(s)
+- entry_mercadolivre_sh__origin__shipping_address__types: 4 row(s)
+- entry_mercadolivre_sh__destination__shipping_address__types: 3 row(s)
+- entry_mercadolivre_sh__tags: 1 row(s)
+
+Load package 1749679572.4104478 is NORMALIZED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step load COMPLETED in 0.11 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679572.4104478 is LOADED and contains no failed jobs
+
+Step run COMPLETED in 0.27 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679572.4104478 is LOADED and contains no failed jobs
+[2025-06-11T22:06:12.619+0000] {logging_mixin.py:190} INFO - trying to load ./extraction/mercadolivre/data/shipping_cost_ml/dev/sh_cost_5.json to entry schema
+[2025-06-11T22:06:12.886+0000] {logging_mixin.py:190} INFO - Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679572.686106 is LOADED and contains no failed jobs
+[2025-06-11T22:06:12.887+0000] {logging_mixin.py:190} INFO - Run started at 2025-06-11 22:06:12.620900+00:00 and COMPLETED in 0.26 seconds with 4 steps.
+Step extract COMPLETED in 0.07 seconds.
+
+Load package 1749679572.686106 is EXTRACTED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step normalize COMPLETED in 0.06 seconds.
+Normalized data for the following tables:
+- entry_mercadolivre_sh: 1 row(s)
+- entry_mercadolivre_sh__items_types: 1 row(s)
+- entry_mercadolivre_sh__origin__shipping_address__types: 4 row(s)
+- entry_mercadolivre_sh__destination__shipping_address__types: 5 row(s)
+- entry_mercadolivre_sh__tags: 1 row(s)
+
+Load package 1749679572.686106 is NORMALIZED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step load COMPLETED in 0.11 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679572.686106 is LOADED and contains no failed jobs
+
+Step run COMPLETED in 0.26 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679572.686106 is LOADED and contains no failed jobs
+[2025-06-11T22:06:12.891+0000] {logging_mixin.py:190} INFO - trying to load ./extraction/mercadolivre/data/shipping_cost_ml/dev/sh_cost_50.json to entry schema
+[2025-06-11T22:06:13.166+0000] {logging_mixin.py:190} INFO - Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679572.9628222 is LOADED and contains no failed jobs
+[2025-06-11T22:06:13.168+0000] {logging_mixin.py:190} INFO - Run started at 2025-06-11 22:06:12.892670+00:00 and COMPLETED in 0.27 seconds with 4 steps.
+Step extract COMPLETED in 0.08 seconds.
+
+Load package 1749679572.9628222 is EXTRACTED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step normalize COMPLETED in 0.06 seconds.
+Normalized data for the following tables:
+- entry_mercadolivre_sh: 1 row(s)
+- entry_mercadolivre_sh__items_types: 1 row(s)
+- entry_mercadolivre_sh__origin__shipping_address__types: 4 row(s)
+- entry_mercadolivre_sh__destination__shipping_address__types: 1 row(s)
+- entry_mercadolivre_sh__tags: 1 row(s)
+
+Load package 1749679572.9628222 is NORMALIZED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step load COMPLETED in 0.11 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679572.9628222 is LOADED and contains no failed jobs
+
+Step run COMPLETED in 0.27 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679572.9628222 is LOADED and contains no failed jobs
+[2025-06-11T22:06:13.173+0000] {logging_mixin.py:190} INFO - trying to load ./extraction/mercadolivre/data/shipping_cost_ml/dev/sh_cost_51.json to entry schema
+[2025-06-11T22:06:13.466+0000] {logging_mixin.py:190} INFO - Pipeline mercadolivre_shipping load step completed in 0.08 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679573.25178 is LOADED and contains no failed jobs
+[2025-06-11T22:06:13.468+0000] {logging_mixin.py:190} INFO - Run started at 2025-06-11 22:06:13.175095+00:00 and COMPLETED in 0.29 seconds with 4 steps.
+Step extract COMPLETED in 0.08 seconds.
+
+Load package 1749679573.25178 is EXTRACTED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step normalize COMPLETED in 0.06 seconds.
+Normalized data for the following tables:
+- entry_mercadolivre_sh: 1 row(s)
+- entry_mercadolivre_sh__items_types: 1 row(s)
+- entry_mercadolivre_sh__origin__shipping_address__types: 4 row(s)
+- entry_mercadolivre_sh__destination__shipping_address__types: 1 row(s)
+- entry_mercadolivre_sh__tags: 1 row(s)
+
+Load package 1749679573.25178 is NORMALIZED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step load COMPLETED in 0.12 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.08 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679573.25178 is LOADED and contains no failed jobs
+
+Step run COMPLETED in 0.29 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.08 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679573.25178 is LOADED and contains no failed jobs
+[2025-06-11T22:06:13.472+0000] {logging_mixin.py:190} INFO - trying to load ./extraction/mercadolivre/data/shipping_cost_ml/dev/sh_cost_52.json to entry schema
+[2025-06-11T22:06:13.749+0000] {logging_mixin.py:190} INFO - Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679573.540881 is LOADED and contains no failed jobs
+[2025-06-11T22:06:13.750+0000] {logging_mixin.py:190} INFO - Run started at 2025-06-11 22:06:13.473681+00:00 and COMPLETED in 0.27 seconds with 4 steps.
+Step extract COMPLETED in 0.08 seconds.
+
+Load package 1749679573.540881 is EXTRACTED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step normalize COMPLETED in 0.06 seconds.
+Normalized data for the following tables:
+- entry_mercadolivre_sh: 1 row(s)
+- entry_mercadolivre_sh__items_types: 1 row(s)
+- entry_mercadolivre_sh__origin__shipping_address__types: 4 row(s)
+- entry_mercadolivre_sh__destination__shipping_address__types: 1 row(s)
+- entry_mercadolivre_sh__tags: 1 row(s)
+
+Load package 1749679573.540881 is NORMALIZED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step load COMPLETED in 0.11 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679573.540881 is LOADED and contains no failed jobs
+
+Step run COMPLETED in 0.27 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679573.540881 is LOADED and contains no failed jobs
+[2025-06-11T22:06:13.756+0000] {logging_mixin.py:190} INFO - trying to load ./extraction/mercadolivre/data/shipping_cost_ml/dev/sh_cost_53.json to entry schema
+[2025-06-11T22:06:14.028+0000] {logging_mixin.py:190} INFO - Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679573.8258657 is LOADED and contains no failed jobs
+[2025-06-11T22:06:14.030+0000] {logging_mixin.py:190} INFO - Run started at 2025-06-11 22:06:13.757716+00:00 and COMPLETED in 0.27 seconds with 4 steps.
+Step extract COMPLETED in 0.07 seconds.
+
+Load package 1749679573.8258657 is EXTRACTED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step normalize COMPLETED in 0.06 seconds.
+Normalized data for the following tables:
+- entry_mercadolivre_sh: 1 row(s)
+- entry_mercadolivre_sh__items_types: 1 row(s)
+- entry_mercadolivre_sh__origin__shipping_address__types: 4 row(s)
+- entry_mercadolivre_sh__destination__shipping_address__types: 1 row(s)
+- entry_mercadolivre_sh__tags: 1 row(s)
+
+Load package 1749679573.8258657 is NORMALIZED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step load COMPLETED in 0.11 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679573.8258657 is LOADED and contains no failed jobs
+
+Step run COMPLETED in 0.27 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679573.8258657 is LOADED and contains no failed jobs
+[2025-06-11T22:06:14.034+0000] {logging_mixin.py:190} INFO - trying to load ./extraction/mercadolivre/data/shipping_cost_ml/dev/sh_cost_54.json to entry schema
+[2025-06-11T22:06:14.340+0000] {logging_mixin.py:190} INFO - Pipeline mercadolivre_shipping load step completed in 0.09 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679574.1051059 is LOADED and contains no failed jobs
+[2025-06-11T22:06:14.342+0000] {logging_mixin.py:190} INFO - Run started at 2025-06-11 22:06:14.035997+00:00 and COMPLETED in 0.30 seconds with 4 steps.
+Step extract COMPLETED in 0.08 seconds.
+
+Load package 1749679574.1051059 is EXTRACTED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step normalize COMPLETED in 0.07 seconds.
+Normalized data for the following tables:
+- entry_mercadolivre_sh: 1 row(s)
+- entry_mercadolivre_sh__items_types: 1 row(s)
+- entry_mercadolivre_sh__origin__shipping_address__types: 4 row(s)
+- entry_mercadolivre_sh__destination__shipping_address__types: 5 row(s)
+- entry_mercadolivre_sh__tags: 1 row(s)
+
+Load package 1749679574.1051059 is NORMALIZED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step load COMPLETED in 0.12 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.09 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679574.1051059 is LOADED and contains no failed jobs
+
+Step run COMPLETED in 0.30 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.09 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679574.1051059 is LOADED and contains no failed jobs
+[2025-06-11T22:06:14.348+0000] {logging_mixin.py:190} INFO - trying to load ./extraction/mercadolivre/data/shipping_cost_ml/dev/sh_cost_55.json to entry schema
+[2025-06-11T22:06:15.623+0000] {logging_mixin.py:190} INFO - Pipeline mercadolivre_shipping load step completed in 1.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679574.4212532 is LOADED and contains no failed jobs
+[2025-06-11T22:06:15.625+0000] {logging_mixin.py:190} INFO - Run started at 2025-06-11 22:06:14.349473+00:00 and COMPLETED in 1.27 seconds with 4 steps.
+Step extract COMPLETED in 0.08 seconds.
+
+Load package 1749679574.4212532 is EXTRACTED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step normalize COMPLETED in 0.06 seconds.
+Normalized data for the following tables:
+- entry_mercadolivre_sh: 1 row(s)
+- entry_mercadolivre_sh__items_types: 1 row(s)
+- entry_mercadolivre_sh__origin__shipping_address__types: 4 row(s)
+- entry_mercadolivre_sh__destination__shipping_address__types: 1 row(s)
+- entry_mercadolivre_sh__tags: 1 row(s)
+
+Load package 1749679574.4212532 is NORMALIZED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step load COMPLETED in 1.11 seconds.
+Pipeline mercadolivre_shipping load step completed in 1.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679574.4212532 is LOADED and contains no failed jobs
+
+Step run COMPLETED in 1.27 seconds.
+Pipeline mercadolivre_shipping load step completed in 1.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679574.4212532 is LOADED and contains no failed jobs
+[2025-06-11T22:06:15.629+0000] {logging_mixin.py:190} INFO - trying to load ./extraction/mercadolivre/data/shipping_cost_ml/dev/sh_cost_56.json to entry schema
+[2025-06-11T22:06:15.927+0000] {logging_mixin.py:190} INFO - Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679575.7165337 is LOADED and contains no failed jobs
+[2025-06-11T22:06:15.929+0000] {logging_mixin.py:190} INFO - Run started at 2025-06-11 22:06:15.631068+00:00 and COMPLETED in 0.30 seconds with 4 steps.
+Step extract COMPLETED in 0.09 seconds.
+
+Load package 1749679575.7165337 is EXTRACTED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step normalize COMPLETED in 0.06 seconds.
+Normalized data for the following tables:
+- entry_mercadolivre_sh: 1 row(s)
+- entry_mercadolivre_sh__items_types: 1 row(s)
+- entry_mercadolivre_sh__origin__shipping_address__types: 5 row(s)
+- entry_mercadolivre_sh__destination__shipping_address__types: 1 row(s)
+- entry_mercadolivre_sh__tags: 1 row(s)
+
+Load package 1749679575.7165337 is NORMALIZED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step load COMPLETED in 0.12 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679575.7165337 is LOADED and contains no failed jobs
+
+Step run COMPLETED in 0.30 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679575.7165337 is LOADED and contains no failed jobs
+[2025-06-11T22:06:15.934+0000] {logging_mixin.py:190} INFO - trying to load ./extraction/mercadolivre/data/shipping_cost_ml/dev/sh_cost_57.json to entry schema
+[2025-06-11T22:06:16.202+0000] {logging_mixin.py:190} INFO - Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679576.0040166 is LOADED and contains no failed jobs
+[2025-06-11T22:06:16.204+0000] {logging_mixin.py:190} INFO - Run started at 2025-06-11 22:06:15.935183+00:00 and COMPLETED in 0.27 seconds with 4 steps.
+Step extract COMPLETED in 0.08 seconds.
+
+Load package 1749679576.0040166 is EXTRACTED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step normalize COMPLETED in 0.06 seconds.
+Normalized data for the following tables:
+- entry_mercadolivre_sh: 1 row(s)
+- entry_mercadolivre_sh__items_types: 1 row(s)
+- entry_mercadolivre_sh__origin__shipping_address__types: 4 row(s)
+- entry_mercadolivre_sh__destination__shipping_address__types: 1 row(s)
+- entry_mercadolivre_sh__tags: 1 row(s)
+
+Load package 1749679576.0040166 is NORMALIZED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step load COMPLETED in 0.11 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679576.0040166 is LOADED and contains no failed jobs
+
+Step run COMPLETED in 0.27 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679576.0040166 is LOADED and contains no failed jobs
+[2025-06-11T22:06:16.209+0000] {logging_mixin.py:190} INFO - trying to load ./extraction/mercadolivre/data/shipping_cost_ml/dev/sh_cost_58.json to entry schema
+[2025-06-11T22:06:16.482+0000] {logging_mixin.py:190} INFO - Pipeline mercadolivre_shipping load step completed in 0.08 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679576.2764142 is LOADED and contains no failed jobs
+[2025-06-11T22:06:16.484+0000] {logging_mixin.py:190} INFO - Run started at 2025-06-11 22:06:16.211014+00:00 and COMPLETED in 0.27 seconds with 4 steps.
+Step extract COMPLETED in 0.08 seconds.
+
+Load package 1749679576.2764142 is EXTRACTED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step normalize COMPLETED in 0.06 seconds.
+Normalized data for the following tables:
+- entry_mercadolivre_sh: 1 row(s)
+- entry_mercadolivre_sh__items_types: 1 row(s)
+- entry_mercadolivre_sh__origin__shipping_address__types: 4 row(s)
+- entry_mercadolivre_sh__destination__shipping_address__types: 1 row(s)
+- entry_mercadolivre_sh__tags: 1 row(s)
+
+Load package 1749679576.2764142 is NORMALIZED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step load COMPLETED in 0.11 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.08 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679576.2764142 is LOADED and contains no failed jobs
+
+Step run COMPLETED in 0.27 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.08 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679576.2764142 is LOADED and contains no failed jobs
+[2025-06-11T22:06:16.489+0000] {logging_mixin.py:190} INFO - trying to load ./extraction/mercadolivre/data/shipping_cost_ml/dev/sh_cost_59.json to entry schema
+[2025-06-11T22:06:16.761+0000] {logging_mixin.py:190} INFO - Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679576.5566294 is LOADED and contains no failed jobs
+[2025-06-11T22:06:16.763+0000] {logging_mixin.py:190} INFO - Run started at 2025-06-11 22:06:16.490996+00:00 and COMPLETED in 0.27 seconds with 4 steps.
+Step extract COMPLETED in 0.07 seconds.
+
+Load package 1749679576.5566294 is EXTRACTED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step normalize COMPLETED in 0.06 seconds.
+Normalized data for the following tables:
+- entry_mercadolivre_sh: 1 row(s)
+- entry_mercadolivre_sh__items_types: 1 row(s)
+- entry_mercadolivre_sh__origin__shipping_address__types: 4 row(s)
+- entry_mercadolivre_sh__destination__shipping_address__types: 1 row(s)
+- entry_mercadolivre_sh__tags: 1 row(s)
+
+Load package 1749679576.5566294 is NORMALIZED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step load COMPLETED in 0.11 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679576.5566294 is LOADED and contains no failed jobs
+
+Step run COMPLETED in 0.27 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679576.5566294 is LOADED and contains no failed jobs
+[2025-06-11T22:06:16.769+0000] {logging_mixin.py:190} INFO - trying to load ./extraction/mercadolivre/data/shipping_cost_ml/dev/sh_cost_6.json to entry schema
+[2025-06-11T22:06:17.044+0000] {logging_mixin.py:190} INFO - Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679576.840491 is LOADED and contains no failed jobs
+[2025-06-11T22:06:17.045+0000] {logging_mixin.py:190} INFO - Run started at 2025-06-11 22:06:16.771079+00:00 and COMPLETED in 0.27 seconds with 4 steps.
+Step extract COMPLETED in 0.07 seconds.
+
+Load package 1749679576.840491 is EXTRACTED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step normalize COMPLETED in 0.06 seconds.
+Normalized data for the following tables:
+- entry_mercadolivre_sh: 1 row(s)
+- entry_mercadolivre_sh__items_types: 1 row(s)
+- entry_mercadolivre_sh__origin__shipping_address__types: 4 row(s)
+- entry_mercadolivre_sh__destination__shipping_address__types: 1 row(s)
+- entry_mercadolivre_sh__tags: 1 row(s)
+
+Load package 1749679576.840491 is NORMALIZED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step load COMPLETED in 0.11 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679576.840491 is LOADED and contains no failed jobs
+
+Step run COMPLETED in 0.27 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679576.840491 is LOADED and contains no failed jobs
+[2025-06-11T22:06:17.049+0000] {logging_mixin.py:190} INFO - trying to load ./extraction/mercadolivre/data/shipping_cost_ml/dev/sh_cost_60.json to entry schema
+[2025-06-11T22:06:17.328+0000] {logging_mixin.py:190} INFO - Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679577.1152318 is LOADED and contains no failed jobs
+[2025-06-11T22:06:17.330+0000] {logging_mixin.py:190} INFO - Run started at 2025-06-11 22:06:17.050387+00:00 and COMPLETED in 0.28 seconds with 4 steps.
+Step extract COMPLETED in 0.07 seconds.
+
+Load package 1749679577.1152318 is EXTRACTED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step normalize COMPLETED in 0.07 seconds.
+Normalized data for the following tables:
+- entry_mercadolivre_sh: 1 row(s)
+- entry_mercadolivre_sh__items_types: 1 row(s)
+- entry_mercadolivre_sh__origin__shipping_address__types: 4 row(s)
+- entry_mercadolivre_sh__destination__shipping_address__types: 1 row(s)
+- entry_mercadolivre_sh__tags: 1 row(s)
+
+Load package 1749679577.1152318 is NORMALIZED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step load COMPLETED in 0.11 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679577.1152318 is LOADED and contains no failed jobs
+
+Step run COMPLETED in 0.28 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679577.1152318 is LOADED and contains no failed jobs
+[2025-06-11T22:06:17.335+0000] {logging_mixin.py:190} INFO - trying to load ./extraction/mercadolivre/data/shipping_cost_ml/dev/sh_cost_61.json to entry schema
+[2025-06-11T22:06:17.606+0000] {logging_mixin.py:190} INFO - Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679577.4031825 is LOADED and contains no failed jobs
+[2025-06-11T22:06:17.607+0000] {logging_mixin.py:190} INFO - Run started at 2025-06-11 22:06:17.336896+00:00 and COMPLETED in 0.27 seconds with 4 steps.
+Step extract COMPLETED in 0.07 seconds.
+
+Load package 1749679577.4031825 is EXTRACTED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step normalize COMPLETED in 0.06 seconds.
+Normalized data for the following tables:
+- entry_mercadolivre_sh: 1 row(s)
+- entry_mercadolivre_sh__items_types: 1 row(s)
+- entry_mercadolivre_sh__origin__shipping_address__types: 4 row(s)
+- entry_mercadolivre_sh__destination__shipping_address__types: 1 row(s)
+- entry_mercadolivre_sh__tags: 1 row(s)
+
+Load package 1749679577.4031825 is NORMALIZED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step load COMPLETED in 0.11 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679577.4031825 is LOADED and contains no failed jobs
+
+Step run COMPLETED in 0.27 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679577.4031825 is LOADED and contains no failed jobs
+[2025-06-11T22:06:17.611+0000] {logging_mixin.py:190} INFO - trying to load ./extraction/mercadolivre/data/shipping_cost_ml/dev/sh_cost_62.json to entry schema
+[2025-06-11T22:06:17.874+0000] {logging_mixin.py:190} INFO - Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679577.6776712 is LOADED and contains no failed jobs
+[2025-06-11T22:06:17.876+0000] {logging_mixin.py:190} INFO - Run started at 2025-06-11 22:06:17.612912+00:00 and COMPLETED in 0.26 seconds with 4 steps.
+Step extract COMPLETED in 0.07 seconds.
+
+Load package 1749679577.6776712 is EXTRACTED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step normalize COMPLETED in 0.06 seconds.
+Normalized data for the following tables:
+- entry_mercadolivre_sh: 1 row(s)
+- entry_mercadolivre_sh__items_types: 1 row(s)
+- entry_mercadolivre_sh__origin__shipping_address__types: 5 row(s)
+- entry_mercadolivre_sh__destination__shipping_address__types: 5 row(s)
+- entry_mercadolivre_sh__tags: 1 row(s)
+
+Load package 1749679577.6776712 is NORMALIZED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step load COMPLETED in 0.11 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679577.6776712 is LOADED and contains no failed jobs
+
+Step run COMPLETED in 0.26 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679577.6776712 is LOADED and contains no failed jobs
+[2025-06-11T22:06:17.880+0000] {logging_mixin.py:190} INFO - trying to load ./extraction/mercadolivre/data/shipping_cost_ml/dev/sh_cost_63.json to entry schema
+[2025-06-11T22:06:18.149+0000] {logging_mixin.py:190} INFO - Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679577.9498737 is LOADED and contains no failed jobs
+[2025-06-11T22:06:18.150+0000] {logging_mixin.py:190} INFO - Run started at 2025-06-11 22:06:17.881537+00:00 and COMPLETED in 0.27 seconds with 4 steps.
+Step extract COMPLETED in 0.07 seconds.
+
+Load package 1749679577.9498737 is EXTRACTED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step normalize COMPLETED in 0.06 seconds.
+Normalized data for the following tables:
+- entry_mercadolivre_sh: 1 row(s)
+- entry_mercadolivre_sh__items_types: 1 row(s)
+- entry_mercadolivre_sh__origin__shipping_address__types: 4 row(s)
+- entry_mercadolivre_sh__destination__shipping_address__types: 1 row(s)
+- entry_mercadolivre_sh__tags: 1 row(s)
+
+Load package 1749679577.9498737 is NORMALIZED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step load COMPLETED in 0.11 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679577.9498737 is LOADED and contains no failed jobs
+
+Step run COMPLETED in 0.27 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679577.9498737 is LOADED and contains no failed jobs
+[2025-06-11T22:06:18.154+0000] {logging_mixin.py:190} INFO - trying to load ./extraction/mercadolivre/data/shipping_cost_ml/dev/sh_cost_64.json to entry schema
+[2025-06-11T22:06:18.420+0000] {logging_mixin.py:190} INFO - Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679578.2218494 is LOADED and contains no failed jobs
+[2025-06-11T22:06:18.421+0000] {logging_mixin.py:190} INFO - Run started at 2025-06-11 22:06:18.156283+00:00 and COMPLETED in 0.26 seconds with 4 steps.
+Step extract COMPLETED in 0.07 seconds.
+
+Load package 1749679578.2218494 is EXTRACTED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step normalize COMPLETED in 0.06 seconds.
+Normalized data for the following tables:
+- entry_mercadolivre_sh: 1 row(s)
+- entry_mercadolivre_sh__items_types: 1 row(s)
+- entry_mercadolivre_sh__origin__shipping_address__types: 4 row(s)
+- entry_mercadolivre_sh__destination__shipping_address__types: 1 row(s)
+- entry_mercadolivre_sh__tags: 1 row(s)
+
+Load package 1749679578.2218494 is NORMALIZED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step load COMPLETED in 0.11 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679578.2218494 is LOADED and contains no failed jobs
+
+Step run COMPLETED in 0.26 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679578.2218494 is LOADED and contains no failed jobs
+[2025-06-11T22:06:18.426+0000] {logging_mixin.py:190} INFO - trying to load ./extraction/mercadolivre/data/shipping_cost_ml/dev/sh_cost_65.json to entry schema
+[2025-06-11T22:06:18.706+0000] {logging_mixin.py:190} INFO - Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679578.492107 is LOADED and contains no failed jobs
+[2025-06-11T22:06:18.707+0000] {logging_mixin.py:190} INFO - Run started at 2025-06-11 22:06:18.427528+00:00 and COMPLETED in 0.28 seconds with 4 steps.
+Step extract COMPLETED in 0.08 seconds.
+
+Load package 1749679578.492107 is EXTRACTED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step normalize COMPLETED in 0.06 seconds.
+Normalized data for the following tables:
+- entry_mercadolivre_sh: 1 row(s)
+- entry_mercadolivre_sh__items_types: 1 row(s)
+- entry_mercadolivre_sh__origin__shipping_address__types: 4 row(s)
+- entry_mercadolivre_sh__destination__shipping_address__types: 1 row(s)
+- entry_mercadolivre_sh__tags: 1 row(s)
+
+Load package 1749679578.492107 is NORMALIZED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step load COMPLETED in 0.11 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679578.492107 is LOADED and contains no failed jobs
+
+Step run COMPLETED in 0.28 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679578.492107 is LOADED and contains no failed jobs
+[2025-06-11T22:06:18.713+0000] {logging_mixin.py:190} INFO - trying to load ./extraction/mercadolivre/data/shipping_cost_ml/dev/sh_cost_66.json to entry schema
+[2025-06-11T22:06:18.979+0000] {logging_mixin.py:190} INFO - Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679578.7826812 is LOADED and contains no failed jobs
+[2025-06-11T22:06:18.981+0000] {logging_mixin.py:190} INFO - Run started at 2025-06-11 22:06:18.714405+00:00 and COMPLETED in 0.26 seconds with 4 steps.
+Step extract COMPLETED in 0.08 seconds.
+
+Load package 1749679578.7826812 is EXTRACTED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step normalize COMPLETED in 0.06 seconds.
+Normalized data for the following tables:
+- entry_mercadolivre_sh: 1 row(s)
+- entry_mercadolivre_sh__items_types: 1 row(s)
+- entry_mercadolivre_sh__origin__shipping_address__types: 4 row(s)
+- entry_mercadolivre_sh__destination__shipping_address__types: 1 row(s)
+- entry_mercadolivre_sh__tags: 1 row(s)
+
+Load package 1749679578.7826812 is NORMALIZED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step load COMPLETED in 0.11 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679578.7826812 is LOADED and contains no failed jobs
+
+Step run COMPLETED in 0.26 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679578.7826812 is LOADED and contains no failed jobs
+[2025-06-11T22:06:18.986+0000] {logging_mixin.py:190} INFO - trying to load ./extraction/mercadolivre/data/shipping_cost_ml/dev/sh_cost_67.json to entry schema
+[2025-06-11T22:06:19.250+0000] {logging_mixin.py:190} INFO - Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679579.0534127 is LOADED and contains no failed jobs
+[2025-06-11T22:06:19.252+0000] {logging_mixin.py:190} INFO - Run started at 2025-06-11 22:06:18.988522+00:00 and COMPLETED in 0.26 seconds with 4 steps.
+Step extract COMPLETED in 0.07 seconds.
+
+Load package 1749679579.0534127 is EXTRACTED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step normalize COMPLETED in 0.06 seconds.
+Normalized data for the following tables:
+- entry_mercadolivre_sh: 1 row(s)
+- entry_mercadolivre_sh__items_types: 1 row(s)
+- entry_mercadolivre_sh__origin__shipping_address__types: 4 row(s)
+- entry_mercadolivre_sh__destination__shipping_address__types: 1 row(s)
+- entry_mercadolivre_sh__tags: 1 row(s)
+
+Load package 1749679579.0534127 is NORMALIZED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step load COMPLETED in 0.11 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679579.0534127 is LOADED and contains no failed jobs
+
+Step run COMPLETED in 0.26 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679579.0534127 is LOADED and contains no failed jobs
+[2025-06-11T22:06:19.256+0000] {logging_mixin.py:190} INFO - trying to load ./extraction/mercadolivre/data/shipping_cost_ml/dev/sh_cost_68.json to entry schema
+[2025-06-11T22:06:20.534+0000] {logging_mixin.py:190} INFO - Pipeline mercadolivre_shipping load step completed in 1.08 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679579.3235369 is LOADED and contains no failed jobs
+[2025-06-11T22:06:20.536+0000] {logging_mixin.py:190} INFO - Run started at 2025-06-11 22:06:19.257473+00:00 and COMPLETED in 1.28 seconds with 4 steps.
+Step extract COMPLETED in 0.07 seconds.
+
+Load package 1749679579.3235369 is EXTRACTED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step normalize COMPLETED in 0.06 seconds.
+Normalized data for the following tables:
+- entry_mercadolivre_sh: 1 row(s)
+- entry_mercadolivre_sh__items_types: 1 row(s)
+- entry_mercadolivre_sh__origin__shipping_address__types: 4 row(s)
+- entry_mercadolivre_sh__destination__shipping_address__types: 1 row(s)
+- entry_mercadolivre_sh__tags: 1 row(s)
+
+Load package 1749679579.3235369 is NORMALIZED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step load COMPLETED in 1.12 seconds.
+Pipeline mercadolivre_shipping load step completed in 1.08 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679579.3235369 is LOADED and contains no failed jobs
+
+Step run COMPLETED in 1.28 seconds.
+Pipeline mercadolivre_shipping load step completed in 1.08 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679579.3235369 is LOADED and contains no failed jobs
+[2025-06-11T22:06:20.540+0000] {logging_mixin.py:190} INFO - trying to load ./extraction/mercadolivre/data/shipping_cost_ml/dev/sh_cost_69.json to entry schema
+[2025-06-11T22:06:20.815+0000] {logging_mixin.py:190} INFO - Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679580.6071332 is LOADED and contains no failed jobs
+[2025-06-11T22:06:20.816+0000] {logging_mixin.py:190} INFO - Run started at 2025-06-11 22:06:20.542011+00:00 and COMPLETED in 0.27 seconds with 4 steps.
+Step extract COMPLETED in 0.07 seconds.
+
+Load package 1749679580.6071332 is EXTRACTED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step normalize COMPLETED in 0.06 seconds.
+Normalized data for the following tables:
+- entry_mercadolivre_sh: 1 row(s)
+- entry_mercadolivre_sh__items_types: 1 row(s)
+- entry_mercadolivre_sh__origin__shipping_address__types: 5 row(s)
+- entry_mercadolivre_sh__destination__shipping_address__types: 1 row(s)
+- entry_mercadolivre_sh__tags: 1 row(s)
+
+Load package 1749679580.6071332 is NORMALIZED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step load COMPLETED in 0.11 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679580.6071332 is LOADED and contains no failed jobs
+
+Step run COMPLETED in 0.27 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679580.6071332 is LOADED and contains no failed jobs
+[2025-06-11T22:06:20.822+0000] {logging_mixin.py:190} INFO - trying to load ./extraction/mercadolivre/data/shipping_cost_ml/dev/sh_cost_7.json to entry schema
+[2025-06-11T22:06:22.107+0000] {logging_mixin.py:190} INFO - Pipeline mercadolivre_shipping load step completed in 1.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679580.8916762 is LOADED and contains no failed jobs
+[2025-06-11T22:06:22.109+0000] {logging_mixin.py:190} INFO - Run started at 2025-06-11 22:06:20.823777+00:00 and COMPLETED in 1.28 seconds with 4 steps.
+Step extract COMPLETED in 0.09 seconds.
+
+Load package 1749679580.8916762 is EXTRACTED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step normalize COMPLETED in 0.06 seconds.
+Normalized data for the following tables:
+- entry_mercadolivre_sh: 1 row(s)
+- entry_mercadolivre_sh__items_types: 1 row(s)
+- entry_mercadolivre_sh__origin__shipping_address__types: 4 row(s)
+- entry_mercadolivre_sh__destination__shipping_address__types: 1 row(s)
+- entry_mercadolivre_sh__tags: 1 row(s)
+
+Load package 1749679580.8916762 is NORMALIZED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step load COMPLETED in 1.11 seconds.
+Pipeline mercadolivre_shipping load step completed in 1.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679580.8916762 is LOADED and contains no failed jobs
+
+Step run COMPLETED in 1.28 seconds.
+Pipeline mercadolivre_shipping load step completed in 1.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679580.8916762 is LOADED and contains no failed jobs
+[2025-06-11T22:06:22.115+0000] {logging_mixin.py:190} INFO - trying to load ./extraction/mercadolivre/data/shipping_cost_ml/dev/sh_cost_70.json to entry schema
+[2025-06-11T22:06:22.392+0000] {logging_mixin.py:190} INFO - Pipeline mercadolivre_shipping load step completed in 0.08 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679582.1834855 is LOADED and contains no failed jobs
+[2025-06-11T22:06:22.394+0000] {logging_mixin.py:190} INFO - Run started at 2025-06-11 22:06:22.116960+00:00 and COMPLETED in 0.27 seconds with 4 steps.
+Step extract COMPLETED in 0.07 seconds.
+
+Load package 1749679582.1834855 is EXTRACTED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step normalize COMPLETED in 0.06 seconds.
+Normalized data for the following tables:
+- entry_mercadolivre_sh: 1 row(s)
+- entry_mercadolivre_sh__items_types: 1 row(s)
+- entry_mercadolivre_sh__origin__shipping_address__types: 4 row(s)
+- entry_mercadolivre_sh__destination__shipping_address__types: 1 row(s)
+- entry_mercadolivre_sh__tags: 1 row(s)
+
+Load package 1749679582.1834855 is NORMALIZED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step load COMPLETED in 0.12 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.08 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679582.1834855 is LOADED and contains no failed jobs
+
+Step run COMPLETED in 0.27 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.08 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679582.1834855 is LOADED and contains no failed jobs
+[2025-06-11T22:06:22.400+0000] {logging_mixin.py:190} INFO - trying to load ./extraction/mercadolivre/data/shipping_cost_ml/dev/sh_cost_71.json to entry schema
+[2025-06-11T22:06:22.684+0000] {logging_mixin.py:190} INFO - Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679582.4719806 is LOADED and contains no failed jobs
+[2025-06-11T22:06:22.686+0000] {logging_mixin.py:190} INFO - Run started at 2025-06-11 22:06:22.401577+00:00 and COMPLETED in 0.28 seconds with 4 steps.
+Step extract COMPLETED in 0.08 seconds.
+
+Load package 1749679582.4719806 is EXTRACTED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step normalize COMPLETED in 0.07 seconds.
+Normalized data for the following tables:
+- entry_mercadolivre_sh: 1 row(s)
+- entry_mercadolivre_sh__items_types: 1 row(s)
+- entry_mercadolivre_sh__origin__shipping_address__types: 4 row(s)
+- entry_mercadolivre_sh__destination__shipping_address__types: 1 row(s)
+- entry_mercadolivre_sh__tags: 1 row(s)
+
+Load package 1749679582.4719806 is NORMALIZED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step load COMPLETED in 0.11 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679582.4719806 is LOADED and contains no failed jobs
+
+Step run COMPLETED in 0.28 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679582.4719806 is LOADED and contains no failed jobs
+[2025-06-11T22:06:22.692+0000] {logging_mixin.py:190} INFO - trying to load ./extraction/mercadolivre/data/shipping_cost_ml/dev/sh_cost_72.json to entry schema
+[2025-06-11T22:06:22.969+0000] {logging_mixin.py:190} INFO - Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679582.761589 is LOADED and contains no failed jobs
+[2025-06-11T22:06:22.970+0000] {logging_mixin.py:190} INFO - Run started at 2025-06-11 22:06:22.693976+00:00 and COMPLETED in 0.27 seconds with 4 steps.
+Step extract COMPLETED in 0.07 seconds.
+
+Load package 1749679582.761589 is EXTRACTED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step normalize COMPLETED in 0.06 seconds.
+Normalized data for the following tables:
+- entry_mercadolivre_sh: 1 row(s)
+- entry_mercadolivre_sh__items_types: 1 row(s)
+- entry_mercadolivre_sh__origin__shipping_address__types: 4 row(s)
+- entry_mercadolivre_sh__destination__shipping_address__types: 4 row(s)
+- entry_mercadolivre_sh__tags: 1 row(s)
+
+Load package 1749679582.761589 is NORMALIZED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step load COMPLETED in 0.11 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679582.761589 is LOADED and contains no failed jobs
+
+Step run COMPLETED in 0.27 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679582.761589 is LOADED and contains no failed jobs
+[2025-06-11T22:06:22.975+0000] {logging_mixin.py:190} INFO - trying to load ./extraction/mercadolivre/data/shipping_cost_ml/dev/sh_cost_73.json to entry schema
+[2025-06-11T22:06:23.287+0000] {logging_mixin.py:190} INFO - Pipeline mercadolivre_shipping load step completed in 0.08 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679583.046537 is LOADED and contains no failed jobs
+[2025-06-11T22:06:23.289+0000] {logging_mixin.py:190} INFO - Run started at 2025-06-11 22:06:22.976785+00:00 and COMPLETED in 0.31 seconds with 4 steps.
+Step extract COMPLETED in 0.08 seconds.
+
+Load package 1749679583.046537 is EXTRACTED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step normalize COMPLETED in 0.09 seconds.
+Normalized data for the following tables:
+- entry_mercadolivre_sh: 1 row(s)
+- entry_mercadolivre_sh__items_types: 1 row(s)
+- entry_mercadolivre_sh__origin__shipping_address__types: 5 row(s)
+- entry_mercadolivre_sh__destination__shipping_address__types: 4 row(s)
+- entry_mercadolivre_sh__tags: 1 row(s)
+
+Load package 1749679583.046537 is NORMALIZED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step load COMPLETED in 0.12 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.08 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679583.046537 is LOADED and contains no failed jobs
+
+Step run COMPLETED in 0.31 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.08 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679583.046537 is LOADED and contains no failed jobs
+[2025-06-11T22:06:23.293+0000] {logging_mixin.py:190} INFO - trying to load ./extraction/mercadolivre/data/shipping_cost_ml/dev/sh_cost_74.json to entry schema
+[2025-06-11T22:06:23.587+0000] {logging_mixin.py:190} INFO - Pipeline mercadolivre_shipping load step completed in 0.08 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679583.3713686 is LOADED and contains no failed jobs
+[2025-06-11T22:06:23.588+0000] {logging_mixin.py:190} INFO - Run started at 2025-06-11 22:06:23.295364+00:00 and COMPLETED in 0.29 seconds with 4 steps.
+Step extract COMPLETED in 0.08 seconds.
+
+Load package 1749679583.3713686 is EXTRACTED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step normalize COMPLETED in 0.07 seconds.
+Normalized data for the following tables:
+- entry_mercadolivre_sh: 1 row(s)
+- entry_mercadolivre_sh__items_types: 1 row(s)
+- entry_mercadolivre_sh__origin__shipping_address__types: 4 row(s)
+- entry_mercadolivre_sh__destination__shipping_address__types: 1 row(s)
+- entry_mercadolivre_sh__tags: 1 row(s)
+
+Load package 1749679583.3713686 is NORMALIZED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step load COMPLETED in 0.12 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.08 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679583.3713686 is LOADED and contains no failed jobs
+
+Step run COMPLETED in 0.29 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.08 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679583.3713686 is LOADED and contains no failed jobs
+[2025-06-11T22:06:23.593+0000] {logging_mixin.py:190} INFO - trying to load ./extraction/mercadolivre/data/shipping_cost_ml/dev/sh_cost_75.json to entry schema
+[2025-06-11T22:06:23.892+0000] {logging_mixin.py:190} INFO - Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679583.6728883 is LOADED and contains no failed jobs
+[2025-06-11T22:06:23.893+0000] {logging_mixin.py:190} INFO - Run started at 2025-06-11 22:06:23.594894+00:00 and COMPLETED in 0.30 seconds with 4 steps.
+Step extract COMPLETED in 0.09 seconds.
+
+Load package 1749679583.6728883 is EXTRACTED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step normalize COMPLETED in 0.07 seconds.
+Normalized data for the following tables:
+- entry_mercadolivre_sh: 1 row(s)
+- entry_mercadolivre_sh__items_types: 1 row(s)
+- entry_mercadolivre_sh__origin__shipping_address__types: 5 row(s)
+- entry_mercadolivre_sh__destination__shipping_address__types: 1 row(s)
+- entry_mercadolivre_sh__tags: 1 row(s)
+
+Load package 1749679583.6728883 is NORMALIZED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step load COMPLETED in 0.11 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679583.6728883 is LOADED and contains no failed jobs
+
+Step run COMPLETED in 0.30 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679583.6728883 is LOADED and contains no failed jobs
+[2025-06-11T22:06:23.897+0000] {logging_mixin.py:190} INFO - trying to load ./extraction/mercadolivre/data/shipping_cost_ml/dev/sh_cost_76.json to entry schema
+[2025-06-11T22:06:24.169+0000] {logging_mixin.py:190} INFO - Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679583.9675748 is LOADED and contains no failed jobs
+[2025-06-11T22:06:24.171+0000] {logging_mixin.py:190} INFO - Run started at 2025-06-11 22:06:23.898512+00:00 and COMPLETED in 0.27 seconds with 4 steps.
+Step extract COMPLETED in 0.08 seconds.
+
+Load package 1749679583.9675748 is EXTRACTED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step normalize COMPLETED in 0.06 seconds.
+Normalized data for the following tables:
+- entry_mercadolivre_sh: 1 row(s)
+- entry_mercadolivre_sh__items_types: 1 row(s)
+- entry_mercadolivre_sh__origin__shipping_address__types: 5 row(s)
+- entry_mercadolivre_sh__destination__shipping_address__types: 1 row(s)
+- entry_mercadolivre_sh__tags: 1 row(s)
+
+Load package 1749679583.9675748 is NORMALIZED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step load COMPLETED in 0.11 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679583.9675748 is LOADED and contains no failed jobs
+
+Step run COMPLETED in 0.27 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679583.9675748 is LOADED and contains no failed jobs
+[2025-06-11T22:06:24.176+0000] {logging_mixin.py:190} INFO - trying to load ./extraction/mercadolivre/data/shipping_cost_ml/dev/sh_cost_8.json to entry schema
+[2025-06-11T22:06:24.503+0000] {logging_mixin.py:190} INFO - Pipeline mercadolivre_shipping load step completed in 0.09 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679584.2488754 is LOADED and contains no failed jobs
+[2025-06-11T22:06:24.505+0000] {logging_mixin.py:190} INFO - Run started at 2025-06-11 22:06:24.178557+00:00 and COMPLETED in 0.32 seconds with 4 steps.
+Step extract COMPLETED in 0.08 seconds.
+
+Load package 1749679584.2488754 is EXTRACTED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step normalize COMPLETED in 0.09 seconds.
+Normalized data for the following tables:
+- entry_mercadolivre_sh: 1 row(s)
+- entry_mercadolivre_sh__items_types: 1 row(s)
+- entry_mercadolivre_sh__origin__shipping_address__types: 4 row(s)
+- entry_mercadolivre_sh__destination__shipping_address__types: 1 row(s)
+- entry_mercadolivre_sh__tags: 1 row(s)
+
+Load package 1749679584.2488754 is NORMALIZED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step load COMPLETED in 0.14 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.09 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679584.2488754 is LOADED and contains no failed jobs
+
+Step run COMPLETED in 0.32 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.09 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679584.2488754 is LOADED and contains no failed jobs
+[2025-06-11T22:06:24.510+0000] {logging_mixin.py:190} INFO - trying to load ./extraction/mercadolivre/data/shipping_cost_ml/dev/sh_cost_9.json to entry schema
+[2025-06-11T22:06:24.821+0000] {logging_mixin.py:190} INFO - Pipeline mercadolivre_shipping load step completed in 0.09 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679584.5896664 is LOADED and contains no failed jobs
+[2025-06-11T22:06:24.823+0000] {logging_mixin.py:190} INFO - Run started at 2025-06-11 22:06:24.512144+00:00 and COMPLETED in 0.31 seconds with 4 steps.
+Step extract COMPLETED in 0.08 seconds.
+
+Load package 1749679584.5896664 is EXTRACTED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step normalize COMPLETED in 0.07 seconds.
+Normalized data for the following tables:
+- entry_mercadolivre_sh: 1 row(s)
+- entry_mercadolivre_sh__items_types: 1 row(s)
+- entry_mercadolivre_sh__origin__shipping_address__types: 4 row(s)
+- entry_mercadolivre_sh__destination__shipping_address__types: 1 row(s)
+- entry_mercadolivre_sh__tags: 1 row(s)
+
+Load package 1749679584.5896664 is NORMALIZED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step load COMPLETED in 0.13 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.09 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679584.5896664 is LOADED and contains no failed jobs
+
+Step run COMPLETED in 0.31 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.09 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749679584.5896664 is LOADED and contains no failed jobs
+[2025-06-11T22:06:24.824+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-06-11T22:06:24.837+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-06-11T22:06:24.838+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=04_ELT_shipping_file_dev, task_id=load_sh_costs, run_id=manual__2025-06-11T22:05:19.126488+00:00, execution_date=20250611T220519, start_date=20250611T220544, end_date=20250611T220624
+[2025-06-11T22:06:24.883+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-06-11T22:06:24.906+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-06-11T22:06:24.910+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

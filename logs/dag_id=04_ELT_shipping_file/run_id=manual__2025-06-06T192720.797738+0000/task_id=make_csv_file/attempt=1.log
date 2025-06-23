@@ -1,0 +1,17 @@
+[2025-06-06T19:27:22.747+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-06-06T19:27:22.767+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: 04_ELT_shipping_file.make_csv_file manual__2025-06-06T19:27:20.797738+00:00 [queued]>
+[2025-06-06T19:27:22.776+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: 04_ELT_shipping_file.make_csv_file manual__2025-06-06T19:27:20.797738+00:00 [queued]>
+[2025-06-06T19:27:22.778+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-06-06T19:27:22.792+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): make_csv_file> on 2025-06-06 19:27:20.797738+00:00
+[2025-06-06T19:27:22.796+0000] {standard_task_runner.py:72} INFO - Started process 2344 to run task
+[2025-06-06T19:27:22.799+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', '04_ELT_shipping_file', 'make_csv_file', 'manual__2025-06-06T19:27:20.797738+00:00', '--job-id', '399', '--raw', '--subdir', 'DAGS_FOLDER/04_make_sh_id_file.py', '--cfg-path', '/tmp/tmpgkaclyts']
+[2025-06-06T19:27:22.801+0000] {standard_task_runner.py:105} INFO - Job 399: Subtask make_csv_file
+[2025-06-06T19:27:22.857+0000] {task_command.py:467} INFO - Running <TaskInstance: 04_ELT_shipping_file.make_csv_file manual__2025-06-06T19:27:20.797738+00:00 [running]> on host 28e6a58e4107
+[2025-06-06T19:27:22.944+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='04_ELT_shipping_file' AIRFLOW_CTX_TASK_ID='make_csv_file' AIRFLOW_CTX_EXECUTION_DATE='2025-06-06T19:27:20.797738+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-06-06T19:27:20.797738+00:00'
+[2025-06-06T19:27:22.946+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-06-06T19:27:22.971+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-06-06T19:27:22.983+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-06-06T19:27:22.984+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=04_ELT_shipping_file, task_id=make_csv_file, run_id=manual__2025-06-06T19:27:20.797738+00:00, execution_date=20250606T192720, start_date=20250606T192722, end_date=20250606T192722
+[2025-06-06T19:27:23.013+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-06-06T19:27:23.040+0000] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-06-06T19:27:23.044+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

@@ -1,0 +1,23 @@
+[2025-06-11T21:42:34.106+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-06-11T21:42:34.126+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: 00_create_IAC.create_database manual__2025-06-11T21:42:31.468121+00:00 [queued]>
+[2025-06-11T21:42:34.134+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: 00_create_IAC.create_database manual__2025-06-11T21:42:31.468121+00:00 [queued]>
+[2025-06-11T21:42:34.136+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-06-11T21:42:34.148+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): create_database> on 2025-06-11 21:42:31.468121+00:00
+[2025-06-11T21:42:34.153+0000] {standard_task_runner.py:72} INFO - Started process 3118 to run task
+[2025-06-11T21:42:34.156+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', '00_create_IAC', 'create_database', 'manual__2025-06-11T21:42:31.468121+00:00', '--job-id', '903', '--raw', '--subdir', 'DAGS_FOLDER/00_create_iac.py', '--cfg-path', '/tmp/tmpwydq6ftm']
+[2025-06-11T21:42:34.158+0000] {standard_task_runner.py:105} INFO - Job 903: Subtask create_database
+[2025-06-11T21:42:34.217+0000] {task_command.py:467} INFO - Running <TaskInstance: 00_create_IAC.create_database manual__2025-06-11T21:42:31.468121+00:00 [running]> on host 28e6a58e4107
+[2025-06-11T21:42:34.301+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='00_create_IAC' AIRFLOW_CTX_TASK_ID='create_database' AIRFLOW_CTX_EXECUTION_DATE='2025-06-11T21:42:31.468121+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-06-11T21:42:31.468121+00:00'
+[2025-06-11T21:42:34.303+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-06-11T21:42:34.317+0000] {logging_mixin.py:190} INFO - Running ['terraform', '--version']
+[2025-06-11T21:42:35.114+0000] {logging_mixin.py:190} INFO - ['terraform', '--version'] ran successfully.
+[2025-06-11T21:42:35.116+0000] {logging_mixin.py:190} INFO - Running ['terraform', 'init']
+[2025-06-11T21:42:36.163+0000] {logging_mixin.py:190} INFO - ['terraform', 'init'] ran successfully.
+[2025-06-11T21:42:36.165+0000] {logging_mixin.py:190} INFO - Running ['terraform', 'apply', '-auto-approve']
+[2025-06-11T21:42:39.654+0000] {logging_mixin.py:190} INFO - ['terraform', 'apply', '-auto-approve'] ran successfully.
+[2025-06-11T21:42:39.655+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-06-11T21:42:39.667+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-06-11T21:42:39.668+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=00_create_IAC, task_id=create_database, run_id=manual__2025-06-11T21:42:31.468121+00:00, execution_date=20250611T214231, start_date=20250611T214234, end_date=20250611T214239
+[2025-06-11T21:42:39.711+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-06-11T21:42:39.731+0000] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-06-11T21:42:39.734+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

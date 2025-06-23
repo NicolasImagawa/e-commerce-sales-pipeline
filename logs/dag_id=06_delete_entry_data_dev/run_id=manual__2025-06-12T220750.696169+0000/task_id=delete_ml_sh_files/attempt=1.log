@@ -1,0 +1,94 @@
+[2025-06-12T22:07:53.409+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-06-12T22:07:53.435+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: 06_delete_entry_data_dev.delete_ml_sh_files manual__2025-06-12T22:07:50.696169+00:00 [queued]>
+[2025-06-12T22:07:53.446+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: 06_delete_entry_data_dev.delete_ml_sh_files manual__2025-06-12T22:07:50.696169+00:00 [queued]>
+[2025-06-12T22:07:53.447+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-06-12T22:07:53.468+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): delete_ml_sh_files> on 2025-06-12 22:07:50.696169+00:00
+[2025-06-12T22:07:53.474+0000] {standard_task_runner.py:72} INFO - Started process 5619 to run task
+[2025-06-12T22:07:53.479+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', '06_delete_entry_data_dev', 'delete_ml_sh_files', 'manual__2025-06-12T22:07:50.696169+00:00', '--job-id', '1144', '--raw', '--subdir', 'DAGS_FOLDER/06_delete_files_tables_dev.py', '--cfg-path', '/tmp/tmpdg7lkwg7']
+[2025-06-12T22:07:53.482+0000] {standard_task_runner.py:105} INFO - Job 1144: Subtask delete_ml_sh_files
+[2025-06-12T22:07:53.565+0000] {task_command.py:467} INFO - Running <TaskInstance: 06_delete_entry_data_dev.delete_ml_sh_files manual__2025-06-12T22:07:50.696169+00:00 [running]> on host 28e6a58e4107
+[2025-06-12T22:07:53.689+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='06_delete_entry_data_dev' AIRFLOW_CTX_TASK_ID='delete_ml_sh_files' AIRFLOW_CTX_EXECUTION_DATE='2025-06-12T22:07:50.696169+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-06-12T22:07:50.696169+00:00'
+[2025-06-12T22:07:53.692+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-06-12T22:07:53.717+0000] {logging_mixin.py:190} INFO - Deleted all files in /opt/***/extraction/mercadolivre/data/shipping_cost_ml/dev/ with extension *.json
+[2025-06-12T22:07:53.721+0000] {logging_mixin.py:190} INFO - Deleted all files in /opt/***/extraction/mercadolivre/data/shipping_cost_ml/dev/ with extension *.json
+[2025-06-12T22:07:53.725+0000] {logging_mixin.py:190} INFO - Deleted all files in /opt/***/extraction/mercadolivre/data/shipping_cost_ml/dev/ with extension *.json
+[2025-06-12T22:07:53.728+0000] {logging_mixin.py:190} INFO - Deleted all files in /opt/***/extraction/mercadolivre/data/shipping_cost_ml/dev/ with extension *.json
+[2025-06-12T22:07:53.732+0000] {logging_mixin.py:190} INFO - Deleted all files in /opt/***/extraction/mercadolivre/data/shipping_cost_ml/dev/ with extension *.json
+[2025-06-12T22:07:53.735+0000] {logging_mixin.py:190} INFO - Deleted all files in /opt/***/extraction/mercadolivre/data/shipping_cost_ml/dev/ with extension *.json
+[2025-06-12T22:07:53.739+0000] {logging_mixin.py:190} INFO - Deleted all files in /opt/***/extraction/mercadolivre/data/shipping_cost_ml/dev/ with extension *.json
+[2025-06-12T22:07:53.743+0000] {logging_mixin.py:190} INFO - Deleted all files in /opt/***/extraction/mercadolivre/data/shipping_cost_ml/dev/ with extension *.json
+[2025-06-12T22:07:53.747+0000] {logging_mixin.py:190} INFO - Deleted all files in /opt/***/extraction/mercadolivre/data/shipping_cost_ml/dev/ with extension *.json
+[2025-06-12T22:07:53.752+0000] {logging_mixin.py:190} INFO - Deleted all files in /opt/***/extraction/mercadolivre/data/shipping_cost_ml/dev/ with extension *.json
+[2025-06-12T22:07:53.756+0000] {logging_mixin.py:190} INFO - Deleted all files in /opt/***/extraction/mercadolivre/data/shipping_cost_ml/dev/ with extension *.json
+[2025-06-12T22:07:53.761+0000] {logging_mixin.py:190} INFO - Deleted all files in /opt/***/extraction/mercadolivre/data/shipping_cost_ml/dev/ with extension *.json
+[2025-06-12T22:07:53.765+0000] {logging_mixin.py:190} INFO - Deleted all files in /opt/***/extraction/mercadolivre/data/shipping_cost_ml/dev/ with extension *.json
+[2025-06-12T22:07:53.769+0000] {logging_mixin.py:190} INFO - Deleted all files in /opt/***/extraction/mercadolivre/data/shipping_cost_ml/dev/ with extension *.json
+[2025-06-12T22:07:53.773+0000] {logging_mixin.py:190} INFO - Deleted all files in /opt/***/extraction/mercadolivre/data/shipping_cost_ml/dev/ with extension *.json
+[2025-06-12T22:07:53.776+0000] {logging_mixin.py:190} INFO - Deleted all files in /opt/***/extraction/mercadolivre/data/shipping_cost_ml/dev/ with extension *.json
+[2025-06-12T22:07:53.780+0000] {logging_mixin.py:190} INFO - Deleted all files in /opt/***/extraction/mercadolivre/data/shipping_cost_ml/dev/ with extension *.json
+[2025-06-12T22:07:53.784+0000] {logging_mixin.py:190} INFO - Deleted all files in /opt/***/extraction/mercadolivre/data/shipping_cost_ml/dev/ with extension *.json
+[2025-06-12T22:07:53.788+0000] {logging_mixin.py:190} INFO - Deleted all files in /opt/***/extraction/mercadolivre/data/shipping_cost_ml/dev/ with extension *.json
+[2025-06-12T22:07:53.792+0000] {logging_mixin.py:190} INFO - Deleted all files in /opt/***/extraction/mercadolivre/data/shipping_cost_ml/dev/ with extension *.json
+[2025-06-12T22:07:53.796+0000] {logging_mixin.py:190} INFO - Deleted all files in /opt/***/extraction/mercadolivre/data/shipping_cost_ml/dev/ with extension *.json
+[2025-06-12T22:07:53.801+0000] {logging_mixin.py:190} INFO - Deleted all files in /opt/***/extraction/mercadolivre/data/shipping_cost_ml/dev/ with extension *.json
+[2025-06-12T22:07:53.805+0000] {logging_mixin.py:190} INFO - Deleted all files in /opt/***/extraction/mercadolivre/data/shipping_cost_ml/dev/ with extension *.json
+[2025-06-12T22:07:53.808+0000] {logging_mixin.py:190} INFO - Deleted all files in /opt/***/extraction/mercadolivre/data/shipping_cost_ml/dev/ with extension *.json
+[2025-06-12T22:07:53.812+0000] {logging_mixin.py:190} INFO - Deleted all files in /opt/***/extraction/mercadolivre/data/shipping_cost_ml/dev/ with extension *.json
+[2025-06-12T22:07:53.816+0000] {logging_mixin.py:190} INFO - Deleted all files in /opt/***/extraction/mercadolivre/data/shipping_cost_ml/dev/ with extension *.json
+[2025-06-12T22:07:53.820+0000] {logging_mixin.py:190} INFO - Deleted all files in /opt/***/extraction/mercadolivre/data/shipping_cost_ml/dev/ with extension *.json
+[2025-06-12T22:07:53.824+0000] {logging_mixin.py:190} INFO - Deleted all files in /opt/***/extraction/mercadolivre/data/shipping_cost_ml/dev/ with extension *.json
+[2025-06-12T22:07:53.828+0000] {logging_mixin.py:190} INFO - Deleted all files in /opt/***/extraction/mercadolivre/data/shipping_cost_ml/dev/ with extension *.json
+[2025-06-12T22:07:53.832+0000] {logging_mixin.py:190} INFO - Deleted all files in /opt/***/extraction/mercadolivre/data/shipping_cost_ml/dev/ with extension *.json
+[2025-06-12T22:07:53.836+0000] {logging_mixin.py:190} INFO - Deleted all files in /opt/***/extraction/mercadolivre/data/shipping_cost_ml/dev/ with extension *.json
+[2025-06-12T22:07:53.840+0000] {logging_mixin.py:190} INFO - Deleted all files in /opt/***/extraction/mercadolivre/data/shipping_cost_ml/dev/ with extension *.json
+[2025-06-12T22:07:53.844+0000] {logging_mixin.py:190} INFO - Deleted all files in /opt/***/extraction/mercadolivre/data/shipping_cost_ml/dev/ with extension *.json
+[2025-06-12T22:07:53.849+0000] {logging_mixin.py:190} INFO - Deleted all files in /opt/***/extraction/mercadolivre/data/shipping_cost_ml/dev/ with extension *.json
+[2025-06-12T22:07:53.852+0000] {logging_mixin.py:190} INFO - Deleted all files in /opt/***/extraction/mercadolivre/data/shipping_cost_ml/dev/ with extension *.json
+[2025-06-12T22:07:53.855+0000] {logging_mixin.py:190} INFO - Deleted all files in /opt/***/extraction/mercadolivre/data/shipping_cost_ml/dev/ with extension *.json
+[2025-06-12T22:07:53.859+0000] {logging_mixin.py:190} INFO - Deleted all files in /opt/***/extraction/mercadolivre/data/shipping_cost_ml/dev/ with extension *.json
+[2025-06-12T22:07:53.863+0000] {logging_mixin.py:190} INFO - Deleted all files in /opt/***/extraction/mercadolivre/data/shipping_cost_ml/dev/ with extension *.json
+[2025-06-12T22:07:53.867+0000] {logging_mixin.py:190} INFO - Deleted all files in /opt/***/extraction/mercadolivre/data/shipping_cost_ml/dev/ with extension *.json
+[2025-06-12T22:07:53.870+0000] {logging_mixin.py:190} INFO - Deleted all files in /opt/***/extraction/mercadolivre/data/shipping_cost_ml/dev/ with extension *.json
+[2025-06-12T22:07:53.873+0000] {logging_mixin.py:190} INFO - Deleted all files in /opt/***/extraction/mercadolivre/data/shipping_cost_ml/dev/ with extension *.json
+[2025-06-12T22:07:53.877+0000] {logging_mixin.py:190} INFO - Deleted all files in /opt/***/extraction/mercadolivre/data/shipping_cost_ml/dev/ with extension *.json
+[2025-06-12T22:07:53.881+0000] {logging_mixin.py:190} INFO - Deleted all files in /opt/***/extraction/mercadolivre/data/shipping_cost_ml/dev/ with extension *.json
+[2025-06-12T22:07:53.884+0000] {logging_mixin.py:190} INFO - Deleted all files in /opt/***/extraction/mercadolivre/data/shipping_cost_ml/dev/ with extension *.json
+[2025-06-12T22:07:53.887+0000] {logging_mixin.py:190} INFO - Deleted all files in /opt/***/extraction/mercadolivre/data/shipping_cost_ml/dev/ with extension *.json
+[2025-06-12T22:07:53.891+0000] {logging_mixin.py:190} INFO - Deleted all files in /opt/***/extraction/mercadolivre/data/shipping_cost_ml/dev/ with extension *.json
+[2025-06-12T22:07:53.895+0000] {logging_mixin.py:190} INFO - Deleted all files in /opt/***/extraction/mercadolivre/data/shipping_cost_ml/dev/ with extension *.json
+[2025-06-12T22:07:53.898+0000] {logging_mixin.py:190} INFO - Deleted all files in /opt/***/extraction/mercadolivre/data/shipping_cost_ml/dev/ with extension *.json
+[2025-06-12T22:07:53.902+0000] {logging_mixin.py:190} INFO - Deleted all files in /opt/***/extraction/mercadolivre/data/shipping_cost_ml/dev/ with extension *.json
+[2025-06-12T22:07:53.905+0000] {logging_mixin.py:190} INFO - Deleted all files in /opt/***/extraction/mercadolivre/data/shipping_cost_ml/dev/ with extension *.json
+[2025-06-12T22:07:53.908+0000] {logging_mixin.py:190} INFO - Deleted all files in /opt/***/extraction/mercadolivre/data/shipping_cost_ml/dev/ with extension *.json
+[2025-06-12T22:07:53.911+0000] {logging_mixin.py:190} INFO - Deleted all files in /opt/***/extraction/mercadolivre/data/shipping_cost_ml/dev/ with extension *.json
+[2025-06-12T22:07:53.914+0000] {logging_mixin.py:190} INFO - Deleted all files in /opt/***/extraction/mercadolivre/data/shipping_cost_ml/dev/ with extension *.json
+[2025-06-12T22:07:53.917+0000] {logging_mixin.py:190} INFO - Deleted all files in /opt/***/extraction/mercadolivre/data/shipping_cost_ml/dev/ with extension *.json
+[2025-06-12T22:07:53.922+0000] {logging_mixin.py:190} INFO - Deleted all files in /opt/***/extraction/mercadolivre/data/shipping_cost_ml/dev/ with extension *.json
+[2025-06-12T22:07:53.927+0000] {logging_mixin.py:190} INFO - Deleted all files in /opt/***/extraction/mercadolivre/data/shipping_cost_ml/dev/ with extension *.json
+[2025-06-12T22:07:53.930+0000] {logging_mixin.py:190} INFO - Deleted all files in /opt/***/extraction/mercadolivre/data/shipping_cost_ml/dev/ with extension *.json
+[2025-06-12T22:07:53.933+0000] {logging_mixin.py:190} INFO - Deleted all files in /opt/***/extraction/mercadolivre/data/shipping_cost_ml/dev/ with extension *.json
+[2025-06-12T22:07:53.936+0000] {logging_mixin.py:190} INFO - Deleted all files in /opt/***/extraction/mercadolivre/data/shipping_cost_ml/dev/ with extension *.json
+[2025-06-12T22:07:53.939+0000] {logging_mixin.py:190} INFO - Deleted all files in /opt/***/extraction/mercadolivre/data/shipping_cost_ml/dev/ with extension *.json
+[2025-06-12T22:07:53.941+0000] {logging_mixin.py:190} INFO - Deleted all files in /opt/***/extraction/mercadolivre/data/shipping_cost_ml/dev/ with extension *.json
+[2025-06-12T22:07:53.944+0000] {logging_mixin.py:190} INFO - Deleted all files in /opt/***/extraction/mercadolivre/data/shipping_cost_ml/dev/ with extension *.json
+[2025-06-12T22:07:53.947+0000] {logging_mixin.py:190} INFO - Deleted all files in /opt/***/extraction/mercadolivre/data/shipping_cost_ml/dev/ with extension *.json
+[2025-06-12T22:07:53.950+0000] {logging_mixin.py:190} INFO - Deleted all files in /opt/***/extraction/mercadolivre/data/shipping_cost_ml/dev/ with extension *.json
+[2025-06-12T22:07:53.952+0000] {logging_mixin.py:190} INFO - Deleted all files in /opt/***/extraction/mercadolivre/data/shipping_cost_ml/dev/ with extension *.json
+[2025-06-12T22:07:53.955+0000] {logging_mixin.py:190} INFO - Deleted all files in /opt/***/extraction/mercadolivre/data/shipping_cost_ml/dev/ with extension *.json
+[2025-06-12T22:07:53.958+0000] {logging_mixin.py:190} INFO - Deleted all files in /opt/***/extraction/mercadolivre/data/shipping_cost_ml/dev/ with extension *.json
+[2025-06-12T22:07:53.961+0000] {logging_mixin.py:190} INFO - Deleted all files in /opt/***/extraction/mercadolivre/data/shipping_cost_ml/dev/ with extension *.json
+[2025-06-12T22:07:53.964+0000] {logging_mixin.py:190} INFO - Deleted all files in /opt/***/extraction/mercadolivre/data/shipping_cost_ml/dev/ with extension *.json
+[2025-06-12T22:07:53.967+0000] {logging_mixin.py:190} INFO - Deleted all files in /opt/***/extraction/mercadolivre/data/shipping_cost_ml/dev/ with extension *.json
+[2025-06-12T22:07:53.970+0000] {logging_mixin.py:190} INFO - Deleted all files in /opt/***/extraction/mercadolivre/data/shipping_cost_ml/dev/ with extension *.json
+[2025-06-12T22:07:53.972+0000] {logging_mixin.py:190} INFO - Deleted all files in /opt/***/extraction/mercadolivre/data/shipping_cost_ml/dev/ with extension *.json
+[2025-06-12T22:07:53.975+0000] {logging_mixin.py:190} INFO - Deleted all files in /opt/***/extraction/mercadolivre/data/shipping_cost_ml/dev/ with extension *.json
+[2025-06-12T22:07:53.978+0000] {logging_mixin.py:190} INFO - Deleted all files in /opt/***/extraction/mercadolivre/data/shipping_cost_ml/dev/ with extension *.json
+[2025-06-12T22:07:53.981+0000] {logging_mixin.py:190} INFO - Deleted all files in /opt/***/extraction/mercadolivre/data/shipping_cost_ml/dev/ with extension *.json
+[2025-06-12T22:07:53.984+0000] {logging_mixin.py:190} INFO - Deleted all files in /opt/***/extraction/mercadolivre/data/shipping_cost_ml/dev/ with extension *.json
+[2025-06-12T22:07:53.987+0000] {logging_mixin.py:190} INFO - Deleted all files in /opt/***/extraction/mercadolivre/data/shipping_cost_ml/dev/ with extension *.json
+[2025-06-12T22:07:53.988+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-06-12T22:07:54.002+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-06-12T22:07:54.004+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=06_delete_entry_data_dev, task_id=delete_ml_sh_files, run_id=manual__2025-06-12T22:07:50.696169+00:00, execution_date=20250612T220750, start_date=20250612T220753, end_date=20250612T220754
+[2025-06-12T22:07:54.054+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-06-12T22:07:54.079+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-06-12T22:07:54.083+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

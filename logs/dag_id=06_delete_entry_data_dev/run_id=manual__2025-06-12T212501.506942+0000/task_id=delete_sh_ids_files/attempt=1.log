@@ -1,0 +1,16 @@
+[2025-06-12T21:25:03.527+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-06-12T21:25:03.548+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: 06_delete_entry_data_dev.delete_sh_ids_files manual__2025-06-12T21:25:01.506942+00:00 [queued]>
+[2025-06-12T21:25:03.558+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: 06_delete_entry_data_dev.delete_sh_ids_files manual__2025-06-12T21:25:01.506942+00:00 [queued]>
+[2025-06-12T21:25:03.559+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-06-12T21:25:03.574+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): delete_sh_ids_files> on 2025-06-12 21:25:01.506942+00:00
+[2025-06-12T21:25:03.580+0000] {standard_task_runner.py:72} INFO - Started process 3042 to run task
+[2025-06-12T21:25:03.583+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', '06_delete_entry_data_dev', 'delete_sh_ids_files', 'manual__2025-06-12T21:25:01.506942+00:00', '--job-id', '1064', '--raw', '--subdir', 'DAGS_FOLDER/06_delete_files_tables_dev.py', '--cfg-path', '/tmp/tmp4og96aqf']
+[2025-06-12T21:25:03.585+0000] {standard_task_runner.py:105} INFO - Job 1064: Subtask delete_sh_ids_files
+[2025-06-12T21:25:03.652+0000] {task_command.py:467} INFO - Running <TaskInstance: 06_delete_entry_data_dev.delete_sh_ids_files manual__2025-06-12T21:25:01.506942+00:00 [running]> on host 28e6a58e4107
+[2025-06-12T21:25:03.755+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='06_delete_entry_data_dev' AIRFLOW_CTX_TASK_ID='delete_sh_ids_files' AIRFLOW_CTX_EXECUTION_DATE='2025-06-12T21:25:01.506942+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-06-12T21:25:01.506942+00:00'
+[2025-06-12T21:25:03.757+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-06-12T21:25:03.775+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-06-12T21:25:03.789+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-06-12T21:25:03.791+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=06_delete_entry_data_dev, task_id=delete_sh_ids_files, run_id=manual__2025-06-12T21:25:01.506942+00:00, execution_date=20250612T212501, start_date=20250612T212503, end_date=20250612T212503
+[2025-06-12T21:25:03.837+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-06-12T21:25:03.854+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

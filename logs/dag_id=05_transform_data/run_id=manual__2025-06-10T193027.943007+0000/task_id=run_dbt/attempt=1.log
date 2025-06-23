@@ -1,0 +1,131 @@
+[2025-06-10T19:30:37.933+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-06-10T19:30:37.953+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: 05_transform_data.run_dbt manual__2025-06-10T19:30:27.943007+00:00 [queued]>
+[2025-06-10T19:30:37.961+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: 05_transform_data.run_dbt manual__2025-06-10T19:30:27.943007+00:00 [queued]>
+[2025-06-10T19:30:37.963+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-06-10T19:30:37.975+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): run_dbt> on 2025-06-10 19:30:27.943007+00:00
+[2025-06-10T19:30:37.979+0000] {standard_task_runner.py:72} INFO - Started process 2192 to run task
+[2025-06-10T19:30:37.983+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', '05_transform_data', 'run_dbt', 'manual__2025-06-10T19:30:27.943007+00:00', '--job-id', '703', '--raw', '--subdir', 'DAGS_FOLDER/05_transform_data.py', '--cfg-path', '/tmp/tmpw2gh7li6']
+[2025-06-10T19:30:37.985+0000] {standard_task_runner.py:105} INFO - Job 703: Subtask run_dbt
+[2025-06-10T19:30:38.039+0000] {task_command.py:467} INFO - Running <TaskInstance: 05_transform_data.run_dbt manual__2025-06-10T19:30:27.943007+00:00 [running]> on host 28e6a58e4107
+[2025-06-10T19:30:38.120+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='05_transform_data' AIRFLOW_CTX_TASK_ID='run_dbt' AIRFLOW_CTX_EXECUTION_DATE='2025-06-10T19:30:27.943007+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-06-10T19:30:27.943007+00:00'
+[2025-06-10T19:30:38.121+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-06-10T19:30:39.719+0000] {logging_mixin.py:190} INFO - 19:30:39  Running with dbt=1.9.5
+[2025-06-10T19:30:40.104+0000] {logging_mixin.py:190} INFO - 19:30:40  Registered adapter: postgres=1.9.0
+[2025-06-10T19:30:41.631+0000] {logging_mixin.py:190} INFO - 19:30:41  [WARNING]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.e_commerce_sales.example
+[2025-06-10T19:30:42.023+0000] {logging_mixin.py:190} INFO - 19:30:42  Found 18 models, 12 sources, 549 macros, 1 unit test
+[2025-06-10T19:30:42.028+0000] {logging_mixin.py:190} INFO - 19:30:42
+[2025-06-10T19:30:42.029+0000] {logging_mixin.py:190} INFO - 19:30:42  Concurrency: 4 threads (target='dev')
+[2025-06-10T19:30:42.031+0000] {logging_mixin.py:190} INFO - 19:30:42
+[2025-06-10T19:30:42.204+0000] {logging_mixin.py:190} INFO - 19:30:42  1 of 18 START sql incremental model sales_stg.stg_mercadolivre ................. [RUN]
+[2025-06-10T19:30:42.206+0000] {logging_mixin.py:190} INFO - 19:30:42  2 of 18 START sql incremental model sales_stg.stg_mercadolivre__order_items .... [RUN]
+[2025-06-10T19:30:42.210+0000] {logging_mixin.py:190} INFO - 19:30:42  3 of 18 START sql incremental model sales_stg.stg_mercadolivre__payments ....... [RUN]
+[2025-06-10T19:30:42.212+0000] {logging_mixin.py:190} INFO - 19:30:42  4 of 18 START sql incremental model sales_stg.stg_mercadolivre_sh .............. [RUN]
+[2025-06-10T19:30:42.488+0000] {logging_mixin.py:190} INFO - 19:30:42  2 of 18 OK created sql incremental model sales_stg.stg_mercadolivre__order_items  [SELECT 285 in 0.26s]
+[2025-06-10T19:30:42.490+0000] {logging_mixin.py:190} INFO - 19:30:42  4 of 18 OK created sql incremental model sales_stg.stg_mercadolivre_sh ......... [SELECT 284 in 0.26s]
+[2025-06-10T19:30:42.492+0000] {logging_mixin.py:190} INFO - 19:30:42  3 of 18 OK created sql incremental model sales_stg.stg_mercadolivre__payments .. [SELECT 301 in 0.27s]
+[2025-06-10T19:30:42.493+0000] {logging_mixin.py:190} INFO - 19:30:42  1 of 18 OK created sql incremental model sales_stg.stg_mercadolivre ............ [SELECT 285 in 0.27s]
+[2025-06-10T19:30:42.502+0000] {logging_mixin.py:190} INFO - 19:30:42  5 of 18 START sql incremental model sales_stg.stg_shopee ....................... [RUN]
+[2025-06-10T19:30:42.506+0000] {logging_mixin.py:190} INFO - 19:30:42  6 of 18 START sql incremental model sales.mercadolivre_orders_results .......... [RUN]
+[2025-06-10T19:30:42.605+0000] {logging_mixin.py:190} INFO - 19:30:42  6 of 18 ERROR creating sql incremental model sales.mercadolivre_orders_results . [ERROR in 0.09s]
+[2025-06-10T19:30:42.612+0000] {logging_mixin.py:190} INFO - 19:30:42  7 of 18 SKIP relation sales.dim_mercadolivre_buyer ............................. [SKIP]
+[2025-06-10T19:30:42.613+0000] {logging_mixin.py:190} INFO - 19:30:42  8 of 18 SKIP relation sales.dim_mercadolivre_date .............................. [SKIP]
+[2025-06-10T19:30:42.615+0000] {logging_mixin.py:190} INFO - 19:30:42  9 of 18 SKIP relation sales.dim_mercadolivre_orders_status ..................... [SKIP]
+[2025-06-10T19:30:42.620+0000] {logging_mixin.py:190} INFO - 19:30:42  10 of 18 SKIP relation sales.dim_mercadolivre_product .......................... [SKIP]
+[2025-06-10T19:30:42.636+0000] {logging_mixin.py:190} INFO - 19:30:42  5 of 18 OK created sql incremental model sales_stg.stg_shopee .................. [SELECT 2875 in 0.13s]
+[2025-06-10T19:30:42.641+0000] {logging_mixin.py:190} INFO - 19:30:42  11 of 18 START sql incremental model sales.shopee_orders_results ............... [RUN]
+[2025-06-10T19:30:42.724+0000] {logging_mixin.py:190} INFO - 19:30:42  11 of 18 OK created sql incremental model sales.shopee_orders_results .......... [SELECT 0 in 0.08s]
+[2025-06-10T19:30:42.731+0000] {logging_mixin.py:190} INFO - 19:30:42  12 of 18 START sql incremental model sales.dim_shopee_buyer .................... [RUN]
+[2025-06-10T19:30:42.733+0000] {logging_mixin.py:190} INFO - 19:30:42  13 of 18 START sql incremental model sales.dim_shopee_date ..................... [RUN]
+[2025-06-10T19:30:42.735+0000] {logging_mixin.py:190} INFO - 19:30:42  14 of 18 START sql incremental model sales.dim_shopee_orders_status ............ [RUN]
+[2025-06-10T19:30:42.737+0000] {logging_mixin.py:190} INFO - 19:30:42  15 of 18 START sql incremental model sales.dim_shopee_product .................. [RUN]
+[2025-06-10T19:30:42.875+0000] {logging_mixin.py:190} INFO - 19:30:42  13 of 18 OK created sql incremental model sales.dim_shopee_date ................ [SELECT 0 in 0.13s]
+[2025-06-10T19:30:42.884+0000] {logging_mixin.py:190} INFO - 19:30:42  12 of 18 OK created sql incremental model sales.dim_shopee_buyer ............... [SELECT 0 in 0.14s]
+[2025-06-10T19:30:42.886+0000] {logging_mixin.py:190} INFO - 19:30:42  14 of 18 OK created sql incremental model sales.dim_shopee_orders_status ....... [SELECT 0 in 0.14s]
+[2025-06-10T19:30:42.888+0000] {logging_mixin.py:190} INFO - 19:30:42  15 of 18 OK created sql incremental model sales.dim_shopee_product ............. [SELECT 0 in 0.14s]
+[2025-06-10T19:30:42.895+0000] {logging_mixin.py:190} INFO - 19:30:42  16 of 18 START sql view model sales.sum_shopee_monthly_profit .................. [RUN]
+[2025-06-10T19:30:42.899+0000] {logging_mixin.py:190} INFO - 19:30:42  17 of 18 START sql view model sales.sum_shopee_monthly_revenue ................. [RUN]
+[2025-06-10T19:30:42.903+0000] {logging_mixin.py:190} INFO - 19:30:42  18 of 18 START sql view model sales.sum_shopee_products_sold ................... [RUN]
+[2025-06-10T19:30:43.106+0000] {logging_mixin.py:190} INFO - 19:30:43  18 of 18 OK created sql view model sales.sum_shopee_products_sold .............. [CREATE VIEW in 0.20s]
+[2025-06-10T19:30:43.108+0000] {logging_mixin.py:190} INFO - 19:30:43  16 of 18 OK created sql view model sales.sum_shopee_monthly_profit ............. [CREATE VIEW in 0.20s]
+[2025-06-10T19:30:43.109+0000] {logging_mixin.py:190} INFO - 19:30:43  17 of 18 OK created sql view model sales.sum_shopee_monthly_revenue ............ [CREATE VIEW in 0.20s]
+[2025-06-10T19:30:43.135+0000] {logging_mixin.py:190} INFO - 19:30:43
+[2025-06-10T19:30:43.137+0000] {logging_mixin.py:190} INFO - 19:30:43  Finished running 15 incremental models, 3 view models in 0 hours 0 minutes and 1.10 seconds (1.10s).
+[2025-06-10T19:30:43.216+0000] {logging_mixin.py:190} INFO - 19:30:43
+[2025-06-10T19:30:43.217+0000] {logging_mixin.py:190} INFO - 19:30:43  Completed with 1 error, 0 partial successes, and 0 warnings:
+[2025-06-10T19:30:43.219+0000] {logging_mixin.py:190} INFO - 19:30:43
+[2025-06-10T19:30:43.221+0000] {logging_mixin.py:190} INFO - 19:30:43    Database Error in model mercadolivre_orders_results (models/core/mercadolivre_orders_results.sql)
+  column ml_sh.lead_time__list_cost__v_double does not exist
+  LINE 91:      COALESCE(ml_sh.lead_time__list_cost__v_double, 0) AS se...
+                         ^
+  compiled code at target/run/e_commerce_sales/models/core/mercadolivre_orders_results.sql
+[2025-06-10T19:30:43.222+0000] {logging_mixin.py:190} INFO - 19:30:43
+[2025-06-10T19:30:43.224+0000] {logging_mixin.py:190} INFO - 19:30:43  Done. PASS=13 WARN=0 ERROR=1 SKIP=4 TOTAL=18
+[2025-06-10T19:30:44.080+0000] {logging_mixin.py:190} INFO - dbt run failed!
+[2025-06-10T19:30:44.082+0000] {logging_mixin.py:190} INFO - None
+[2025-06-10T19:30:44.083+0000] {taskinstance.py:3311} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/opt/airflow/dbt_files/run_dbt.py", line 22, in transform_data
+    raise RuntimeError("dbt run failed")
+RuntimeError: dbt run failed
+[2025-06-10T19:30:44.094+0000] {taskinstance.py:1225} INFO - Marking task as FAILED. dag_id=05_transform_data, task_id=run_dbt, run_id=manual__2025-06-10T19:30:27.943007+00:00, execution_date=20250610T193027, start_date=20250610T193037, end_date=20250610T193044
+[2025-06-10T19:30:44.108+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-06-10T19:30:44.110+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 703 for task run_dbt (dbt run failed; 2192)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 3005, in _run_raw_task
+    return _run_raw_task(
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 3159, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 3183, in _execute_task
+    return _execute_task(self, context, task_orig)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/opt/airflow/dbt_files/run_dbt.py", line 22, in transform_data
+    raise RuntimeError("dbt run failed")
+RuntimeError: dbt run failed
+[2025-06-10T19:30:44.139+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2025-06-10T19:30:44.156+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-06-10T19:30:44.159+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

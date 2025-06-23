@@ -1,0 +1,784 @@
+[2025-05-26T21:10:25.107+0000] {processor.py:186} INFO - Started process (PID=68) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:10:25.110+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:10:25.117+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:10:25.116+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:10:25.194+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:10:25.266+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:10:25.266+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:10:25.313+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:10:25.313+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:10:25.370+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.278 seconds
+[2025-05-26T21:10:55.547+0000] {processor.py:186} INFO - Started process (PID=85) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:10:55.550+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:10:55.556+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:10:55.555+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:10:55.613+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:10:55.662+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:10:55.661+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:10:55.686+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:10:55.686+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:10:55.717+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.191 seconds
+[2025-05-26T21:11:26.189+0000] {processor.py:186} INFO - Started process (PID=96) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:11:26.191+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:11:26.195+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:11:26.195+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:11:26.257+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:11:26.322+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:11:26.321+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:11:26.352+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:11:26.352+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:11:26.385+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.209 seconds
+[2025-05-26T21:11:56.807+0000] {processor.py:186} INFO - Started process (PID=107) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:11:56.812+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:11:56.827+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:11:56.825+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:11:56.962+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:11:57.009+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:11:57.008+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:11:57.040+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:11:57.039+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:11:57.081+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.317 seconds
+[2025-05-26T21:12:27.417+0000] {processor.py:186} INFO - Started process (PID=118) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:12:27.422+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:12:27.432+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:12:27.431+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:12:27.579+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:12:27.624+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:12:27.623+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:12:27.646+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:12:27.646+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:12:27.674+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.289 seconds
+[2025-05-26T21:12:58.043+0000] {processor.py:186} INFO - Started process (PID=129) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:12:58.045+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:12:58.049+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:12:58.048+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:12:58.106+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:12:58.150+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:12:58.149+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:12:58.172+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:12:58.172+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:12:58.201+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.167 seconds
+[2025-05-26T21:13:28.524+0000] {processor.py:186} INFO - Started process (PID=140) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:13:28.527+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:13:28.534+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:13:28.533+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:13:28.668+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:13:28.766+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:13:28.765+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:13:28.820+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:13:28.819+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:13:28.884+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.379 seconds
+[2025-05-26T21:13:59.421+0000] {processor.py:186} INFO - Started process (PID=151) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:13:59.426+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:13:59.438+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:13:59.437+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:13:59.622+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:13:59.754+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:13:59.753+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:13:59.822+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:13:59.821+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:13:59.897+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.509 seconds
+[2025-05-26T21:14:30.233+0000] {processor.py:186} INFO - Started process (PID=162) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:14:30.240+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:14:30.253+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:14:30.251+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:14:30.427+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:14:30.546+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:14:30.546+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:14:30.573+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:14:30.573+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:14:30.607+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.413 seconds
+[2025-05-26T21:15:00.970+0000] {processor.py:186} INFO - Started process (PID=173) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:15:00.975+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:15:00.987+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:15:00.986+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:15:01.136+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:15:01.247+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:15:01.246+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:15:01.302+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:15:01.302+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:15:01.365+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.428 seconds
+[2025-05-26T21:15:31.854+0000] {processor.py:186} INFO - Started process (PID=184) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:15:31.859+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:15:31.869+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:15:31.868+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:15:32.010+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:15:32.052+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:15:32.052+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:15:32.074+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:15:32.073+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:15:32.100+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.275 seconds
+[2025-05-26T21:16:02.411+0000] {processor.py:186} INFO - Started process (PID=195) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:16:02.414+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:16:02.418+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:16:02.418+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:16:02.476+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:16:02.518+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:16:02.517+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:16:02.541+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:16:02.541+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:16:02.569+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.170 seconds
+[2025-05-26T21:16:32.867+0000] {processor.py:186} INFO - Started process (PID=206) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:16:32.869+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:16:32.872+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:16:32.872+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:16:32.925+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:16:32.967+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:16:32.967+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:16:32.994+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:16:32.993+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:16:33.025+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.167 seconds
+[2025-05-26T21:17:03.347+0000] {processor.py:186} INFO - Started process (PID=217) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:17:03.352+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:17:03.364+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:17:03.363+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:17:03.547+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:17:03.675+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:17:03.674+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:17:03.703+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:17:03.703+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:17:03.731+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.414 seconds
+[2025-05-26T21:17:34.121+0000] {processor.py:186} INFO - Started process (PID=228) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:17:34.123+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:17:34.127+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:17:34.126+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:17:34.195+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:17:34.244+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:17:34.244+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:17:34.268+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:17:34.267+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:17:34.298+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.188 seconds
+[2025-05-26T21:18:04.678+0000] {processor.py:186} INFO - Started process (PID=239) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:18:04.683+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:18:04.695+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:18:04.694+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:18:04.770+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:18:04.816+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:18:04.816+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:18:04.841+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:18:04.840+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:18:04.873+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.226 seconds
+[2025-05-26T21:18:35.224+0000] {processor.py:186} INFO - Started process (PID=250) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:18:35.229+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:18:35.239+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:18:35.238+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:18:35.422+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:18:35.474+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:18:35.473+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:18:35.495+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:18:35.494+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:18:35.524+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.337 seconds
+[2025-05-26T21:19:05.753+0000] {processor.py:186} INFO - Started process (PID=261) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:19:05.757+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:19:05.767+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:19:05.766+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:19:05.955+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:19:06.089+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:19:06.088+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:19:06.171+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:19:06.170+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:19:06.266+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.542 seconds
+[2025-05-26T21:19:36.817+0000] {processor.py:186} INFO - Started process (PID=272) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:19:36.822+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:19:36.835+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:19:36.833+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:19:37.005+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:19:37.061+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:19:37.061+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:19:37.087+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:19:37.087+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:19:37.121+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.339 seconds
+[2025-05-26T21:20:07.562+0000] {processor.py:186} INFO - Started process (PID=283) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:20:07.568+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:20:07.580+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:20:07.578+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:20:07.774+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:20:07.908+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:20:07.908+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:20:07.940+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:20:07.940+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:20:07.969+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.439 seconds
+[2025-05-26T21:20:38.683+0000] {processor.py:186} INFO - Started process (PID=294) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:20:38.688+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:20:38.697+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:20:38.696+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:20:38.865+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:20:39.006+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:20:39.005+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:20:39.064+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:20:39.063+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:20:39.109+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.452 seconds
+[2025-05-26T21:21:09.418+0000] {processor.py:186} INFO - Started process (PID=305) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:21:09.420+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:21:09.423+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:21:09.423+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:21:09.477+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:21:09.525+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:21:09.524+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:21:09.549+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:21:09.549+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:21:09.579+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.169 seconds
+[2025-05-26T21:21:39.928+0000] {processor.py:186} INFO - Started process (PID=316) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:21:39.930+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:21:39.933+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:21:39.933+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:21:39.995+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:21:40.042+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:21:40.042+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:21:40.067+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:21:40.067+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:21:40.097+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.179 seconds
+[2025-05-26T21:22:10.588+0000] {processor.py:186} INFO - Started process (PID=327) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:22:10.593+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:22:10.602+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:22:10.601+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:22:10.735+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:22:10.833+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:22:10.832+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:22:10.883+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:22:10.883+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:22:10.940+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.379 seconds
+[2025-05-26T21:22:41.518+0000] {processor.py:186} INFO - Started process (PID=338) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:22:41.521+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:22:41.527+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:22:41.526+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:22:41.596+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:22:41.641+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:22:41.641+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:22:41.671+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:22:41.671+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:22:41.744+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.261 seconds
+[2025-05-26T21:23:12.345+0000] {processor.py:186} INFO - Started process (PID=349) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:23:12.352+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:23:12.367+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:23:12.366+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:23:12.568+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:23:12.717+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:23:12.716+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:23:12.756+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:23:12.755+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:23:12.804+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.498 seconds
+[2025-05-26T21:23:43.987+0000] {processor.py:186} INFO - Started process (PID=360) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:23:43.991+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:23:44.002+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:23:44.001+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:23:44.203+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:23:44.294+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:23:44.293+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:23:44.317+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:23:44.317+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:23:44.348+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.399 seconds
+[2025-05-26T21:24:14.855+0000] {processor.py:186} INFO - Started process (PID=371) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:24:14.859+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:24:14.870+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:24:14.869+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:24:15.057+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:24:15.195+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:24:15.194+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:24:15.274+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:24:15.273+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:24:15.364+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.540 seconds
+[2025-05-26T21:24:45.600+0000] {processor.py:186} INFO - Started process (PID=382) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:24:45.605+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:24:45.616+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:24:45.615+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:24:45.753+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:24:45.795+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:24:45.794+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:24:45.818+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:24:45.818+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:24:45.846+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.273 seconds
+[2025-05-26T21:25:16.649+0000] {processor.py:186} INFO - Started process (PID=393) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:25:16.655+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:25:16.668+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:25:16.667+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:25:16.847+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:25:16.975+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:25:16.974+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:25:17.045+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:25:17.045+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:25:17.124+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.504 seconds
+[2025-05-26T21:25:47.383+0000] {processor.py:186} INFO - Started process (PID=404) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:25:47.385+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:25:47.390+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:25:47.389+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:25:47.450+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:25:47.498+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:25:47.497+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:25:47.523+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:25:47.523+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:25:47.556+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.185 seconds
+[2025-05-26T21:26:18.435+0000] {processor.py:186} INFO - Started process (PID=415) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:26:18.440+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:26:18.451+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:26:18.450+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:26:18.639+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:26:18.796+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:26:18.795+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:26:18.866+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:26:18.865+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:26:18.913+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.512 seconds
+[2025-05-26T21:26:49.398+0000] {processor.py:186} INFO - Started process (PID=426) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:26:49.401+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:26:49.411+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:26:49.409+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:26:49.529+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:26:49.619+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:26:49.618+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:26:49.669+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:26:49.668+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:26:49.732+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.357 seconds
+[2025-05-26T21:27:20.180+0000] {processor.py:186} INFO - Started process (PID=437) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:27:20.181+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:27:20.185+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:27:20.184+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:27:20.238+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:27:20.278+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:27:20.278+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:27:20.302+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:27:20.301+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:27:20.332+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.161 seconds
+[2025-05-26T21:27:51.019+0000] {processor.py:186} INFO - Started process (PID=449) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:27:51.024+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:27:51.035+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:27:51.034+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:27:51.190+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:27:51.236+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:27:51.235+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:27:51.258+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:27:51.257+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:27:51.287+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.307 seconds
+[2025-05-26T21:28:21.563+0000] {processor.py:186} INFO - Started process (PID=460) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:28:21.565+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:28:21.570+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:28:21.570+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:28:21.683+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:28:21.743+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:28:21.742+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:28:21.769+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:28:21.769+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:28:21.802+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.253 seconds
+[2025-05-26T21:28:52.203+0000] {processor.py:186} INFO - Started process (PID=471) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:28:52.205+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:28:52.209+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:28:52.209+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:28:52.256+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:28:52.299+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:28:52.298+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:28:52.321+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:28:52.321+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:28:52.351+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.162 seconds
+[2025-05-26T21:29:22.600+0000] {processor.py:186} INFO - Started process (PID=482) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:29:22.602+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:29:22.605+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:29:22.605+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:29:22.656+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:29:22.699+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:29:22.698+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:29:22.722+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:29:22.721+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:29:22.752+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.163 seconds
+[2025-05-26T21:29:53.701+0000] {processor.py:186} INFO - Started process (PID=493) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:29:53.705+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:29:53.715+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:29:53.714+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:29:53.790+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:29:53.831+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:29:53.830+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:29:53.854+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:29:53.854+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:29:53.885+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.211 seconds
+[2025-05-26T21:30:24.659+0000] {processor.py:186} INFO - Started process (PID=504) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:30:24.661+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:30:24.666+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:30:24.666+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:30:24.728+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:30:24.776+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:30:24.776+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:30:24.802+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:30:24.802+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:30:24.838+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.196 seconds
+[2025-05-26T21:30:55.121+0000] {processor.py:186} INFO - Started process (PID=515) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:30:55.123+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:30:55.127+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:30:55.126+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:30:55.180+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:30:55.226+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:30:55.226+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:30:55.248+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:30:55.248+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:30:55.276+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.164 seconds
+[2025-05-26T21:31:25.584+0000] {processor.py:186} INFO - Started process (PID=526) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:31:25.586+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:31:25.591+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:31:25.590+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:31:25.658+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:31:25.698+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:31:25.698+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:31:25.720+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:31:25.719+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:31:25.748+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.174 seconds
+[2025-05-26T21:31:56.473+0000] {processor.py:186} INFO - Started process (PID=537) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:31:56.477+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:31:56.487+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:31:56.486+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:31:56.659+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:31:56.769+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:31:56.768+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:31:56.799+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:31:56.798+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:31:56.830+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.385 seconds
+[2025-05-26T21:32:27.117+0000] {processor.py:186} INFO - Started process (PID=548) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:32:27.119+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:32:27.122+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:32:27.122+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:32:27.178+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:32:27.222+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:32:27.222+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:32:27.246+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:32:27.246+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:32:27.277+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.170 seconds
+[2025-05-26T21:32:57.797+0000] {processor.py:186} INFO - Started process (PID=559) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:32:57.799+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:32:57.803+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:32:57.803+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:32:57.861+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:32:57.913+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:32:57.912+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:32:57.940+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:32:57.940+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:32:57.971+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.186 seconds
+[2025-05-26T21:33:28.527+0000] {processor.py:186} INFO - Started process (PID=570) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:33:28.532+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:33:28.545+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:33:28.543+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:33:28.721+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:33:28.851+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:33:28.850+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:33:28.916+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:33:28.915+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:33:28.998+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.499 seconds
+[2025-05-26T21:33:59.541+0000] {processor.py:186} INFO - Started process (PID=581) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:33:59.547+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:33:59.560+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:33:59.558+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:33:59.731+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:33:59.859+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:33:59.858+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:33:59.890+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:33:59.889+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:33:59.921+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.411 seconds
+[2025-05-26T21:34:30.289+0000] {processor.py:186} INFO - Started process (PID=597) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:34:30.292+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:34:30.297+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:34:30.297+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:34:30.354+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:34:30.401+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:34:30.401+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:34:30.427+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:34:30.426+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:34:30.462+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.186 seconds
+[2025-05-26T21:35:01.218+0000] {processor.py:186} INFO - Started process (PID=608) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:35:01.222+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:35:01.233+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:35:01.231+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:35:01.333+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:35:01.382+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:35:01.382+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:35:01.407+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:35:01.407+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:35:01.438+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.252 seconds
+[2025-05-26T21:35:31.871+0000] {processor.py:186} INFO - Started process (PID=619) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:35:31.875+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:35:31.886+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:35:31.885+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:35:31.960+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:35:32.001+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:35:32.000+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:35:32.023+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:35:32.022+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:35:32.050+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.208 seconds
+[2025-05-26T21:36:02.690+0000] {processor.py:186} INFO - Started process (PID=630) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:36:02.696+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:36:02.705+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:36:02.704+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:36:02.838+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:36:02.946+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:36:02.945+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:36:03.011+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:36:03.010+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:36:03.070+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.412 seconds
+[2025-05-26T21:36:33.658+0000] {processor.py:186} INFO - Started process (PID=641) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:36:33.662+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:36:33.672+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:36:33.671+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:36:33.840+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:36:33.949+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:36:33.949+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:36:33.974+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:36:33.974+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:36:34.001+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.373 seconds
+[2025-05-26T21:37:04.575+0000] {processor.py:186} INFO - Started process (PID=652) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:37:04.580+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:37:04.591+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:37:04.590+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:37:04.773+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:37:04.908+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:37:04.907+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:37:04.985+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:37:04.984+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:37:05.072+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.528 seconds
+[2025-05-26T21:37:35.541+0000] {processor.py:186} INFO - Started process (PID=663) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:37:35.546+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:37:35.558+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:37:35.556+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:37:35.727+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:37:35.836+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:37:35.835+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:37:35.861+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:37:35.860+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:37:35.888+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.373 seconds
+[2025-05-26T21:38:06.412+0000] {processor.py:186} INFO - Started process (PID=674) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:38:06.415+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:38:06.422+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:38:06.422+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:38:06.506+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:38:06.572+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:38:06.571+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:38:06.602+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:38:06.602+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:38:06.638+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.245 seconds
+[2025-05-26T21:38:36.832+0000] {processor.py:186} INFO - Started process (PID=685) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:38:36.835+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:38:36.842+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:38:36.841+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:38:36.920+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:38:36.966+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:38:36.966+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:38:36.992+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:38:36.991+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:38:37.025+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.237 seconds
+[2025-05-26T21:39:07.576+0000] {processor.py:186} INFO - Started process (PID=696) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:39:07.581+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:39:07.593+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:39:07.591+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:39:07.788+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:39:07.937+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:39:07.936+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:39:08.028+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:39:08.027+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:39:08.121+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.581 seconds
+[2025-05-26T21:39:38.254+0000] {processor.py:186} INFO - Started process (PID=707) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:39:38.256+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:39:38.259+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:39:38.259+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:39:38.326+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:39:38.368+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:39:38.367+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:39:38.391+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:39:38.390+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:39:38.419+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.175 seconds
+[2025-05-26T21:40:08.829+0000] {processor.py:186} INFO - Started process (PID=718) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:40:08.841+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:40:08.852+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:40:08.851+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:40:08.951+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:40:09.000+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:40:08.999+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:40:09.025+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:40:09.024+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:40:09.056+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.272 seconds
+[2025-05-26T21:40:39.878+0000] {processor.py:186} INFO - Started process (PID=729) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:40:39.884+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:40:39.903+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:40:39.901+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:40:40.077+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:40:40.134+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:40:40.133+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:40:40.161+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:40:40.160+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:40:40.196+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.359 seconds
+[2025-05-26T21:41:11.021+0000] {processor.py:186} INFO - Started process (PID=740) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:41:11.025+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:41:11.035+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:41:11.034+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:41:11.206+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:41:11.344+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:41:11.343+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:41:11.400+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:41:11.400+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:41:11.447+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.454 seconds
+[2025-05-26T21:41:42.108+0000] {processor.py:186} INFO - Started process (PID=751) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:41:42.113+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:41:42.125+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:41:42.123+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:41:42.276+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:41:42.361+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:41:42.361+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:41:42.406+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:41:42.405+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:41:42.464+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.385 seconds
+[2025-05-26T21:42:13.042+0000] {processor.py:186} INFO - Started process (PID=762) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:42:13.045+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:42:13.050+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:42:13.049+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:42:13.115+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:42:13.161+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:42:13.161+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:42:13.183+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:42:13.183+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:42:13.215+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.193 seconds
+[2025-05-26T21:42:44.076+0000] {processor.py:186} INFO - Started process (PID=773) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:42:44.078+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:42:44.081+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:42:44.081+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:42:44.131+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:42:44.180+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:42:44.180+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:42:44.202+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:42:44.202+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:42:44.231+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.165 seconds
+[2025-05-26T21:43:14.526+0000] {processor.py:186} INFO - Started process (PID=784) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:43:14.528+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:43:14.532+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:43:14.532+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:43:14.597+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:43:14.639+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:43:14.639+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:43:14.662+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:43:14.662+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:43:14.691+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.176 seconds
+[2025-05-26T21:43:44.957+0000] {processor.py:186} INFO - Started process (PID=795) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:43:44.959+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:43:44.964+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:43:44.963+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:43:45.025+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:43:45.073+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:43:45.073+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:43:45.097+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:43:45.096+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:43:45.126+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.182 seconds
+[2025-05-26T21:44:15.562+0000] {processor.py:186} INFO - Started process (PID=806) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:44:15.563+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:44:15.566+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:44:15.566+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:44:15.606+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:44:15.642+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:44:15.642+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:44:15.659+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:44:15.659+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:44:15.681+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.128 seconds
+[2025-05-26T21:44:46.321+0000] {processor.py:186} INFO - Started process (PID=817) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:44:46.322+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:44:46.325+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:44:46.325+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:44:46.364+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:44:46.413+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:44:46.412+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:44:46.436+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:44:46.436+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:44:46.460+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.148 seconds
+[2025-05-26T21:45:17.100+0000] {processor.py:186} INFO - Started process (PID=828) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:45:17.101+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:45:17.103+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:45:17.103+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:45:17.144+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:45:17.184+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:45:17.184+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:45:17.203+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:45:17.203+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:45:17.223+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.134 seconds
+[2025-05-26T21:45:47.879+0000] {processor.py:186} INFO - Started process (PID=839) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:45:47.880+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:45:47.883+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:45:47.883+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:45:47.928+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:45:47.973+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:45:47.973+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:45:47.992+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:45:47.992+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:45:48.015+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.148 seconds
+[2025-05-26T21:46:18.731+0000] {processor.py:186} INFO - Started process (PID=850) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:46:18.733+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:46:18.736+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:46:18.736+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:46:18.777+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:46:18.822+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:46:18.821+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:46:18.847+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:46:18.847+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:46:18.872+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.151 seconds
+[2025-05-26T21:46:49.579+0000] {processor.py:186} INFO - Started process (PID=861) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:46:49.581+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:46:49.584+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:46:49.584+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:46:49.624+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:46:49.664+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:46:49.664+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:46:49.685+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:46:49.684+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:46:49.712+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.142 seconds
+[2025-05-26T21:47:20.453+0000] {processor.py:186} INFO - Started process (PID=872) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:47:20.454+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:47:20.457+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:47:20.457+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:47:20.501+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:47:20.543+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:47:20.543+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:47:20.559+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:47:20.559+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:47:20.580+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.137 seconds
+[2025-05-26T21:47:51.143+0000] {processor.py:186} INFO - Started process (PID=883) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:47:51.144+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:47:51.147+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:47:51.147+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:47:51.183+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:47:51.219+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:47:51.219+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:47:51.235+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:47:51.235+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:47:51.264+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.130 seconds
+[2025-05-26T21:48:21.855+0000] {processor.py:186} INFO - Started process (PID=894) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:48:21.857+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:48:21.859+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:48:21.859+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:48:21.897+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:48:21.931+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:48:21.931+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:48:21.946+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:48:21.945+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:48:21.966+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.118 seconds
+[2025-05-26T21:48:52.721+0000] {processor.py:186} INFO - Started process (PID=905) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:48:52.722+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:48:52.725+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:48:52.724+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:48:52.762+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:48:52.797+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:48:52.797+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:48:52.813+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:48:52.813+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:48:52.839+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.126 seconds
+[2025-05-26T21:49:23.457+0000] {processor.py:186} INFO - Started process (PID=916) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:49:23.458+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:49:23.462+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:49:23.462+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:49:23.503+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:49:23.546+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:49:23.546+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:49:23.567+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:49:23.567+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:49:23.595+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.154 seconds
+[2025-05-26T21:49:54.272+0000] {processor.py:186} INFO - Started process (PID=927) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:49:54.273+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:49:54.278+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:49:54.277+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:49:54.308+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:49:54.338+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:49:54.337+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:49:54.353+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:49:54.353+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:49:54.371+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.117 seconds
+[2025-05-26T21:50:25.004+0000] {processor.py:186} INFO - Started process (PID=938) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:50:25.005+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:50:25.008+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:50:25.007+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:50:25.033+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:50:25.058+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:50:25.057+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:50:25.072+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:50:25.072+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:50:25.090+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.091 seconds
+[2025-05-26T21:50:55.804+0000] {processor.py:186} INFO - Started process (PID=949) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:50:55.805+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:50:55.808+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:50:55.807+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:50:55.833+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:50:55.859+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:50:55.858+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:50:55.872+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:50:55.872+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:50:55.891+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.092 seconds
+[2025-05-26T21:51:26.466+0000] {processor.py:186} INFO - Started process (PID=960) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:51:26.467+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:51:26.469+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:51:26.469+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:51:26.494+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:51:26.519+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:51:26.518+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:51:26.533+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:51:26.532+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:51:26.551+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.091 seconds
+[2025-05-26T21:51:57.195+0000] {processor.py:186} INFO - Started process (PID=971) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:51:57.195+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:51:57.198+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:51:57.198+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:51:57.222+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:51:57.249+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:51:57.249+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:51:57.262+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:51:57.262+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:51:57.280+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.092 seconds
+[2025-05-26T21:52:27.967+0000] {processor.py:186} INFO - Started process (PID=982) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:52:27.968+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:52:27.971+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:52:27.970+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:52:27.999+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:52:28.025+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:52:28.024+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:52:28.038+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:52:28.038+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:52:28.058+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.097 seconds
+[2025-05-26T21:52:58.732+0000] {processor.py:186} INFO - Started process (PID=993) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:52:58.733+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:52:58.736+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:52:58.736+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:52:58.761+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:52:58.786+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:52:58.786+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:52:58.799+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:52:58.799+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:52:58.817+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.091 seconds
+[2025-05-26T21:53:29.581+0000] {processor.py:186} INFO - Started process (PID=1004) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:53:29.582+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:53:29.584+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:53:29.584+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:53:29.612+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:53:29.644+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:53:29.643+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:53:29.660+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:53:29.660+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:53:29.680+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.105 seconds
+[2025-05-26T21:54:00.374+0000] {processor.py:186} INFO - Started process (PID=1015) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:54:00.376+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:54:00.380+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:54:00.380+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:54:00.413+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:54:00.447+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:54:00.446+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:54:00.462+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:54:00.462+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:54:00.486+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.121 seconds
+[2025-05-26T21:54:31.090+0000] {processor.py:186} INFO - Started process (PID=1026) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:54:31.091+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:54:31.093+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:54:31.092+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:54:31.117+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:54:31.141+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:54:31.141+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:54:31.155+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:54:31.155+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:54:31.174+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.090 seconds
+[2025-05-26T21:55:01.749+0000] {processor.py:186} INFO - Started process (PID=1037) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:55:01.750+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:55:01.752+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:55:01.752+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:55:01.778+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:55:01.805+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:55:01.805+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:55:01.819+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:55:01.819+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:55:01.837+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.095 seconds
+[2025-05-26T21:55:32.518+0000] {processor.py:186} INFO - Started process (PID=1048) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:55:32.519+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:55:32.521+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:55:32.521+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:55:32.546+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:55:32.575+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:55:32.575+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:55:32.588+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:55:32.588+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:55:32.606+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.093 seconds
+[2025-05-26T21:56:03.271+0000] {processor.py:186} INFO - Started process (PID=1059) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:56:03.272+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:56:03.274+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:56:03.274+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:56:03.301+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:56:03.329+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:56:03.328+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:56:03.342+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:56:03.342+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:56:03.359+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.094 seconds
+[2025-05-26T21:56:33.961+0000] {processor.py:186} INFO - Started process (PID=1076) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:56:33.962+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:56:33.964+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:56:33.964+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:56:33.990+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:56:34.018+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:56:34.018+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:56:34.031+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:56:34.031+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:56:34.050+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.094 seconds
+[2025-05-26T21:57:04.590+0000] {processor.py:186} INFO - Started process (PID=1087) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:57:04.591+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:57:04.595+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:57:04.594+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:57:04.624+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:57:04.653+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:57:04.653+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:57:04.669+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:57:04.669+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:57:04.688+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.105 seconds
+[2025-05-26T21:57:35.471+0000] {processor.py:186} INFO - Started process (PID=1098) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:57:35.472+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:57:35.474+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:57:35.474+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:57:35.500+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:57:35.526+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:57:35.526+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:57:35.540+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:57:35.539+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:57:35.557+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.091 seconds
+[2025-05-26T21:58:06.196+0000] {processor.py:186} INFO - Started process (PID=1109) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:58:06.197+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:58:06.199+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:58:06.199+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:58:06.223+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:58:06.247+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:58:06.247+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:58:06.262+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:58:06.262+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:58:06.280+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.090 seconds
+[2025-05-26T21:58:36.986+0000] {processor.py:186} INFO - Started process (PID=1120) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:58:36.987+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:58:36.989+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:58:36.988+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:58:37.013+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:58:37.037+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:58:37.037+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:58:37.053+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:58:37.053+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:58:37.071+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.091 seconds
+[2025-05-26T21:59:07.592+0000] {processor.py:186} INFO - Started process (PID=1131) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:59:07.592+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:59:07.595+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:59:07.595+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:59:07.619+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:59:07.643+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:59:07.643+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:59:07.657+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:59:07.656+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:59:07.676+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.090 seconds
+[2025-05-26T21:59:38.342+0000] {processor.py:186} INFO - Started process (PID=1142) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:59:38.342+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T21:59:38.345+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:59:38.344+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:59:38.369+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T21:59:38.394+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:59:38.393+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T21:59:38.407+0000] {logging_mixin.py:190} INFO - [2025-05-26T21:59:38.407+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T21:59:38.425+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.090 seconds
+[2025-05-26T22:00:08.955+0000] {processor.py:186} INFO - Started process (PID=1153) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T22:00:08.956+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T22:00:08.958+0000] {logging_mixin.py:190} INFO - [2025-05-26T22:00:08.958+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T22:00:08.985+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T22:00:09.010+0000] {logging_mixin.py:190} INFO - [2025-05-26T22:00:09.010+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T22:00:09.023+0000] {logging_mixin.py:190} INFO - [2025-05-26T22:00:09.023+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T22:00:09.041+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.092 seconds
+[2025-05-26T22:00:39.673+0000] {processor.py:186} INFO - Started process (PID=1164) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T22:00:39.674+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T22:00:39.676+0000] {logging_mixin.py:190} INFO - [2025-05-26T22:00:39.676+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T22:00:39.701+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T22:00:39.725+0000] {logging_mixin.py:190} INFO - [2025-05-26T22:00:39.725+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T22:00:39.738+0000] {logging_mixin.py:190} INFO - [2025-05-26T22:00:39.738+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T22:00:39.756+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.089 seconds
+[2025-05-26T22:01:10.489+0000] {processor.py:186} INFO - Started process (PID=1175) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T22:01:10.490+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T22:01:10.492+0000] {logging_mixin.py:190} INFO - [2025-05-26T22:01:10.492+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T22:01:10.517+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T22:01:10.541+0000] {logging_mixin.py:190} INFO - [2025-05-26T22:01:10.541+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T22:01:10.555+0000] {logging_mixin.py:190} INFO - [2025-05-26T22:01:10.555+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T22:01:10.572+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.089 seconds
+[2025-05-26T22:01:41.231+0000] {processor.py:186} INFO - Started process (PID=1186) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T22:01:41.232+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T22:01:41.235+0000] {logging_mixin.py:190} INFO - [2025-05-26T22:01:41.234+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T22:01:41.261+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T22:01:41.287+0000] {logging_mixin.py:190} INFO - [2025-05-26T22:01:41.287+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T22:01:41.300+0000] {logging_mixin.py:190} INFO - [2025-05-26T22:01:41.300+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T22:01:41.318+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.093 seconds
+[2025-05-26T22:02:11.869+0000] {processor.py:186} INFO - Started process (PID=1197) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T22:02:11.870+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T22:02:11.872+0000] {logging_mixin.py:190} INFO - [2025-05-26T22:02:11.871+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T22:02:11.899+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T22:02:11.930+0000] {logging_mixin.py:190} INFO - [2025-05-26T22:02:11.930+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T22:02:11.945+0000] {logging_mixin.py:190} INFO - [2025-05-26T22:02:11.945+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T22:02:11.964+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.102 seconds
+[2025-05-26T22:02:42.766+0000] {processor.py:186} INFO - Started process (PID=1208) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T22:02:42.767+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T22:02:42.769+0000] {logging_mixin.py:190} INFO - [2025-05-26T22:02:42.769+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T22:02:42.795+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T22:02:42.821+0000] {logging_mixin.py:190} INFO - [2025-05-26T22:02:42.821+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T22:02:42.834+0000] {logging_mixin.py:190} INFO - [2025-05-26T22:02:42.834+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T22:02:42.851+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.092 seconds
+[2025-05-26T22:03:13.538+0000] {processor.py:186} INFO - Started process (PID=1219) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T22:03:13.539+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T22:03:13.541+0000] {logging_mixin.py:190} INFO - [2025-05-26T22:03:13.541+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T22:03:13.565+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T22:03:13.590+0000] {logging_mixin.py:190} INFO - [2025-05-26T22:03:13.590+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T22:03:13.603+0000] {logging_mixin.py:190} INFO - [2025-05-26T22:03:13.602+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T22:03:13.620+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.088 seconds
+[2025-05-26T22:03:44.170+0000] {processor.py:186} INFO - Started process (PID=1230) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T22:03:44.171+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T22:03:44.173+0000] {logging_mixin.py:190} INFO - [2025-05-26T22:03:44.173+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T22:03:44.198+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T22:03:44.222+0000] {logging_mixin.py:190} INFO - [2025-05-26T22:03:44.221+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T22:03:44.235+0000] {logging_mixin.py:190} INFO - [2025-05-26T22:03:44.234+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T22:03:44.254+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.090 seconds
+[2025-05-26T22:04:14.894+0000] {processor.py:186} INFO - Started process (PID=1242) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T22:04:14.895+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T22:04:14.897+0000] {logging_mixin.py:190} INFO - [2025-05-26T22:04:14.897+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T22:04:14.922+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T22:04:14.947+0000] {logging_mixin.py:190} INFO - [2025-05-26T22:04:14.947+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T22:04:14.961+0000] {logging_mixin.py:190} INFO - [2025-05-26T22:04:14.961+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T22:04:14.985+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.098 seconds
+[2025-05-26T22:04:45.578+0000] {processor.py:186} INFO - Started process (PID=1253) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T22:04:45.579+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T22:04:45.587+0000] {logging_mixin.py:190} INFO - [2025-05-26T22:04:45.586+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T22:04:45.616+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T22:04:45.642+0000] {logging_mixin.py:190} INFO - [2025-05-26T22:04:45.641+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T22:04:45.655+0000] {logging_mixin.py:190} INFO - [2025-05-26T22:04:45.655+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T22:04:45.681+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.110 seconds
+[2025-05-26T22:05:16.155+0000] {processor.py:186} INFO - Started process (PID=1264) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T22:05:16.156+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T22:05:16.159+0000] {logging_mixin.py:190} INFO - [2025-05-26T22:05:16.158+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T22:05:16.188+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T22:05:16.219+0000] {logging_mixin.py:190} INFO - [2025-05-26T22:05:16.219+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T22:05:16.234+0000] {logging_mixin.py:190} INFO - [2025-05-26T22:05:16.234+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T22:05:16.253+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.108 seconds
+[2025-05-26T22:05:46.988+0000] {processor.py:186} INFO - Started process (PID=1275) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T22:05:46.989+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T22:05:46.992+0000] {logging_mixin.py:190} INFO - [2025-05-26T22:05:46.992+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T22:05:47.020+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T22:05:47.049+0000] {logging_mixin.py:190} INFO - [2025-05-26T22:05:47.049+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T22:05:47.064+0000] {logging_mixin.py:190} INFO - [2025-05-26T22:05:47.064+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T22:05:47.084+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.103 seconds
+[2025-05-26T22:06:17.573+0000] {processor.py:186} INFO - Started process (PID=1286) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T22:06:17.574+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T22:06:17.576+0000] {logging_mixin.py:190} INFO - [2025-05-26T22:06:17.575+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T22:06:17.603+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T22:06:17.629+0000] {logging_mixin.py:190} INFO - [2025-05-26T22:06:17.629+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T22:06:17.642+0000] {logging_mixin.py:190} INFO - [2025-05-26T22:06:17.642+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T22:06:17.660+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.093 seconds
+[2025-05-26T22:06:48.298+0000] {processor.py:186} INFO - Started process (PID=1297) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T22:06:48.299+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T22:06:48.301+0000] {logging_mixin.py:190} INFO - [2025-05-26T22:06:48.301+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T22:06:48.327+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T22:06:48.353+0000] {logging_mixin.py:190} INFO - [2025-05-26T22:06:48.353+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T22:06:48.367+0000] {logging_mixin.py:190} INFO - [2025-05-26T22:06:48.366+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T22:06:48.385+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.093 seconds
+[2025-05-26T22:07:18.924+0000] {processor.py:186} INFO - Started process (PID=1308) to work on /opt/airflow/dags/04_transform_data.py
+[2025-05-26T22:07:18.925+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_transform_data.py for tasks to queue
+[2025-05-26T22:07:18.928+0000] {logging_mixin.py:190} INFO - [2025-05-26T22:07:18.928+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T22:07:18.976+0000] {processor.py:925} INFO - DAG(s) '04_transform_data' retrieved from /opt/airflow/dags/04_transform_data.py
+[2025-05-26T22:07:19.026+0000] {logging_mixin.py:190} INFO - [2025-05-26T22:07:19.026+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-05-26T22:07:19.053+0000] {logging_mixin.py:190} INFO - [2025-05-26T22:07:19.052+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_transform_data to None, run_after=None
+[2025-05-26T22:07:19.085+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_transform_data.py took 0.169 seconds

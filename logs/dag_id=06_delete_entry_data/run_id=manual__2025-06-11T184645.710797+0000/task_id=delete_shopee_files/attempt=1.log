@@ -1,0 +1,17 @@
+[2025-06-11T18:46:47.454+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-06-11T18:46:47.479+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: 06_delete_entry_data.delete_shopee_files manual__2025-06-11T18:46:45.710797+00:00 [queued]>
+[2025-06-11T18:46:47.488+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: 06_delete_entry_data.delete_shopee_files manual__2025-06-11T18:46:45.710797+00:00 [queued]>
+[2025-06-11T18:46:47.489+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-06-11T18:46:47.502+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): delete_shopee_files> on 2025-06-11 18:46:45.710797+00:00
+[2025-06-11T18:46:47.508+0000] {standard_task_runner.py:72} INFO - Started process 723 to run task
+[2025-06-11T18:46:47.513+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', '06_delete_entry_data', 'delete_shopee_files', 'manual__2025-06-11T18:46:45.710797+00:00', '--job-id', '887', '--raw', '--subdir', 'DAGS_FOLDER/06_delete_files_tables.py', '--cfg-path', '/tmp/tmpk9fzy2ww']
+[2025-06-11T18:46:47.516+0000] {standard_task_runner.py:105} INFO - Job 887: Subtask delete_shopee_files
+[2025-06-11T18:46:47.577+0000] {task_command.py:467} INFO - Running <TaskInstance: 06_delete_entry_data.delete_shopee_files manual__2025-06-11T18:46:45.710797+00:00 [running]> on host 28e6a58e4107
+[2025-06-11T18:46:47.675+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='06_delete_entry_data' AIRFLOW_CTX_TASK_ID='delete_shopee_files' AIRFLOW_CTX_EXECUTION_DATE='2025-06-11T18:46:45.710797+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-06-11T18:46:45.710797+00:00'
+[2025-06-11T18:46:47.676+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-06-11T18:46:47.698+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-06-11T18:46:47.714+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-06-11T18:46:47.716+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=06_delete_entry_data, task_id=delete_shopee_files, run_id=manual__2025-06-11T18:46:45.710797+00:00, execution_date=20250611T184645, start_date=20250611T184647, end_date=20250611T184647
+[2025-06-11T18:46:47.765+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-06-11T18:46:47.782+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-06-11T18:46:47.784+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

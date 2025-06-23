@@ -1,0 +1,157 @@
+[2025-06-12T20:45:29.615+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-06-12T20:45:29.638+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: 03_load_data_dev.load_mercadolivre manual__2025-06-12T20:45:26.608369+00:00 [queued]>
+[2025-06-12T20:45:29.648+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: 03_load_data_dev.load_mercadolivre manual__2025-06-12T20:45:26.608369+00:00 [queued]>
+[2025-06-12T20:45:29.650+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-06-12T20:45:29.666+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): load_mercadolivre> on 2025-06-12 20:45:26.608369+00:00
+[2025-06-12T20:45:29.671+0000] {standard_task_runner.py:72} INFO - Started process 618 to run task
+[2025-06-12T20:45:29.675+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', '03_load_data_dev', 'load_mercadolivre', 'manual__2025-06-12T20:45:26.608369+00:00', '--job-id', '1022', '--raw', '--subdir', 'DAGS_FOLDER/03_load_data_dev.py', '--cfg-path', '/tmp/tmpvdyn7jxa']
+[2025-06-12T20:45:29.678+0000] {standard_task_runner.py:105} INFO - Job 1022: Subtask load_mercadolivre
+[2025-06-12T20:45:29.742+0000] {task_command.py:467} INFO - Running <TaskInstance: 03_load_data_dev.load_mercadolivre manual__2025-06-12T20:45:26.608369+00:00 [running]> on host 28e6a58e4107
+[2025-06-12T20:45:29.849+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='03_load_data_dev' AIRFLOW_CTX_TASK_ID='load_mercadolivre' AIRFLOW_CTX_EXECUTION_DATE='2025-06-12T20:45:26.608369+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-06-12T20:45:26.608369+00:00'
+[2025-06-12T20:45:29.850+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-06-12T20:45:31.276+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.9/site-packages/dlt/helpers/dbt/__init__.py:3: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+
+[2025-06-12T20:45:31.709+0000] {config_providers_context.py:156} WARNING - Airflow variable 'dlt_secrets_toml' was not found. This Airflow variable is a recommended place to hold the content of secrets.toml.If you do not use Airflow variables to hold dlt configuration or use variables with other names you can ignore this warning.
+[2025-06-12T20:45:33.847+0000] {logging_mixin.py:190} INFO - trying to load ./extraction/mercadolivre/data/raw/dev/ml_sell_data_2024-10-01T00:00:00.000-03:00_2025-01-31T00:00:00.000-03:00_0.json to sales_db
+[2025-06-12T20:45:36.507+0000] {logging_mixin.py:190} INFO - Pipeline mercadolivre_data load step completed in 0.11 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749761135.0589185 is LOADED and contains no failed jobs
+[2025-06-12T20:45:36.509+0000] {logging_mixin.py:190} INFO - Run started at 2025-06-12 20:45:33.848650+00:00 and COMPLETED in 2.66 seconds with 4 steps.
+Step extract COMPLETED in 0.72 seconds.
+
+Load package 1749761135.0589185 is EXTRACTED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step normalize COMPLETED in 0.43 seconds.
+Normalized data for the following tables:
+- entry_mercadolivre: 50 row(s)
+- entry_mercadolivre__payments: 56 row(s)
+- entry_mercadolivre__payments__available_actions: 56 row(s)
+- entry_mercadolivre__order_items: 50 row(s)
+- entry_mercadolivre__tags: 134 row(s)
+- entry_mercadolivre__context__flows: 11 row(s)
+- entry_mercadolivre__order_items__item__variation_attributes: 41 row(s)
+- entry_mercadolivre__mediations: 6 row(s)
+
+Load package 1749761135.0589185 is NORMALIZED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step load COMPLETED in 0.33 seconds.
+Pipeline mercadolivre_data load step completed in 0.11 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749761135.0589185 is LOADED and contains no failed jobs
+
+Step run COMPLETED in 2.66 seconds.
+Pipeline mercadolivre_data load step completed in 0.11 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749761135.0589185 is LOADED and contains no failed jobs
+[2025-06-12T20:45:36.518+0000] {logging_mixin.py:190} INFO - trying to load ./extraction/mercadolivre/data/raw/dev/ml_sell_data_2024-10-01T00:00:00.000-03:00_2025-01-31T00:00:00.000-03:00_1.json to sales_db
+[2025-06-12T20:45:36.869+0000] {logging_mixin.py:190} INFO - Pipeline mercadolivre_data load step completed in 0.10 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749761136.5892942 is LOADED and contains no failed jobs
+[2025-06-12T20:45:36.871+0000] {logging_mixin.py:190} INFO - Run started at 2025-06-12 20:45:36.519898+00:00 and COMPLETED in 0.35 seconds with 4 steps.
+Step extract COMPLETED in 0.08 seconds.
+
+Load package 1749761136.5892942 is EXTRACTED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step normalize COMPLETED in 0.11 seconds.
+Normalized data for the following tables:
+- entry_mercadolivre: 50 row(s)
+- entry_mercadolivre__payments: 50 row(s)
+- entry_mercadolivre__payments__available_actions: 50 row(s)
+- entry_mercadolivre__order_items: 50 row(s)
+- entry_mercadolivre__tags: 163 row(s)
+- entry_mercadolivre__context__flows: 18 row(s)
+- entry_mercadolivre__order_items__item__variation_attributes: 38 row(s)
+- entry_mercadolivre__mediations: 7 row(s)
+
+Load package 1749761136.5892942 is NORMALIZED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step load COMPLETED in 0.14 seconds.
+Pipeline mercadolivre_data load step completed in 0.10 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749761136.5892942 is LOADED and contains no failed jobs
+
+Step run COMPLETED in 0.35 seconds.
+Pipeline mercadolivre_data load step completed in 0.10 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749761136.5892942 is LOADED and contains no failed jobs
+[2025-06-12T20:45:36.880+0000] {logging_mixin.py:190} INFO - trying to load ./extraction/mercadolivre/data/raw/dev/ml_sell_data_2024-10-01T00:00:00.000-03:00_2025-01-31T00:00:00.000-03:00_2.json to sales_db
+[2025-06-12T20:45:37.221+0000] {logging_mixin.py:190} INFO - Pipeline mercadolivre_data load step completed in 0.10 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749761136.946103 is LOADED and contains no failed jobs
+[2025-06-12T20:45:37.223+0000] {logging_mixin.py:190} INFO - Run started at 2025-06-12 20:45:36.882025+00:00 and COMPLETED in 0.34 seconds with 4 steps.
+Step extract COMPLETED in 0.07 seconds.
+
+Load package 1749761136.946103 is EXTRACTED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step normalize COMPLETED in 0.11 seconds.
+Normalized data for the following tables:
+- entry_mercadolivre: 50 row(s)
+- entry_mercadolivre__payments: 53 row(s)
+- entry_mercadolivre__payments__available_actions: 53 row(s)
+- entry_mercadolivre__order_items: 50 row(s)
+- entry_mercadolivre__order_items__item__variation_attributes: 57 row(s)
+- entry_mercadolivre__tags: 156 row(s)
+- entry_mercadolivre__mediations: 7 row(s)
+- entry_mercadolivre__context__flows: 5 row(s)
+
+Load package 1749761136.946103 is NORMALIZED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step load COMPLETED in 0.13 seconds.
+Pipeline mercadolivre_data load step completed in 0.10 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749761136.946103 is LOADED and contains no failed jobs
+
+Step run COMPLETED in 0.34 seconds.
+Pipeline mercadolivre_data load step completed in 0.10 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749761136.946103 is LOADED and contains no failed jobs
+[2025-06-12T20:45:37.230+0000] {logging_mixin.py:190} INFO - trying to load ./extraction/mercadolivre/data/raw/dev/ml_sell_data_2024-10-01T00:00:00.000-03:00_2025-01-31T00:00:00.000-03:00_3.json to sales_db
+[2025-06-12T20:45:37.545+0000] {logging_mixin.py:190} INFO - Pipeline mercadolivre_data load step completed in 0.10 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749761137.298697 is LOADED and contains no failed jobs
+[2025-06-12T20:45:37.547+0000] {logging_mixin.py:190} INFO - Run started at 2025-06-12 20:45:37.231844+00:00 and COMPLETED in 0.31 seconds with 4 steps.
+Step extract COMPLETED in 0.07 seconds.
+
+Load package 1749761137.298697 is EXTRACTED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step normalize COMPLETED in 0.08 seconds.
+Normalized data for the following tables:
+- entry_mercadolivre: 25 row(s)
+- entry_mercadolivre__payments: 27 row(s)
+- entry_mercadolivre__payments__available_actions: 27 row(s)
+- entry_mercadolivre__order_items: 25 row(s)
+- entry_mercadolivre__order_items__item__variation_attributes: 26 row(s)
+- entry_mercadolivre__tags: 77 row(s)
+- entry_mercadolivre__context__flows: 2 row(s)
+- entry_mercadolivre__mediations: 1 row(s)
+
+Load package 1749761137.298697 is NORMALIZED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step load COMPLETED in 0.13 seconds.
+Pipeline mercadolivre_data load step completed in 0.10 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749761137.298697 is LOADED and contains no failed jobs
+
+Step run COMPLETED in 0.31 seconds.
+Pipeline mercadolivre_data load step completed in 0.10 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/dev_sales_db location to store data
+Load package 1749761137.298697 is LOADED and contains no failed jobs
+[2025-06-12T20:45:37.548+0000] {logging_mixin.py:190} INFO - [WARNING] - file ./extraction/mercadolivre/data/raw/dev/temp.txt does not have .json extension and could not be loaded.
+[2025-06-12T20:45:37.549+0000] {python.py:240} INFO - Done. Returned value was: -1
+[2025-06-12T20:45:37.574+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-06-12T20:45:37.575+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=03_load_data_dev, task_id=load_mercadolivre, run_id=manual__2025-06-12T20:45:26.608369+00:00, execution_date=20250612T204526, start_date=20250612T204529, end_date=20250612T204537
+[2025-06-12T20:45:37.599+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-06-12T20:45:37.611+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

@@ -1,0 +1,52 @@
+[2025-05-15T20:48:17.388+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-05-15T20:48:17.413+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: 03_load_data.load_mercadolivre manual__2025-05-15T20:48:15.543774+00:00 [queued]>
+[2025-05-15T20:48:17.425+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: 03_load_data.load_mercadolivre manual__2025-05-15T20:48:15.543774+00:00 [queued]>
+[2025-05-15T20:48:17.427+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-05-15T20:48:17.442+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): load_mercadolivre> on 2025-05-15 20:48:15.543774+00:00
+[2025-05-15T20:48:17.448+0000] {standard_task_runner.py:72} INFO - Started process 587 to run task
+[2025-05-15T20:48:17.455+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', '03_load_data', 'load_mercadolivre', 'manual__2025-05-15T20:48:15.543774+00:00', '--job-id', '21', '--raw', '--subdir', 'DAGS_FOLDER/03_load_data.py', '--cfg-path', '/tmp/tmp2y4qcxr8']
+[2025-05-15T20:48:17.458+0000] {standard_task_runner.py:105} INFO - Job 21: Subtask load_mercadolivre
+[2025-05-15T20:48:17.540+0000] {task_command.py:467} INFO - Running <TaskInstance: 03_load_data.load_mercadolivre manual__2025-05-15T20:48:15.543774+00:00 [running]> on host b43b94ab59b1
+[2025-05-15T20:48:17.646+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='03_load_data' AIRFLOW_CTX_TASK_ID='load_mercadolivre' AIRFLOW_CTX_EXECUTION_DATE='2025-05-15T20:48:15.543774+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-05-15T20:48:15.543774+00:00'
+[2025-05-15T20:48:17.648+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-05-15T20:48:19.631+0000] {config_providers_context.py:156} WARNING - Airflow variable 'dlt_secrets_toml' was not found. This Airflow variable is a recommended place to hold the content of secrets.toml.If you do not use Airflow variables to hold dlt configuration or use variables with other names you can ignore this warning.
+[2025-05-15T20:48:21.908+0000] {logging_mixin.py:190} INFO - trying to load ./extraction/mercadolivre/data/raw/test_3_4.json to sales_db
+[2025-05-15T20:48:24.978+0000] {logging_mixin.py:190} INFO - Pipeline mercadolivre_data load step completed in 0.12 seconds
+1 load package(s) were loaded to destination postgres and into dataset stg
+The postgres destination used postgresql://***:***@pgdatabase:5432/sales_db location to store data
+Load package 1747342103.3022523 is LOADED and contains no failed jobs
+[2025-05-15T20:48:24.979+0000] {logging_mixin.py:190} INFO - Run started at 2025-05-15 20:48:21.909846+00:00 and COMPLETED in 3.07 seconds with 4 steps.
+Step extract COMPLETED in 0.88 seconds.
+
+Load package 1747342103.3022523 is EXTRACTED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step normalize COMPLETED in 0.46 seconds.
+Normalized data for the following tables:
+- stg_mercadolivre: 50 row(s)
+- stg_mercadolivre__payments: 53 row(s)
+- stg_mercadolivre__payments__available_actions: 53 row(s)
+- stg_mercadolivre__order_items: 50 row(s)
+- stg_mercadolivre__order_items__item__variation_attributes: 53 row(s)
+- stg_mercadolivre__tags: 154 row(s)
+- stg_mercadolivre__mediations: 5 row(s)
+- stg_mercadolivre__context__flows: 5 row(s)
+
+Load package 1747342103.3022523 is NORMALIZED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step load COMPLETED in 0.37 seconds.
+Pipeline mercadolivre_data load step completed in 0.12 seconds
+1 load package(s) were loaded to destination postgres and into dataset stg
+The postgres destination used postgresql://***:***@pgdatabase:5432/sales_db location to store data
+Load package 1747342103.3022523 is LOADED and contains no failed jobs
+
+Step run COMPLETED in 3.06 seconds.
+Pipeline mercadolivre_data load step completed in 0.12 seconds
+1 load package(s) were loaded to destination postgres and into dataset stg
+The postgres destination used postgresql://***:***@pgdatabase:5432/sales_db location to store data
+Load package 1747342103.3022523 is LOADED and contains no failed jobs
+[2025-05-15T20:48:24.980+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-05-15T20:48:24.992+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-05-15T20:48:24.992+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=03_load_data, task_id=load_mercadolivre, run_id=manual__2025-05-15T20:48:15.543774+00:00, execution_date=20250515T204815, start_date=20250515T204817, end_date=20250515T204824
+[2025-05-15T20:48:25.018+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-05-15T20:48:25.035+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-05-15T20:48:25.038+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

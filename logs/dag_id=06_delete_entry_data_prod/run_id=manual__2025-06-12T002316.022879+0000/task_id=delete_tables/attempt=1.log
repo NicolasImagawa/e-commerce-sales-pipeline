@@ -1,0 +1,34 @@
+[2025-06-12T00:23:17.318+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-06-12T00:23:17.342+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: 06_delete_entry_data_prod.delete_tables manual__2025-06-12T00:23:16.022879+00:00 [queued]>
+[2025-06-12T00:23:17.352+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: 06_delete_entry_data_prod.delete_tables manual__2025-06-12T00:23:16.022879+00:00 [queued]>
+[2025-06-12T00:23:17.353+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-06-12T00:23:17.367+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): delete_tables> on 2025-06-12 00:23:16.022879+00:00
+[2025-06-12T00:23:17.372+0000] {standard_task_runner.py:72} INFO - Started process 10571 to run task
+[2025-06-12T00:23:17.376+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', '06_delete_entry_data_prod', 'delete_tables', 'manual__2025-06-12T00:23:16.022879+00:00', '--job-id', '1011', '--raw', '--subdir', 'DAGS_FOLDER/06_delete_files_tables_prod.py', '--cfg-path', '/tmp/tmproa9cfh_']
+[2025-06-12T00:23:17.377+0000] {standard_task_runner.py:105} INFO - Job 1011: Subtask delete_tables
+[2025-06-12T00:23:17.439+0000] {task_command.py:467} INFO - Running <TaskInstance: 06_delete_entry_data_prod.delete_tables manual__2025-06-12T00:23:16.022879+00:00 [running]> on host 28e6a58e4107
+[2025-06-12T00:23:17.537+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='06_delete_entry_data_prod' AIRFLOW_CTX_TASK_ID='delete_tables' AIRFLOW_CTX_EXECUTION_DATE='2025-06-12T00:23:16.022879+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-06-12T00:23:16.022879+00:00'
+[2025-06-12T00:23:17.539+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-06-12T00:23:17.559+0000] {logging_mixin.py:190} INFO - Table entry.entry_mercadolivre successfully deleted.
+[2025-06-12T00:23:17.561+0000] {logging_mixin.py:190} INFO - Table entry.entry_mercadolivre__context__flows successfully deleted.
+[2025-06-12T00:23:17.563+0000] {logging_mixin.py:190} INFO - Table entry.entry_mercadolivre__mediations successfully deleted.
+[2025-06-12T00:23:17.564+0000] {logging_mixin.py:190} INFO - Table entry.entry_mercadolivre__order_items successfully deleted.
+[2025-06-12T00:23:17.565+0000] {logging_mixin.py:190} INFO - Table entry.entry_mercadolivre__order_items__item__variation_attributes successfully deleted.
+[2025-06-12T00:23:17.567+0000] {logging_mixin.py:190} INFO - Table entry.entry_mercadolivre__payments successfully deleted.
+[2025-06-12T00:23:17.568+0000] {logging_mixin.py:190} INFO - Table entry.entry_mercadolivre__payments__available_actions successfully deleted.
+[2025-06-12T00:23:17.569+0000] {logging_mixin.py:190} INFO - Table entry.entry_mercadolivre__tags successfully deleted.
+[2025-06-12T00:23:17.571+0000] {logging_mixin.py:190} INFO - Table entry.entry_mercadolivre_sh successfully deleted.
+[2025-06-12T00:23:17.572+0000] {logging_mixin.py:190} INFO - Table entry.entry_mercadolivre_sh__destination__shipping_address__types successfully deleted.
+[2025-06-12T00:23:17.574+0000] {logging_mixin.py:190} INFO - Table entry.entry_mercadolivre_sh__items_types successfully deleted.
+[2025-06-12T00:23:17.575+0000] {logging_mixin.py:190} INFO - Table entry.entry_mercadolivre_sh__origin__shipping_address__types successfully deleted.
+[2025-06-12T00:23:17.576+0000] {logging_mixin.py:190} INFO - Table entry.entry_mercadolivre_sh__tags successfully deleted.
+[2025-06-12T00:23:17.577+0000] {logging_mixin.py:190} INFO - Table entry.entry_shopee successfully deleted.
+[2025-06-12T00:23:17.578+0000] {logging_mixin.py:190} INFO - Table entry._dlt_loads successfully deleted.
+[2025-06-12T00:23:17.579+0000] {logging_mixin.py:190} INFO - Table entry._dlt_pipeline_state successfully deleted.
+[2025-06-12T00:23:17.580+0000] {logging_mixin.py:190} INFO - Table entry._dlt_version successfully deleted.
+[2025-06-12T00:23:17.587+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-06-12T00:23:17.601+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-06-12T00:23:17.602+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=06_delete_entry_data_prod, task_id=delete_tables, run_id=manual__2025-06-12T00:23:16.022879+00:00, execution_date=20250612T002316, start_date=20250612T002317, end_date=20250612T002317
+[2025-06-12T00:23:17.629+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-06-12T00:23:17.646+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-06-12T00:23:17.648+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

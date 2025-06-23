@@ -1,0 +1,76 @@
+[2025-06-10T22:15:22.761+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-06-10T22:15:22.782+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: 05_transform_data.run_dbt manual__2025-06-10T22:15:07.590638+00:00 [queued]>
+[2025-06-10T22:15:22.791+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: 05_transform_data.run_dbt manual__2025-06-10T22:15:07.590638+00:00 [queued]>
+[2025-06-10T22:15:22.792+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-06-10T22:15:22.807+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): run_dbt> on 2025-06-10 22:15:07.590638+00:00
+[2025-06-10T22:15:22.812+0000] {standard_task_runner.py:72} INFO - Started process 10437 to run task
+[2025-06-10T22:15:22.815+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', '05_transform_data', 'run_dbt', 'manual__2025-06-10T22:15:07.590638+00:00', '--job-id', '782', '--raw', '--subdir', 'DAGS_FOLDER/05_transform_data.py', '--cfg-path', '/tmp/tmpwk4jiyjq']
+[2025-06-10T22:15:22.818+0000] {standard_task_runner.py:105} INFO - Job 782: Subtask run_dbt
+[2025-06-10T22:15:22.876+0000] {task_command.py:467} INFO - Running <TaskInstance: 05_transform_data.run_dbt manual__2025-06-10T22:15:07.590638+00:00 [running]> on host 28e6a58e4107
+[2025-06-10T22:15:22.965+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='05_transform_data' AIRFLOW_CTX_TASK_ID='run_dbt' AIRFLOW_CTX_EXECUTION_DATE='2025-06-10T22:15:07.590638+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-06-10T22:15:07.590638+00:00'
+[2025-06-10T22:15:22.967+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-06-10T22:15:24.559+0000] {logging_mixin.py:190} INFO - 22:15:24  Running with dbt=1.9.5
+[2025-06-10T22:15:24.943+0000] {logging_mixin.py:190} INFO - 22:15:24  Registered adapter: postgres=1.9.0
+[2025-06-10T22:15:26.340+0000] {logging_mixin.py:190} INFO - 22:15:26  [WARNING]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.e_commerce_sales.example
+[2025-06-10T22:15:26.726+0000] {logging_mixin.py:190} INFO - 22:15:26  Found 21 models, 12 sources, 549 macros, 1 unit test
+[2025-06-10T22:15:26.731+0000] {logging_mixin.py:190} INFO - 22:15:26
+[2025-06-10T22:15:26.733+0000] {logging_mixin.py:190} INFO - 22:15:26  Concurrency: 4 threads (target='dev')
+[2025-06-10T22:15:26.734+0000] {logging_mixin.py:190} INFO - 22:15:26
+[2025-06-10T22:15:26.893+0000] {logging_mixin.py:190} INFO - 22:15:26  1 of 21 START sql incremental model sales_stg.stg_mercadolivre ................. [RUN]
+[2025-06-10T22:15:26.895+0000] {logging_mixin.py:190} INFO - 22:15:26  2 of 21 START sql incremental model sales_stg.stg_mercadolivre__order_items .... [RUN]
+[2025-06-10T22:15:26.897+0000] {logging_mixin.py:190} INFO - 22:15:26  3 of 21 START sql incremental model sales_stg.stg_mercadolivre__payments ....... [RUN]
+[2025-06-10T22:15:26.899+0000] {logging_mixin.py:190} INFO - 22:15:26  4 of 21 START sql incremental model sales_stg.stg_mercadolivre_sh .............. [RUN]
+[2025-06-10T22:15:27.191+0000] {logging_mixin.py:190} INFO - 22:15:27  2 of 21 OK created sql incremental model sales_stg.stg_mercadolivre__order_items  [SELECT 285 in 0.28s]
+[2025-06-10T22:15:27.193+0000] {logging_mixin.py:190} INFO - 22:15:27  1 of 21 OK created sql incremental model sales_stg.stg_mercadolivre ............ [SELECT 285 in 0.29s]
+[2025-06-10T22:15:27.195+0000] {logging_mixin.py:190} INFO - 22:15:27  3 of 21 OK created sql incremental model sales_stg.stg_mercadolivre__payments .. [SELECT 301 in 0.28s]
+[2025-06-10T22:15:27.198+0000] {logging_mixin.py:190} INFO - 22:15:27  4 of 21 OK created sql incremental model sales_stg.stg_mercadolivre_sh ......... [SELECT 263 in 0.28s]
+[2025-06-10T22:15:27.207+0000] {logging_mixin.py:190} INFO - 22:15:27  5 of 21 START sql incremental model sales_stg.stg_shopee ....................... [RUN]
+[2025-06-10T22:15:27.211+0000] {logging_mixin.py:190} INFO - 22:15:27  6 of 21 START sql incremental model sales.mercadolivre_orders_results .......... [RUN]
+[2025-06-10T22:15:27.348+0000] {logging_mixin.py:190} INFO - 22:15:27  5 of 21 OK created sql incremental model sales_stg.stg_shopee .................. [SELECT 2875 in 0.14s]
+[2025-06-10T22:15:27.353+0000] {logging_mixin.py:190} INFO - 22:15:27  7 of 21 START sql incremental model sales.shopee_orders_results ................ [RUN]
+[2025-06-10T22:15:27.466+0000] {logging_mixin.py:190} INFO - 22:15:27  7 of 21 OK created sql incremental model sales.shopee_orders_results ........... [SELECT 2679 in 0.11s]
+[2025-06-10T22:15:27.473+0000] {logging_mixin.py:190} INFO - 22:15:27  8 of 21 START sql incremental model sales.dim_shopee_buyer ..................... [RUN]
+[2025-06-10T22:15:27.475+0000] {logging_mixin.py:190} INFO - 22:15:27  9 of 21 START sql incremental model sales.dim_shopee_date ...................... [RUN]
+[2025-06-10T22:15:27.477+0000] {logging_mixin.py:190} INFO - 22:15:27  10 of 21 START sql incremental model sales.dim_shopee_orders_status ............ [RUN]
+[2025-06-10T22:15:27.614+0000] {logging_mixin.py:190} INFO - 22:15:27  10 of 21 OK created sql incremental model sales.dim_shopee_orders_status ....... [SELECT 2679 in 0.13s]
+[2025-06-10T22:15:27.625+0000] {logging_mixin.py:190} INFO - 22:15:27  9 of 21 OK created sql incremental model sales.dim_shopee_date ................. [SELECT 2679 in 0.14s]
+[2025-06-10T22:15:27.627+0000] {logging_mixin.py:190} INFO - 22:15:27  8 of 21 OK created sql incremental model sales.dim_shopee_buyer ................ [SELECT 2567 in 0.14s]
+[2025-06-10T22:15:27.628+0000] {logging_mixin.py:190} INFO - 22:15:27  11 of 21 START sql incremental model sales.dim_shopee_product .................. [RUN]
+[2025-06-10T22:15:27.636+0000] {logging_mixin.py:190} INFO - 22:15:27  12 of 21 START sql view model sales.sum_shopee_monthly_profit .................. [RUN]
+[2025-06-10T22:15:27.638+0000] {logging_mixin.py:190} INFO - 22:15:27  13 of 21 START sql view model sales.sum_shopee_monthly_revenue ................. [RUN]
+[2025-06-10T22:15:27.785+0000] {logging_mixin.py:190} INFO - 22:15:27  11 of 21 OK created sql incremental model sales.dim_shopee_product ............. [SELECT 180 in 0.15s]
+[2025-06-10T22:15:27.816+0000] {logging_mixin.py:190} INFO - 22:15:27  14 of 21 START sql view model sales.sum_shopee_products_sold ................... [RUN]
+[2025-06-10T22:15:27.837+0000] {logging_mixin.py:190} INFO - 22:15:27  12 of 21 OK created sql view model sales.sum_shopee_monthly_profit ............. [CREATE VIEW in 0.18s]
+[2025-06-10T22:15:27.840+0000] {logging_mixin.py:190} INFO - 22:15:27  13 of 21 OK created sql view model sales.sum_shopee_monthly_revenue ............ [CREATE VIEW in 0.18s]
+[2025-06-10T22:15:27.908+0000] {logging_mixin.py:190} INFO - 22:15:27  14 of 21 OK created sql view model sales.sum_shopee_products_sold .............. [CREATE VIEW in 0.09s]
+[2025-06-10T22:15:41.302+0000] {logging_mixin.py:190} INFO - 22:15:41  6 of 21 OK created sql incremental model sales.mercadolivre_orders_results ..... [SELECT 190 in 14.08s]
+[2025-06-10T22:15:41.310+0000] {logging_mixin.py:190} INFO - 22:15:41  15 of 21 START sql incremental model sales.dim_mercadolivre_buyer .............. [RUN]
+[2025-06-10T22:15:41.311+0000] {logging_mixin.py:190} INFO - 22:15:41  16 of 21 START sql incremental model sales.dim_mercadolivre_date ............... [RUN]
+[2025-06-10T22:15:41.313+0000] {logging_mixin.py:190} INFO - 22:15:41  17 of 21 START sql incremental model sales.dim_mercadolivre_orders_status ...... [RUN]
+[2025-06-10T22:15:41.315+0000] {logging_mixin.py:190} INFO - 22:15:41  18 of 21 START sql incremental model sales.dim_mercadolivre_product ............ [RUN]
+[2025-06-10T22:15:41.453+0000] {logging_mixin.py:190} INFO - 22:15:41  15 of 21 OK created sql incremental model sales.dim_mercadolivre_buyer ......... [SELECT 188 in 0.13s]
+[2025-06-10T22:15:41.467+0000] {logging_mixin.py:190} INFO - 22:15:41  16 of 21 OK created sql incremental model sales.dim_mercadolivre_date .......... [SELECT 190 in 0.15s]
+[2025-06-10T22:15:41.474+0000] {logging_mixin.py:190} INFO - 22:15:41  17 of 21 OK created sql incremental model sales.dim_mercadolivre_orders_status . [SELECT 190 in 0.15s]
+[2025-06-10T22:15:41.476+0000] {logging_mixin.py:190} INFO - 22:15:41  18 of 21 OK created sql incremental model sales.dim_mercadolivre_product ....... [SELECT 65 in 0.15s]
+[2025-06-10T22:15:41.481+0000] {logging_mixin.py:190} INFO - 22:15:41  19 of 21 START sql view model sales.sum_mercadolivre_monthly_profit ............ [RUN]
+[2025-06-10T22:15:41.483+0000] {logging_mixin.py:190} INFO - 22:15:41  20 of 21 START sql view model sales.sum_mercadolivre_monthly_revenue ........... [RUN]
+[2025-06-10T22:15:41.488+0000] {logging_mixin.py:190} INFO - 22:15:41  21 of 21 START sql view model sales.sum_mercadolivre_monthly_sold .............. [RUN]
+[2025-06-10T22:15:41.655+0000] {logging_mixin.py:190} INFO - 22:15:41  19 of 21 OK created sql view model sales.sum_mercadolivre_monthly_profit ....... [CREATE VIEW in 0.16s]
+[2025-06-10T22:15:41.687+0000] {logging_mixin.py:190} INFO - 22:15:41  21 of 21 OK created sql view model sales.sum_mercadolivre_monthly_sold ......... [CREATE VIEW in 0.18s]
+[2025-06-10T22:15:41.689+0000] {logging_mixin.py:190} INFO - 22:15:41  20 of 21 OK created sql view model sales.sum_mercadolivre_monthly_revenue ...... [CREATE VIEW in 0.20s]
+[2025-06-10T22:15:41.718+0000] {logging_mixin.py:190} INFO - 22:15:41
+[2025-06-10T22:15:41.720+0000] {logging_mixin.py:190} INFO - 22:15:41  Finished running 15 incremental models, 6 view models in 0 hours 0 minutes and 14.98 seconds (14.98s).
+[2025-06-10T22:15:41.808+0000] {logging_mixin.py:190} INFO - 22:15:41
+[2025-06-10T22:15:41.810+0000] {logging_mixin.py:190} INFO - 22:15:41  Completed successfully
+[2025-06-10T22:15:41.812+0000] {logging_mixin.py:190} INFO - 22:15:41
+[2025-06-10T22:15:41.814+0000] {logging_mixin.py:190} INFO - 22:15:41  Done. PASS=21 WARN=0 ERROR=0 SKIP=0 TOTAL=21
+[2025-06-10T22:15:42.742+0000] {logging_mixin.py:190} INFO - Transformation sucessfully done.
+[2025-06-10T22:15:42.744+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-06-10T22:15:42.756+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-06-10T22:15:42.757+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=05_transform_data, task_id=run_dbt, run_id=manual__2025-06-10T22:15:07.590638+00:00, execution_date=20250610T221507, start_date=20250610T221522, end_date=20250610T221542
+[2025-06-10T22:15:42.809+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-06-10T22:15:42.828+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-06-10T22:15:42.828+0000] {standard_task_runner.py:217} INFO - Process not found (most likely exited), stop collecting metrics
+[2025-06-10T22:15:42.832+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

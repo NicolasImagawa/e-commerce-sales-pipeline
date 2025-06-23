@@ -1,0 +1,18 @@
+[2025-06-10T21:17:05.011+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-06-10T21:17:05.028+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: 01_extract_data.ml_access_token manual__2025-06-10T21:17:03.088429+00:00 [queued]>
+[2025-06-10T21:17:05.035+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: 01_extract_data.ml_access_token manual__2025-06-10T21:17:03.088429+00:00 [queued]>
+[2025-06-10T21:17:05.036+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-06-10T21:17:05.048+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): ml_access_token> on 2025-06-10 21:17:03.088429+00:00
+[2025-06-10T21:17:05.053+0000] {standard_task_runner.py:72} INFO - Started process 5146 to run task
+[2025-06-10T21:17:05.056+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', '01_extract_data', 'ml_access_token', 'manual__2025-06-10T21:17:03.088429+00:00', '--job-id', '736', '--raw', '--subdir', 'DAGS_FOLDER/01_extract_dag.py', '--cfg-path', '/tmp/tmpz0lqkh7a']
+[2025-06-10T21:17:05.058+0000] {standard_task_runner.py:105} INFO - Job 736: Subtask ml_access_token
+[2025-06-10T21:17:05.114+0000] {task_command.py:467} INFO - Running <TaskInstance: 01_extract_data.ml_access_token manual__2025-06-10T21:17:03.088429+00:00 [running]> on host 28e6a58e4107
+[2025-06-10T21:17:05.194+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='01_extract_data' AIRFLOW_CTX_TASK_ID='ml_access_token' AIRFLOW_CTX_EXECUTION_DATE='2025-06-10T21:17:03.088429+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-06-10T21:17:03.088429+00:00'
+[2025-06-10T21:17:05.196+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-06-10T21:17:05.639+0000] {logging_mixin.py:190} INFO - {'access_token': 'APP_USR-5691318154785215-061017-1113724881c35d653bd3b5531d865e30-187745286', 'token_type': 'Bearer', 'expires_in': 21600, 'scope': 'offline_access read write', 'user_id': 187745286, 'refresh_token': 'TG-6848a0d09f7ef10001d24f1e-187745286'}
+[2025-06-10T21:17:05.646+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-06-10T21:17:05.657+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-06-10T21:17:05.658+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=01_extract_data, task_id=ml_access_token, run_id=manual__2025-06-10T21:17:03.088429+00:00, execution_date=20250610T211703, start_date=20250610T211705, end_date=20250610T211705
+[2025-06-10T21:17:05.674+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-06-10T21:17:05.694+0000] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-06-10T21:17:05.698+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

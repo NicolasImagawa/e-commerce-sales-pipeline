@@ -1,0 +1,257 @@
+[2025-06-09T21:58:55.807+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-06-09T21:58:55.828+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: 04_ELT_shipping_file.load_sh_costs manual__2025-06-09T21:57:40.877758+00:00 [queued]>
+[2025-06-09T21:58:55.837+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: 04_ELT_shipping_file.load_sh_costs manual__2025-06-09T21:57:40.877758+00:00 [queued]>
+[2025-06-09T21:58:55.839+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-06-09T21:58:55.853+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): load_sh_costs> on 2025-06-09 21:57:40.877758+00:00
+[2025-06-09T21:58:55.857+0000] {standard_task_runner.py:72} INFO - Started process 4293 to run task
+[2025-06-09T21:58:55.860+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', '04_ELT_shipping_file', 'load_sh_costs', 'manual__2025-06-09T21:57:40.877758+00:00', '--job-id', '615', '--raw', '--subdir', 'DAGS_FOLDER/04_make_sh_id_file.py', '--cfg-path', '/tmp/tmp3vj3pfu9']
+[2025-06-09T21:58:55.862+0000] {standard_task_runner.py:105} INFO - Job 615: Subtask load_sh_costs
+[2025-06-09T21:58:55.915+0000] {task_command.py:467} INFO - Running <TaskInstance: 04_ELT_shipping_file.load_sh_costs manual__2025-06-09T21:57:40.877758+00:00 [running]> on host 28e6a58e4107
+[2025-06-09T21:58:56.001+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='04_ELT_shipping_file' AIRFLOW_CTX_TASK_ID='load_sh_costs' AIRFLOW_CTX_EXECUTION_DATE='2025-06-09T21:57:40.877758+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-06-09T21:57:40.877758+00:00'
+[2025-06-09T21:58:56.003+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-06-09T21:58:56.615+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.9/site-packages/dlt/helpers/dbt/__init__.py:3: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+
+[2025-06-09T21:58:56.914+0000] {config_providers_context.py:156} WARNING - Airflow variable 'dlt_secrets_toml' was not found. This Airflow variable is a recommended place to hold the content of secrets.toml.If you do not use Airflow variables to hold dlt configuration or use variables with other names you can ignore this warning.
+[2025-06-09T21:58:59.759+0000] {logging_mixin.py:190} INFO - trying to load ./extraction/mercadolivre/data/shipping_cost_ml/sh_cost_0.json to entry schema
+[2025-06-09T21:59:02.389+0000] {logging_mixin.py:190} INFO - Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/sales_db location to store data
+Load package 1749506341.0147834 is LOADED and contains no failed jobs
+[2025-06-09T21:59:02.391+0000] {logging_mixin.py:190} INFO - Run started at 2025-06-09 21:58:59.760870+00:00 and COMPLETED in 2.63 seconds with 4 steps.
+Step extract COMPLETED in 0.75 seconds.
+
+Load package 1749506341.0147834 is EXTRACTED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step normalize COMPLETED in 0.37 seconds.
+Normalized data for the following tables:
+- entry_mercadolivre_sh: 1 row(s)
+- entry_mercadolivre_sh__items_types: 1 row(s)
+- entry_mercadolivre_sh__origin__shipping_address__types: 5 row(s)
+
+Load package 1749506341.0147834 is NORMALIZED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step load COMPLETED in 0.30 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/sales_db location to store data
+Load package 1749506341.0147834 is LOADED and contains no failed jobs
+
+Step run COMPLETED in 2.63 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.07 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/sales_db location to store data
+Load package 1749506341.0147834 is LOADED and contains no failed jobs
+[2025-06-09T21:59:02.394+0000] {logging_mixin.py:190} INFO - trying to load ./extraction/mercadolivre/data/shipping_cost_ml/sh_cost_1.json to entry schema
+[2025-06-09T21:59:02.632+0000] {logging_mixin.py:190} INFO - Pipeline mercadolivre_shipping load step completed in 0.05 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/sales_db location to store data
+Load package 1749506342.4591055 is LOADED and contains no failed jobs
+[2025-06-09T21:59:02.634+0000] {logging_mixin.py:190} INFO - Run started at 2025-06-09 21:59:02.395755+00:00 and COMPLETED in 0.23 seconds with 4 steps.
+Step extract COMPLETED in 0.07 seconds.
+
+Load package 1749506342.4591055 is EXTRACTED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step normalize COMPLETED in 0.06 seconds.
+Normalized data for the following tables:
+- entry_mercadolivre_sh: 1 row(s)
+- entry_mercadolivre_sh__items_types: 1 row(s)
+- entry_mercadolivre_sh__origin__shipping_address__types: 2 row(s)
+
+Load package 1749506342.4591055 is NORMALIZED and NOT YET LOADED to the destination and contains no failed jobs
+
+Step load COMPLETED in 0.09 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.05 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/sales_db location to store data
+Load package 1749506342.4591055 is LOADED and contains no failed jobs
+
+Step run COMPLETED in 0.23 seconds.
+Pipeline mercadolivre_shipping load step completed in 0.05 seconds
+1 load package(s) were loaded to destination postgres and into dataset entry
+The postgres destination used postgresql://***:***@pgdatabase:5432/sales_db location to store data
+Load package 1749506342.4591055 is LOADED and contains no failed jobs
+[2025-06-09T21:59:02.639+0000] {logging_mixin.py:190} INFO - trying to load ./extraction/mercadolivre/data/shipping_cost_ml/sh_cost_10.json to entry schema
+[2025-06-09T21:59:02.880+0000] {logging_mixin.py:190} WARNING - 2025-06-09 21:59:02,880|[ERROR]|4293|140509026703040|dlt|client.py|run_managed:409|Terminal exception in job entry_mercadolivre_sh__destination__shipping_address__types.c1ce064cf9.insert_values in file /var/dlt/pipelines/mercadolivre_shipping/load/normalized/1749506342.7041383/started_jobs/entry_mercadolivre_sh__destination__shipping_address__types.c1ce064cf9.0.insert_values
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.9/site-packages/dlt/destinations/sql_client.py", line 416, in _wrap_gen
+    return (yield from f(self, *args, **kwargs))
+  File "/home/***/.local/lib/python3.9/site-packages/dlt/destinations/impl/postgres/sql_client.py", line 112, in execute_query
+    raise outer
+  File "/home/***/.local/lib/python3.9/site-packages/dlt/destinations/impl/postgres/sql_client.py", line 104, in execute_query
+    curr.execute(query, db_args)
+psycopg2.errors.UndefinedTable: relation "entry.entry_mercadolivre_sh__destination__shipping_address__types" does not exist
+LINE 1: insert into "entry"."entry_mercadolivre_sh__destination__shi...
+                    ^
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/***/.local/lib/python3.9/site-packages/dlt/common/destination/client.py", line 404, in run_managed
+    self.run()
+  File "/home/***/.local/lib/python3.9/site-packages/dlt/destinations/insert_job_client.py", line 28, in run
+    self._sql_client.execute_fragments(fragments)
+  File "/home/***/.local/lib/python3.9/site-packages/dlt/destinations/impl/postgres/sql_client.py", line 119, in execute_fragments
+    return self.execute_sql(composed, *args, **kwargs)
+  File "/home/***/.local/lib/python3.9/site-packages/dlt/destinations/impl/postgres/sql_client.py", line 90, in execute_sql
+    with self.execute_query(sql, *args, **kwargs) as curr:
+  File "/usr/local/lib/python3.9/contextlib.py", line 119, in __enter__
+    return next(self.gen)
+  File "/home/***/.local/lib/python3.9/site-packages/dlt/destinations/sql_client.py", line 418, in _wrap_gen
+    raise self._make_database_exception(ex)
+  File "/home/***/.local/lib/python3.9/site-packages/dlt/destinations/impl/postgres/sql_client.py", line 129, in _make_database_exception
+    raise DatabaseUndefinedRelation(ex)
+dlt.destinations.exceptions.DatabaseUndefinedRelation: relation "entry.entry_mercadolivre_sh__destination__shipping_address__types" does not exist
+LINE 1: insert into "entry"."entry_mercadolivre_sh__destination__shi...
+                    ^
+[2025-06-09T21:59:02.882+0000] {logging_mixin.py:190} WARNING - 2025-06-09 21:59:02,882|[ERROR]|4293|140509881050944|dlt|load.py|complete_jobs:413|Job for entry_mercadolivre_sh__destination__shipping_address__types.c1ce064cf9.insert_values failed terminally in load 1749506342.7041383 with message relation "entry.entry_mercadolivre_sh__destination__shipping_address__types" does not exist
+LINE 1: insert into "entry"."entry_mercadolivre_sh__destination__shi...
+                    ^
+[2025-06-09T21:59:02.890+0000] {taskinstance.py:3311} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/dlt/pipeline/pipeline.py", line 585, in load
+    runner.run_pool(load_step.config, load_step)
+  File "/home/airflow/.local/lib/python3.9/site-packages/dlt/common/runners/pool_runner.py", line 91, in run_pool
+    while _run_func():
+  File "/home/airflow/.local/lib/python3.9/site-packages/dlt/common/runners/pool_runner.py", line 84, in _run_func
+    run_metrics = run_f.run(cast(TExecutor, pool))
+  File "/home/airflow/.local/lib/python3.9/site-packages/dlt/load/load.py", line 638, in run
+    self.load_single_package(load_id, schema)
+  File "/home/airflow/.local/lib/python3.9/site-packages/dlt/load/load.py", line 597, in load_single_package
+    raise pending_exception
+dlt.load.exceptions.LoadClientJobFailed: Job for entry_mercadolivre_sh__destination__shipping_address__types.c1ce064cf9.insert_values failed terminally in load 1749506342.7041383 with message relation "entry.entry_mercadolivre_sh__destination__shipping_address__types" does not exist
+LINE 1: insert into "entry"."entry_mercadolivre_sh__destination__shi...
+                    ^
+. The package is aborted and cannot be retried.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/opt/airflow/extraction/mercadolivre/script/send_shipping_cost.py", line 54, in postgres_ingestion_sh_costs
+    info = pipeline.run(data, table_name="entry_mercadolivre_sh", write_disposition="append")
+  File "/home/airflow/.local/lib/python3.9/site-packages/dlt/pipeline/pipeline.py", line 222, in _wrap
+    step_info = f(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/dlt/pipeline/pipeline.py", line 271, in _wrap
+    return f(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/dlt/pipeline/pipeline.py", line 729, in run
+    return self.load(destination, dataset_name, credentials=credentials)
+  File "/home/airflow/.local/lib/python3.9/site-packages/dlt/pipeline/pipeline.py", line 222, in _wrap
+    step_info = f(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/dlt/pipeline/pipeline.py", line 162, in _wrap
+    return f(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/dlt/pipeline/pipeline.py", line 271, in _wrap
+    return f(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/dlt/pipeline/pipeline.py", line 592, in load
+    raise PipelineStepFailed(
+dlt.pipeline.exceptions.PipelineStepFailed: Pipeline execution failed at stage load with exception:
+
+<class 'dlt.load.exceptions.LoadClientJobFailed'>
+Job for entry_mercadolivre_sh__destination__shipping_address__types.c1ce064cf9.insert_values failed terminally in load 1749506342.7041383 with message relation "entry.entry_mercadolivre_sh__destination__shipping_address__types" does not exist
+LINE 1: insert into "entry"."entry_mercadolivre_sh__destination__shi...
+                    ^
+. The package is aborted and cannot be retried.
+[2025-06-09T21:59:02.905+0000] {taskinstance.py:1225} INFO - Marking task as FAILED. dag_id=04_ELT_shipping_file, task_id=load_sh_costs, run_id=manual__2025-06-09T21:57:40.877758+00:00, execution_date=20250609T215740, start_date=20250609T215855, end_date=20250609T215902
+[2025-06-09T21:59:02.915+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-06-09T21:59:02.916+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 615 for task load_sh_costs (Pipeline execution failed at stage load with exception:
+
+<class 'dlt.load.exceptions.LoadClientJobFailed'>
+Job for entry_mercadolivre_sh__destination__shipping_address__types.c1ce064cf9.insert_values failed terminally in load 1749506342.7041383 with message relation "entry.entry_mercadolivre_sh__destination__shipping_address__types" does not exist
+LINE 1: insert into "entry"."entry_mercadolivre_sh__destination__shi...
+                    ^
+. The package is aborted and cannot be retried.; 4293)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/dlt/pipeline/pipeline.py", line 585, in load
+    runner.run_pool(load_step.config, load_step)
+  File "/home/airflow/.local/lib/python3.9/site-packages/dlt/common/runners/pool_runner.py", line 91, in run_pool
+    while _run_func():
+  File "/home/airflow/.local/lib/python3.9/site-packages/dlt/common/runners/pool_runner.py", line 84, in _run_func
+    run_metrics = run_f.run(cast(TExecutor, pool))
+  File "/home/airflow/.local/lib/python3.9/site-packages/dlt/load/load.py", line 638, in run
+    self.load_single_package(load_id, schema)
+  File "/home/airflow/.local/lib/python3.9/site-packages/dlt/load/load.py", line 597, in load_single_package
+    raise pending_exception
+dlt.load.exceptions.LoadClientJobFailed: Job for entry_mercadolivre_sh__destination__shipping_address__types.c1ce064cf9.insert_values failed terminally in load 1749506342.7041383 with message relation "entry.entry_mercadolivre_sh__destination__shipping_address__types" does not exist
+LINE 1: insert into "entry"."entry_mercadolivre_sh__destination__shi...
+                    ^
+. The package is aborted and cannot be retried.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 3005, in _run_raw_task
+    return _run_raw_task(
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 3159, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 3183, in _execute_task
+    return _execute_task(self, context, task_orig)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/opt/airflow/extraction/mercadolivre/script/send_shipping_cost.py", line 54, in postgres_ingestion_sh_costs
+    info = pipeline.run(data, table_name="entry_mercadolivre_sh", write_disposition="append")
+  File "/home/airflow/.local/lib/python3.9/site-packages/dlt/pipeline/pipeline.py", line 222, in _wrap
+    step_info = f(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/dlt/pipeline/pipeline.py", line 271, in _wrap
+    return f(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/dlt/pipeline/pipeline.py", line 729, in run
+    return self.load(destination, dataset_name, credentials=credentials)
+  File "/home/airflow/.local/lib/python3.9/site-packages/dlt/pipeline/pipeline.py", line 222, in _wrap
+    step_info = f(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/dlt/pipeline/pipeline.py", line 162, in _wrap
+    return f(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/dlt/pipeline/pipeline.py", line 271, in _wrap
+    return f(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/dlt/pipeline/pipeline.py", line 592, in load
+    raise PipelineStepFailed(
+dlt.pipeline.exceptions.PipelineStepFailed: Pipeline execution failed at stage load with exception:
+
+<class 'dlt.load.exceptions.LoadClientJobFailed'>
+Job for entry_mercadolivre_sh__destination__shipping_address__types.c1ce064cf9.insert_values failed terminally in load 1749506342.7041383 with message relation "entry.entry_mercadolivre_sh__destination__shipping_address__types" does not exist
+LINE 1: insert into "entry"."entry_mercadolivre_sh__destination__shi...
+                    ^
+. The package is aborted and cannot be retried.
+[2025-06-09T21:59:02.936+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2025-06-09T21:59:02.952+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-06-09T21:59:02.955+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

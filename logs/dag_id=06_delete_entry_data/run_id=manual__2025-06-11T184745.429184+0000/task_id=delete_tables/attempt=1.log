@@ -1,0 +1,67 @@
+[2025-06-11T18:47:46.995+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-06-11T18:47:47.020+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: 06_delete_entry_data.delete_tables manual__2025-06-11T18:47:45.429184+00:00 [queued]>
+[2025-06-11T18:47:47.033+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: 06_delete_entry_data.delete_tables manual__2025-06-11T18:47:45.429184+00:00 [queued]>
+[2025-06-11T18:47:47.034+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-06-11T18:47:47.050+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): delete_tables> on 2025-06-11 18:47:45.429184+00:00
+[2025-06-11T18:47:47.056+0000] {standard_task_runner.py:72} INFO - Started process 752 to run task
+[2025-06-11T18:47:47.060+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', '06_delete_entry_data', 'delete_tables', 'manual__2025-06-11T18:47:45.429184+00:00', '--job-id', '891', '--raw', '--subdir', 'DAGS_FOLDER/06_delete_files_tables.py', '--cfg-path', '/tmp/tmp0q_4slvv']
+[2025-06-11T18:47:47.063+0000] {standard_task_runner.py:105} INFO - Job 891: Subtask delete_tables
+[2025-06-11T18:47:47.128+0000] {task_command.py:467} INFO - Running <TaskInstance: 06_delete_entry_data.delete_tables manual__2025-06-11T18:47:45.429184+00:00 [running]> on host 28e6a58e4107
+[2025-06-11T18:47:47.227+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='06_delete_entry_data' AIRFLOW_CTX_TASK_ID='delete_tables' AIRFLOW_CTX_EXECUTION_DATE='2025-06-11T18:47:45.429184+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-06-11T18:47:45.429184+00:00'
+[2025-06-11T18:47:47.229+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-06-11T18:47:47.251+0000] {logging_mixin.py:190} INFO - Table entry.entry_mercadolivre could not be deleted: syntax error at or near "IF"
+LINE 1: DROP TABLE entry.entry_mercadolivre IF EXISTS
+                                            ^
+[2025-06-11T18:47:47.253+0000] {logging_mixin.py:190} INFO - Table entry.entry_mercadolivre__context__flows could not be deleted: syntax error at or near "IF"
+LINE 1: ...ROP TABLE entry.entry_mercadolivre__context__flows IF EXISTS
+                                                              ^
+[2025-06-11T18:47:47.254+0000] {logging_mixin.py:190} INFO - Table entry.entry_mercadolivre__mediations could not be deleted: syntax error at or near "IF"
+LINE 1: DROP TABLE entry.entry_mercadolivre__mediations IF EXISTS
+                                                        ^
+[2025-06-11T18:47:47.255+0000] {logging_mixin.py:190} INFO - Table entry.entry_mercadolivre__order_items could not be deleted: syntax error at or near "IF"
+LINE 1: DROP TABLE entry.entry_mercadolivre__order_items IF EXISTS
+                                                         ^
+[2025-06-11T18:47:47.256+0000] {logging_mixin.py:190} INFO - Table entry.entry_mercadolivre__order_items__item__variation_attributes could not be deleted: syntax error at or near "IF"
+LINE 1: ...cadolivre__order_items__item__variation_attributes IF EXISTS
+                                                              ^
+[2025-06-11T18:47:47.257+0000] {logging_mixin.py:190} INFO - Table entry.entry_mercadolivre__payments could not be deleted: syntax error at or near "IF"
+LINE 1: DROP TABLE entry.entry_mercadolivre__payments IF EXISTS
+                                                      ^
+[2025-06-11T18:47:47.258+0000] {logging_mixin.py:190} INFO - Table entry.entry_mercadolivre__payments__available_actions could not be deleted: syntax error at or near "IF"
+LINE 1: ...ry.entry_mercadolivre__payments__available_actions IF EXISTS
+                                                              ^
+[2025-06-11T18:47:47.259+0000] {logging_mixin.py:190} INFO - Table entry.entry_mercadolivre__tags could not be deleted: syntax error at or near "IF"
+LINE 1: DROP TABLE entry.entry_mercadolivre__tags IF EXISTS
+                                                  ^
+[2025-06-11T18:47:47.260+0000] {logging_mixin.py:190} INFO - Table entry.entry_mercadolivre_sh could not be deleted: syntax error at or near "IF"
+LINE 1: DROP TABLE entry.entry_mercadolivre_sh IF EXISTS
+                                               ^
+[2025-06-11T18:47:47.261+0000] {logging_mixin.py:190} INFO - Table entry.entry_mercadolivre_sh__destination__shipping_address__types could not be deleted: syntax error at or near "IF"
+LINE 1: ...cadolivre_sh__destination__shipping_address__types IF EXISTS
+                                                              ^
+[2025-06-11T18:47:47.262+0000] {logging_mixin.py:190} INFO - Table entry.entry_mercadolivre_sh__items_types could not be deleted: syntax error at or near "IF"
+LINE 1: ...ROP TABLE entry.entry_mercadolivre_sh__items_types IF EXISTS
+                                                              ^
+[2025-06-11T18:47:47.263+0000] {logging_mixin.py:190} INFO - Table entry.entry_mercadolivre_sh__origin__shipping_address__types could not be deleted: syntax error at or near "IF"
+LINE 1: ...y_mercadolivre_sh__origin__shipping_address__types IF EXISTS
+                                                              ^
+[2025-06-11T18:47:47.264+0000] {logging_mixin.py:190} INFO - Table entry.entry_mercadolivre_sh__tags could not be deleted: syntax error at or near "IF"
+LINE 1: DROP TABLE entry.entry_mercadolivre_sh__tags IF EXISTS
+                                                     ^
+[2025-06-11T18:47:47.265+0000] {logging_mixin.py:190} INFO - Table entry.entry_shopee could not be deleted: syntax error at or near "IF"
+LINE 1: DROP TABLE entry.entry_shopee IF EXISTS
+                                      ^
+[2025-06-11T18:47:47.266+0000] {logging_mixin.py:190} INFO - Table entry._dlt_loads could not be deleted: syntax error at or near "IF"
+LINE 1: DROP TABLE entry._dlt_loads IF EXISTS
+                                    ^
+[2025-06-11T18:47:47.267+0000] {logging_mixin.py:190} INFO - Table entry._dlt_pipeline_state could not be deleted: syntax error at or near "IF"
+LINE 1: DROP TABLE entry._dlt_pipeline_state IF EXISTS
+                                             ^
+[2025-06-11T18:47:47.268+0000] {logging_mixin.py:190} INFO - Table entry._dlt_version could not be deleted: syntax error at or near "IF"
+LINE 1: DROP TABLE entry._dlt_version IF EXISTS
+                                      ^
+[2025-06-11T18:47:47.269+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-06-11T18:47:47.282+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-06-11T18:47:47.283+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=06_delete_entry_data, task_id=delete_tables, run_id=manual__2025-06-11T18:47:45.429184+00:00, execution_date=20250611T184745, start_date=20250611T184747, end_date=20250611T184747
+[2025-06-11T18:47:47.314+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-06-11T18:47:47.326+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

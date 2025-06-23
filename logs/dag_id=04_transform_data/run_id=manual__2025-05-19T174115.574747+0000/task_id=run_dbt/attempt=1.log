@@ -1,0 +1,109 @@
+[2025-05-19T17:41:17.442+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-05-19T17:41:17.465+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: 04_transform_data.run_dbt manual__2025-05-19T17:41:15.574747+00:00 [queued]>
+[2025-05-19T17:41:17.474+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: 04_transform_data.run_dbt manual__2025-05-19T17:41:15.574747+00:00 [queued]>
+[2025-05-19T17:41:17.475+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-05-19T17:41:17.488+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): run_dbt> on 2025-05-19 17:41:15.574747+00:00
+[2025-05-19T17:41:17.493+0000] {standard_task_runner.py:72} INFO - Started process 1194 to run task
+[2025-05-19T17:41:17.496+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', '04_transform_data', 'run_dbt', 'manual__2025-05-19T17:41:15.574747+00:00', '--job-id', '18', '--raw', '--subdir', 'DAGS_FOLDER/04_transform_data.py', '--cfg-path', '/tmp/tmp3u9y67ut']
+[2025-05-19T17:41:17.498+0000] {standard_task_runner.py:105} INFO - Job 18: Subtask run_dbt
+[2025-05-19T17:41:17.549+0000] {task_command.py:467} INFO - Running <TaskInstance: 04_transform_data.run_dbt manual__2025-05-19T17:41:15.574747+00:00 [running]> on host 68e8d748c575
+[2025-05-19T17:41:17.632+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='04_transform_data' AIRFLOW_CTX_TASK_ID='run_dbt' AIRFLOW_CTX_EXECUTION_DATE='2025-05-19T17:41:15.574747+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-05-19T17:41:15.574747+00:00'
+[2025-05-19T17:41:17.634+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-05-19T17:41:19.706+0000] {logging_mixin.py:190} INFO - 17:41:19  Running with dbt=1.9.4
+[2025-05-19T17:41:20.057+0000] {logging_mixin.py:190} INFO - 17:41:20  Registered adapter: postgres=1.9.0
+[2025-05-19T17:41:21.214+0000] {logging_mixin.py:190} INFO - 17:41:21  [WARNING]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.e_commerce_sales.example
+[2025-05-19T17:41:21.380+0000] {logging_mixin.py:190} INFO - 17:41:21  Found 6 models, 12 sources, 433 macros
+[2025-05-19T17:41:21.385+0000] {logging_mixin.py:190} INFO - 17:41:21
+[2025-05-19T17:41:21.387+0000] {logging_mixin.py:190} INFO - 17:41:21  Concurrency: 4 threads (target='dev')
+[2025-05-19T17:41:21.389+0000] {logging_mixin.py:190} INFO - 17:41:21
+[2025-05-19T17:41:21.519+0000] {logging_mixin.py:190} INFO - 17:41:21  1 of 6 START sql incremental model sales.mercadolivre_orders_results ........... [RUN]
+[2025-05-19T17:41:21.521+0000] {logging_mixin.py:190} INFO - 17:41:21  2 of 6 START sql incremental model sales.shopee_new_id ......................... [RUN]
+[2025-05-19T17:41:21.872+0000] {logging_mixin.py:190} INFO - 17:41:21  2 of 6 OK created sql incremental model sales.shopee_new_id .................... [MERGE 0 in 0.34s]
+[2025-05-19T17:41:21.876+0000] {logging_mixin.py:190} INFO - 17:41:21  1 of 6 OK created sql incremental model sales.mercadolivre_orders_results ...... [MERGE 255 in 0.35s]
+[2025-05-19T17:41:21.880+0000] {logging_mixin.py:190} INFO - 17:41:21  3 of 6 START sql incremental model sales.shopee_orders_results ................. [RUN]
+[2025-05-19T17:41:21.884+0000] {logging_mixin.py:190} INFO - 17:41:21  4 of 6 START sql incremental model sales.mercadolivre_profits .................. [RUN]
+[2025-05-19T17:41:21.961+0000] {logging_mixin.py:190} INFO - 17:41:21  3 of 6 ERROR creating sql incremental model sales.shopee_orders_results ........ [ERROR in 0.07s]
+[2025-05-19T17:41:21.973+0000] {logging_mixin.py:190} INFO - 17:41:21  5 of 6 SKIP relation sales.dim_shopee_orders ................................... [SKIP]
+[2025-05-19T17:41:21.975+0000] {logging_mixin.py:190} INFO - 17:41:21  6 of 6 SKIP relation sales.shopee_profits ...................................... [SKIP]
+[2025-05-19T17:41:22.027+0000] {logging_mixin.py:190} INFO - 17:41:22  4 of 6 OK created sql incremental model sales.mercadolivre_profits ............. [MERGE 250 in 0.14s]
+[2025-05-19T17:41:22.048+0000] {logging_mixin.py:190} INFO - 17:41:22
+[2025-05-19T17:41:22.049+0000] {logging_mixin.py:190} INFO - 17:41:22  Finished running 6 incremental models in 0 hours 0 minutes and 0.66 seconds (0.66s).
+[2025-05-19T17:41:22.113+0000] {logging_mixin.py:190} INFO - 17:41:22
+[2025-05-19T17:41:22.116+0000] {logging_mixin.py:190} INFO - 17:41:22  Completed with 1 error, 0 partial successes, and 0 warnings:
+[2025-05-19T17:41:22.119+0000] {logging_mixin.py:190} INFO - 17:41:22
+[2025-05-19T17:41:22.122+0000] {logging_mixin.py:190} INFO - 17:41:22    Database Error in model shopee_orders_results (models/core/shopee_orders_results.sql)
+  column stg_shopee.hora_de_pagamento_do_pedido does not exist
+  LINE 39:          stg_shopee.hora_de_pagamento_do_pedido AS date_appr...
+                    ^
+  HINT:  Perhaps you meant to reference the column "stg_shopee.hora_do_pagamento_do_pedido".
+[2025-05-19T17:41:22.124+0000] {logging_mixin.py:190} INFO - 17:41:22
+[2025-05-19T17:41:22.128+0000] {logging_mixin.py:190} INFO - 17:41:22  Done. PASS=3 WARN=0 ERROR=1 SKIP=2 TOTAL=6
+[2025-05-19T17:41:22.896+0000] {logging_mixin.py:190} INFO - dbt run failed!
+[2025-05-19T17:41:22.897+0000] {logging_mixin.py:190} INFO - None
+[2025-05-19T17:41:22.898+0000] {taskinstance.py:3311} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/opt/airflow/dbt/run_dbt.py", line 22, in transform_data
+    raise RuntimeError("dbt run failed")
+RuntimeError: dbt run failed
+[2025-05-19T17:41:22.909+0000] {taskinstance.py:1225} INFO - Marking task as FAILED. dag_id=04_transform_data, task_id=run_dbt, run_id=manual__2025-05-19T17:41:15.574747+00:00, execution_date=20250519T174115, start_date=20250519T174117, end_date=20250519T174122
+[2025-05-19T17:41:22.924+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-05-19T17:41:22.926+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 18 for task run_dbt (dbt run failed; 1194)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 3005, in _run_raw_task
+    return _run_raw_task(
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 3159, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 3183, in _execute_task
+    return _execute_task(self, context, task_orig)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 422, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+  File "/opt/airflow/dbt/run_dbt.py", line 22, in transform_data
+    raise RuntimeError("dbt run failed")
+RuntimeError: dbt run failed
+[2025-05-19T17:41:22.979+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2025-05-19T17:41:23.005+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-05-19T17:41:23.009+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

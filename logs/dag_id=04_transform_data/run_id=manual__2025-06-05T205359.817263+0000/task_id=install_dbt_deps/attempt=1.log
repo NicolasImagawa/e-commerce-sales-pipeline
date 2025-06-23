@@ -1,0 +1,25 @@
+[2025-06-05T20:54:01.426+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-06-05T20:54:01.445+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: 04_transform_data.install_dbt_deps manual__2025-06-05T20:53:59.817263+00:00 [queued]>
+[2025-06-05T20:54:01.455+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: 04_transform_data.install_dbt_deps manual__2025-06-05T20:53:59.817263+00:00 [queued]>
+[2025-06-05T20:54:01.456+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-06-05T20:54:01.468+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): install_dbt_deps> on 2025-06-05 20:53:59.817263+00:00
+[2025-06-05T20:54:01.473+0000] {standard_task_runner.py:72} INFO - Started process 4546 to run task
+[2025-06-05T20:54:01.476+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', '04_transform_data', 'install_dbt_deps', 'manual__2025-06-05T20:53:59.817263+00:00', '--job-id', '369', '--raw', '--subdir', 'DAGS_FOLDER/04_transform_data.py', '--cfg-path', '/tmp/tmp9zlmnnxc']
+[2025-06-05T20:54:01.478+0000] {standard_task_runner.py:105} INFO - Job 369: Subtask install_dbt_deps
+[2025-06-05T20:54:01.538+0000] {task_command.py:467} INFO - Running <TaskInstance: 04_transform_data.install_dbt_deps manual__2025-06-05T20:53:59.817263+00:00 [running]> on host 28e6a58e4107
+[2025-06-05T20:54:01.627+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='04_transform_data' AIRFLOW_CTX_TASK_ID='install_dbt_deps' AIRFLOW_CTX_EXECUTION_DATE='2025-06-05T20:53:59.817263+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-06-05T20:53:59.817263+00:00'
+[2025-06-05T20:54:01.629+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-06-05T20:54:03.332+0000] {logging_mixin.py:190} INFO - 20:54:03  Running with dbt=1.9.5
+[2025-06-05T20:54:04.132+0000] {logging_mixin.py:190} INFO - 20:54:04  Installing dbt-labs/dbt_utils
+[2025-06-05T20:54:07.413+0000] {logging_mixin.py:190} INFO - 20:54:07  Installed from version 1.2.0
+[2025-06-05T20:54:07.415+0000] {logging_mixin.py:190} INFO - 20:54:07  Updated version available: 1.3.0
+[2025-06-05T20:54:07.417+0000] {logging_mixin.py:190} INFO - 20:54:07
+[2025-06-05T20:54:07.419+0000] {logging_mixin.py:190} INFO - 20:54:07  Updates available for packages: ['dbt-labs/dbt_utils']                 
+Update your versions in packages.yml, then run dbt deps
+[2025-06-05T20:54:08.101+0000] {logging_mixin.py:190} INFO - Dependencies sucessfully installed.
+[2025-06-05T20:54:08.102+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-06-05T20:54:08.112+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-06-05T20:54:08.113+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=04_transform_data, task_id=install_dbt_deps, run_id=manual__2025-06-05T20:53:59.817263+00:00, execution_date=20250605T205359, start_date=20250605T205401, end_date=20250605T205408
+[2025-06-05T20:54:08.152+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-06-05T20:54:08.179+0000] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-06-05T20:54:08.182+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

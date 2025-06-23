@@ -1,0 +1,22 @@
+[2025-06-16T14:46:01.052+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-06-16T14:46:01.077+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: 06_delete_entry_data_prod.delete_ml_files manual__2025-06-16T14:45:59.019345+00:00 [queued]>
+[2025-06-16T14:46:01.087+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: 06_delete_entry_data_prod.delete_ml_files manual__2025-06-16T14:45:59.019345+00:00 [queued]>
+[2025-06-16T14:46:01.089+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-06-16T14:46:01.103+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): delete_ml_files> on 2025-06-16 14:45:59.019345+00:00
+[2025-06-16T14:46:01.110+0000] {standard_task_runner.py:72} INFO - Started process 2720 to run task
+[2025-06-16T14:46:01.115+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', '06_delete_entry_data_prod', 'delete_ml_files', 'manual__2025-06-16T14:45:59.019345+00:00', '--job-id', '47', '--raw', '--subdir', 'DAGS_FOLDER/06_delete_files_tables_prod.py', '--cfg-path', '/tmp/tmp_gz_1oh3']
+[2025-06-16T14:46:01.119+0000] {standard_task_runner.py:105} INFO - Job 47: Subtask delete_ml_files
+[2025-06-16T14:46:01.199+0000] {task_command.py:467} INFO - Running <TaskInstance: 06_delete_entry_data_prod.delete_ml_files manual__2025-06-16T14:45:59.019345+00:00 [running]> on host 5b7cdd28fdf5
+[2025-06-16T14:46:01.317+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='06_delete_entry_data_prod' AIRFLOW_CTX_TASK_ID='delete_ml_files' AIRFLOW_CTX_EXECUTION_DATE='2025-06-16T14:45:59.019345+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-06-16T14:45:59.019345+00:00'
+[2025-06-16T14:46:01.318+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-06-16T14:46:01.339+0000] {logging_mixin.py:190} INFO - Deleted all files in /opt/***/extraction/mercadolivre/data/raw/prod/ with extension *.json
+[2025-06-16T14:46:01.343+0000] {logging_mixin.py:190} INFO - Deleted all files in /opt/***/extraction/mercadolivre/data/raw/prod/ with extension *.json
+[2025-06-16T14:46:01.347+0000] {logging_mixin.py:190} INFO - Deleted all files in /opt/***/extraction/mercadolivre/data/raw/prod/ with extension *.json
+[2025-06-16T14:46:01.351+0000] {logging_mixin.py:190} INFO - Deleted all files in /opt/***/extraction/mercadolivre/data/raw/prod/ with extension *.json
+[2025-06-16T14:46:01.354+0000] {logging_mixin.py:190} INFO - Deleted all files in /opt/***/extraction/mercadolivre/data/raw/prod/ with extension *.json
+[2025-06-16T14:46:01.358+0000] {logging_mixin.py:190} INFO - Deleted all files in /opt/***/extraction/mercadolivre/data/raw/prod/ with extension *.json
+[2025-06-16T14:46:01.359+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-06-16T14:46:01.373+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-06-16T14:46:01.377+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=06_delete_entry_data_prod, task_id=delete_ml_files, run_id=manual__2025-06-16T14:45:59.019345+00:00, execution_date=20250616T144559, start_date=20250616T144601, end_date=20250616T144601
+[2025-06-16T14:46:01.414+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-06-16T14:46:01.429+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

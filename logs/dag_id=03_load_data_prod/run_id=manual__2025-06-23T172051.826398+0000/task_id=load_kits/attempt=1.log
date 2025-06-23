@@ -1,0 +1,19 @@
+[2025-06-23T17:20:53.501+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-06-23T17:20:53.520+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: 03_load_data_prod.load_kits manual__2025-06-23T17:20:51.826398+00:00 [queued]>
+[2025-06-23T17:20:53.530+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: 03_load_data_prod.load_kits manual__2025-06-23T17:20:51.826398+00:00 [queued]>
+[2025-06-23T17:20:53.531+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-06-23T17:20:53.545+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): load_kits> on 2025-06-23 17:20:51.826398+00:00
+[2025-06-23T17:20:53.551+0000] {standard_task_runner.py:72} INFO - Started process 880 to run task
+[2025-06-23T17:20:53.557+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', '03_load_data_prod', 'load_kits', 'manual__2025-06-23T17:20:51.826398+00:00', '--job-id', '17', '--raw', '--subdir', 'DAGS_FOLDER/03_load_data_prod.py', '--cfg-path', '/tmp/tmpxsdkwxqd']
+[2025-06-23T17:20:53.559+0000] {standard_task_runner.py:105} INFO - Job 17: Subtask load_kits
+[2025-06-23T17:20:53.620+0000] {task_command.py:467} INFO - Running <TaskInstance: 03_load_data_prod.load_kits manual__2025-06-23T17:20:51.826398+00:00 [running]> on host b208c9761688
+[2025-06-23T17:20:53.711+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='03_load_data_prod' AIRFLOW_CTX_TASK_ID='load_kits' AIRFLOW_CTX_EXECUTION_DATE='2025-06-23T17:20:51.826398+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-06-23T17:20:51.826398+00:00'
+[2025-06-23T17:20:53.713+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-06-23T17:20:54.215+0000] {logging_mixin.py:190} INFO - Loading file /opt/***/data/supplies/clean/prod/kit_components.csv to prod sales_db
+[2025-06-23T17:20:54.281+0000] {logging_mixin.py:190} INFO - Data in /opt/***/data/supplies/clean/prod/kit_components.csv successfully loaded.
+[2025-06-23T17:20:54.281+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-06-23T17:20:54.292+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-06-23T17:20:54.294+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=03_load_data_prod, task_id=load_kits, run_id=manual__2025-06-23T17:20:51.826398+00:00, execution_date=20250623T172051, start_date=20250623T172053, end_date=20250623T172054
+[2025-06-23T17:20:54.331+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-06-23T17:20:54.350+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-06-23T17:20:54.353+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

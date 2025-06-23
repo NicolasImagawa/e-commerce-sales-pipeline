@@ -1,0 +1,17 @@
+[2025-06-10T22:42:52.813+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-06-10T22:42:52.832+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: 04_ELT_shipping_file.extract_from_API manual__2025-06-10T22:42:49.726472+00:00 [queued]>
+[2025-06-10T22:42:52.840+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: 04_ELT_shipping_file.extract_from_API manual__2025-06-10T22:42:49.726472+00:00 [queued]>
+[2025-06-10T22:42:52.842+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-06-10T22:42:52.854+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): extract_from_API> on 2025-06-10 22:42:49.726472+00:00
+[2025-06-10T22:42:52.859+0000] {standard_task_runner.py:72} INFO - Started process 13819 to run task
+[2025-06-10T22:42:52.862+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', '04_ELT_shipping_file', 'extract_from_API', 'manual__2025-06-10T22:42:49.726472+00:00', '--job-id', '812', '--raw', '--subdir', 'DAGS_FOLDER/04_make_sh_id_file.py', '--cfg-path', '/tmp/tmpfop1p078']
+[2025-06-10T22:42:52.864+0000] {standard_task_runner.py:105} INFO - Job 812: Subtask extract_from_API
+[2025-06-10T22:42:52.914+0000] {task_command.py:467} INFO - Running <TaskInstance: 04_ELT_shipping_file.extract_from_API manual__2025-06-10T22:42:49.726472+00:00 [running]> on host 28e6a58e4107
+[2025-06-10T22:42:52.990+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='04_ELT_shipping_file' AIRFLOW_CTX_TASK_ID='extract_from_API' AIRFLOW_CTX_EXECUTION_DATE='2025-06-10T22:42:49.726472+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-06-10T22:42:49.726472+00:00'
+[2025-06-10T22:42:52.992+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-06-10T22:43:54.584+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-06-10T22:43:54.598+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-06-10T22:43:54.599+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=04_ELT_shipping_file, task_id=extract_from_API, run_id=manual__2025-06-10T22:42:49.726472+00:00, execution_date=20250610T224249, start_date=20250610T224252, end_date=20250610T224354
+[2025-06-10T22:43:54.656+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-06-10T22:43:54.684+0000] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-06-10T22:43:54.688+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
