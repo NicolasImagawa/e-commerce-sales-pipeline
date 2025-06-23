@@ -149,6 +149,9 @@ After, under "Connection", use the following parameters to connect to the databa
 
 That's it! The pipeline should be working smoothly now and queries can be made against the warehouse.
 
+### Under development
+The partitioning is still under development.
+
 ## Contact
 If you have any questions or want to reach me out, you can contact me on the following channels:
 - LinkedIn: www.linkedin.com/in/nicolas-imagawa
