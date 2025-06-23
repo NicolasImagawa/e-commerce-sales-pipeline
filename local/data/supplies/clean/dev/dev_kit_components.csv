@@ -1,0 +1,30 @@
+main_sku,product,sku,component_sku,component_name
+PEN001,Blue pen,PEN001VAR001,PEN001VAR001,Simple blue pen
+PEN001,Black pen,PEN001VAR002,PEN001VAR002,Simple black pen
+WAT001VAR001,Watch,WAT001VAR001,WAT001VAR001,Fancy watch
+WAT001VAR001,Watch,WAT001VAR001,WAT001VAR001,Fancy watch
+SHR001VAR001,T-shirt,SHR001VAR001,SHR001VAR001,Your favorite band's t-shirt - 2000's World Tour
+CAF001VAR001,Coffee,CAF001VAR001,CAF001VAR001, Brazilian Coffee from Sul de Minas
+ART001VAR001,Art,ART001VAR001,ART001VAR001,Mona Lisa
+ART001VAR001,Art,ART001VAR001,ART001VAR001,Mona Lisa
+ART001VAR001,Art,ART001VAR001,ART001VAR001,Mona Lisa
+ERM001,Mate,ERM001VAR001,ERM001VAR001,Hierba Mate - Strong
+ERM001,Mate,ERM001VAR001,ERM001VAR001,Hierba Mate - Strong
+ERM001,Mate,ERM001VAR002,ERM001VAR002,Hierba Mate - Mild
+BOK001,Book,BOK001VAR001,BOK001VAR001,Elementary Diplomacy - How to negotiate in a foreign language
+BOK001,Book,BOK001VAR002,BOK001VAR002,Elementary Diplomacy - On the sovereignty of your neighbours
+AXE001VAR001,Woodaxe,AXE001VAR001,AXE001VAR001,Lumberjack Axe
+CUP001,Tea cup,CUP001VAR001,CUP001VAR001,Fine porcelain tea cup - white
+CUP001,Tea cup,CUP001VAR001,CUP001VAR001,Fine porcelain tea cup - white
+CUP001,Tea cup,CUP001VAR002,CUP001VAR002,Fine porcelain tea cup - blue
+POT001,Tea pot,POT001VAR001,POT001VAR001,Fine porcelain tea pot - white
+POT001,Tea pot,POT001VAR001,POT001VAR001,Fine porcelain tea pot - white
+POT001,Tea pot,POT001VAR002,POT001VAR002,Fine porcelain tea pot - blue
+POT001,Tea pot,POT001VAR002,POT001VAR002,Fine porcelain tea pot - blue
+KITTEA001,Tea set,KITTEA001VAR001,CUP001VAR001,Fine porcelain tea cup - white
+KITTEA001,Tea set,KITTEA001VAR001,CUP001VAR001,Fine porcelain tea cup - white
+KITTEA001,Tea set,KITTEA001VAR001,CUP001VAR002,Fine porcelain tea cup - blue
+KITTEA001,Tea set,KITTEA001VAR001,POT001VAR001,Fine porcelain tea pot - white
+KITTEA001,Tea set,KITTEA001VAR001,POT001VAR001,Fine porcelain tea pot - white
+KITTEA001,Tea set,KITTEA001VAR001,POT001VAR002,Fine porcelain tea pot - blue
+KITTEA001,Tea set,KITTEA001VAR001,POT001VAR002,Fine porcelain tea pot - blue

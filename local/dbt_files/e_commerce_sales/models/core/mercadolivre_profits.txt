@@ -1,0 +1,187 @@
+{{
+    config(
+        materialized='incremental',
+        unique_key='order_id',
+        incremental_strategy='merge',
+    )
+}}
+
+
+WITH agg_results AS (
+	SELECT order_id,
+		   sku,
+		   SUM(transaction_amount) AS agg_transaction_amount,
+		   SUM(sh_cost) AS agg_sh_cost,
+           ld_timestamp
+	FROM {{ ref("mercadolivre_orders_results") }}
+
+    {% if is_incremental() %}
+        WHERE ld_timestamp > (SELECT MAX(ld_timestamp) FROM {{ this }})
+    {% endif %}
+
+	GROUP BY order_id,
+		   sku,
+           ld_timestamp
+), order_date AS (
+	SELECT order_id,
+		   date_approved AS date_paid,
+		   orders_results.price,
+	   	   sku,
+           ld_timestamp
+	FROM {{ ref("mercadolivre_orders_results") }} AS orders_results
+
+    {% if is_incremental() %}
+        WHERE ld_timestamp > (SELECT MAX(ld_timestamp) FROM {{ this }})
+    {% endif %}
+
+), orders_costs AS (
+		SELECT order_date.order_id,
+			   kit.sku,
+			   order_date.date_paid,
+			   order_date.price,
+			   SUM(costs.cost) AS total_prod_cost
+	FROM {{ source("supplies", "kit_components") }} AS kit, 
+		 {{ source("supplies", "product_sku_cost") }} AS costs,
+		 order_date
+	WHERE kit.component_sku = costs.sku
+		AND kit.sku = order_date.sku
+		AND (costs.end_date >= order_date.date_paid OR costs.end_date IS NULL)
+		AND costs.begin_date <= order_date.date_paid
+	GROUP BY order_date.order_id,
+			 order_date.date_paid,
+			 order_date.price,
+			 kit.sku
+), prep_seller_sh_cost AS (
+	SELECT ml.id AS order_id,
+		   COALESCE(ml_sh.lead_time__list_cost__v_double, 0) AS seller_ship_cost,
+		   orders_costs.price
+	FROM {{ source("entry_ml", "stg_mercadolivre_sh") }} AS ml_sh
+	LEFT JOIN {{ source("entry_ml", "stg_mercadolivre") }} AS ml
+		ON ml_sh.id = ml.shipping__id
+	LEFT JOIN orders_costs
+		ON orders_costs.order_id = ml.id
+	GROUP BY ml.id,
+			 seller_ship_cost,
+			 price
+), aux_seller_sh_cost AS (
+	SELECT prep_seller_sh_cost.order_id AS order_id,
+		   prep_seller_sh_cost.seller_ship_cost AS seller_ship_cost,
+		   orders_costs.price
+		FROM prep_seller_sh_cost
+		INNER JOIN orders_costs
+			ON orders_costs.order_id = prep_seller_sh_cost.order_id
+		WHERE orders_costs.price >= 79.00 --2000009590300714
+), seller_sh_cost AS (
+	SELECT prep_seller_sh_cost.order_id,
+		   COALESCE(aux_seller_sh_cost.seller_ship_cost, 0) AS seller_ship_cost,
+		   prep_seller_sh_cost.price
+		FROM prep_seller_sh_cost
+		LEFT JOIN aux_seller_sh_cost
+			ON prep_seller_sh_cost.order_id = aux_seller_sh_cost.order_id
+), update_results_agg AS (
+	SELECT orders_results.order_id,
+		   orders_results.product,
+		   orders_results.sku,
+		   MAX(orders_results.date_approved) AS date_approved, /*Since the sell price might appear with two values for the same order, the last one is chosen*/
+		   orders_results.qt,
+		   MAX(orders_results.total_paid_amount) AS total_paid_amount,  /*Since the sell price might appear with two values for the same order, the last one is chosen*/
+		   agg_results.agg_transaction_amount,
+		   orders_results.price,
+		   agg_results.agg_sh_cost,
+		   orders_results.fee,
+		   orders_costs.total_prod_cost,
+		   seller_sh_cost.seller_ship_cost,
+		   ROUND(CAST(agg_results.agg_transaction_amount - (orders_results.qt * (orders_results.fee + orders_costs.total_prod_cost)) - seller_ship_cost AS NUMERIC), 2) AS profit,
+           orders_results.ld_timestamp
+	 FROM {{ ref("mercadolivre_orders_results") }} AS orders_results
+	 LEFT JOIN agg_results
+		 ON orders_results.order_id = agg_results.order_id
+		 AND orders_results.sku = agg_results.sku
+	 LEFT JOIN orders_costs
+		 ON orders_results.sku = orders_costs.sku
+		 AND orders_results.order_id = orders_costs.order_id
+	 LEFT JOIN seller_sh_cost
+		 ON orders_results.order_id = seller_sh_cost.order_id
+    {% if is_incremental() %}
+        WHERE orders_results.order_id IN (SELECT order_id FROM {{ this }})
+    {% endif %}
+	 GROUP BY orders_results.order_id,
+		   orders_results.product,
+		   orders_results.sku,
+		   orders_results.qt,
+		   agg_results.agg_transaction_amount,
+		   orders_results.price,
+		   agg_results.agg_sh_cost,
+		   orders_results.fee,
+		   orders_costs.total_prod_cost,
+		   seller_sh_cost.seller_ship_cost,
+		   profit,
+           orders_results.ld_timestamp
+), insert_results_agg AS (
+	SELECT orders_results.order_id,
+		   orders_results.product,
+		   orders_results.sku,
+		   MAX(orders_results.date_approved) AS date_approved, /*Since the sell price might appear with two values for the same order, the last one is chosen*/
+		   orders_results.qt,
+		   MAX(orders_results.total_paid_amount) AS total_paid_amount,  /*Since the sell price might appear with two values for the same order, the last one is chosen*/
+		   agg_results.agg_transaction_amount,
+		   orders_results.price,
+		   agg_results.agg_sh_cost,
+		   orders_results.fee,
+		   orders_costs.total_prod_cost,
+		   seller_sh_cost.seller_ship_cost,
+		   ROUND(CAST(agg_results.agg_transaction_amount - (orders_results.qt * (orders_results.fee + orders_costs.total_prod_cost)) - seller_ship_cost AS NUMERIC), 2) AS profit,
+           orders_results.ld_timestamp
+	 FROM {{ ref("mercadolivre_orders_results") }} AS orders_results
+	 LEFT JOIN agg_results
+		 ON orders_results.order_id = agg_results.order_id
+		 AND orders_results.sku = agg_results.sku
+	 LEFT JOIN orders_costs
+		 ON orders_results.sku = orders_costs.sku
+		 AND orders_results.order_id = orders_costs.order_id
+	 LEFT JOIN seller_sh_cost
+		 ON orders_results.order_id = seller_sh_cost.order_id
+    WHERE orders_results.order_id NOT IN (SELECT order_id FROM update_results_agg)
+	 GROUP BY orders_results.order_id,
+		   orders_results.product,
+		   orders_results.sku,
+		   orders_results.qt,
+		   agg_results.agg_transaction_amount,
+		   orders_results.price,
+		   agg_results.agg_sh_cost,
+		   orders_results.fee,
+		   orders_costs.total_prod_cost,
+		   seller_sh_cost.seller_ship_cost,
+		   profit,
+           orders_results.ld_timestamp
+)  SELECT update_results_agg.order_id,
+		  update_results_agg.product,
+		  update_results_agg.sku,
+		  update_results_agg.date_approved,
+		  update_results_agg.qt,
+		  update_results_agg.total_paid_amount,
+		  update_results_agg.agg_transaction_amount,
+		  update_results_agg.price,
+		  update_results_agg.agg_sh_cost,
+		  update_results_agg.fee,
+		  update_results_agg.total_prod_cost,
+		  update_results_agg.seller_ship_cost,
+		  update_results_agg.profit,
+		  update_results_agg.ld_timestamp
+	FROM update_results_agg
+    UNION
+    SELECT insert_results_agg.order_id,
+           insert_results_agg.product,
+           insert_results_agg.sku,
+           insert_results_agg.date_approved,
+           insert_results_agg.qt,
+           insert_results_agg.total_paid_amount,
+           insert_results_agg.agg_transaction_amount,
+           insert_results_agg.price,
+           insert_results_agg.agg_sh_cost,
+           insert_results_agg.fee,
+           insert_results_agg.total_prod_cost,
+           insert_results_agg.seller_ship_cost,
+           insert_results_agg.profit,
+		   insert_results_agg.ld_timestamp
+    FROM insert_results_agg

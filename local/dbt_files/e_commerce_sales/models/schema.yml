@@ -1,0 +1,35 @@
+version: 2
+
+sources:
+  - name: entry_shopee
+    database: "{{ 'sales_db' if target.name == 'prod' else 'dev_sales_db' }}"
+    schema: entry
+    tables:
+      - name: entry_shopee
+
+  - name: entry_ml
+    database: "{{ 'sales_db' if target.name == 'prod' else 'dev_sales_db' }}"
+    schema: entry
+    tables:
+      - name: entry_mercadolivre
+      - name: entry_mercadolivre__context__flows
+      - name: entry_mercadolivre__mediations
+      - name: entry_mercadolivre__order_items
+      - name: entry_mercadolivre__order_items__item__variation_attributes
+      - name: entry_mercadolivre__payments
+      - name: entry_mercadolivre__payments__available_actions
+      - name: entry_mercadolivre__tags
+      - name: entry_mercadolivre_sh
+      
+  - name: supplies
+    database: "{{ 'sales_db' if target.name == 'prod' else 'dev_sales_db' }}"
+    schema: supplies
+    tables:
+      - name: product_sku_cost
+        external:
+          location: "{{ '/opt/airflow/cleaning/entry_data/prod/clean/clean_cost_data.csv' if target.name == 'prod' else '/opt/airflow/cleaning/entry_data/dev/clean/clean_cost_data.csv' }}"
+          file_format: csv
+      - name: kit_components
+        external:
+          location: "{{ '/opt/airflow/cleaning/entry_data/prod/clean/kit_components.csv' if target.name == 'prod' else '/opt/airflow/cleaning/entry_data/dev/clean/kit_components.csv' }}"
+          file_format: csv

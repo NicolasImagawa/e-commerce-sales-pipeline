@@ -1,0 +1,26 @@
+e_commerce_sales:
+  target: prod
+  outputs:
+    prod:
+      type: postgres
+      threads: 4
+      host: pgdatabase
+      user: airflow
+      password: airflow
+      port: 5432
+      dbname: sales_db
+      schema: sales
+      connect_timeout: 10
+      retries: 1 
+
+    dev:
+      type: postgres
+      threads: 4
+      host: pgdatabase
+      user: airflow
+      password: airflow
+      port: 5432
+      dbname: dev_sales_db
+      schema: sales
+      connect_timeout: 10
+      retries: 1 
