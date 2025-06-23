@@ -6,11 +6,17 @@ Currently, there are no seeds and the schema.yml file has info about the entry d
 
 The information about the models can be found on: https://github.com/NicolasImagawa/e-commerce-sales-pipeline/tree/main/local/dbt_files/e_commerce_sales/models
 
-The lineage is the following:
+The lineage is the following for Mercado Livre and Shopee, respectively:
 
 <br>
 
 ![image](https://github.com/user-attachments/assets/ba9f5645-c764-41e1-a03d-6068e0e97341)
+
+<br>
+
+<br>
+
+![image](https://github.com/user-attachments/assets/9c021778-c183-4cc5-b744-a5866218ab09)
 
 <br>
 
