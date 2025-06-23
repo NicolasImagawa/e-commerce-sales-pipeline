@@ -7,6 +7,9 @@ local/data/mercadolivre/clean/prod/*.csv
 local/data/mercadolivre/raw/dev/*.json
 local/data/mercadolivre/raw/prod/*.json
 
+local/data/mercadolivre/shipping_cost_ml/prod/*.json
+local/data/mercadolivre/shipping_cost_ml/dev/*.json
+
 local/data/shopee/raw/dev/*.xlsx
 local/data/shopee/raw/prod/*.xlsx
 
