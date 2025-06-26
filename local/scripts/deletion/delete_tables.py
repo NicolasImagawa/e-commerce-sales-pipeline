@@ -1,27 +1,11 @@
-def delete_entry_tables(env):
+def delete_entry_tables(env: str) -> None:
+    from config.config import ENTRY_TABLES_NAMES
+    
     import psycopg2
     host = "pgdatabase"
     user = "airflow"
     
-    tables = [
-        "entry.entry_mercadolivre",
-        "entry.entry_mercadolivre__context__flows",
-        "entry.entry_mercadolivre__mediations",
-        "entry.entry_mercadolivre__order_items",
-        "entry.entry_mercadolivre__order_items__item__variation_attributes",
-        "entry.entry_mercadolivre__payments",
-        "entry.entry_mercadolivre__payments__available_actions",
-        "entry.entry_mercadolivre__tags",
-        "entry.entry_mercadolivre_sh",
-        "entry.entry_mercadolivre_sh__destination__shipping_address__types",
-        "entry.entry_mercadolivre_sh__items_types",
-        "entry.entry_mercadolivre_sh__origin__shipping_address__types",
-        "entry.entry_mercadolivre_sh__tags",
-        "entry.entry_shopee",
-        "entry._dlt_loads",
-        "entry._dlt_pipeline_state",
-        "entry._dlt_version"
-    ]
+    tables = ENTRY_TABLES_NAMES
 
     if env == 'prod':
         db = "sales_db"

@@ -1,4 +1,4 @@
-def delete_input_files(path, file_extension):
+def delete_input_files(path: str, file_extension: str) -> None:
     from pathlib import Path
 
     # paths = [

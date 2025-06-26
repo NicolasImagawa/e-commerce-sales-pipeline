@@ -1,21 +1,23 @@
 def make_shipping_file(test_run: bool, env: str) -> None:
+    from config.config import PATHS
+    
     import csv
     import psycopg2
 
     if test_run:
         host = "localhost"
         user = "root"
-        save_path = "./local/data/mercadolivre/shipping_cost_ml/dev/shipping_ids_mercadolivre.csv"
+        save_path = PATHS['create_shipping_id_list']['test']['save_path']
     else:
         host = "pgdatabase"
         user = "airflow"
 
         if env == 'prod':
             db = "sales_db"
+            save_path = PATHS['create_shipping_id_list']['prod']['save_path']
         elif env == 'dev':
             db = "dev_sales_db"
-
-    save_path = f"/opt/airflow/data/mercadolivre/shipping_cost_ml/{env}/shipping_ids_mercadolivre.csv"
+            save_path = PATHS['create_shipping_id_list']['dev']['save_path']
 
     conn = psycopg2.connect(database=db, host=host, user=user, password="airflow", port="5432")
 

@@ -1,27 +1,20 @@
-def extract_mercado(test_run, order_init_date, order_end_date, env):
+def extract_mercado(test_run: bool, order_init_date: str, order_end_date: str, env: str) -> None: #Returns dict if is test run    
     import requests
     import json
     import pathlib
     import os
     from dotenv import load_dotenv
-
-    # config_path = "./extraction/mercadolivre/script/configs/user.json"
-    # token_filepath = "./extraction/mercadolivre/token.json"
+    from config.config import PATHS
 
     if test_run:
-        load_dotenv("./local/.env")
+        load_dotenv(PATHS['extract_ml_data']['test']['dotenv_path'])
     else:
-        load_dotenv("/opt/airflow/.env")
+        load_dotenv(PATHS['extract_ml_data']['prod_and_dev']['dotenv_path'])
 
     seller_id = os.environ["SELLER_ID"]
     access_token = os.environ["ACCESS_TOKEN"]
     order_data_created_from = order_init_date
     order_data_created_to = order_end_date
-
-    if env == 'prod':
-        folder = 'prod'
-    else:
-        folder = 'dev'
 
     limit = 50
     offset = 0
@@ -48,9 +41,11 @@ def extract_mercado(test_run, order_init_date, order_end_date, env):
             break
 
         if test_run:
-            download_path = f"./local/data/mercadolivre/raw/{folder}/ml_sell_data_{order_data_created_from}_{order_data_created_to}_{file_num}.json"
+            download_path = f"{PATHS['extract_ml_data']['test']['download_path']}{order_data_created_from}_{order_data_created_to}_{file_num}.json"
+        elif env == 'prod':
+            download_path = f"{PATHS['extract_ml_data']['prod']['download_path']}{order_data_created_from}_{order_data_created_to}_{file_num}.json"
         else:
-            download_path = f"/opt/airflow/data/mercadolivre/raw/{folder}/ml_sell_data_{order_data_created_from}_{order_data_created_to}_{file_num}.json"
+            download_path = f"{PATHS['extract_ml_data']['dev']['download_path']}{order_data_created_from}_{order_data_created_to}_{file_num}.json"
 
         with open(download_path, "w", encoding="utf-8") as data_json:
             json.dump(data["results"], data_json)

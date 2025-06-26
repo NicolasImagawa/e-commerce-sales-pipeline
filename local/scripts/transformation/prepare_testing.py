@@ -1,4 +1,4 @@
-def run_empty_shopee_tables(test_run):
+def run_empty_shopee_tables(test_run: bool) -> None:
     from dbt.cli.main import dbtRunner, dbtRunnerResult
 
     if test_run:

@@ -1,13 +1,14 @@
-def get_access_token(test_run):
+def get_access_token(test_run: bool) -> None:
     import requests
     import os
     from dotenv import load_dotenv, set_key
+    from config.config import PATHS
 
     if test_run:
-        env_path = "./local/.env"
+        env_path = PATHS['get_access_token']['test']['dotenv_path']
         load_dotenv(env_path, override=True)
     else:
-        env_path = "/opt/airflow/.env"
+        env_path = PATHS['get_access_token']['prod_and_dev']['dotenv_path']
         load_dotenv(env_path, override=True)
 
     client_id = os.environ["CLIENT_ID"]

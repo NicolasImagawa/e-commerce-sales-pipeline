@@ -1,4 +1,4 @@
-def get_access_token():
+def get_access_token() -> None:
     import requests
     import json
     from dotenv import load_dotenv

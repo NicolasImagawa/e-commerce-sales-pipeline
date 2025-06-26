@@ -1,12 +1,14 @@
-def install_dependencies(test_run, target):
+def install_dependencies(test_run: bool, target: str) -> None:
+    from config.config import DBT_PROFILE_PATH, DBT_PROJECT_PATH, TEST_PROFILE_PATH, TEST_PROJECT_PATH
+    
     from dbt.cli.main import dbtRunner, dbtRunnerResult
 
     if test_run:
-        PROFILE_PATH = "./local/dbt_files/e_commerce_sales/tests"
-        PROJECT_PATH = "./local/dbt_files/e_commerce_sales"
+        PROFILE_PATH = TEST_PROFILE_PATH
+        PROJECT_PATH = TEST_PROJECT_PATH
     else:
-        PROFILE_PATH = "/opt/airflow/dbt_files/e_commerce_sales"
-        PROJECT_PATH = "/opt/airflow/dbt_files/e_commerce_sales"
+        PROFILE_PATH = DBT_PROFILE_PATH
+        PROJECT_PATH = DBT_PROJECT_PATH
 
     dbt = dbtRunner()
     cli_args = [

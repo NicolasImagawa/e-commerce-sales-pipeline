@@ -1,19 +1,21 @@
-def postgres_ingestion_shopee(test_run, env):
+def postgres_ingestion_shopee(test_run: bool, env: str) -> int:
+    from config.config import PATHS
+    
     import pandas as pd
     from sqlalchemy import create_engine
     import os
     import pathlib
 
     if test_run:
-        dir = "./local/shopee/data/sample/sample.xlsx"
+        dir = PATHS['load_data_shopee']['test']['dir']
         files = [dir]
         db_config = 'postgresql://airflow:airflow@localhost:5432/sales_db'
     else:
         if env == 'prod':
-            dir = "/opt/airflow/data/shopee/raw/prod/"
+            dir = PATHS['load_data_shopee']['prod']['dir']
             db_config = f'postgresql://airflow:airflow@pgdatabase/sales_db'
         elif env == 'dev':
-            dir = "/opt/airflow/data/shopee/raw/dev/"
+            dir = PATHS['load_data_shopee']['dev']['dir']
             db_config = f'postgresql://airflow:airflow@pgdatabase/dev_sales_db'
 
         filelist = os.listdir(dir)
@@ -52,7 +54,7 @@ def postgres_ingestion_shopee(test_run, env):
     print("All data successfully loaded!")
     return 1
 
-def clean_name(name):
+def clean_name(name: str) -> str:
     from unidecode import unidecode
     import re
 

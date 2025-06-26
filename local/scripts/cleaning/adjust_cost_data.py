@@ -1,16 +1,18 @@
-def clean_cost_data (test_run, env):
+def clean_cost_data (test_run: bool, env: str) -> dict: #if testing, returns a dict, otherwise, None.
+    from config.config import PATHS
+
     import pandas as pd
 
     if test_run:
-        cost_data_path = "./local/data/supplies/unit_test/raw/raw_sample.csv"
-        output_path = "./local/data/supplies/unit_test/clean/clean_sample.csv"
+        cost_data_path = PATHS['adjust_cost_data']['test']['cost_data_path']
+        output_path = PATHS['adjust_cost_data']['test']['output_path']
     else:
         if env == 'prod':
-            cost_data_path = "/opt/airflow/data/supplies/raw/prod/cost_data.csv"
-            output_path = "/opt/airflow/data/supplies/clean/prod/clean_cost_data.csv"
+            cost_data_path = PATHS['adjust_cost_data']['prod']['cost_data_path']
+            output_path = PATHS['adjust_cost_data']['prod']['output_path']
         else:
-            cost_data_path = "/opt/airflow/data/supplies/raw/dev/dev_cost_data.csv"
-            output_path = "/opt/airflow/data/supplies/clean/dev/dev_clean_cost_data.csv"
+            cost_data_path = PATHS['adjust_cost_data']['dev']['cost_data_path']
+            output_path = PATHS['adjust_cost_data']['dev']['output_path']
     
     df = pd.read_csv(cost_data_path)
 

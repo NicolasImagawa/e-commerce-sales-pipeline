@@ -1,1 +1,0 @@
-Currently, shopee API doesn't work, at least for Brazil.

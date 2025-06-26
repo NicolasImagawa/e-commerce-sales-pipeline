@@ -1,11 +1,18 @@
-def postgres_ingestion_kits(env):
+def postgres_ingestion_kits(env: str) -> None:
+    import pathlib
+    import sys
+
+    sys.path.append(str(pathlib.Path(__file__).parent.parent.parent.parent))
+
+    from config.config import PATHS
+    
     import pandas as pd #pip install openpyxl
     from sqlalchemy import create_engine
 
     if env == 'prod':
-        path = f"/opt/airflow/data/supplies/clean/prod/kit_components.csv"
+        path = PATHS['load_kits']['prod']['path']
     elif env == 'dev':
-        path = f"/opt/airflow/data/supplies/clean/dev/dev_kit_components.csv"
+        path = PATHS['load_kits']['dev']['path']
 
     df = pd.read_csv(path, encoding='utf-8')
 

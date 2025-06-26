@@ -1,4 +1,6 @@
-def postgres_ingestion_sh_costs(test_run, env):
+def postgres_ingestion_sh_costs(test_run: bool, env: str) -> None:
+    from config.config import PATHS
+    
     import dlt
     from dlt.destinations import postgres
     import os
@@ -25,7 +27,7 @@ def postgres_ingestion_sh_costs(test_run, env):
     if test_run:
         data = [file]
         try:
-            print(f"trying to load {path} to entry schema")
+            print(f"trying to load to entry schema")
             info = pipeline.run(data, table_name="entry_mercadolivre_sh", write_disposition="append")
             print(info)
             print(pipeline.last_trace)
@@ -34,7 +36,11 @@ def postgres_ingestion_sh_costs(test_run, env):
             print(f"Unexpected error: {e}")    
         
     else:
-        path = f"/opt/airflow/data/mercadolivre/shipping_cost_ml/{env}/"
+        if env == 'prod':
+            path = PATHS['load_shipping_cost']['prod']['path']
+        else:
+            path = PATHS['load_shipping_cost']['dev']['path']
+
         filelist= os.listdir(path)
         paths = [f"{path}{file}" for file in filelist]
         

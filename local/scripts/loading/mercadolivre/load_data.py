@@ -1,4 +1,6 @@
-def postgres_ingestion_ml(test_run, env):
+def postgres_ingestion_ml(test_run: bool, env: str):
+    from config.config import PATHS
+    
     import dlt
     from dlt.destinations import postgres
     import json
@@ -9,16 +11,17 @@ def postgres_ingestion_ml(test_run, env):
     load_dotenv()
 
     if test_run:
-        dir = "./local/data/mercadolivre/raw/dev/sample.json"
+        dir = PATHS['load_data_ml']['test']['dir']
         files = [dir]
         creds = "postgresql://airflow:airflow@localhost:5432/dev_sales_db"
     else:
-        dir = f"/opt/airflow/data/mercadolivre/raw/{env}/"
-
         if env == 'prod':
             creds = "postgresql://airflow:airflow@pgdatabase:5432/sales_db"
+            dir = PATHS['load_data_ml']['prod']['dir']
+
         elif env == 'dev':
             creds = "postgresql://airflow:airflow@pgdatabase:5432/dev_sales_db"
+            dir = PATHS['load_data_ml']['dev']['dir']
         else:
             raise Exception(f"No environment named {env}")
         
@@ -30,7 +33,6 @@ def postgres_ingestion_ml(test_run, env):
         dataset_name="entry",
         destination=postgres(credentials=creds),
     )
-
 
     for file in files:
         if pathlib.Path(file).suffix == ".json":

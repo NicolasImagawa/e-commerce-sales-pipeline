@@ -1,5 +1,4 @@
-def run_terraform(dir):
-    import os
+def run_terraform(dir: str) -> None:
     import subprocess
 
     terraform_dir = dir

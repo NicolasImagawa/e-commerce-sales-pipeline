@@ -1,11 +1,18 @@
-def postgres_ingestion_costs(env):
+def postgres_ingestion_costs(env: str) -> None:
+    import pathlib
+    import sys
+
+    sys.path.append(str(pathlib.Path(__file__).parent.parent.parent.parent))
+
+    from config.config import PATHS
+    
     import pandas as pd #pip install openpyxl
     from sqlalchemy import create_engine
 
     if env == 'prod':
-        path = f"/opt/airflow/data/supplies/clean/prod/clean_cost_data.csv"
+        path = PATHS['load_prices']['prod']['path']
     elif env == 'dev':
-        path = f"/opt/airflow/data/supplies/clean/dev/dev_clean_cost_data.csv"
+        path = PATHS['load_prices']['dev']['path']
 
     df = pd.read_csv(path, encoding='utf-8')
 

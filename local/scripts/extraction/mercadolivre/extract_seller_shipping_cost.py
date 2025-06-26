@@ -1,4 +1,6 @@
-def get_shipping_id(test_run, env):
+def get_shipping_id(test_run: bool, env: str) -> None: #returns Dict if testing
+    from config.config import PATHS
+
     import pandas as pd
     import os
     from dotenv import load_dotenv
@@ -11,11 +13,16 @@ def get_shipping_id(test_run, env):
 
     else:
         if test_run:
-            id_path = f"./local/data/mercadolivre/shipping_cost_ml/{env}/shipping_ids_mercadolivre.csv"
-            save_suffix = f"./local/data/mercadolivre/shipping_cost_ml/{env}/"
+            id_path = PATHS['extract_seller_shipping_cost']['test']['id_path']
+            save_suffix = PATHS['extract_seller_shipping_cost']['test']['save_suffix']
         else:
-            id_path = f"/opt/airflow/data/mercadolivre/shipping_cost_ml/{env}/shipping_ids_mercadolivre.csv"
-            save_suffix = f"/opt/airflow/data/mercadolivre/shipping_cost_ml/{env}/"
+            if env == 'prod':
+                id_path = PATHS['extract_seller_shipping_cost']['prod']['id_path']
+                save_suffix = PATHS['extract_seller_shipping_cost']['prod']['save_suffix']
+            else:
+                id_path = PATHS['extract_seller_shipping_cost']['dev']['id_path']
+                save_suffix = PATHS['extract_seller_shipping_cost']['dev']['save_suffix']
+
         df = pd.read_csv(id_path, encoding="utf-8")
 
         df["shipping_id"] = df["shipping_id"].astype(int)
@@ -27,14 +34,13 @@ def get_shipping_id(test_run, env):
     else:
         extract_shipping_cost(shipping_ids, test_run, env, save_suffix)
 
-def extract_shipping_cost(sh_list, test_run, env, save_suffix):
+def extract_shipping_cost(sh_list: list, test_run: bool, env: str, save_suffix: str) -> None: #returns Dict if testing
     import requests
     import json
     import os
     from dotenv import load_dotenv
 
     load_dotenv()
-
 
     limit = 50
     offset = 0
@@ -69,6 +75,3 @@ def extract_shipping_cost(sh_list, test_run, env, save_suffix):
             "list_cost": data["lead_time"]["list_cost"]
         }
         return test_results
-    
-# get_shipping_id()
-# get_access_token()

@@ -1,16 +1,15 @@
-def transform_data(target):
+def transform_data(target: str) -> None:
+    from config.config import DBT_PROFILE_PATH, DBT_PROJECT_PATH
+    
     from dbt.cli.main import dbtRunner
-
-    PROFILE_PATH = "/opt/airflow/dbt_files/e_commerce_sales"
-    PROJECT_PATH = "/opt/airflow/dbt_files/e_commerce_sales"
 
     dbt = dbtRunner()
     cli_args = [
                     "run",
                     "--profiles-dir",
-                    PROFILE_PATH,
+                    DBT_PROFILE_PATH,
                     "--project-dir",
-                    PROJECT_PATH,
+                    DBT_PROJECT_PATH,
                     "--target",
                     target
                ]
