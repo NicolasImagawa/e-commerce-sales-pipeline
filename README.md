@@ -151,6 +151,7 @@ That's it! The pipeline should be working smoothly now and queries can be made a
 
 ### Under development
 The partitioning is still under development.
+Removing unneeded columns as well.
 
 ## Contact
 If you have any questions or want to reach me out, you can contact me on the following channels:
