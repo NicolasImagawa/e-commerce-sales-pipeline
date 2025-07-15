@@ -1,11 +1,7 @@
 from airflow import DAG
 from airflow.operators.empty import EmptyOperator
 from airflow.operators.python import PythonOperator
-from pathlib import Path
-import sys
 import datetime as dt
-
-sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from scripts.cleaning.adjust_cost_data import clean_cost_data
 

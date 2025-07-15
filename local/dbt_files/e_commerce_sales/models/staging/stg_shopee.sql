@@ -72,17 +72,5 @@ SELECT  CONCAT(id_do_pedido, numero_de_referencia_sku) AS load_id,
     {% if is_incremental() %}
         WHERE load_timestamp > (SELECT MAX(load_timestamp) from {{this}})
     {% endif %}
-), update_data AS (
-    SELECT * FROM new_data
-    {% if is_incremental() %}
-        WHERE load_id IN (SELECT load_id from {{this}})
-    {% endif %}
-), insert_data AS (
-    SELECT * FROM new_data
-    {% if is_incremental() %}
-        WHERE load_id NOT IN (SELECT load_id from update_data)
-    {% endif %}
 )
-SELECT * FROM update_data
-UNION
-SELECT * FROM insert_data
+SELECT * FROM new_data

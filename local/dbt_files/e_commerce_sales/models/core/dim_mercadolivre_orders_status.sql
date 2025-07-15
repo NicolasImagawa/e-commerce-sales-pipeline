@@ -31,45 +31,12 @@ WITH shipping_id AS (
         FROM shipping_id
         LEFT JOIN {{ ref('stg_mercadolivre_sh') }} AS stg_mercadolivre_sh
             ON shipping_id.shipping_id = stg_mercadolivre_sh.id
-), update_data AS (
-    SELECT  status_data.main_id,
-            status_data.shipping_id,
-            status_data.fulfilled,
-            status_data.status,
-            status_data.delivery_id,
-            status_data.delivery_method,
-            status_data.ld_timestamp
-        FROM status_data
-        {% if is_incremental() %}
-
-            WHERE status_data.main_id IN (SELECT main_id FROM {{ this }})
-
-        {% endif %}
-), insert_data AS (
-    SELECT  status_data.main_id,
-            status_data.shipping_id,
-            status_data.fulfilled,
-            status_data.status,
-            status_data.delivery_id,
-            status_data.delivery_method,
-            status_data.ld_timestamp
-        FROM status_data
-        WHERE status_data.main_id NOT IN (SELECT main_id FROM update_data)
 )
-SELECT update_data.main_id,
-       update_data.shipping_id,
-       update_data.fulfilled,
-       update_data.status,
-       update_data.delivery_id,
-       update_data.delivery_method,
-       update_data.ld_timestamp
-    FROM update_data
-UNION
-SELECT insert_data.main_id,
-       insert_data.shipping_id,
-       insert_data.fulfilled,
-       insert_data.status,
-       insert_data.delivery_id,
-       insert_data.delivery_method,
-       insert_data.ld_timestamp
-    FROM insert_data
+    SELECT  status_data.main_id,
+            status_data.shipping_id,
+            status_data.fulfilled,
+            status_data.status,
+            status_data.delivery_id,
+            status_data.delivery_method,
+            status_data.ld_timestamp
+        FROM status_data

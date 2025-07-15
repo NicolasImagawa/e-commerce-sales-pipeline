@@ -32,30 +32,10 @@ WITH product_id_sku AS(
            		 stg_shopee.numero_de_referencia_sku,
            		 kit_components.product,
 				 product_id_sku.ld_timestamp
-), update_data AS (
-        SELECT  product_id,
-                sku,
-                product,
-                ld_timestamp
-        FROM new_data
-            {% if is_incremental() %}
-                WHERE product_id IN (SELECT product_id FROM {{ this }})
-            {% endif %}
-), insert_data AS (
-        SELECT  product_id,
-                sku,
-                product,
-                ld_timestamp
-        FROM new_data
-        WHERE product_id NOT IN (SELECT product_id FROM update_data)
-) SELECT product_id,
-         sku,
-         product,
-         ld_timestamp
-    FROM update_data
-    UNION
-    SELECT product_id,
-           sku,
-           product,
-           ld_timestamp
-    FROM insert_data
+)
+    SELECT  product_id,
+            sku,
+            product,
+            ld_timestamp
+    FROM new_data
+ 

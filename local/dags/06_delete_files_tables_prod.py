@@ -1,10 +1,6 @@
 from airflow import DAG
 from airflow.operators.python import PythonOperator
 from airflow.operators.empty import EmptyOperator
-from pathlib import Path
-import sys
-
-sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from scripts.deletion.delete_files import delete_input_files
 from scripts.deletion.delete_tables import delete_entry_tables

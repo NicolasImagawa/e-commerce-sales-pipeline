@@ -55,47 +55,11 @@ WITH ad_name AS (
 	             ad_name_dlt_id_sku.sku,
 	             kit_components.product,
 	             ad_name_dlt_id_sku.ld_timestamp
-), update_data AS (
-    SELECT ad_name_dlt_id_sku_product.product_id,
-           ad_name_dlt_id_sku_product.product_ad_id,
-           ad_name_dlt_id_sku_product.product_ad_name,
-           ad_name_dlt_id_sku_product.sku,
-           ad_name_dlt_id_sku_product.product,
-           ad_name_dlt_id_sku_product.ld_timestamp
-        FROM ad_name_dlt_id_sku_product
-        
-        {% if is_incremental() %}
-
-            WHERE ad_name_dlt_id_sku_product.product_id IN (SELECT product_ad_id FROM {{ this }})
-
-        {% endif %}
-), insert_data AS (
-    SELECT ad_name_dlt_id_sku_product.product_id,
-           ad_name_dlt_id_sku_product.product_ad_id,
-           ad_name_dlt_id_sku_product.product_ad_name,
-           ad_name_dlt_id_sku_product.sku,
-           ad_name_dlt_id_sku_product.product,
-           ad_name_dlt_id_sku_product.ld_timestamp
-        FROM ad_name_dlt_id_sku_product
-        
-        {% if is_incremental() %}
-
-            WHERE ad_name_dlt_id_sku_product.product_id NOT IN (SELECT product_ad_id FROM update_data)
-
-        {% endif %}
 )
-SELECT  update_data.product_id,
-        update_data.product_ad_id,
-        update_data.product_ad_name,
-        update_data.sku,
-        update_data.product,
-        update_data.ld_timestamp
-    FROM update_data
-    UNION
-SELECT  insert_data.product_id,
-        insert_data.product_ad_id,
-        insert_data.product_ad_name,
-        insert_data.sku,
-        insert_data.product,
-        insert_data.ld_timestamp
-    FROM insert_data
+    SELECT ad_name_dlt_id_sku_product.product_id,
+           ad_name_dlt_id_sku_product.product_ad_id,
+           ad_name_dlt_id_sku_product.product_ad_name,
+           ad_name_dlt_id_sku_product.sku,
+           ad_name_dlt_id_sku_product.product,
+           ad_name_dlt_id_sku_product.ld_timestamp
+        FROM ad_name_dlt_id_sku_product

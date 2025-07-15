@@ -1,12 +1,7 @@
 from airflow import DAG
 from airflow.operators.python import PythonOperator
 from airflow.operators.empty import EmptyOperator
-import sys
-from pathlib import Path
 import datetime as dt
-
-sys.path.insert(0, str(Path(__file__).parent.parent))  # 0: highest priority when including the folder common to dags and the extraction scripts.
-
 from scripts.IaC.run_terraform import run_terraform
 
 tf_create_db_dir = "/opt/airflow/terraform/create_db"

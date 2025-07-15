@@ -158,80 +158,21 @@ WITH add_timestamp AS (
             --     AND payments.id IN (SELECT main_id FROM {{ this }})
 
             -- {% endif %}
-), update_results AS (
-		SELECT  new_results.main_id,
-                new_results.main_buyer__id,
-                new_results.order_id,
-                new_results.product_id,
-                new_results.date_id,
-                new_results.payment_method_id,
-                new_results.qt,
-                new_results.total_paid_amount,
-                new_results.transaction_amount,
-                new_results.price,
-                new_results.sh_cost,
-                new_results.fee,
-                new_results.total_prod_cost,
-		        new_results.seller_ship_cost,
-                new_results.profit,
-                new_results.ld_timestamp
-            FROM new_results
-            {% if is_incremental() %}
-
-                WHERE new_results.main_id IN (SELECT main_id FROM {{ this }})
-
-            {% endif %}
-), insert_results AS (
-		SELECT  new_results.main_id,
-                new_results.main_buyer__id,
-                new_results.order_id,
-                new_results.product_id,
-                new_results.date_id,
-                new_results.payment_method_id,
-                new_results.qt,
-                new_results.total_paid_amount,
-                new_results.transaction_amount,
-                new_results.price,
-                new_results.sh_cost,
-                new_results.fee,
-                new_results.total_prod_cost,
-		        new_results.seller_ship_cost,
-                new_results.profit,
-                new_results.ld_timestamp
-            FROM new_results
-            WHERE new_results.main_id NOT IN (SELECT main_id FROM update_results)
-) SELECT main_id,
-       main_buyer__id,
-       order_id,
-       product_id,
-       date_id,
-       payment_method_id,
-       qt,
-       total_paid_amount,
-       transaction_amount,
-       price,
-       sh_cost,
-       fee,
-       total_prod_cost,
-       seller_ship_cost,
-       profit,
-       ld_timestamp
-    FROM update_results
-UNION
-SELECT main_id,
-       main_buyer__id,
-       order_id,
-       product_id,
-       date_id,
-       payment_method_id,
-       qt,
-       total_paid_amount,
-       transaction_amount,
-       price,
-       sh_cost,
-       fee,
-       total_prod_cost,
-       seller_ship_cost,
-       profit,
-       ld_timestamp
-    FROM insert_results
+)
+    SELECT  new_results.main_id,
+            new_results.main_buyer__id,
+            new_results.order_id,
+            new_results.product_id,
+            new_results.date_id,
+            new_results.payment_method_id,
+            new_results.qt,
+            new_results.total_paid_amount,
+            new_results.transaction_amount,
+            new_results.price,
+            new_results.sh_cost,
+            new_results.fee,
+            new_results.total_prod_cost,
+            new_results.seller_ship_cost,
+            new_results.profit,
+            new_results.ld_timestamp
+        FROM new_results

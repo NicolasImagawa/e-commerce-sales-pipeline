@@ -10,10 +10,10 @@ sys.path.insert(0, str(Path(__file__).parent.parent))  # 0: highest priority whe
 from scripts.extraction.mercadolivre.get_access_token import get_access_token
 from scripts.extraction.mercadolivre.extract_ml_data import extract_mercado
 
-date_init = "2024-07-01T00:00:00.000-03:00"
-date_end = "2024-10-01T00:00:00.000-03:00"
-# date_init = "2024-10-01T00:00:00.000-03:00"
-# date_end = "2025-01-31T00:00:00.000-03:00"
+# date_init = "2024-07-01T00:00:00.000-03:00"
+# date_end = "2024-10-01T00:00:00.000-03:00"
+date_init = "2024-11-01T00:00:00.000-03:00"
+date_end = "2025-05-01T00:00:00.000-03:00"
 
 with DAG (
     dag_id = '01_extract_data_dev',

@@ -43,7 +43,7 @@ WITH date_approved AS (
     FROM date_approved_ship_id
         LEFT JOIN {{ ref('stg_mercadolivre_sh') }} AS stg_mercadolivre_sh
         ON date_approved_ship_id.shipping_id = stg_mercadolivre_sh.id
-), update_data AS (
+)
     SELECT  date_approved_estimated_delivery.date_id,
             date_approved_estimated_delivery.date_approved,
             date_approved_estimated_delivery.year_approved,
@@ -55,45 +55,3 @@ WITH date_approved AS (
             date_approved_estimated_delivery.day_delivered,
             date_approved_estimated_delivery.ld_timestamp
     FROM date_approved_estimated_delivery
-        {% if is_incremental() %}
-
-            WHERE date_approved_estimated_delivery.date_id IN (SELECT date_id FROM {{ this }})
-
-        {% endif %}
-), insert_data AS (
-    SELECT  date_approved_estimated_delivery.date_id,
-            date_approved_estimated_delivery.date_approved,
-            date_approved_estimated_delivery.year_approved,
-            date_approved_estimated_delivery.month_approved,
-            date_approved_estimated_delivery.day_approved,
-            date_approved_estimated_delivery.estimated_delivery_date,
-            date_approved_estimated_delivery.year_delivered,
-            date_approved_estimated_delivery.month_delivered,
-            date_approved_estimated_delivery.day_delivered,
-            date_approved_estimated_delivery.ld_timestamp
-    FROM date_approved_estimated_delivery
-    WHERE date_approved_estimated_delivery.date_id NOT IN (SELECT date_id FROM update_data)
-
-) SELECT update_data.date_id,
-         update_data.date_approved,
-         update_data.year_approved,
-         update_data.month_approved,
-         update_data.day_approved,
-         update_data.estimated_delivery_date,
-         update_data.year_delivered,
-         update_data.month_delivered,
-         update_data.day_delivered,
-         update_data.ld_timestamp
-    FROM update_data
-    UNION
-  SELECT insert_data.date_id,
-         insert_data.date_approved,
-         insert_data.year_approved,
-         insert_data.month_approved,
-         insert_data.day_approved,
-         insert_data.estimated_delivery_date,
-         insert_data.year_delivered,
-         insert_data.month_delivered,
-         insert_data.day_delivered,
-         insert_data.ld_timestamp
-    FROM insert_data

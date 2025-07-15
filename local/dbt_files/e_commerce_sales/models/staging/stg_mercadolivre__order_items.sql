@@ -17,8 +17,7 @@ WITH max_timestamp AS (SELECT CURRENT_TIMESTAMP AS load_timestamp)
             order_items.item__seller_sku, 
             order_items.quantity, 
             order_items.unit_price, 
-            order_items.full_unit_price, 
-            order_items.currency_id, 
+            order_items.full_unit_price,
             order_items.requested_quantity__measure,
             order_items.requested_quantity__value, 
             order_items.sale_fee, 
@@ -27,8 +26,7 @@ WITH max_timestamp AS (SELECT CURRENT_TIMESTAMP AS load_timestamp)
             order_items._dlt_parent_id, 
             order_items._dlt_list_idx, 
             order_items._dlt_id, 
-            order_items.item__variation_id, 
-            order_items.stock__node_id,
+            order_items.item__variation_id,
             max_timestamp.load_timestamp
         FROM {{ source("entry_ml", "entry_mercadolivre__order_items") }} AS order_items, 
              {{ source("entry_ml", "entry_mercadolivre") }} AS ml,
@@ -37,20 +35,5 @@ WITH max_timestamp AS (SELECT CURRENT_TIMESTAMP AS load_timestamp)
         {% if is_incremental() %}
             AND max_timestamp.load_timestamp > (SELECT MAX(load_timestamp ) FROM {{this}})
         {% endif %}
-), update_data AS (
-    SELECT * 
-    FROM new_data
-    {% if is_incremental() %}
-        WHERE load_id IN (SELECT load_id FROM {{this}})
-    {% endif %}
-), insert_data AS (
-    SELECT * 
-    FROM new_data
-    {% if is_incremental() %}
-        WHERE load_id NOT IN (SELECT load_id FROM update_data)
-    {% endif %}
-) 
-SELECT * FROM update_data
-UNION
-SELECT * FROM insert_data
+) SELECT * FROM new_data
 

@@ -1,0 +1,679 @@
+version: 2
+
+models:
+  - name: stg_shopee
+    description: >
+      Sales made in Shopee's platform for a given period. The data originates from Shopee's own data database and be extracted through .xlsx files
+      This table is should be deleted after each transformation in order to no break the downstream tables.
+
+    columns:
+      - name: load_id
+        description: Id created with "id_do_pedido" and "numero_de_referencia_sku" since the same order id can have more than 1 product in Shopee sales.
+        tests:
+          - not_null:
+              severity: error
+
+      - name: id_do_pedido
+        description: Sale order id, might repeat if an order has more than 1 product.
+        tests:
+          - not_null:
+              severity: error
+
+      - name: status_do_pedido
+        description: Whether the order was fullfilled, shipped, being processed or canceled.
+      
+      - name: status_da_devolucao___reembolso
+        description: Refund status. The value is null if no refund occurred.
+
+      - name: numero_de_rastreamento
+        description: Order tracking number.
+
+      - name: opcao_de_envio
+        description: Shipping option.
+      
+      - name: data_prevista_de_envio
+        description: Shipping expected date.
+
+      - name: tempo_de_envio
+        description: Time to process and ship the order.
+
+      - name: data_de_criacao_do_pedido
+        description: Timestamp showing when the order was made by the customer.
+
+      - name: hora_do_pagamento_do_pedido
+        description: Timestamp showing when the order was paid by the customer.
+ 
+      - name: no_de_referencia_do_sku_principal
+        description: Product's main SKU, must be created by the sales team or the user of the DB.
+        tests:
+          - not_null:
+              severity: warn
+        
+      - name: nome_do_produto
+        description: Product's name in Shopee's platform. Typically, it is a ad oriented name to catch potential buyers attention.
+
+      - name: numero_de_referencia_sku
+        description: Product's SKU, must be created by the sales team or the user of the DB. This SKU is the one used for matching data between many Shopee tables.
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: nome_da_variacao
+        description: Describes a product subtype such as color and size
+
+      - name: preco_original
+        description: Product's original price before any discounts. It well be zero if the order was cancelled.
+        tests:
+          - not_null:
+              severity: error
+
+      - name: preco_acordado
+        description: Product's price after discounts. It well be zero if the order was cancelled.
+        tests:
+          - not_null:
+              severity: error
+          - dbt_utils.expression_is_true:
+              expression: "preco_acordado > 0"
+              severity: error
+
+      - name: quantidade
+        description: How many products for a given SKU were bought.
+        tests:
+          - not_null:
+              severity: error
+
+      - name: returned_quantity
+        description: Products delivered back to the seller after a refund was approved.
+
+      - name: subtotal_do_produto
+        description: Product's price inside an order, might be the only price if a single product was purchased or a part of if in case many products were bought.
+
+      - name: desconto_do_vendedor
+        description: Seller discount for a product.
+
+      - name: reembolso_shopee
+        description: Shopee's refund.
+
+      - name: peso_total_sku
+        description: Product's weight.
+
+      - name: numero_de_produtos_pedidos
+        description: Total products ordered.
+
+      - name: peso_total_do_pedido
+        description: Order total weight.
+
+      - name: codigo_do_cupom
+        description: Cupom code.
+
+      - name: cupom_do_vendedor
+        description: Cupom code - created by the seller.
+      
+      - name: seller_absorbed_coin_cashback
+        description: Seller cashback in Shopee coins.
+
+      - name: cupom_shopee
+        description: Cupom code - created by Shopee.
+
+      - name: indicador_da_leve_mais_por_menos
+        description: Tells if a sale had "buy something get another thing else free or cheaper" .
+
+      - name: desconto_shopee_da_leve_mais_por_menos
+        description: Discount for the column above applied by Shopee.
+
+      - name: desconto_da_leve_mais_por_menos_do_vendedor
+        description: Discount for the column above applied by the seller.
+
+      - name: compensar_moedas_shopee
+        description: Value in Shopee coins used by the buyer.
+
+      - name: total_descontado_cartao_de_credito
+        description: Purchase value portion using credit card.
+
+      - name: valor_total
+        description: Sale total cost.
+
+      - name: taxa_de_envio_pagas_pelo_comprador
+        description: Shipping costs paid by the buyer.
+
+      - name: desconto_de_frete_aproximado
+        description: Shipping costs discounts.
+
+      - name: taxa_de_envio_reversa
+        description: Reverse shipping costs (usually for refunds).
+
+      - name: taxa_de_transacao
+        description: Purchase transaction costs.
+        tests:
+          - not_null:
+              severity: error
+
+      - name: taxa_de_comissao
+        description: Comission fee paid to Shopee
+        tests:
+          - not_null:
+              severity: error
+
+      - name: taxa_de_servico
+        description: Service fee paid to Shopee
+        tests:
+          - not_null:
+              severity: error
+
+      - name: total_global
+        description: Another sales total cost.
+        tests:
+          - not_null:
+              severity: error
+
+      - name: valor_estimado_do_frete
+        description: Shipping estimated costs.
+
+      - name: nome_de_usuario__comprador_
+        description: Buyer's username
+        tests:
+          - not_null:
+              severity: error
+
+      - name: nome_do_destinatario
+        description: Buyer's real name
+        tests:
+          - not_null:
+              severity: error
+
+      - name: telefone
+        description: Buyer's tellphone number
+        tests:
+          - not_null:
+              severity: error
+
+      - name: cpf_do_comprador
+        description: Buyer's legal ID
+        tests:
+          - not_null:
+              severity: error
+
+      - name: endereco_de_entrega
+        description: Shipping address.
+        tests:
+          - not_null:
+              severity: error
+
+      - name: cidade
+        description: Shipping city.
+        tests:
+          - not_null:
+              severity: error
+
+      - name: bairro
+        description: Shipping neighborhood.
+        tests:
+          - not_null:
+              severity: error
+
+
+      - name: cidade_1
+        description: Another shipping city identifier.
+        tests:
+          - not_null:
+              severity: error
+
+      - name: uf
+        description: Shipping State.
+        tests:
+          - not_null:
+              severity: error
+
+      - name: pais
+        description: Shipping country.
+        tests:
+          - not_null:
+              severity: error
+
+      - name: cep
+        description: Shipping postal code.
+        tests:
+          - not_null:
+              severity: error
+
+      - name: observacao_do_comprador
+        description: Buyer's observation.
+
+      - name: hora_completa_do_pedido
+        description: Time when the order was fullfilled.
+
+      - name: nota
+        description: Note
+
+      - name: load_timestamp
+        description: Registers when the data was loaded to the database.
+        tests:
+          - not_null:
+              severity: error
+    
+  - name: stg_mercadolivre
+    description: Table including data from MercadoLivre sales that are not nested on its original JSON file.
+
+    columns:
+      - name: expiration_date
+        description: .
+      
+      - name: fulfilled
+        description: Fulfillment status
+
+      - name: shipping__id
+        description: Shipping identifier
+        tests:
+          - not_null:
+              severity: error
+
+      - name: shipping__id
+        description: .
+
+      - name: date_closed
+        description: .
+
+      - name: id
+        description: Sale id, it is the unique key for this table.
+        tests:
+          - not_null:
+              severity: error
+
+      - name: date_last_updated
+        description: Transaction date last update.
+
+      - name: last_updated
+        description: .
+
+      - name: coupon__amount
+        description: Amount paid by using a coupom.
+
+      - name: date_created
+        description: Date when the purchase was created.
+
+      - name: buyer__id
+        description: Buyer's identifier (Real name).
+
+      - name: buyer__nickname
+        description: Buyer's nickname inside MercadoLivre,
+
+      - name: seller__id
+        description: Seller's identifier.
+
+      - name: seller__nickname
+        description: Seller's nickname inside MercadoLivre.
+
+      - name: total_amount
+        description: Total amount that has to be paid.
+
+      - name: paid_amount
+        description: Paid amount that might not be equal to the total amount if more that one payment option was chosen.
+
+      - name: currency_id
+        description: Currency used in the purchase.
+      
+      - name: status
+        description: Order status.
+
+      - name: context__channel
+        description: MercadoLivre channel related to the purchase
+
+      - name: context__site
+        description: MercadoLivre site related to the purchase
+
+      - name: _dlt_load_id
+        description: dlt's identifier when loading the data.
+        tests:
+          - not_null:
+              severity: error
+
+      - name: _dlt_id
+        description: dlt id to identify this table's children through the latter's "_dlt_parent_id"
+        tests:
+          - not_null:
+              severity: error
+          - unique:
+              severity: warn
+
+      - name: load_timestamp
+        description: Registers when the data was loaded to the database.
+        tests:
+          - not_null:
+              severity: error
+
+  - name: stg_mercadolivre_sh
+    description: >
+      This table's core function is to get the shipping costs paid by the seller if the product costs more than BRL 78.99. 
+      This value is located in the column "lead_time__list_cost".
+
+    columns:
+      - name: _dlt_load_id
+        description: dlt's identifier when loading the data.
+        tests:
+          - not_null:
+              severity: error
+
+      - name: _dlt_id
+        description: dlt id to identify this table's children through the latter's "_dlt_parent_id"
+        tests:
+          - not_null:
+              severity: error
+          - unique:
+              severity: warn
+
+      - name: id
+        description: Shipping id for the order, it is the unique key for this table.
+        tests:
+          - not_null:
+              severity: error
+
+      - name: lead_time__cost
+        description: .
+
+      - name: lead_time__cost_type
+        description: Type of lead_time__cost
+
+      - name: lead_time__list_cost
+        description: This is the value for the shipping cost to be used in case the price exceeds BRL 78.99
+        tests:
+          - not_null:
+              severity: error
+          - dbt_utils.expression_is_true:
+              expression: "lead_time__list_cost > 0"
+              severity: error
+
+      - name: lead_time__currency_id
+        description: .
+
+      - name: snapshot_packing__snapshot_id
+        description: .
+
+      - name: snapshot_packing__pack_hash
+        description: .
+
+      - name: last_updated
+        description: .
+
+      - name: date_created
+        description: .
+
+      - name: destination__receiver_id
+        description: .
+
+      - name: destination__receiver_name
+        description: .
+
+      - name: destination__shipping_address__country__id
+        description: .
+            
+      - name: destination__shipping_address__country__name
+        description: . 
+
+      - name: destination__shipping_address__address_line
+        description: .
+
+      - name: destination__shipping_address__scoring
+        description: .
+
+      - name: destination__shipping_address__city__id
+        description: .
+
+      - name: destination__shipping_address__city__name
+        description: .
+
+      - name: destination__shipping_address__geolocation_type
+        description: .
+        
+      - name: destination__shipping_address__latitude
+        description: .
+
+      - name: destination__shipping_address__address_id
+        description: .
+
+      - name: destination__shipping_address__location_id
+        description: .
+            
+      - name: destination__shipping_address__street_name
+        description: .
+
+      - name: destination__shipping_address__zip_code
+        description: .
+          
+      - name: destination__shipping_address__geolocation_source
+        description: .
+
+      - name: destination__shipping_address__delivery_preference
+        description: .
+
+      - name: destination__shipping_address__street_number
+        description: .
+
+      - name: destination__shipping_address__state__id
+        description: .
+
+      - name: destination__shipping_address__state__name
+        description: .
+
+      - name: destination__shipping_address__neighborhood__name
+        description: .
+
+      - name: destination__shipping_address__geolocation_last_updated
+        description: .
+
+      - name: destination__shipping_address__longitude
+        description: . 
+
+      - name: destination__type
+        description: .
+
+      - name: destination__receiver_phone
+        description: .
+
+      - name: source__site_id
+        description: .
+
+      - name: source__market_place
+        description: .
+
+      - name: declared_value
+        description: .
+
+      - name: logistic__mode
+        description: .
+
+      - name: logistic__type
+        description: .
+
+      - name: logistic__direction
+        description: .
+
+      - name: priority_class__id
+        description: .
+
+      - name: tracking_number
+        description: .
+
+      - name: load_timestamp
+        description: Registers when the data was loaded to the database.
+        tests:
+          - not_null:
+              severity: error
+
+  - name: stg_mercadolivre__payments
+    description: This table has data related to payments on sales in MercadoLivre.
+
+    columns:
+      - name: load_id
+        description: "Concatenates the id and the payment_method_id since an order can use more than 1 method. Serves as the unique key."
+        tests:
+          - not_null:
+              severity: error
+
+      - name: reason
+        description: "Product description of what is being bought."
+
+      - name: total_paid_amount
+        description: "Total paid by the customer."
+        tests:
+          - not_null:
+              severity: error
+          - dbt_utils.expression_is_true:
+              expression: "total_paid_amount > 0"
+              severity: error
+
+      - name: transaction_amount
+        description: "Total processed in the transaction."
+        tests:
+          - not_null:
+              severity: error
+          - dbt_utils.expression_is_true:
+              expression: "transaction_amount > 0"
+              severity: error
+
+      - name: date_approved,
+        description: .
+
+      - name: id,
+        description: Shipping id.
+        tests:
+          - not_null:
+              severity: error
+
+      - name: shipping_cost,
+        description: id, must not be null.
+
+      - name: date_created
+        description: id, must not be null.
+        tests:
+          - not_null:
+              severity: error            
+
+      - name: payment_method_id
+        description: Payment method chosen for a transaction or subtransaction.
+        tests:
+          - not_null:
+              severity: error
+
+      - name: order_id
+        description: Order id.
+        tests:
+          - not_null:
+              severity: error
+
+      - name: status
+        description: Order status
+
+      - name: _dlt_parent_id
+        description: Order status
+        tests:
+          - not_null:
+              severity: error
+
+      - name: _dlt_list_idx
+        description: Order status
+        tests:
+          - not_null:
+              severity: error
+
+      - name: _dlt_id
+        description: Order status
+        tests:
+          - not_null:
+              severity: error
+
+      - name: installment_amount
+        description: .
+
+      - name: load_timestamp
+        description: Registers when the data was loaded to the database.
+        tests:
+          - not_null:
+              severity: error
+
+  - name: stg_mercadolivre__order_items
+    description: This table has data related to payments on sales in MercadoLivre.
+
+    columns:
+    - name: load_id
+      description: "Concatenates the id and the item__seller_sku since an order can have more than 1 product Serves as the unique key."
+      tests:
+        - not_null:
+            severity: error
+
+    - name: item__id
+      description: .
+
+    - name: item__title
+      description: .
+
+    - name: item__category_id
+      description: .
+
+    - name: item__warranty
+      description: .
+
+    - name: item__seller_sku
+      description: Item SKU, provided by the seller or database user.
+      tests:
+        - not_null:
+            severity: warn
+
+    - name: quantity
+      description: .
+      tests:
+        - not_null:
+            severity: error
+
+    - name: unit_price
+      description: .
+      tests:
+        - not_null:
+            severity: error
+
+    - name: full_unit_price
+      description: .
+
+    - name: requested_quantity__measure
+      description: .
+
+    - name: requested_quantity__value
+      description: .
+
+    - name: sale_fee
+      description: .
+      tests:
+        - not_null:
+            severity: error
+
+    - name: listing_type_id
+      description: .
+
+    - name: element_id
+      description: .
+
+    - name: _dlt_parent_id
+      description: .
+      tests:
+        - not_null:
+            severity: error
+
+    - name: _dlt_list_idx
+      description: .
+      tests:
+        - not_null:
+            severity: error
+
+    - name: _dlt_id
+      description: .
+      tests:
+        - not_null:
+            severity: error
+
+    - name: item__variation_id
+      description: .
+
+    - name: load_timestamp
+      description: Registers when the data was loaded to the database.
+      tests:
+        - not_null:
+            severity: error

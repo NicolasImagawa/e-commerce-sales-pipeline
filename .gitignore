@@ -25,6 +25,9 @@ local/old/
 
 local/scripts/dev-only/
 
+local/dbt/files/logs/
+local/dags/logs/
+
 token.json
 
 local/sql/

@@ -97,73 +97,19 @@ WITH id_buyer_sku_price AS (
 		AND total_price.buyer__id = stg_shopee.nome_de_usuario__comprador_
         AND total_price.sku = stg_shopee.numero_de_referencia_sku
         AND stg_shopee.status_da_devolucao___reembolso IS NULL
-), update_results AS (
-	SELECT  new_data.main_id,
-	        new_data.buyer__id,
-            new_data.date_id,
-            new_data.product_id,
-	        new_data.qt,
-	        new_data.price,
-            new_data.unit_comission_fee,
-            new_data.unit_service_fee,
-	        new_data.sh_cost,
-	        new_data.sh_discount,
-	        new_data.reverse_sh_fee,
-            new_data.total_prod_cost,
-            ROUND(CAST((new_data.price - new_data.unit_comission_fee - new_data.unit_service_fee - new_data.total_prod_cost) - new_data.reverse_sh_fee AS NUMERIC), 2) AS profit,
-            new_data.ld_timestamp
-		FROM new_data
-        {% if is_incremental() %}
-
-            WHERE new_data.main_id IN (SELECT main_id FROM {{ this }})
-
-        {% endif %}
-),  insert_results AS (
-	SELECT  new_data.main_id,
-	        new_data.buyer__id,
-            new_data.date_id,
-            new_data.product_id,
-	        new_data.qt,
-	        new_data.price,
-            new_data.unit_comission_fee,
-            new_data.unit_service_fee,
-	        new_data.sh_cost,
-	        new_data.sh_discount,
-	        new_data.reverse_sh_fee,
-            new_data.total_prod_cost,
-            ROUND(CAST((new_data.price - new_data.unit_comission_fee - new_data.unit_service_fee - new_data.total_prod_cost) - new_data.reverse_sh_fee AS NUMERIC), 2) AS profit,
-            new_data.ld_timestamp
-		FROM new_data
-        WHERE new_data.main_id NOT IN (SELECT main_id FROM update_results)
 )
-SELECT  main_id,
-        buyer__id,
-        date_id,
-        product_id,
-        qt,
-        price,
-        unit_comission_fee,
-        unit_service_fee,
-        sh_cost,
-        sh_discount,
-        reverse_sh_fee,
-        total_prod_cost,
-        profit,
-        ld_timestamp
-    FROM update_results
-    UNION
-SELECT  main_id,
-        buyer__id,
-        date_id,
-        product_id,
-        qt,
-        price,
-        unit_comission_fee,
-        unit_service_fee,
-        sh_cost,
-        sh_discount,
-        reverse_sh_fee,
-        total_prod_cost,
-        profit,
-        ld_timestamp
-    FROM insert_results
+    SELECT  new_data.main_id,
+            new_data.buyer__id,
+            new_data.date_id,
+            new_data.product_id,
+            new_data.qt,
+            new_data.price,
+            new_data.unit_comission_fee,
+            new_data.unit_service_fee,
+            new_data.sh_cost,
+            new_data.sh_discount,
+            new_data.reverse_sh_fee,
+            new_data.total_prod_cost,
+            ROUND(CAST((new_data.price - new_data.unit_comission_fee - new_data.unit_service_fee - new_data.total_prod_cost) - new_data.reverse_sh_fee AS NUMERIC), 2) AS profit,
+            new_data.ld_timestamp
+        FROM new_data

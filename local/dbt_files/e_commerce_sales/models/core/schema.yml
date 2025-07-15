@@ -1,0 +1,190 @@
+version: 2
+
+models:
+  - name: shopee_orders_results
+    description: >
+      Fact table for shopee sales results before taxes and operational costs.
+    columns:
+
+    - name: main_id
+      description: Main id for the table and serves as the unique key, works the same way as the stg_shopee.load_id.
+      tests:
+      - not_null:
+          severity: error
+    
+    - name: buyer__id
+      description: Works as the key for accessing data in the buyer dimensional table.
+      tests:
+      - not_null:
+          severity: error
+
+    - name: date_id
+      description: Works as the key for accessing data in the date dimensional table.
+      tests:
+      - not_null:
+          severity: error
+
+    - name: product_id
+      description: Works as the key for accessing data in the product dimensional table.
+      tests:
+      - not_null:
+          severity: error
+
+    - name: qt
+      description: Quantity bought
+      tests:
+      - not_null:
+          severity: error
+
+    - name: price
+      description: Price for the product
+      tests:
+      - not_null:
+          severity: error
+
+    - name: unit_comission_fee
+      description: Since shopee shows this piece of data aggregated by the total of products in an order, this column get the proportion of a single product inside an order
+      tests:
+      - not_null:
+          severity: error
+
+
+    - name: unit_service_fee
+      description: Since shopee shows this piece of data aggregated by the total of products in an order, this column get the proportion of a single product inside an order
+      tests:
+      - not_null:
+          severity: error
+
+    - name: sh_cost
+      description: Shipping costs paid by the customer.
+
+    - name: sh_discount
+      description: Shipping discounts paid by shopee.
+
+    - name: reverse_sh_fee
+      description: Reverse shipping fee.
+
+    - name: total_prod_cost
+      description: Total product cost that must be given by the user through a .csv file. It will warn in case of nulls or zeroes.
+      tests:
+      - not_null:
+          severity: warn
+      - dbt_utils.expression_is_true:
+          expression: "total_prod_cost > 0"
+          severity: warn
+
+    - name: profit
+      description: Calculates the profit before taxes and operational costs
+      tests:
+      - not_null:
+          severity: error
+
+    - name: ld_timestamp
+      description: Registers the time when the transformation occurred.
+      tests:
+      - not_null:
+          severity: error
+
+  - name: ml_orders_results
+    description: >
+      Fact table for MercadoLivre sales results before taxes and operational costs.
+    columns:
+
+    - name: main_id
+      description: Main id for the table and serves as the unique key.
+      tests:
+      - not_null:
+          severity: error
+    
+    - name: main_buyer__id
+      description: Works as the key for accessing data in the buyer dimensional table.
+      tests:
+      - not_null:
+          severity: error
+
+    - name: order_id
+      description: Works as the key for accessing data in the order_status dimensional table.
+      tests:
+      - not_null:
+          severity: error
+        
+    - name: product_id
+      description: Works as the key for accessing data in the product dimensional table.
+      tests:
+      - not_null:
+          severity: error
+
+    - name: date_id
+      description: Works as the key for accessing data in the date dimensional table.
+      tests:
+      - not_null:
+          severity: error
+
+    - name: payment_method_id
+      description: Identifies which payment method was used
+      tests:
+      - not_null:
+          severity: error
+
+    - name: qt
+      description: Quantity bought
+      tests:
+      - not_null:
+          severity: error
+
+    - name: total_paid_amount
+      description: Total paid for the product.
+      tests:
+      - not_null:
+          severity: error
+
+    - name: transaction_amount
+      description: Total money transacted.
+      tests:
+      - not_null:
+          severity: error
+
+    - name: price
+      description: Price for a single product.
+      tests:
+      - not_null:
+          severity: error
+
+    - name: sh_cost
+      description: Shipping costs paid by the customer.
+      tests:
+      - not_null:
+          severity: error
+
+    - name: fee
+      description: This column shows fee paid to MercadoLivre for an order.
+      tests:
+      - not_null:
+          severity: error
+
+    - name: total_prod_cost
+      description: Total product cost that must be given by the user through a .csv file. It will warn in case of nulls or zeroes.
+      tests:
+      - not_null:
+          severity: warn
+      - dbt_utils.expression_is_true:
+          expression: "total_prod_cost > 0"
+          severity: warn
+
+    - name: seller_ship_cost
+      description: Shipping costs paid by the seller.
+      tests:
+      - not_null:
+          severity: error
+
+    - name: profit
+      description: Calculates the profit before taxes and operational costs
+      tests:
+      - not_null:
+          severity: error
+
+    - name: ld_timestamp
+      description: Registers the time when the transformation occurred.
+      tests:
+      - not_null:
+          severity: error

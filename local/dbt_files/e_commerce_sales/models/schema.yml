@@ -33,3 +33,4 @@ sources:
         external:
           location: "{{ '/opt/airflow/cleaning/entry_data/prod/clean/kit_components.csv' if target.name == 'prod' else '/opt/airflow/cleaning/entry_data/dev/clean/kit_components.csv' }}"
           file_format: csv
+  

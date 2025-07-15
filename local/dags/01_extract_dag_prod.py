@@ -1,11 +1,7 @@
 from airflow import DAG
 from airflow.operators.python import PythonOperator
 from airflow.operators.empty import EmptyOperator
-import sys
-from pathlib import Path
 import datetime as dt
-
-sys.path.insert(0, str(Path(__file__).parent.parent))  # 0: highest priority when including the folder common to dags and the extraction scripts.
 
 from scripts.extraction.mercadolivre.get_access_token import get_access_token
 from scripts.extraction.mercadolivre.extract_ml_data import extract_mercado
