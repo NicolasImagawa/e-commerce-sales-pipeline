@@ -40,7 +40,7 @@ Still under development.
 ## Requirements
 To run this pipeline, the user needs:
 1. A Shopee seller account;
-2. A AWS account, root or IAM, being IAM recommended for safety reasons.
+2. A AWS account, root or IAM user, being IAM user recommended for safety reasons.
 
 ## Running the pipeline
 
