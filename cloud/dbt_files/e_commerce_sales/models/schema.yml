@@ -1,0 +1,22 @@
+version: 2
+
+sources:
+  - name: entry_shopee
+    database: "{{ 'sales_db' if target.name == 'prod' else 'dev' }}"
+    schema: entry
+    tables:
+      - name: entry_shopee
+
+  - name: supplies
+    database: "{{ 'sales_db' if target.name == 'prod' else 'dev' }}"
+    schema: test_schema
+    tables:
+      - name: product_sku_cost
+        external:
+          location: "{{ 's3://e-commerce-sales-bucket/data/test-spectrum/product_sku_cost/' if target.name == 'prod' else 's3://e-commerce-sales-bucket/data/test-spectrum/product_sku_cost/' }}"
+          file_format: csv
+      - name: kit_components
+        external:
+          location: "{{ 's3://e-commerce-sales-bucket/data/test-spectrum/kit_components/' if target.name == 'prod' else 's3://e-commerce-sales-bucket/data/test-spectrum/kit_components/' }}"
+          file_format: csv
+  

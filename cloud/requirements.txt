@@ -1,0 +1,12 @@
+apache-airflow
+numpy
+pandas
+dlt
+dlt[pyarrow]
+openpyxl
+unidecode
+sqlalchemy
+psycopg2-binary
+dbt-core
+dbt-redshift
+python-dotenv
