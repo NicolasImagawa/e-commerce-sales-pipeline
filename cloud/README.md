@@ -1,5 +1,5 @@
 # Overview
-This open-source data pipeline shows sales results from two major e-commerce platforms in Brazil (Mercado Livre and Shopee) through an ELT pipeline that stores data in a Redshift star-schema data warehouse.
+This open-source data pipeline shows sales results from two major e-commerce platforms in Brazil (Mercado Livre and Shopee) through an ELT pipeline using AWS tools that stores data in a AWS Redshift star-schema data warehouse.
 
 The orchestration is still under development
 
