@@ -42,22 +42,105 @@ To run this pipeline, the user needs:
 1. A Shopee seller account;
 2. A AWS account, root or IAM user, being IAM user recommended for safety reasons.
 
+## Creating IAM roles
+This section will show what IAM roles need to be created.
+
 ## Running the pipeline
 
-### Running Docker
-To run the pipeline, first run the following command on the project's root through the CLI.
+### Configuring and running Terraform
+To run the pipeline, first adjust the configurations for each main.tf file. Afterwards, for each of them, run:
 ```
-docker build -t airflow_e_commerce_sales:v001 .
+terraform init
 ```
 Then, please run this command:
 ```
-docker-compose up -d
+terraform plan
 ```
-After creating the containers, use your browser to check if the following port has Apache Airflow running on it.
+Finally, execute and type "yes":
 ```
-https://localhost:8081
+terraform apply
 ```
-The default credentials are `airflow` for both the username and password.
+
+### Loading local files to S3
+Under elaboration.
+
+### Connect and transfer files to EC2
+Inside your local machine user, in path that probably looks like "/home/username/.ssh" or "c:/users/username/.ssh", create a `config` file like this:
+
+```
+Host host-name
+    HostName 1.234.56.789
+    User ec2-user
+    IdentityFile c:/users/username/.ssh/ec2-key.pem
+```
+> [!IMPORTANT]
+> Make sure a .pem key value pair exists in AWS that can be used for the SSH connection.
+
+Then, run the command:
+
+```
+ssh host-name
+```
+
+After connecting to the EC2 instance, transfer the project to EC2.
+
+```
+scp -i ~/.ssh/ec2-key.pem -r "c:/users/username/projects/e-commerce-sales-pipeline/cloud/" ec2-user@1.234.56.789:/home/ec2-user/projects
+```
+
+> [!TIP]
+> If needed, the EC2 instance can be accessed through VSCode via the extension [Remote-SSH](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh)
+
+### Running the rest of the pipeline
+
+Inside the EC2 instance, install:
+```
+sudo yum install python3-pip -y
+pip3 install dlt boto3 psycopg2-binary pandas pyarrow dbt-core dbt-redshift
+```
+> [!IMPORTANT]
+> Make sure that the EC2 instance has IAM roles that include `AmazonS3ReadOnlyAccess` and `AmazonSSMManagedInstanceCore`
+
+Then, preferably inside the path to the loading scripts, run:
+```
+python3 shopee.py
+```
+
+After loading, access Redshift and create the following spectrum schemas and tables:
+
+```
+CREATE EXTERNAL SCHEMA spectrum_schema
+FROM DATA CATALOG
+DATABASE 'spectrum_db'
+IAM_ROLE 'arn:aws:iam::xxxxxxxxxxxx:role/your-IAM'
+CREATE EXTERNAL DATABASE IF NOT EXISTS;
+
+CREATE EXTERNAL TABLE spectrum_schema.kit_components (
+  main_sku VARCHAR(15),
+  product VARCHAR(50),
+  sku VARCHAR(15),
+  component_sku VARCHAR(15),
+  component_name VARCHAR(75) )
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ','
+STORED AS TEXTFILE
+LOCATION 's3://e-commerce-sales-bucket/data/test-spectrum/kit_components/'
+TABLE PROPERTIES ('skip.header.line.count'='1');
+
+CREATE EXTERNAL TABLE spectrum_schema.product_sku_cost (
+  main_sku VARCHAR(15),
+  product VARCHAR(50),
+  sku VARCHAR(15),
+  component_name VARCHAR(50),
+  begin_date TIMESTAMP,
+  end_date TIMESTAMP,
+  cost NUMERIC(7, 2) )
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ','
+STORED AS TEXTFILE
+LOCATION 's3://e-commerce-sales-bucket/data/test-spectrum/product_sku_cost/'
+TABLE PROPERTIES ('skip.header.line.count'='1');
+```
 
 ### Accessing the API
 Now, create a `.env` file on the project's root to access Mercado Livre's API and get its access token with the following parameters:
