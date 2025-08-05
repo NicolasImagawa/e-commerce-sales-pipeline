@@ -18,9 +18,8 @@ The orchestration is still under development
 The following picture shows how the pipeline works end-to-end.
   
   <br>
-  
-<img width="1343" height="651" alt="image" src="https://github.com/user-attachments/assets/42f7bb31-97b0-4d28-ac0e-a060f9fd73d6" />
 
+  <img width="1339" height="676" alt="image" src="https://github.com/user-attachments/assets/a04f2560-4d14-4b29-b364-aa4c48d08d84" />
 
   <br>
   
