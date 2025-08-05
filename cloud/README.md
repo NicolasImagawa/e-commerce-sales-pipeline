@@ -19,54 +19,28 @@ The following picture shows how the pipeline works end-to-end.
   
   <br>
   
-![image](https://github.com/user-attachments/assets/7e739c09-68b1-464a-b555-45b0835eeb7e)
+<img width="1343" height="651" alt="image" src="https://github.com/user-attachments/assets/42f7bb31-97b0-4d28-ac0e-a060f9fd73d6" />
+
 
   <br>
   
-- Data Warehouse: PostgreSQL;
-- Infrastructure: Terraform creates all additional databases and schemas in the warehouse;
-- Extraction: Python to handle REST API requests;
+- Data Warehouse: Redshift serverless;
+- Infrastructure: Terraform creates the EC2 instance, the S3 buckets, Redshift namespace and workgroups, while also creating the connection between EC2 and Redshift.
+- Extraction: Python to extract the data and transform into .csv file;
 - Cleaning: Pandas;
 - Loading:
-  - dlt and Python: For Mercado Livre .json data;
-  - PostgreSQL and Python: to load Shopee .xlsx data;
-  - PostgreSQL: to load user-defined .csv files regarding costs and product relations.
-- Transformation: dbt;
-- Orchestration: Apache Airflow;
-- Management and quering: pgAdmin.
+  - Python: when loading the files to AWS S3;
+  - dlt, pandas and Python: to load Shopee .csv data after ensuring data types and adding load timestamps;
+- Transformation: dbt inside Redshift;
+- Orchestration: Under development, not done yet.
 
 ## Charts
-The pipeline supports the current default charts:
-- Margin before taxes and operational costs, for a given period;
-  
-  <br>
-  
-  ![image](https://github.com/user-attachments/assets/2d231a9c-a978-44fc-a22d-f3f74d2dcfb8)
-
-- Most sold products for a given period;
-  
-  <br>
-  
-![image](https://github.com/user-attachments/assets/4d209d63-9964-4b5b-9df3-a905b8d0733a)
-
-- Sales on a given period.
-  
-  <br>
-  
-![image](https://github.com/user-attachments/assets/33650448-2e85-4b3f-92f3-96ff38691e54)
-
-<br>
-
-Any other table or view might be created by the user.
+Still under development.
 
 ## Requirements
 To run this pipeline, the user needs:
-1. A Mercado Livre seller account;
-2. A Mercado Livre application [(more on that here - PT/BR)](https://developers.mercadolivre.com.br/en/crie-uma-aplicacao-no-mercado-livre);
-3. A Shopee seller account;
-4. Docker and docker compose on your machine. Docker Desktop is also possible;
-5. To clone this repo;
-6. To have preferably Python 3.9 or a virtual environment equivalent on its machine.
+1. A Shopee seller account;
+2. A AWS account, root or IAM, being IAM recommended for safety reasons.
 
 ## Running the pipeline
 
