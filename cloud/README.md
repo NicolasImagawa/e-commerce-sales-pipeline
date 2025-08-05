@@ -10,11 +10,13 @@ The orchestration is still under development
 - [Tools and technologies used for the pipeline development](#tools-and-technologies-used-for-the-pipeline-development)
 - [Charts](#charts)
 - [Requirements](#requirements)
+- [Creating IAM roles](#creating-iam-roles)
 - [Running the pipeline](#running-the-pipeline)
-  - [Running Docker](#running-docker)
-  - [Accessing the API](#accessing-the-api)
-  - [Running the DAGs](#running-the-dags)
-  - [Accessing the Data Warehouse](#accessing-the-data-warehouse)
+  - [Configuring and running Terraform](#configuring-and-running-terraform)
+  - [Loading local files to S3](#loading-local-files-to-s3)
+  - [Connect and transfer files to EC2](#connect-and-transfer-files-to-ec2)
+  - [Running the rest of the pipeline](#running-the-rest-of-the-pipeline)
+  - [Under development](#under-development)
 - [Contact](#contact)
   
 ## Tools and technologies used for the pipeline development
