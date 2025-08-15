@@ -24,7 +24,7 @@ The following picture shows how the pipeline works end-to-end.
   
   <br>
 
-<img width="1276" height="455" alt="image" src="https://github.com/user-attachments/assets/e11c7491-a84d-4dc0-a607-4009c999daa2" />
+<img width="1283" height="481" alt="image" src="https://github.com/user-attachments/assets/7ea57134-5a6c-4932-b76a-ac859d72833f" />
 
   <br>
   
@@ -33,8 +33,7 @@ The following picture shows how the pipeline works end-to-end.
 - Extraction: Python to extract the data and transform into .csv file;
 - Cleaning: Pandas;
 - Loading:
-  - Python: when loading the files to AWS S3;
-  - dlt, pandas and Python: to load Shopee .csv data after ensuring data types and adding load timestamps;
+  - The loading phase is divided in two steps: First, the data is transformed and has its files converted to parquet to a staging bucket. Then, this bucket becomes the external table for the database to avoid duplicates.
 - Transformation: dbt inside Redshift;
 - Orchestration: Done with AWS Step Functions.
 
