@@ -109,7 +109,7 @@ scp -i ~/.ssh/ec2-key.pem -r "c:/users/username/projects/e-commerce-sales-pipeli
 
 
 ### Under development
-AWS Glue PySpark jobs - the code can be found [here](https://github.com/NicolasImagawa/e-commerce-sales-pipeline/blob/feature/cloud/cloud/scripts/pyspark/cluster.py)
+AWS Glue PySpark jobs - the code can be found [here](https://github.com/NicolasImagawa/e-commerce-sales-pipeline/blob/feature/cloud/cloud/scripts/pyspark/cluster.py)<br>
 Managing queues for multiple files loaded at once, probably with AWS SQS;
 Improve external table management and loading to the Warehouse.
 
