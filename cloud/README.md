@@ -1,4 +1,4 @@
-![stepfunctions_graph](https://github.com/user-attachments/assets/d1fafadd-c463-4614-8fba-cc8042f23f2e)> [!IMPORTANT]
+!IMPORTANT]
 > The cloud pipeline is still under development.
 
 # Overview
