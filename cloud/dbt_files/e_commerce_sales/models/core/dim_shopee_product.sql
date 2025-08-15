@@ -20,7 +20,7 @@ WITH product_id_sku AS(
            kit_components.product AS product,
            product_id_sku.ld_timestamp
         FROM product_id_sku,
-             {{ ref("stg_shopee") }} AS stg_shopee,
+             {{ source('stg_shopee', 'stg_shopee') }} AS stg_shopee,
              {{ source("supplies", "kit_components") }} AS kit_components
         WHERE product_id_sku.sku = stg_shopee.numero_de_referencia_sku
 		    AND product_id_sku.sku = kit_components.sku

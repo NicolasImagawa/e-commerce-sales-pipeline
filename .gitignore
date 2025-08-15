@@ -24,6 +24,8 @@ cloud/scripts/loading/using EC2 and redshift.txt
 
 cloud/terraform/create_external_db/
 
+cloud/terraform/**/variables.tf
+
 .terraform
 .terraform.lock.hcl
 terraform.tfstate

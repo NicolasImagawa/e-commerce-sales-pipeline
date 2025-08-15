@@ -20,7 +20,7 @@ WITH new_data AS (
            EXTRACT( DAY FROM stg_shopee.hora_completa_do_pedido ) AS day_delivered,
            stg_shopee.load_timestamp AS ld_timestamp
         FROM {{ ref("shopee_orders_results") }} AS orders_results,
-             {{ ref("stg_shopee") }} AS stg_shopee
+             {{ source('stg_shopee', 'stg_shopee') }} AS stg_shopee
         WHERE orders_results.main_id = stg_shopee.load_id
 
         {% if is_incremental() %}

@@ -14,7 +14,7 @@ WITH id_buyer_sku_price AS (
            stg_shopee.numero_de_referencia_sku AS sku,
            stg_shopee.load_timestamp AS load_timestamp,
            COALESCE(ROUND(CAST(SUM(stg_shopee.subtotal_do_produto) AS NUMERIC), 2), 0) AS total_price
-        FROM {{ ref("stg_shopee") }} AS stg_shopee
+        FROM {{ source('stg_shopee', 'stg_shopee') }} AS stg_shopee
 
         {% if is_incremental() %}
 
@@ -92,7 +92,7 @@ WITH id_buyer_sku_price AS (
             total_price.total_prod_cost,
             total_price.load_timestamp AS ld_timestamp
             
-		FROM {{ ref("stg_shopee") }} AS stg_shopee, total_price
+		FROM {{ source('stg_shopee', 'stg_shopee') }} AS stg_shopee, total_price
 		WHERE total_price.id = stg_shopee.load_id
 		AND total_price.buyer__id = stg_shopee.nome_de_usuario__comprador_
         AND total_price.sku = stg_shopee.numero_de_referencia_sku

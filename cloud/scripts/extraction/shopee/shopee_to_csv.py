@@ -4,16 +4,16 @@ def spreadsheet_to_csv(test_run, env):
     import pathlib
 
     if test_run:
-        dir = "./extraction/shopee/data/sample/sample.xlsx"
+        dir = "./data/shopee/sample/sample.xlsx"
         files = [dir]
 
     else:
         if env == 'prod':
-            dir = "/path/to/xlsx/files/cloud/data/shopee/raw/prod/"
-            output_dir = pathlib.Path("/path/to/csv/files/cloud/data/shopee/clean/prod/")
+            dir = "/path/to/input/xlsx"
+            output_dir = pathlib.Path("/path/to/output/csv")
         elif env == 'dev':
-            dir = "/path/to/xlsx/files/cloud/data/shopee/raw/dev/"
-            output_dir = pathlib.Path("/path/to/csv/files/cloud/data/shopee/clean/dev/")
+            dir = "/path/to/input/xlsx"
+            output_dir = pathlib.Path("/path/to/output/csv")
 
         filelist = os.listdir(dir)
         files = [f"{dir}{file}" for file in filelist]

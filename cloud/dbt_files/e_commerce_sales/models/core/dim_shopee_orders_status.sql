@@ -15,7 +15,7 @@ WITH delivery_data AS (
            stg_shopee.opcao_de_envio AS delivery_company,
            stg_shopee.opcao_de_envio AS shipping_option,
            stg_shopee.load_timestamp AS ld_timestamp
-        FROM {{ ref("stg_shopee") }} AS stg_shopee
+        FROM {{ source('stg_shopee', 'stg_shopee') }} AS stg_shopee
         WHERE stg_shopee.status_da_devolucao___reembolso IS NULL
 ), new_data AS (
     SELECT  orders_results.main_id,
