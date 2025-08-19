@@ -4,17 +4,6 @@ For more details, please check one of options below:
 - [Local](https://github.com/NicolasImagawa/e-commerce-sales-pipeline/tree/feature/cloud/local);
 - [Cloud](https://github.com/NicolasImagawa/e-commerce-sales-pipeline/tree/feature/cloud/cloud).
 
-## Contents
-- [Tools and technologies used for the pipeline development](#tools-and-technologies-used-for-the-pipeline-development)
-- [Charts](#charts)
-- [Requirements](#requirements)
-- [Running the pipeline](#running-the-pipeline)
-  - [Running Docker](#running-docker)
-  - [Accessing the API](#accessing-the-api)
-  - [Running the DAGs](#running-the-dags)
-  - [Accessing the Data Warehouse](#accessing-the-data-warehouse)
-- [Contact](#contact)
-  
 ## Tools and technologies used for the pipeline development
 The following picture shows how the pipeline works end-to-end in the local environment
   
