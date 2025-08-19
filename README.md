@@ -1,6 +1,6 @@
 # Overview
 This open-source data pipeline shows sales results from two major e-commerce platforms in Brazil (Mercado Livre and Shopee) and can be used both as on-premises or with cloud tools.
-For more details, please check one of them below:
+For more details, please check one of options below:
 - [Local](https://github.com/NicolasImagawa/e-commerce-sales-pipeline/tree/feature/cloud/local);
 - [Cloud](https://github.com/NicolasImagawa/e-commerce-sales-pipeline/tree/feature/cloud/cloud).
 
