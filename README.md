@@ -25,6 +25,7 @@ The following picture shows how the pipeline works end-to-end in the local envir
 - Orchestration: Apache Airflow;
 - Management and quering: pgAdmin.
 
+  <br>
 
 Regarding the cloud environment, the following picture shows how the pipeline works end-to-end.
   
