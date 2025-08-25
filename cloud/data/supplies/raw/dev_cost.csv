@@ -1,0 +1,4 @@
+main_sku,product,sku,component_name,begin_date,end_date,cost
+ABC001,Blue pen,ABC001VAR001,"Simple blue pen",01/01/2000,,"1,00"
+ABC002,Watch,ABC002VAR001,"Fancy watch",01/01/1990,04/12/2000,"100,00"
+ABC002,Watch,ABC002VAR001,"Fancy watch",05/12/2000,,"300,00"

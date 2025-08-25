@@ -1,0 +1,245 @@
+{
+  "Comment": "A description of my state machine",
+  "StartAt": "CreateExternalTables",
+  "States": {
+    "CreateExternalTables": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::aws-sdk:ssm:sendCommand",
+      "Parameters": {
+        "InstanceIds": [
+          "i-xxxxxxxxxxxxxxxxxxx"
+        ],
+        "DocumentName": "AWS-RunShellScript",
+        "Parameters": {
+          "commands": [
+            "python3 /home/ec2-user/scripts/external_tables/create.py"
+          ]
+        }
+      },
+      "Next": "WaitForCreateExternalTables",
+      "ResultPath": "$.CreateExternalTables"
+    },
+    "WaitForCreateExternalTables": {
+      "Type": "Wait",
+      "Seconds": 5,
+      "Next": "CheckCreateExternalTables"
+    },
+    "CheckCreateExternalTables": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::aws-sdk:ssm:getCommandInvocation",
+      "Parameters": {
+        "CommandId.$": "$.CreateExternalTables.Command.CommandId",
+        "InstanceId": "i-xxxxxxxxxxxxxxxxxxx"
+      },
+      "Next": "EvaluateCreateExternalTables",
+      "ResultPath": "$.CheckCreateExternalTables",
+      "Retry": [
+        {
+          "ErrorEquals": [
+            "States.ALL"
+          ],
+          "IntervalSeconds": 5,
+          "MaxAttempts": 3
+        }
+      ]
+    },
+    "EvaluateCreateExternalTables": {
+      "Type": "Choice",
+      "Choices": [
+        {
+          "Variable": "$.CheckCreateExternalTables.Status",
+          "StringEquals": "Success",
+          "Next": "LoadToStgBucket"
+        },
+        {
+          "Variable": "$.CheckCreateExternalTables.Status",
+          "StringEquals": "Failed",
+          "Next": "HandleCreateTableFailure"
+        }
+      ],
+      "Default": "WaitForCreateExternalTables"
+    },
+    "LoadToStgBucket": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::aws-sdk:ssm:sendCommand",
+      "Parameters": {
+        "InstanceIds": [
+          "i-xxxxxxxxxxxxxxxxxxx"
+        ],
+        "DocumentName": "AWS-RunShellScript",
+        "Parameters": {
+          "commands": [
+            "python3 /home/ec2-user/scripts/loading/staging_bucket/filesystem_pipeline.py"
+          ]
+        }
+      },
+      "Next": "WaitForLoadToStgBucket",
+      "ResultPath": "$.LoadToStgBucket"
+    },
+    "WaitForLoadToStgBucket": {
+      "Type": "Wait",
+      "Seconds": 5,
+      "Next": "CheckLoadToStgBucketStatus"
+    },
+    "CheckLoadToStgBucketStatus": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::aws-sdk:ssm:getCommandInvocation",
+      "Parameters": {
+        "CommandId.$": "$.LoadToStgBucket.Command.CommandId",
+        "InstanceId": "i-xxxxxxxxxxxxxxxxxxx"
+      },
+      "Next": "EvaluateLoadToStgBucket",
+      "ResultPath": "$.CheckLoadToStgBucketStatus",
+      "Retry": [
+        {
+          "ErrorEquals": [
+            "States.ALL"
+          ],
+          "IntervalSeconds": 5,
+          "MaxAttempts": 3
+        }
+      ]
+    },
+    "EvaluateLoadToStgBucket": {
+      "Type": "Choice",
+      "Choices": [
+        {
+          "Variable": "$.CheckLoadToStgBucketStatus.Status",
+          "StringEquals": "Success",
+          "Next": "InstallDbtDeps"
+        },
+        {
+          "Variable": "$.CheckLoadToStgBucketStatus.Status",
+          "StringEquals": "Failed",
+          "Next": "HandleLoadFailure"
+        }
+      ],
+      "Default": "WaitForLoadToStgBucket"
+    },
+    "InstallDbtDeps": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::aws-sdk:ssm:sendCommand",
+      "Parameters": {
+        "InstanceIds": [
+          "i-xxxxxxxxxxxxxxxxxxx"
+        ],
+        "DocumentName": "AWS-RunShellScript",
+        "Parameters": {
+          "commands": [
+            "cd /home/ec2-user/dbt_files/e_commerce_sales && dbt deps"
+          ]
+        }
+      },
+      "Next": "WaitForDbtDeps",
+      "ResultPath": "$.InstallDbtDeps"
+    },
+    "WaitForDbtDeps": {
+      "Type": "Wait",
+      "Seconds": 5,
+      "Next": "CheckDbtDepsStatus"
+    },
+    "CheckDbtDepsStatus": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::aws-sdk:ssm:getCommandInvocation",
+      "Parameters": {
+        "CommandId.$": "$.InstallDbtDeps.Command.CommandId",
+        "InstanceId": "i-xxxxxxxxxxxxxxxxxxx"
+      },
+      "Next": "EvaluateDbtDeps",
+      "ResultPath": "$.CheckDbtDepsStatus"
+    },
+    "EvaluateDbtDeps": {
+      "Type": "Choice",
+      "Choices": [
+        {
+          "Variable": "$.CheckDbtDepsStatus.Status",
+          "StringEquals": "Success",
+          "Next": "RunDbt"
+        },
+        {
+          "Variable": "$.CheckDbtDepsStatus.Status",
+          "StringEquals": "Failed",
+          "Next": "HandleDbtDepsFailure"
+        }
+      ],
+      "Default": "WaitForDbtDeps"
+    },
+    "RunDbt": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::aws-sdk:ssm:sendCommand",
+      "Parameters": {
+        "InstanceIds": [
+          "i-xxxxxxxxxxxxxxxxxxx"
+        ],
+        "DocumentName": "AWS-RunShellScript",
+        "Parameters": {
+          "commands": [
+            "cd /home/ec2-user/dbt_files/e_commerce_sales && dbt run --profiles-dir \"/home/ec2-user/dbt_files/e_commerce_sales\" --target dev"
+          ]
+        }
+      },
+      "Next": "WaitForDbtRun",
+      "ResultPath": "$.DbtRunResult"
+    },
+    "WaitForDbtRun": {
+      "Type": "Wait",
+      "Seconds": 5,
+      "Next": "CheckDbtRunStatus"
+    },
+    "CheckDbtRunStatus": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::aws-sdk:ssm:getCommandInvocation",
+      "Parameters": {
+        "CommandId.$": "$.DbtRunResult.Command.CommandId",
+        "InstanceId": "i-xxxxxxxxxxxxxxxxxxx"
+      },
+      "Next": "EvaluateDbtRun",
+      "ResultPath": "$.CheckDbtRunStatus"
+    },
+    "EvaluateDbtRun": {
+      "Type": "Choice",
+      "Choices": [
+        {
+          "Variable": "$.CheckDbtRunStatus.Status",
+          "StringEquals": "Success",
+          "Next": "EndPipeline"
+        },
+        {
+          "Variable": "$.CheckDbtRunStatus.Status",
+          "StringEquals": "Failed",
+          "Next": "HandleDbtRunFailure"
+        }
+      ],
+      "Default": "WaitForDbtRun"
+    },
+    "EndPipeline": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::aws-sdk:ssm:getCommandInvocation",
+      "Parameters": {
+        "CommandId.$": "$.DbtRunResult.Command.CommandId",
+        "InstanceId": "i-xxxxxxxxxxxxxxxxxxx"
+      },
+      "End": true
+    },
+    "HandleCreateTableFailure": {
+      "Type": "Fail",
+      "Error": "CreateExternalTablesFailed",
+      "Cause": "External tables could not be created."
+    },
+    "HandleLoadFailure": {
+      "Type": "Fail",
+      "Error": "LoadToStgBucketFailed",
+      "Cause": "Failed to load data to staging bucket"
+    },
+    "HandleDbtDepsFailure": {
+      "Type": "Fail",
+      "Error": "DbtDepsFailed",
+      "Cause": "dbt deps command failed"
+    },
+    "HandleDbtRunFailure": {
+      "Type": "Fail",
+      "Error": "DbtRunFailed",
+      "Cause": "dbt run command failed"
+    }
+  }
+}

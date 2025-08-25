@@ -1,0 +1,13 @@
+e_commerce_sales:
+  target: dev
+  outputs:
+    dev:
+      type: redshift
+      host: e-commerce-sales.XXXXXXXXXXXX.YOUR-REGION.redshift-serverless.amazonaws.com
+      user: User
+      password: Password
+      dbname: dev
+      schema: sales
+      port: 5439
+      sslmode: prefer
+

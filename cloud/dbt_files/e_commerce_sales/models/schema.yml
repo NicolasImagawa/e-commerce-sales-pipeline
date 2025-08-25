@@ -1,0 +1,25 @@
+version: 2
+
+sources:
+  - name: stg_shopee
+    database: "{{ 'sales_db' if target.name == 'prod' else 'dev' }}"
+    schema: spectrum_schema
+    tables:
+      - name: stg_shopee
+        external:
+          location: "{{ 's3://e-commerce-sales-staging/data/shopee/prod/' if target.name == 'prod' else 's3://e-commerce-sales-staging/data/shopee/dev/' }}"
+          file_format: parquet
+
+  - name: supplies
+    database: "{{ 'sales_db' if target.name == 'prod' else 'dev' }}"
+    schema: spectrum_schema
+    tables:
+      - name: product_sku_cost
+        external:
+          location: "{{ 's3://e-commerce-sales-bucket/data/supplies/clean/spectrum_costs_prod/' if target.name == 'prod' else 's3://e-commerce-sales-bucket/data/supplies/clean/spectrum_costs_prod/' }}"
+          file_format: csv
+      - name: kit_components
+        external:
+          location: "{{ 's3://e-commerce-sales-bucket/data/supplies/clean/spectrum_kit_prod/' if target.name == 'prod' else 's3://e-commerce-sales-bucket/data/supplies/clean/spectrum_kit_prod/' }}"
+          file_format: csv
+  
