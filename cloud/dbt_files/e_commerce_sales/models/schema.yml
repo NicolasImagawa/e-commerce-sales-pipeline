@@ -16,10 +16,10 @@ sources:
     tables:
       - name: product_sku_cost
         external:
-          location: "{{ 's3://e-commerce-sales-bucket/data/supplies/clean/spectrum_costs_prod/' if target.name == 'prod' else 's3://e-commerce-sales-bucket/data/supplies/clean/spectrum_costs_prod/' }}"
+          location: "{{ 's3://e-commerce-sales-bucket/data/supplies/clean/spectrum_costs_prod/' if target.name == 'prod' else 's3://e-commerce-sales-bucket/data/supplies/clean/spectrum_costs_dev/' }}"
           file_format: csv
       - name: kit_components
         external:
-          location: "{{ 's3://e-commerce-sales-bucket/data/supplies/clean/spectrum_kit_prod/' if target.name == 'prod' else 's3://e-commerce-sales-bucket/data/supplies/clean/spectrum_kit_prod/' }}"
+          location: "{{ 's3://e-commerce-sales-bucket/data/supplies/clean/spectrum_kit_prod/' if target.name == 'prod' else 's3://e-commerce-sales-bucket/data/supplies/clean/spectrum_kit_dev/' }}"
           file_format: csv
   

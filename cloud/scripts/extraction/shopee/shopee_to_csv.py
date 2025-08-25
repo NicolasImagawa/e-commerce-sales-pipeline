@@ -9,11 +9,11 @@ def spreadsheet_to_csv(test_run, env):
 
     else:
         if env == 'prod':
-            dir = "/path/to/input/xlsx"
-            output_dir = pathlib.Path("/path/to/output/csv")
+            dir = "./cloud/data/shopee/raw/prod/"
+            output_dir = pathlib.Path(".cloud/data/shopee/clean/prod/")
         elif env == 'dev':
-            dir = "/path/to/input/xlsx"
-            output_dir = pathlib.Path("/path/to/output/csv")
+            dir = "./cloud/data/shopee/raw/dev/"
+            output_dir = pathlib.Path("./cloud/data/shopee/clean/dev/")
 
         filelist = os.listdir(dir)
         files = [f"{dir}{file}" for file in filelist]

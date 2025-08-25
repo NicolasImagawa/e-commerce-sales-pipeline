@@ -1,26 +1,22 @@
-import sys
-from awsglue.transforms import *
-from awsglue.utils import getResolvedOptions
-from pyspark.context import SparkContext
-
+import pyspark
+from pyspark.sql import SparkSession
 from pyspark.sql import types
 from pyspark.sql import functions as F
 
-from awsglue.context import GlueContext
-from awsglue.job import Job
+import pandas as pd
 
-## @params: [JOB_NAME]
-args = getResolvedOptions(sys.argv, ['JOB_NAME'])
+input_file = 'test.csv'
 
-spark_context = SparkContext.getOrCreate()
-glueContext = GlueContext(spark_context)
-spark = glueContext.spark_session
+pandas_df = pd.read_csv(input_file, nrows = 10)
 
-timestamp_cols = ["data_prevista_de_envio", "tempo_de_envio", "data_de_criacao_do_pedido", "hora_completa_do_pedido", "hora_do_pagamento_do_pedido"]
-str_cols = ["status_da_devolucao___reembolso", "cupom_do_vendedor", "cupom_shopee", "cpf_do_comprador", "cep", "cidade", "observacao_do_comprador", "nota"]
+pandas_df.dropna(subset=['nome_da_variacao', 'no_de_referencia_do_sku_principal'], inplace=True)
 
-INPUT_FILES = "s3://e-commerce-sales-bucket/data/shopee/clean/dev/"
-OUTPUT_PATH = "s3://e-commerce-sales-staging/spark_test/"
+spark = SparkSession.builder \
+                    .master("local[*]") \
+                    .appName("LocalAWSTesting") \
+                    .getOrCreate()
+
+spark_schema = spark.createDataFrame(pandas_df.to_dict('records')).schema
 
 new_schema = types.StructType(
 [
@@ -85,10 +81,13 @@ new_schema = types.StructType(
 ]
 )
 
+timestamp_cols = ["data_prevista_de_envio", "tempo_de_envio", "data_de_criacao_do_pedido", "hora_completa_do_pedido", "hora_do_pagamento_do_pedido"]
+str_cols = ["status_da_devolucao___reembolso", "cupom_do_vendedor", "cupom_shopee", "cpf_do_comprador", "cep", "cidade", "observacao_do_comprador", "nota"]
+
 spark_df = spark.read \
                 .option("header", "true") \
                 .schema(new_schema) \
-                .csv(INPUT_FILES)
+                .csv(input_file)
 
 spark_df = spark_df.withColumn(
         "load_id",
@@ -98,16 +97,16 @@ spark_df = spark_df.withColumn(
         )
     )
 
-for col in timestamp_cols:
-    spark_df = spark_df.withColumn(
-            col,
-            F.to_timestamp(F.col(col))
-        )
-
 for col in str_cols:
     spark_df = spark_df.withColumn(
             col,
             F.col(col).cast("string")
+        )
+
+for col in timestamp_cols:
+    spark_df = spark_df.withColumn(
+            col,
+            F.to_timestamp(F.col(col))
         )
 
 spark_df = spark_df.withColumn(
@@ -117,8 +116,4 @@ spark_df = spark_df.withColumn(
 
 spark_df.write \
         .mode('overwrite') \
-        .parquet(OUTPUT_PATH)
-
-job = Job(glueContext)
-job.init(args['JOB_NAME'], args)
-job.commit()
+        .parquet('parquet_output')

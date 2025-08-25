@@ -22,6 +22,14 @@ cloud/scripts/loading/mercadolivre.py
 
 cloud/scripts/loading/using EC2 and redshift.txt
 
+cloud/scripts/pyspark/local_testing/.ipynb_checkpoints
+cloud/scripts/pyspark/local_testing/parquet_output
+cloud/scripts/pyspark/local_testing/edit_spark_schema_new
+cloud/scripts/pyspark/local_testing/edit_spark_schema_old
+cloud/scripts/pyspark/local_testing/test_Redshift_schema
+cloud/scripts/pyspark/local_testing/test.csv
+cloud/scripts/pyspark/local_testing/testing_cluster.ipynb
+
 cloud/terraform/create_external_db/
 
 cloud/terraform/**/variables.tf
