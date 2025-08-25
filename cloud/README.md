@@ -73,7 +73,12 @@ terraform apply
 ```
 
 ### Loading local files to S3
-Under elaboration.
+To load the data, first change the spreadsheets to csv files using the following script: (shopee_to_csv.py)[https://github.com/NicolasImagawa/e-commerce-sales-pipeline/blob/main/cloud/scripts/extraction/shopee/shopee_to_csv.py]
+
+Then, run the ingestion script to AWS S3: (shopee_and_supplies_to_s3.py)[https://github.com/NicolasImagawa/e-commerce-sales-pipeline/blob/main/cloud/scripts/extraction/shopee_and_supplies_to_s3.py]
+
+>!IMPORTANT
+>Plase make sure that a config file exists under the .ssh folder configured to be used in PATH.
 
 ### Connect and transfer files to EC2
 Terraform already loads the needed files to the EC2 instance, but this section helps you to load extra files using SCP.
