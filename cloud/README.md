@@ -1,6 +1,3 @@
-> [!IMPORTANT]
-> The cloud pipeline is still under development.
-
 # Overview
 This open-source data pipeline shows sales results from Shopee, a major e-commerce platform in Brazil. The results are accomplished through an ELT pipeline using AWS tools that stores data in a AWS Redshift star-schema data warehouse.
 
@@ -57,7 +54,7 @@ To run this pipeline, the user needs:
 2. A AWS account, root or IAM user, being IAM user recommended for safety reasons.
 
 ## Creating IAM roles
-This section will show what IAM roles need to be created.
+The IAM roles need to be created by the user for safety reason and it is strongly recommended to follow least-privilege principles when doing so.
 
 ## Running the pipeline
 
