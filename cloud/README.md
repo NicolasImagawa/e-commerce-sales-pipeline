@@ -113,7 +113,7 @@ scp -i ~/.ssh/ec2-key.pem -r "c:/users/username/projects/e-commerce-sales-pipeli
 ### Pyspark
 PySpark can be used instead of the EC2 instance to prepare the data for the staging area. The [AWS Glue Job](https://github.com/NicolasImagawa/e-commerce-sales-pipeline/blob/main/cloud/scripts/pyspark/cluster.py) is created by default in the [terraform file](https://github.com/NicolasImagawa/e-commerce-sales-pipeline/blob/main/cloud/terraform/create_iac/main.tf)
 
-To avoid costs while testing any changes to the cluster, there is a [local version]() alongside instructions to install Spark in your local machine (if it has a Windows OS)
+To avoid costs while testing any changes to the cluster, there is a [local version](https://github.com/NicolasImagawa/e-commerce-sales-pipeline/tree/main/cloud/scripts/pyspark/local_testing) alongside instructions to install Spark in your local machine (if it has a Windows OS)
 
 ### Under development
 AWS Glue PySpark jobs - the code can be found [here](https://github.com/NicolasImagawa/e-commerce-sales-pipeline/blob/feature/cloud/cloud/scripts/pyspark/cluster.py)<br>
