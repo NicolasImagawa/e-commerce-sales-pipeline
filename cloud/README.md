@@ -8,6 +8,7 @@ The orchestration is still under development
 
 ## Contents
 - [Tools and technologies used for the pipeline development](#tools-and-technologies-used-for-the-pipeline-development)
+- [Details about the orchestration](#details-about-the-orchestration)
 - [Charts](#charts)
 - [Requirements](#requirements)
 - [Creating IAM roles](#creating-iam-roles)
@@ -15,7 +16,6 @@ The orchestration is still under development
   - [Configuring and running Terraform](#configuring-and-running-terraform)
   - [Loading local files to S3](#loading-local-files-to-s3)
   - [Connect and transfer files to EC2](#connect-and-transfer-files-to-ec2)
-  - [Running the rest of the pipeline](#running-the-rest-of-the-pipeline)
   - [Under development](#under-development)
 - [Contact](#contact)
   
@@ -24,7 +24,7 @@ The following picture shows how the pipeline works end-to-end.
   
   <br>
 
-  <img width="1339" height="676" alt="image" src="https://github.com/user-attachments/assets/a04f2560-4d14-4b29-b364-aa4c48d08d84" />
+<img width="1283" height="481" alt="image" src="https://github.com/user-attachments/assets/7ea57134-5a6c-4932-b76a-ac859d72833f" />
 
   <br>
   
@@ -33,10 +33,20 @@ The following picture shows how the pipeline works end-to-end.
 - Extraction: Python to extract the data and transform into .csv file;
 - Cleaning: Pandas;
 - Loading:
-  - Python: when loading the files to AWS S3;
-  - dlt, pandas and Python: to load Shopee .csv data after ensuring data types and adding load timestamps;
+  - The loading phase is divided in two steps: First, the data is transformed and has its files converted to parquet to a staging bucket. Then, this bucket becomes the external table for the database to avoid duplicates.
 - Transformation: dbt inside Redshift;
-- Orchestration: Under development, not done yet.
+- Orchestration: Done with AWS Step Functions.
+
+## Details about the orchestration
+Below, one can see the workflow for the AWS Step Function usage in this pipeline.
+
+<br>
+
+<img width="1466" height="1674" alt="stepfunctions_graph" src="https://github.com/user-attachments/assets/0d3037e0-e2bc-4e82-aef3-de6120f730a9" />
+
+<br>
+
+The workflow follows these procedures in its orchestration: sends a command to the EC2 instance, then waits a few seconds, checks the command status via SSM, the evaluates if it goes to the next command in the VM.
 
 ## Charts
 Still under development.
@@ -52,7 +62,7 @@ This section will show what IAM roles need to be created.
 ## Running the pipeline
 
 ### Configuring and running Terraform
-To run the pipeline, first adjust the configurations for each main.tf file. Afterwards, for each of them, run:
+To run the pipeline, first adjust the configurations for the main.tf file by creating variables.tf. Afterwards, run:
 ```
 terraform init
 ```
@@ -69,6 +79,8 @@ terraform apply
 Under elaboration.
 
 ### Connect and transfer files to EC2
+Terraform already loads the needed files to the EC2 instance, but this section helps you to load extra files using SCP.
+
 Inside your local machine user, in path that probably looks like "/home/username/.ssh" or "c:/users/username/.ssh", create a `config` file like this:
 
 ```
@@ -86,80 +98,21 @@ Then, run the command:
 ssh host-name
 ```
 
-After connecting to the EC2 instance, transfer the project to EC2.
+After connecting to the EC2 instance, transfer any additional files that you might need to EC2.
 
 ```
-scp -i ~/.ssh/ec2-key.pem -r "c:/users/username/projects/e-commerce-sales-pipeline/cloud/" ec2-user@1.234.56.789:/home/ec2-user/projects
+scp -i ~/.ssh/ec2-key.pem -r "c:/users/username/projects/e-commerce-sales-pipeline/cloud/your-file" ec2-user@1.234.56.789:/home/ec2-user/path/to/file
 ```
 
 > [!TIP]
 > If needed, the EC2 instance can be accessed through VSCode via the extension [Remote-SSH](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh)
 
-### Running the rest of the pipeline
-
-Inside the EC2 instance, install:
-```
-sudo yum install python3-pip -y
-pip3 install dlt boto3 psycopg2-binary pandas pyarrow dbt-core dbt-redshift
-```
-> [!IMPORTANT]
-> Make sure that the EC2 instance has IAM roles that include `AmazonS3ReadOnlyAccess` and `AmazonSSMManagedInstanceCore`
-
-Then, preferably inside the path to the loading scripts, run:
-```
-python3 shopee.py
-```
-
-After loading, access Redshift and create the following spectrum schemas and tables:
-
-```
-CREATE EXTERNAL SCHEMA spectrum_schema
-FROM DATA CATALOG
-DATABASE 'spectrum_db'
-IAM_ROLE 'arn:aws:iam::xxxxxxxxxxxx:role/your-IAM'
-CREATE EXTERNAL DATABASE IF NOT EXISTS;
-
-CREATE EXTERNAL TABLE spectrum_schema.kit_components (
-  main_sku VARCHAR(15),
-  product VARCHAR(50),
-  sku VARCHAR(15),
-  component_sku VARCHAR(15),
-  component_name VARCHAR(75) )
-ROW FORMAT DELIMITED
-FIELDS TERMINATED BY ','
-STORED AS TEXTFILE
-LOCATION 's3://e-commerce-sales-bucket/data/test-spectrum/kit_components/'
-TABLE PROPERTIES ('skip.header.line.count'='1');
-
-CREATE EXTERNAL TABLE spectrum_schema.product_sku_cost (
-  main_sku VARCHAR(15),
-  product VARCHAR(50),
-  sku VARCHAR(15),
-  component_name VARCHAR(50),
-  begin_date TIMESTAMP,
-  end_date TIMESTAMP,
-  cost NUMERIC(7, 2) )
-ROW FORMAT DELIMITED
-FIELDS TERMINATED BY ','
-STORED AS TEXTFILE
-LOCATION 's3://e-commerce-sales-bucket/data/test-spectrum/product_sku_cost/'
-TABLE PROPERTIES ('skip.header.line.count'='1');
-```
-
-Then, under `/home/ec2-user/projects/dbt_files/e_commerce_sales/` run:
-```
-dbt deps
-```
-
-Follow it by:
-```
-dbt run --profiles-dir "/home/ec2-user/projects/dbt_files/e_commerce_sales" --target dev
-```
 
 ### Under development
-Orchestration;
-Applying AWS Glue to the shopee files to avoid duplications;
-Creating python scripts for external tables.
+AWS Glue PySpark jobs - the code can be found [here](https://github.com/NicolasImagawa/e-commerce-sales-pipeline/blob/feature/cloud/cloud/scripts/pyspark/cluster.py)<br>
+Managing queues for multiple files loaded at once, probably with AWS SQS;
+Improve external table management and loading to the Warehouse.
+
 
 ## Contact
 If you have any questions or want to reach me out, you can contact me on the following channels:
